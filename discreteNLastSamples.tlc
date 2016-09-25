@@ -1,0 +1,196 @@
+%% -----------------------------------------------------------------------------
+%% File : discreteNLastSamples.tlc - 2.2
+%% -----------------------------------------------------------------------------
+%%
+%% This S Function keeps the past N-1 input samples plus the present one
+%% in a shift register, for every input signal,
+%% and outputs them as a vector of length "N".
+%% All the output signals will be multiplexed in a single vector
+%%
+%% u0[0]
+%% +--+
+%% |  |--------+
+%% +--+        v  Shift register
+%%  .         +-+-+-+...+---+---+
+%%  .         |0|1|2|...|N-2|N-1|->
+%%  .         +-+-+-+...+---+---+
+%%  .          | | |      |   |
+%%  .          v v v      v   v        y0[n*N]
+%%  .         +-+-+-+...+---+---+.....+-+-+-+...+---+---+
+%%  .   y0[0] |0|1|2|...|N-2|N-1|.....|0|1|2|...|N-2|N-1| Output (mpx)
+%%  .         +-+-+-+...+---+---+.....+-+-+-+...+---+---+
+%%  .                                  ^ ^ ^      ^   ^
+%%  .                                  | | |      |   |
+%%  .                                 +-+-+-+...+---+---+
+%%  .                                 |0|1|2|...|N-2|N-1|->
+%% u0[n]                              +-+-+-+...+---+---+
+%% +--+                                ^  Shift register
+%% |  |--------------------------------+
+%% +--+
+%%
+%% (n+1) is the input signal width.
+%%
+%% Input can be multiplexed data of any type..
+%% 
+%%
+%% -----------------------------------------------------------------------------
+%%
+%% Author: Raymond Roussel					November 2002
+%%
+%% -----------------------------------------------------------------------------
+%% HYDRO-QUEBEC -- 2000-2002
+%% -----------------------------------------------------------------------------
+
+
+
+%implements "discreteNLastSamples" "C"
+
+%function BlockTypeSetup(block, system) void
+  %openfile buf_include
+#include <math.h>
+#include <stdlib.h>
+  %closefile buf_include
+  %<LibCacheIncludes(buf_include)>
+  %assign DnlsMaxBufferSize = 32768
+  %assign block = block + DnlsMaxBufferSize
+  %openfile buf_define
+#define MAX_BUFFER_SIZE	   %<DnlsMaxBufferSize>
+  %if CodeFormat == "Embedded-C"
+#ifndef ssGetFixedStepSize
+#define ssGetFixedStepSize(S)   (S).stepSize
+#endif /* ssGetFixedStepSize */
+  %endif
+  %closefile buf_define
+  %<LibCacheDefine(buf_define)>
+%endfunction
+
+  
+%% BlockInstanceSetup =========================================================
+%% Abstract:
+%%   It is sometimes more desirable to dynamically allocate the buffers
+%%   for the past samples so they are not in the .bss section.
+%%   To do this, assign DiscreteNLastSamplesUseMalloc=1
+%%   in you system target file.
+%%
+%function BlockInstanceSetup(block, system) void
+  %assign AlwaysUseMalloc = 0
+  %assign DnlsMaxBufferSize = 32768
+  %if EXISTS("DiscreteNLastSamplesUseMalloc")
+    %if LibIsEqual(DiscreteNLastSamplesUseMalloc, 1)
+      %assign AlwaysUseMalloc = 1
+    %endif
+  %endif
+  %assign sample_time = block.SFcnParamSettings.sampleTime
+  %assign DnlsBufferSize = CAST("Number",block.SFcnParamSettings.pastSamples)
+  %% Truncate buffer size if greater than DnlsMaxBufferSize
+  %if DnlsBufferSize < 0 || DnlsBufferSize > DnlsMaxBufferSize
+    %assign DnlsBufferSize = DnlsMaxBufferSize
+  %endif
+  %assign block = block + AlwaysUseMalloc + DnlsBufferSize
+%endfunction
+  
+
+%function Start(block, system) Output
+  %assign DtTypeId = LibGetRecordDataTypeId(block.DataInputPort[0])
+  %assign DtType = LibGetDataTypeNameFromId(DtTypeId)
+
+  %assign init_value = block.SFcnParamSettings.initValue
+  %assign ind_ps = LibBlockIWork(indPs, "", "", 0)
+  /* %<Type> Block: %<Name> */
+  {
+    %%
+    %% allocate or declare buffers
+    %%
+    %if UsingMalloc || AlwaysUseMalloc
+      %assign rollVars = [ "<pwork>/uBuffers" ]
+      %roll idx = DataInputPort[0].RollRegions, lcv = RollThreshold, block, "Roller", rollVars
+        %assign u_buffer = LibBlockPWork(uBuffers, "", lcv, idx)
+        %<u_buffer> = calloc(%<DnlsBufferSize>, sizeof(%<DtType>));
+        %<RTMChkMemAndReturnIfErr("%<u_buffer>")>
+      %endroll
+    %else
+      %assign blockWidth = LibBlockInputSignalWidth(0)
+      static %<DtType> dnls_buffer[%<blockWidth> * %<DnlsBufferSize>];
+      %assign rollVars = [ "<pwork>/uBuffers" ]
+      %assign bufIdx = 0
+      %roll idx = DataInputPort[0].RollRegions, lcv = RollThreshold, block, "Roller", rollVars
+        %assign u_buffer = LibBlockPWork(uBuffers, "", lcv, idx)
+        %<u_buffer> = (void *)&dnls_buffer[%<bufIdx>];
+        %assign bufIdx = bufIdx + %<DnlsBufferSize>
+      %endroll
+    %endif
+  }
+  {
+      int ids;
+
+      /* Assign default sample(s) */
+  %assign nbInitVal = SIZE(SFcnParamSettings.initValue,1)
+  %foreach idx = LibBlockInputSignalWidth(0)
+    %assign u_buffer   = LibBlockPWork(uBuffers, "", "", idx)
+    %assign init_value = nbInitVal == 1 ? SFcnParamSettings.initValue[0] : SFcnParamSettings.initValue[idx]
+      if(%<u_buffer> != NULL)
+      {
+          for(ids = 0; ids < %<DnlsBufferSize>; ++ids)
+              ((%<DtType> *)%<u_buffer>)[ids] = (%<DtType>)%<init_value>;
+      }
+  %endforeach
+      /* Set work values */
+      %<ind_ps> = 0;
+  }
+%endfunction
+  
+%function Outputs(block, system) Output
+  %assign ind_ps = LibBlockIWork(indPs, "", "", 0)
+  %assign DtTypeId = LibGetRecordDataTypeId(block.DataInputPort[0])
+  %assign DtType = LibGetDataTypeNameFromId(DtTypeId)
+  %assign yaddr = LibBlockOutputSignalAddr(0,"","",0)
+  %%
+  /* %<Type> block: %<Name> */
+  {
+    int       nSamples = %<DnlsBufferSize> ;
+    int       io       = 0;
+    int       iv;
+    int       ind_Ps   = %<ind_ps>;
+
+    /* Input present value(s) */
+    %assign rollVars = [ "U0",  "<pwork>/uBuffers" ]
+    %roll idx = DataInputPort[0].RollRegions, lcv = RollThreshold, block, "Roller", rollVars
+      %assign u = LibBlockInputSignal(0,"",lcv,idx)
+      %assign u_buffer = LibBlockPWork(uBuffers, "", lcv, idx)
+      ((%<DtType> *)%<u_buffer>)[ind_Ps] = %<u>;
+    %endroll
+    /* Output past value(s) */
+    %assign rollVars = [ "<pwork>/uBuffers" ]
+    %roll idx = DataInputPort[0].RollRegions, lcv = 1, block, "Roller", rollVars
+      %assign u_buffer = LibBlockPWork(uBuffers, "", lcv, idx)
+    /* Output from present sample index to 0 */
+    for(iv = ind_Ps; iv >=  0; --iv)
+        (%<yaddr>)[io++] = ((%<DtType> *)%<u_buffer>)[iv];
+    /* Output from end of buffer to present sample index excl. */
+    for(iv = nSamples-1; iv > ind_Ps; --iv)
+        (%<yaddr>)[io++] = ((%<DtType> *)%<u_buffer>)[iv];
+    %endroll
+    /* Update ring buffer index */
+    if(++(%<ind_ps>) == nSamples)
+        %<ind_ps> = 0;
+  }
+%endfunction
+
+%function Terminate(block, system) Output
+  /* %<Type> block: %<Name> */
+  {
+    %if UsingMalloc || AlwaysUseMalloc
+      /* Free memory */
+      %assign rollVars = [ "<pwork>/uBuffers" ]
+      %roll idx = DataInputPort[0].RollRegions, lcv = RollThreshold, block, "Roller", rollVars
+        %assign u_buffer = LibBlockPWork(uBuffers, "", lcv, idx)
+        if(%<u_buffer> != NULL) {
+          free(%<u_buffer>);
+        }
+      %endroll
+    %else
+    /* Nothing to do! */
+    %endif
+  }
+%endfunction
+

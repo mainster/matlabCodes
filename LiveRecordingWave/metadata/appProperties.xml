@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<appProperties xmlns="http://schemas.mathworks.com/matlab/app/2012/appProperties" signature="D194872163F96310E375B995F701F2ACBD3BD1CE">
+
+  <entryPoint>LiveRecording</entryPoint>
+
+  <name>LiveRecording</name>
+
+  <version>1.0</version>
+
+  <createdByMATLABRelease>(R2014a)</createdByMATLABRelease>
+
+  <GUID>b2231a02-4f43-4da1-aad4-36eac306e232</GUID>
+
+  <summary>Recording audio signals, live visualisation, spectrogram, save to .wav</summary>
+
+  <description>This application will record audio signals from an input device. During the record there is a gradually plot of the immediate signal and the spectrogram. The display length as well as the frequency window are adjustable. Afterwards you are able to save the record as a wav-file, play the record, open the wave form and sprectrogram as figures or start a new record.</description>
+
+  <author>
+    <name>Marcus Vollmer</name>
+    <contact>marcus.vollmer@uni-greifswald.de</contact>
+    <organization>Ernst-Moritz-Arndt Universität Greifswald</organization>
+  </author>
+
+  <supportedPlatforms/>
+
+  <requiredProducts>
+    <product identifier="1" name="MATLAB" version="8.3"/>
+    <product identifier="8" name="Signal Processing Toolbox" version="6.21"/>
+  </requiredProducts>
+
+  <numFiles>1</numFiles>
+
+  <created>2014-06-13T12:22:45Z</created>
+
+  <appEntries>
+    <appFile>/LiveRecording.m</appFile>
+  </appEntries>
+
+</appProperties>

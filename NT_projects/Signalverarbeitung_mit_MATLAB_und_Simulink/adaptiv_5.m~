@@ -1,0 +1,60 @@
+% Programm adaptiv_5.m zur Parametrierung und Aufrufs des Modells
+% adaptiv5.mdl, in dem eine Störunterdrückung mit LMS-Verfahren
+% simuliert wird
+
+clear;
+% ------- Allgemeine Parameter
+fs = 1000;
+Ts = 1/fs;
+noise = 0.2;   % Messrauschen Varianz
+m_noise = sqrt(noise);   
+
+mu = 0.001;       % Schrittweite der Anpassung
+n_koeff = 32;    % Anzahl der Koeffizienten des Filters
+
+% ------- Parameter für die Eingangssequenz
+% in Form einer Periode eines EKGs der Mutter
+xs = [0 -2 -4 -5 -4 -2 0 1 3 5 6 5 3 1,...
+        randn(1,10)*0.1, -0.2 -0.3 -0.4 -0.5 -0.6 -0.7 -1,...
+        -0.8 -0.6 -0.4 -0.2 0 0.2 0.4 0.6 0.8 1 1.2 1 0.8 0.6,...
+        0.4 0.2 0 0 0 -0.2 -0.5 -0.4 -0.2 0 0 0 0];
+xs = interp1(0:length(xs)-1, xs, 0:0.25:length(xs)-1,'spline');
+ts = (0:length(xs)-1)/250;
+
+% EKG Signal des Fetus
+xsf = xs;
+tsf = (0:length(xs)-1)/300;;    % eine andere Periode als die der Mutter  
+
+% ------- Aufruf der Simulation
+sim('adaptiv6',[0, 20]);
+
+% ------- Darstellung der Ergebnisse
+ny = length(y);
+nd = ny-5000:ny;
+
+figure(1);    clf;
+subplot(221), plot(nd, y(nd,1));
+title('Durch die Mutter gestoertes EKG');
+xlabel('Zeit in ms');   grid;
+La = axis;   axis([min(nd), max(nd), La(3:4)]);
+
+subplot(223), plot(nd, y(nd,2));
+title('Adaptiv Entstoertes EKG');
+xlabel('Zeit in ms');   grid;
+La = axis;   axis([min(nd), max(nd), La(3:4)]);
+
+
+subplot(222), plot(nd, y(nd,3));
+title('Gelernte Stoerung');
+xlabel('Zeit in ms');   grid;
+La = axis;   axis([min(nd), max(nd), La(3:4)]);
+
+
+subplot(224), stem(koeff);
+title('Filterkoeffizienten');
+xlabel('n');   grid;
+
+figure(2);    clf;
+freqz(koeff,1);
+title('Frequenzgang des angepassten Filters');
+

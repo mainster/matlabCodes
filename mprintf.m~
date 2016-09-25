@@ -1,0 +1,33 @@
+function fs=mprintf(MAT, varargin)
+%% mprintf(MAT, FORMAT)     @@@MDB
+% 
+% Matrix print
+%
+% MAT:      Matrix to print
+% FORM:     format spec, eg.  '\t%.2g'
+%
+FORM = '\t % g';
+
+if nargin > 1
+    if isstr(varargin{1})
+        FORM = varargin{1};
+    else
+        if ischar
+end
+% 
+% %evalin('base','fprintf([repmat(FORM,1,size(MAT,2)), ''\n''] ,MAT.'')')
+% if min(MAT(:)) < 0
+%      [r c]=find(MAT+abs(MAT));
+%      st = sprintf([repmat(FORM,1,size(MAT,2)), '\n'], MAT.');
+%      st = regexprep(st,'.\t-','\t-');
+% %     st = strrep(st,'.',' ');
+% else
+%     st = sprintf([repmat(FORM,1,size(MAT,2)), '\n'], MAT.');
+% end
+st = sprintf([repmat(FORM,1,size(MAT,2)), '\n'], MAT.');
+fprintf('\n');
+disp(st)
+fprintf('\n');
+
+fs=st;
+end

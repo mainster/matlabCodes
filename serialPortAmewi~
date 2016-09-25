@@ -1,0 +1,1 @@
+ availableDevices = ls('/dev/ttyUSB*') % Linux

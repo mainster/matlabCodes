@@ -1,0 +1,227 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>PID tuning algorithm for linear plant model</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-05-18"><meta name="DC.source" content="pidtune_pidf.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>PID tuning algorithm for linear plant model</h1><!--introduction--><pre>     speziell pidF
+http://de.mathworks.com/help/control/ref/pidtune.html</pre><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">PID Controller Design at the Command Line</a></li></ul></div><h2>PID Controller Design at the Command Line<a name="1"></a></h2><p>This example shows how to design a PID controller for the plant given by:</p><p><img src="pidtune_pidf_eq72741.png" alt="$$sys = \frac{1}{{{{\left( {s + 1} \right)}^3}}}$$"></p><pre class="codeinput"><span class="comment">% As a first pass, create a model of the plant and design a simple PI controller</span>
+<span class="comment">% for it.</span>
+sys = zpk([],[-1 -1 -1],1);
+[C_pi,info] = pidtune(sys,<span class="string">'pi'</span>)
+
+<span class="comment">% Examine the closed-loop step response (reference tracking) of the controlled</span>
+<span class="comment">% system.</span>
+T_pi = feedback(C_pi*sys, 1);
+step(T_pi)
+
+<span class="comment">% To improve the response time, you can set a higher target crossover frequency</span>
+<span class="comment">% than the result that pidtune automatically selects, 0.52. Increase the</span>
+<span class="comment">% crossover frequency to 1.0.</span>
+[C_pi_fast,info] = pidtune(sys,<span class="string">'pi'</span>,1.0)
+
+<span class="comment">% The new controller achieves the higher crossover frequency, but at the cost of</span>
+<span class="comment">% a reduced phase margin. Compare the closed-loop step response with the two</span>
+<span class="comment">% controllers.</span>
+T_pi_fast = feedback(C_pi_fast*sys,1);
+step(T_pi,T_pi_fast)
+axis([0 30 0 1.4])
+legend(<span class="string">'PI'</span>,<span class="string">'PI,fast'</span>)
+
+<span class="comment">% This reduction in performance results because the PI controller does not have</span>
+<span class="comment">% enough degrees of freedom to achieve a good phase margin at a crossover</span>
+<span class="comment">% frequency of 1.0 rad/s. Adding a derivative action improves the response.</span>
+<span class="comment">% Design a PIDF controller for Gc with the target crossover frequency of 1.0</span>
+<span class="comment">% rad/s.</span>
+[C_pidf_fast,info] = pidtune(sys,<span class="string">'pidf'</span>,1.0)
+
+<span class="comment">% The fields of info show that the derivative action in the controller allows</span>
+<span class="comment">% the tuning algorithm to design a more aggressive controller that achieves the</span>
+<span class="comment">% target crossover frequency with a good phase margin. Compare the closed-loop</span>
+<span class="comment">% step response and disturbance rejection for the fast PI and PIDF controllers.</span>
+T_pidf_fast =  feedback(C_pidf_fast*sys,1);
+step(T_pi_fast, T_pidf_fast);
+axis([0 30 0 1.4]);
+legend(<span class="string">'PI,fast'</span>,<span class="string">'PIDF,fast'</span>);
+
+
+<span class="comment">% You can compare the input (load) disturbance rejection of the controlled</span>
+<span class="comment">% system with the fast PI and PIDF controllers. To do so, plot the response of</span>
+<span class="comment">% the closed-loop transfer function from the plant input to the plant output.</span>
+S_pi_fast = feedback(sys,C_pi_fast);
+S_pidf_fast = feedback(sys,C_pidf_fast);
+step(S_pi_fast,S_pidf_fast);
+axis([0 50 0 0.4]);
+legend(<span class="string">'PI,fast'</span>,<span class="string">'PIDF,fast'</span>);
+</pre><pre class="codeoutput">
+C_pi =
+ 
+             1 
+  Kp + Ki * ---
+             s 
+
+  with Kp = 1.14, Ki = 0.454
+ 
+Continuous-time PI controller in parallel form.
+
+info = 
+                Stable: 1
+    CrossoverFrequency: 0.52053
+           PhaseMargin: 60
+
+C_pi_fast =
+ 
+             1 
+  Kp + Ki * ---
+             s 
+
+  with Kp = 2.83, Ki = 0.0495
+ 
+Continuous-time PI controller in parallel form.
+
+info = 
+                Stable: 1
+    CrossoverFrequency: 1
+           PhaseMargin: 43.997
+
+C_pidf_fast =
+ 
+             1            s    
+  Kp + Ki * --- + Kd * --------
+             s          Tf*s+1 
+
+  with Kp = 2.72, Ki = 1.03, Kd = 1.76, Tf = 0.00875
+ 
+Continuous-time PIDF controller in parallel form.
+
+info = 
+                Stable: 1
+    CrossoverFrequency: 1
+           PhaseMargin: 60
+</pre><img vspace="5" hspace="5" src="pidtune_pidf_01.png" alt=""> <p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% PID tuning algorithm for linear plant model
+%
+%       speziell pidF
+% http://de.mathworks.com/help/control/ref/pidtune.html
+%
+
+%% PID Controller Design at the Command Line
+% This example shows how to design a PID controller for the plant given by:
+%%
+% $$sys = \frac{1}{{{{\left( {s + 1} \right)}^3}}}$$
+% 
+
+% As a first pass, create a model of the plant and design a simple PI controller
+% for it.
+sys = zpk([],[-1 -1 -1],1);
+[C_pi,info] = pidtune(sys,'pi')
+
+% Examine the closed-loop step response (reference tracking) of the controlled
+% system.
+T_pi = feedback(C_pi*sys, 1);
+step(T_pi)
+
+% To improve the response time, you can set a higher target crossover frequency
+% than the result that pidtune automatically selects, 0.52. Increase the
+% crossover frequency to 1.0.
+[C_pi_fast,info] = pidtune(sys,'pi',1.0)
+
+% The new controller achieves the higher crossover frequency, but at the cost of
+% a reduced phase margin. Compare the closed-loop step response with the two
+% controllers.
+T_pi_fast = feedback(C_pi_fast*sys,1);
+step(T_pi,T_pi_fast)
+axis([0 30 0 1.4])
+legend('PI','PI,fast')
+
+% This reduction in performance results because the PI controller does not have
+% enough degrees of freedom to achieve a good phase margin at a crossover
+% frequency of 1.0 rad/s. Adding a derivative action improves the response.
+% Design a PIDF controller for Gc with the target crossover frequency of 1.0
+% rad/s.
+[C_pidf_fast,info] = pidtune(sys,'pidf',1.0)
+
+% The fields of info show that the derivative action in the controller allows
+% the tuning algorithm to design a more aggressive controller that achieves the
+% target crossover frequency with a good phase margin. Compare the closed-loop
+% step response and disturbance rejection for the fast PI and PIDF controllers.
+T_pidf_fast =  feedback(C_pidf_fast*sys,1);
+step(T_pi_fast, T_pidf_fast);
+axis([0 30 0 1.4]);
+legend('PI,fast','PIDF,fast');
+
+
+% You can compare the input (load) disturbance rejection of the controlled
+% system with the fast PI and PIDF controllers. To do so, plot the response of
+% the closed-loop transfer function from the plant input to the plant output.
+S_pi_fast = feedback(sys,C_pi_fast);
+S_pidf_fast = feedback(sys,C_pidf_fast);
+step(S_pi_fast,S_pidf_fast);
+axis([0 50 0 0.4]);
+legend('PI,fast','PIDF,fast');
+
+
+##### SOURCE END #####
+--></body></html>

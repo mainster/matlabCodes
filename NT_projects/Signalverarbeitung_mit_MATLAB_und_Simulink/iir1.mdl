@@ -1,0 +1,2874 @@
+Model {
+  Name			  "iir1"
+  Version		  6.1
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.44"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "US-ASCII"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sat Mar 12 19:31:18 2005"
+  Creator		  "svenhoffmann"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "svenhoffmann"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Mar 14 16:56:11 2005"
+  ModelVersionFormat	  "1.%<AutoIncrement:44>"
+  ConfigurationManager	  "None"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  StrictBusMsg		  "None"
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.0.4"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.0.4"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.0.4"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  ConditionalExecOptimization "on_for_testing"
+	  InlineParams		  off
+	  InlineInvariantSignals  on
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  ParameterPooling	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.0.4"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "TryResolveAllWithWarning"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "warning"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterPrecisionLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.0.4"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.0.4"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.0.4"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		9
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      CustomSymbolStr	      "$R$N$M"
+	      MangleLength	      1
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		12
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.0.4"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      SimulationMode	      "normal"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  WSDataSource		  "M-Code"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+      SampleTime	      "inf"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      OutDataTypeMode	      "Inherit via back propagation"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      ConvertRealWorld	      "Real World Value (RWV)"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      From
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Goto
+      IconDisplay	      "Tag"
+    }
+    Block {
+      BlockType		      SignalConversion
+      OverrideOpt	      off
+    }
+    Block {
+      BlockType		      Inport
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      "M-S-Function"
+      MFile		      "mlfile"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      UniformRandomNumber
+      Minimum		      "-1"
+      Maximum		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "iir1"
+    Location		    [611, 523, 1378, 825]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Buffer"
+      Ports		      [1, 1]
+      Position		      [485, 45, 535, 95]
+      SourceBlock	      "dspbuff3/Buffer"
+      SourceType	      "Buffer"
+      N			      "256"
+      V			      "64"
+      ic		      "0"
+    }
+    Block {
+      BlockType		      DataTypeConversion
+      Name		      "Data Type Conversion"
+      Position		      [285, 113, 360, 147]
+      OutDataTypeMode	      "double"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Filter"
+      Tag		      "FilterWizardSubSystem"
+      Ports		      [1, 1]
+      Position		      [175, 109, 240, 151]
+      DropShadow	      on
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Filter"
+	Location		[108, 80, 1346, 690]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Input"
+	  Position		  [80, 68, 110, 82]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "CastStates1"
+	  Position		  [350, 58, 390, 92]
+	  DropShadow		  on
+	  ShowName		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(18)"
+	  OutScaling		  "2^-14"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "CastStates2"
+	  Position		  [835, 93, 875, 127]
+	  DropShadow		  on
+	  ShowName		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(18)"
+	  OutScaling		  "2^-14"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "CastStates3"
+	  Position		  [310, 338, 350, 372]
+	  DropShadow		  on
+	  ShowName		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(18)"
+	  OutScaling		  "2^-14"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "CastStates4"
+	  Position		  [800, 378, 840, 412]
+	  DropShadow		  on
+	  ShowName		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(18)"
+	  OutScaling		  "2^-14"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "ConvertIn"
+	  Position		  [130, 58, 170, 92]
+	  DropShadow		  on
+	  ShowName		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	}
+	Block {
+	  BlockType		  DataTypeConversion
+	  Name			  "ConvertOut"
+	  Position		  [1055, 378, 1095, 412]
+	  DropShadow		  on
+	  ShowName		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-14"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(1)"
+	  Ports			  [1, 1]
+	  Position		  [415, 115, 445, 145]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(2)"
+	  Ports			  [1, 1]
+	  Position		  [900, 145, 930, 175]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(3)"
+	  Ports			  [1, 1]
+	  Position		  [370, 395, 400, 425]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(4)"
+	  Ports			  [1, 1]
+	  Position		  [870, 430, 900, 460]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay2(1)"
+	  Ports			  [1, 1]
+	  Position		  [415, 200, 445, 230]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay2(2)"
+	  Ports			  [1, 1]
+	  Position		  [900, 240, 930, 270]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay2(3)"
+	  Ports			  [1, 1]
+	  Position		  [370, 490, 400, 520]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn1"
+	  Position		  [640, 103, 700, 117]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn2"
+	  Position		  [95, 348, 155, 362]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect2"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn3"
+	  Position		  [650, 388, 710, 402]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect3"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut1"
+	  Position		  [625, 68, 680, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect1"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut2"
+	  Position		  [1125, 103, 1180, 117]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect2"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut3"
+	  Position		  [640, 348, 695, 362]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect3"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA21"
+	  Ports			  [2, 1]
+	  Position		  [245, 60, 275, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA22"
+	  Ports			  [2, 1]
+	  Position		  [720, 95, 750, 125]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA23"
+	  Ports			  [2, 1]
+	  Position		  [190, 340, 220, 370]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA24"
+	  Ports			  [2, 1]
+	  Position		  [745, 380, 775, 410]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA31"
+	  Ports			  [2, 1]
+	  Position		  [300, 60, 330, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA32"
+	  Ports			  [2, 1]
+	  Position		  [780, 95, 810, 125]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA33"
+	  Ports			  [2, 1]
+	  Position		  [250, 340, 280, 370]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB21"
+	  Ports			  [2, 1]
+	  Position		  [525, 60, 555, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB22"
+	  Ports			  [2, 1]
+	  Position		  [1015, 95, 1045, 125]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB23"
+	  Ports			  [2, 1]
+	  Position		  [500, 340, 530, 370]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB24"
+	  Ports			  [2, 1]
+	  Position		  [995, 380, 1025, 410]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB31"
+	  Ports			  [2, 1]
+	  Position		  [575, 60, 605, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB32"
+	  Ports			  [2, 1]
+	  Position		  [1070, 95, 1100, 125]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB33"
+	  Ports			  [2, 1]
+	  Position		  [570, 340, 600, 370]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(40)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,1)"
+	  Position		  [340, 149, 370, 181]
+	  Orientation		  "left"
+	  Gain			  "-1.1693115234375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,2)"
+	  Position		  [840, 194, 870, 226]
+	  Orientation		  "left"
+	  Gain			  "-0.796875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,3)"
+	  Position		  [290, 444, 320, 476]
+	  Orientation		  "left"
+	  Gain			  "-0.60296630859375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,4)"
+	  Position		  [800, 479, 830, 511]
+	  Orientation		  "left"
+	  Gain			  "-0.70172119140625"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,1)"
+	  Position		  [340, 244, 370, 276]
+	  Orientation		  "left"
+	  Gain			  "0.6038818359375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,2)"
+	  Position		  [840, 284, 870, 316]
+	  Orientation		  "left"
+	  Gain			  "0.794189453125"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,3)"
+	  Position		  [295, 539, 325, 571]
+	  Orientation		  "left"
+	  Gain			  "0.939208984375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-14"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-26"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,1)"
+	  Position		  [470, 59, 500, 91]
+	  Gain			  "0.23046875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,2)"
+	  Position		  [960, 94, 990, 126]
+	  Gain			  "0.343231201171875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,3)"
+	  Position		  [435, 339, 465, 371]
+	  Gain			  "0.42962646484375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,4)"
+	  Position		  [930, 379, 960, 411]
+	  Gain			  "0.169677734375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,1)"
+	  Position		  [470, 149, 500, 181]
+	  Gain			  "0.297454833984375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,2)"
+	  Position		  [960, 194, 990, 226]
+	  Gain			  "0.164520263671875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,3)"
+	  Position		  [435, 444, 465, 476]
+	  Gain			  "0.062957763671875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,4)"
+	  Position		  [930, 479, 960, 511]
+	  Gain			  "0.169677734375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3,1)"
+	  Position		  [475, 244, 505, 276]
+	  Gain			  "0.23046875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3,2)"
+	  Position		  [960, 284, 990, 316]
+	  Gain			  "0.343231201171875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3,3)"
+	  Position		  [435, 539, 465, 571]
+	  Gain			  "0.42962646484375"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-27"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(1)"
+	  Position		  [195, 60, 225, 90]
+	  Gain			  "0.855194091796875"
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-14"
+	  LockScale		  on
+	  RndMeth		  "Nearest"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Output"
+	  Position		  [1130, 388, 1160, 402]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Input"
+	  SrcPort		  1
+	  DstBlock		  "ConvertIn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertIn"
+	  SrcPort		  1
+	  DstBlock		  "s(1)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(1)"
+	  SrcPort		  1
+	  DstBlock		  "SumA21"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA21"
+	  SrcPort		  1
+	  DstBlock		  "SumA31"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA31"
+	  SrcPort		  1
+	  DstBlock		  "CastStates1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CastStates1"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "b(1,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Delay1(1)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(1,1)"
+	  SrcPort		  1
+	  DstBlock		  "SumB21"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB21"
+	  SrcPort		  1
+	  DstBlock		  "SumB31"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB31"
+	  SrcPort		  1
+	  DstBlock		  "SectOut1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(1)"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  Branch {
+	    DstBlock		    "Delay2(1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(2,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "a(2,1)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,1)"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "SumB21"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Delay2(1)"
+	  SrcPort		  1
+	  Points		  [0, 25]
+	  Branch {
+	    DstBlock		    "b(3,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "a(3,1)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(3,1)"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  DstBlock		  "SumB31"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(2,1)"
+	  SrcPort		  1
+	  Points		  [-75, 0]
+	  DstBlock		  "SumA21"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,1)"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  DstBlock		  "SumA31"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SectIn1"
+	  SrcPort		  1
+	  DstBlock		  "SumA22"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA22"
+	  SrcPort		  1
+	  DstBlock		  "SumA32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA32"
+	  SrcPort		  1
+	  DstBlock		  "CastStates2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CastStates2"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "b(1,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 0]
+	    DstBlock		    "Delay1(2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(1,2)"
+	  SrcPort		  1
+	  DstBlock		  "SumB22"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB22"
+	  SrcPort		  1
+	  DstBlock		  "SumB32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB32"
+	  SrcPort		  1
+	  DstBlock		  "SectOut2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(2)"
+	  SrcPort		  1
+	  Points		  [0, 30]
+	  Branch {
+	    DstBlock		    "Delay2(2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(2,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "a(2,2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,2)"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  DstBlock		  "SumB22"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Delay2(2)"
+	  SrcPort		  1
+	  Points		  [0, -5; 0, 30]
+	  Branch {
+	    DstBlock		    "b(3,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "a(3,2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(3,2)"
+	  SrcPort		  1
+	  Points		  [90, 0]
+	  DstBlock		  "SumB32"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(2,2)"
+	  SrcPort		  1
+	  Points		  [-100, 0]
+	  DstBlock		  "SumA22"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,2)"
+	  SrcPort		  1
+	  Points		  [-40, 0]
+	  DstBlock		  "SumA32"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SectIn2"
+	  SrcPort		  1
+	  DstBlock		  "SumA23"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA23"
+	  SrcPort		  1
+	  DstBlock		  "SumA33"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA33"
+	  SrcPort		  1
+	  DstBlock		  "CastStates3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CastStates3"
+	  SrcPort		  1
+	  Points		  [0, 0; 30, 0]
+	  Branch {
+	    DstBlock		    "b(1,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Delay1(3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(1,3)"
+	  SrcPort		  1
+	  DstBlock		  "SumB23"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB23"
+	  SrcPort		  1
+	  DstBlock		  "SumB33"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB33"
+	  SrcPort		  1
+	  DstBlock		  "SectOut3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(3)"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "Delay2(3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(2,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "a(2,3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,3)"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "SumB23"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Delay2(3)"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "a(3,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(3,3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(3,3)"
+	  SrcPort		  1
+	  Points		  [115, 0]
+	  DstBlock		  "SumB33"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(2,3)"
+	  SrcPort		  1
+	  Points		  [-80, 0]
+	  DstBlock		  "SumA23"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,3)"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  DstBlock		  "SumA33"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SectIn3"
+	  SrcPort		  1
+	  DstBlock		  "SumA24"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "CastStates4"
+	  SrcPort		  1
+	  Points		  [0, 0; 40, 0]
+	  Branch {
+	    DstBlock		    "b(1,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Delay1(4)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(1,4)"
+	  SrcPort		  1
+	  DstBlock		  "SumB24"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertOut"
+	  SrcPort		  1
+	  DstBlock		  "Output"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(4)"
+	  SrcPort		  1
+	  Points		  [0, 0; 0, 30]
+	  Branch {
+	    DstBlock		    "a(2,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(2,4)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,4)"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "SumB24"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(2,4)"
+	  SrcPort		  1
+	  Points		  [-35, 0]
+	  DstBlock		  "SumA24"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SumB24"
+	  SrcPort		  1
+	  DstBlock		  "ConvertOut"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA24"
+	  SrcPort		  1
+	  DstBlock		  "CastStates4"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Filter1"
+      Tag		      "FilterWizardSubSystem"
+      Ports		      [1, 1]
+      Position		      [180, 199, 245, 241]
+      DropShadow	      on
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      System {
+	Name			"Filter1"
+	Location		[70, 200, 650, 460]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Input"
+	  Position		  [80, 68, 110, 82]
+	  Port			  "1"
+	  IconDisplay		  "Port number"
+	  LatchInput		  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(1)"
+	  Ports			  [1, 1]
+	  Position		  [605, 120, 635, 150]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(2)"
+	  Ports			  [1, 1]
+	  Position		  [1555, 120, 1585, 150]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(3)"
+	  Ports			  [1, 1]
+	  Position		  [2505, 120, 2535, 150]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay1(4)"
+	  Ports			  [1, 1]
+	  Position		  [3455, 120, 3485, 150]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay2(1)"
+	  Ports			  [1, 1]
+	  Position		  [605, 220, 635, 250]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay2(2)"
+	  Ports			  [1, 1]
+	  Position		  [1555, 220, 1585, 250]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Delay2(3)"
+	  Ports			  [1, 1]
+	  Position		  [2505, 220, 2535, 250]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  "off"
+	  dif_ic_for_ch		  "off"
+	  dif_ic_for_dly	  "off"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn1"
+	  Position		  [1065, 68, 1125, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn2"
+	  Position		  [2015, 68, 2075, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect2"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn3"
+	  Position		  [2965, 68, 3025, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect3"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut1"
+	  Position		  [1040, 68, 1095, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect1"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut2"
+	  Position		  [1990, 68, 2045, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect2"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut3"
+	  Position		  [2940, 68, 2995, 82]
+	  ShowName		  off
+	  DialogController	  "Simulink.DDGSource"
+	  GotoTag		  "Sect3"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA21"
+	  Ports			  [2, 1]
+	  Position		  [320, 60, 350, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA22"
+	  Ports			  [2, 1]
+	  Position		  [1270, 60, 1300, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA23"
+	  Ports			  [2, 1]
+	  Position		  [2220, 60, 2250, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA24"
+	  Ports			  [2, 1]
+	  Position		  [3170, 60, 3200, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA31"
+	  Ports			  [2, 1]
+	  Position		  [430, 60, 460, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA32"
+	  Ports			  [2, 1]
+	  Position		  [1380, 60, 1410, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumA33"
+	  Ports			  [2, 1]
+	  Position		  [2330, 60, 2360, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB21"
+	  Ports			  [2, 1]
+	  Position		  [760, 60, 790, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB22"
+	  Ports			  [2, 1]
+	  Position		  [1710, 60, 1740, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB23"
+	  Ports			  [2, 1]
+	  Position		  [2660, 60, 2690, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB24"
+	  Ports			  [2, 1]
+	  Position		  [3610, 60, 3640, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB31"
+	  Ports			  [2, 1]
+	  Position		  [870, 60, 900, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB32"
+	  Ports			  [2, 1]
+	  Position		  [1820, 60, 1850, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "SumB33"
+	  Ports			  [2, 1]
+	  Position		  [2770, 60, 2800, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,1)"
+	  Position		  [510, 159, 540, 191]
+	  Orientation		  "left"
+	  Gain			  "-1.16932297090714377"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,2)"
+	  Position		  [1460, 159, 1490, 191]
+	  Orientation		  "left"
+	  Gain			  "-0.796868124144799017"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,3)"
+	  Position		  [2410, 159, 2440, 191]
+	  Orientation		  "left"
+	  Gain			  "-0.602990193060982782"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,4)"
+	  Position		  [3360, 159, 3390, 191]
+	  Orientation		  "left"
+	  Gain			  "-0.701738654901977621"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,1)"
+	  Position		  [510, 259, 540, 291]
+	  Orientation		  "left"
+	  Gain			  "0.603886544266487135"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,2)"
+	  Position		  [1460, 259, 1490, 291]
+	  Orientation		  "left"
+	  Gain			  "0.794188227708541361"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,3)"
+	  Position		  [2410, 259, 2440, 291]
+	  Orientation		  "left"
+	  Gain			  "0.939208337868291721"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,1)"
+	  Position		  [695, 159, 725, 191]
+	  Gain			  "1.29071641951833493"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,2)"
+	  Position		  [1645, 159, 1675, 191]
+	  Gain			  "0.479333910960367704"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,3)"
+	  Position		  [2595, 159, 2625, 191]
+	  Gain			  "0.146549849899489326"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(1)"
+	  Position		  [195, 60, 225, 90]
+	  Gain			  "0.0264169155668388597"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(2)"
+	  Position		  [1145, 60, 1175, 90]
+	  Gain			  "0.402253241951355978"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(3)"
+	  Position		  [2095, 60, 2125, 90]
+	  Gain			  "0.622495743515985134"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(4)"
+	  Position		  [3045, 60, 3075, 90]
+	  Gain			  "0.745500140386741172"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Output"
+	  Position		  [3995, 68, 4025, 82]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Input"
+	  SrcPort		  1
+	  DstBlock		  "s(1)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(1)"
+	  SrcPort		  1
+	  DstBlock		  "SumA21"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA21"
+	  SrcPort		  1
+	  DstBlock		  "SumA31"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA31"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [155, 0]
+	    DstBlock		    "Delay1(1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "SumB21"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "SumB21"
+	  SrcPort		  1
+	  DstBlock		  "SumB31"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB31"
+	  SrcPort		  1
+	  DstBlock		  "SectOut1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(1)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Delay2(1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "b(2,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(2,1)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,1)"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "SumB21"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Delay2(1)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(3,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 10; 265, 0]
+	    DstBlock		    "SumB31"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "a(2,1)"
+	  SrcPort		  1
+	  Points		  [-170, 0]
+	  DstBlock		  "SumA21"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,1)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "SumA31"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SectIn1"
+	  SrcPort		  1
+	  DstBlock		  "s(2)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(2)"
+	  SrcPort		  1
+	  DstBlock		  "SumA22"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA22"
+	  SrcPort		  1
+	  DstBlock		  "SumA32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA32"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [155, 0]
+	    DstBlock		    "Delay1(2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "SumB22"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "SumB22"
+	  SrcPort		  1
+	  DstBlock		  "SumB32"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB32"
+	  SrcPort		  1
+	  DstBlock		  "SectOut2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(2)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Delay2(2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "b(2,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(2,2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,2)"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "SumB22"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Delay2(2)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(3,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 10; 265, 0]
+	    DstBlock		    "SumB32"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "a(2,2)"
+	  SrcPort		  1
+	  Points		  [-170, 0]
+	  DstBlock		  "SumA22"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,2)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "SumA32"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SectIn2"
+	  SrcPort		  1
+	  DstBlock		  "s(3)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(3)"
+	  SrcPort		  1
+	  DstBlock		  "SumA23"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA23"
+	  SrcPort		  1
+	  DstBlock		  "SumA33"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA33"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [155, 0]
+	    DstBlock		    "Delay1(3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "SumB23"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "SumB23"
+	  SrcPort		  1
+	  DstBlock		  "SumB33"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumB33"
+	  SrcPort		  1
+	  DstBlock		  "SectOut3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(3)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "Delay2(3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "b(2,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(2,3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(2,3)"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "SumB23"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Delay2(3)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(3,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 10; 265, 0]
+	    DstBlock		    "SumB33"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "a(2,3)"
+	  SrcPort		  1
+	  Points		  [-170, 0]
+	  DstBlock		  "SumA23"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,3)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "SumA33"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SectIn3"
+	  SrcPort		  1
+	  DstBlock		  "s(4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(4)"
+	  SrcPort		  1
+	  DstBlock		  "SumA24"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Delay1(4)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 20]
+	    DstBlock		    "a(2,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 10; 155, 0]
+	    DstBlock		    "SumB24"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "a(2,4)"
+	  SrcPort		  1
+	  Points		  [-170, 0]
+	  DstBlock		  "SumA24"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "SumB24"
+	  SrcPort		  1
+	  DstBlock		  "Output"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SumA24"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [265, 0]
+	    DstBlock		    "Delay1(4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "SumB24"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch"
+      Ports		      [2, 1]
+      Position		      [100, 112, 130, 148]
+      SourceBlock	      "simulink/Signal\nRouting/Manual Switch"
+      SourceType	      "Manual Switch"
+      ShowPortLabels	      on
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [2, 1]
+      Position		      [440, 116, 450, 174]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Periodogram"
+      Ports		      [1, 1]
+      Position		      [575, 44, 655, 96]
+      SourceBlock	      "dspspect3/Periodogram"
+      SourceType	      "Periodogram"
+      ShowPortLabels	      on
+      wintype		      "Hamming"
+      Rs		      "50"
+      beta		      "5"
+      winsamp		      "Symmetric"
+      inheritFFT	      off
+      fftsize		      "256"
+      navg		      "4"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [2]
+      Position		      [505, 136, 535, 169]
+      Location		      [476, 519, 919, 994]
+      Open		      on
+      NumInputPorts	      "2"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      YMin		      "-5~-5"
+      YMax		      "5~5"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine Wave"
+      Ports		      [0, 1]
+      Position		      [35, 50, 65, 80]
+      SineType		      "Time based"
+      Amplitude		      "9.999694e-1"
+      Frequency		      "2*pi*100"
+      SampleTime	      "1/1000"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Subtract"
+      Ports		      [2, 1]
+      Position		      [415, 52, 445, 83]
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutScaling	      "2^-10"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      UniformRandomNumber
+      Name		      "Uniform Random\nNumber"
+      Position		      [35, 179, 65, 211]
+      Minimum		      "-0.95"
+      Maximum		      "0.95"
+      SampleTime	      "1/1000"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Vector\nScope"
+      Ports		      [1]
+      Position		      [690, 45, 725, 95]
+      SourceBlock	      "dspsnks4/Vector\nScope"
+      SourceType	      "Vector Scope"
+      ScopeProperties	      on
+      Domain		      "Frequency"
+      HorizSpan		      "1"
+      DisplayProperties	      off
+      AxisGrid		      on
+      Memory		      off
+      FrameNumber	      on
+      AxisLegend	      off
+      AxisZoom		      off
+      OpenScopeAtSimStart     on
+      OpenScopeImmediately    off
+      FigPos		      "get(0,'defaultfigureposition')"
+      AxisProperties	      off
+      XUnits		      "Hertz"
+      XRange		      "[0...Fs/2]"
+      InheritXIncr	      off
+      XIncr		      "1/1000"
+      XLabel		      "Time"
+      YUnits		      "dB"
+      YMin		      "-106.145195657547"
+      YMax		      "-75.386729288775"
+      YLabel		      "Amplitude"
+      LineProperties	      off
+      ShowPortLabels	      off
+    }
+    Line {
+      SrcBlock		      "Filter"
+      SrcPort		      1
+      DstBlock		      "Data Type Conversion"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Data Type Conversion"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -70]
+	DstBlock		"Subtract"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Filter1"
+      SrcPort		      1
+      Points		      [145, 0; 0, -60]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -85]
+	DstBlock		"Subtract"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Subtract"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Buffer"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 90]
+	DstBlock		"Scope"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Periodogram"
+      SrcPort		      1
+      DstBlock		      "Vector\nScope"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Buffer"
+      SrcPort		      1
+      DstBlock		      "Periodogram"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"Filter"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 90]
+	DstBlock		"Filter1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sine Wave"
+      SrcPort		      1
+      Points		      [5, 0; 0, 55]
+      DstBlock		      "Manual Switch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Uniform Random\nNumber"
+      SrcPort		      1
+      Points		      [5, 0; 0, -55]
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Annotation {
+      Name		      "IIR_1_1.fda"
+      Position		      [219, 191]
+    }
+    Annotation {
+      Name		      "IIR_1.fda"
+      Position		      [212, 101]
+    }
+  }
+}

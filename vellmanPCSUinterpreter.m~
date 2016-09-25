@@ -1,0 +1,68 @@
+function ret = vellmanPCSUinterpreter(path, varargin)
+%% RET = vellmanPCSUinterpreter(PATH)
+%
+% Read a (or multiple) DSO export file from pcsu200se USB scope     @@@MDB
+%   PATH:       String or cellstrings that holds one or more full
+%   filepathes to the exportet txt samples
+% 
+
+if nargin == 0
+    fprintf('Erro, path to exported PCSU samples needed ')
+    exit -1;
+end
+
+if (~iscellstr(path))
+    path={path};
+end
+
+for k=1:length(path)
+    if (exist(path{k}))
+        [~, name, ~] = fileparts(path{k});
+        sam.(name) = importdata(path{k}, '\t',9);
+    else
+        fprintf('Erro, file not found')
+        exit -1;
+    end
+
+    %% Make a time vector based on header information
+
+    tmp=strsplit(sam.(name).textdata{3},'=');
+
+    if (find(cellfun(@isempty, strfind(tmp,'us'))))
+        tmp2 = strsplit(tmp{2}, 'us');
+        sam.(name).ts = 1e-6;
+    else
+        if (find(cellfun(@isempty, strfind(tmp,'ms'))))
+            tmp2 = strsplit(tmp{2}, 'ms');
+            sam.(name).ts = 1e-3;
+        else
+            fprintf('Error, cannot interpret timebase')
+        end
+    end
+    
+    sam.(name).n_samples = length(sam.(name).data);
+    sam.(name).time = [0:1:sam.(name).n_samples-1]*sam.(name).ts;
+    sam.(name).input_file = path{k};
+
+end
+
+fn = fields(sam);
+
+if (varargin{1} == 1) 
+    
+    for k=1:length(fn)
+        tmps = sam.fn{k});
+        [inname, ~, ~] = fileparts(temps.input_file);
+        wavwrite(temps.data{2}, 1/temps.ts, temps.ts,  [inname '_ch1.wav'])
+
+ret = sam;        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

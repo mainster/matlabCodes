@@ -1,0 +1,750 @@
+function varargout = AudioAnalyse (varargin)
+%% [COSTSUM COSTVEC] = AudioAnalyse(CMD, REF)     @@@MDB
+% 
+% Testimplementierung von "Ungarische Methode" ( Kuhn-Munkres-Algorithmus )
+%
+% CMD:           absoluter Pfad zu wave Datei mit aufgezeichnetem Sprachkomando 
+% REF:           absoluter Pfad zu Referenz- wave Datei 
+%
+% COSTSUM:       Kostensumme der optimalen Teillösung?!
+% COSTVEC:       Kostenvector der optimalen Teillösung?!
+
+clearvars -except varargin varargout nargin nargout classSeq;
+
+
+if nargin == 0
+    error('no input file(s) given')
+    WAVESPATH = '/home/mainster/CODES_local/matlab_workspace/wavefiles/15_17_21/';
+    WAVESPATHREF = '/home/mainster/CODES_local/matlab_workspace/wavefiles/0_57_43/';
+    WAVESPATHREF = WAVESPATH;
+else
+    if nargin == 1  % == 1 --> ref und cmd dateien in selbem verzeichniss
+       
+        if ~ischar(varargin{1})
+            error('Only absolut paths are accepted')
+        end
+        if isempty(strfind(varargin{1},'wavefiles')) 
+            error('Keyword ''wavefiles'' not found')
+        end        
+        if ~exist(varargin{1},'file')
+            error(sprintf('File %s not found',varargin{1}))
+        else
+            WAVESPATHREF_FILE = varargin{1};
+        end
+        MODE = 0;
+    end
+    
+    if nargin == 2  % == 1 --> ref und cmd dateien in selbem verzeichniss
+       
+        if ~(ischar(varargin{1}) && ischar(varargin{2}))
+            error('Only absolut paths are accepted')
+        end
+        if isempty(strfind(varargin{1},'wavefiles') || strfind(varargin{2},'wavefiles'))
+            error('Keyword ''wavefiles'' not found')
+        end        
+        if ~exist(varargin{1},'file')
+            error(sprintf('File %s not found',varargin{1}))
+        else
+            WAVESPATH_FILE = varargin{1};
+        end
+        if ~exist(varargin{2},'file')
+            error(sprintf('File %s not found',varargin{2}))
+        else           
+            WAVESPATHREF_FILE = varargin{2};
+        end
+        
+        MODE = 1;
+    end   
+        
+end
+
+global ymic classSeq stCmd stRef1 A S R assign costs y
+evalin('base','global classSeq stCmd stRef1 A S R assign costs y');
+ds = evalin('base','ds;');
+fsGlob = 10000;
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sprachkommando einlesen (recCmd) oder aus wav laden (audioread)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%MODE = 0;   % aufnahme über mic
+
+if MODE == 0
+    if ~exist('ymic.mat','file')
+        optmsg.Default = 'Yes';
+        optmsg.Interpreter = 'none';
+        
+        for k=5:-1:1
+            disp([num2str(k*.5) 's'])
+            delayWait(0.5);
+        end
+%         choice = questdlg('Aufnahme starten','Rec','Yes','No',optmsg)
+%         if strcmp(choice, 'No')
+%             return;
+%         end
+        disp('call...')
+        
+        [ymic, mpCmd, opt] = recCmd(fsGlob, 2, 2); %play(mpCmd)
+%        f33=figure(33);
+%        plot(ymic)
+        save('ymic.mat','ymic', 'mpCmd', 'opt');
+    else
+        load('ymic.mat');
+    end
+    y = ymic;
+    fsCmd = opt{1};
+end
+
+if MODE == 1
+    if ~exist('WAVESPATH_FILE','var')       % --> Keine pfadangabe per fkt.- parameter
+        y = audioread([WAVESPATH, 'waveout_1.wav']);
+        infoCmd = audioinfo([WAVESPATH, 'waveout_1.wav']);
+    else
+        y = audioread(WAVESPATH_FILE);
+        infoCmd = audioinfo(WAVESPATH_FILE);
+    end
+    fsCmd = infoCmd.SampleRate;
+end
+%    y = y(round([0.4:1/fsCmd:1]*fsCmd),1);      % Anfang ausklammern
+    y = 1/5 * y(:,1)/max(abs(y(:,1)));      % auf 0.2 normieren
+
+    objCmd = {y(:,1), fsCmd};
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referenzkommando(s) aus wav laden (audioread)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    yref1=audioread([WAVESPATHREF, 'waveout_nein_2.wav']);
+%    infoRef1=audioinfo([WAVESPATHREF, 'waveout_nein_2.wav']);
+    clear y;
+    
+    if ~exist('WAVESPATHREF_FILE','var')
+        warning('default ref1 wav file selected')
+        y=audioread([WAVESPATHREF, 'waveout_2.wav']);
+        infoRef1=audioinfo([WAVESPATHREF, 'waveout_2.wav']);
+    else
+        y=audioread(WAVESPATHREF_FILE);
+        infoRef1=audioinfo(WAVESPATHREF_FILE);
+    end
+%     
+%     tmp = sum(abs(y));
+%     if (tmp(1) > tmp(2))
+%         del=2;
+%     else
+%         del=1;
+%     end
+    if infoRef1.NumChannels == 2
+        del = 2;
+    else
+        del = 1;
+    end
+    yref1 = 1/5 * y(:,del)/max(abs(y(:,del)));
+
+    fsRef1=infoRef1.SampleRate;
+    objRef1 = {yref1, fsRef1};
+
+%    yref1 = yref1(round([0.4:1/fsRef1:1]*fsRef1),1);      % Anfang ausklammern
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    objectsOld = { objCmd{1}, objRef1{1} };
+    objectsNew = { objCmd{1}, objRef1{1} };
+
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% beide waves auf lowvolume bereich prüfen, der kürzeste Bereich mit
+% lowvolume bestimmt, wie viel samples am anfang der seuenzen  gekappt
+% werden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if 1
+        DIVS = 20;
+
+        f2 = figure(2); clf;
+        SUB=220;
+%         VORHER=[1,3];
+%         NACHHER=[2,4];
+        sb(1) = subplot(SUB+1);
+        sb(2) = subplot(SUB+3);
+        sb(3) = subplot(SUB+2);
+        sb(4) = subplot(SUB+4);
+        
+        for m=1:size(objectsOld,2)
+            y=objectsOld{m};
+            LOWERTHAN(m) = max(y)*3/DIVS;
+            LOWERTHAN_MEAN = mean(LOWERTHAN);
+            lowvol(m) = find(diff( find(y < LOWERTHAN_MEAN) )-1, 1, 'first'); 
+        end
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Festlegung: Referenz- Signale und Sprachcommando müssen die
+        % ersten PRE_DELAY samples ein quiet delay besitzen. Die Audiopegel in
+        % diesem Bereich dürfen den Wert 3/DIVS (3/20) der maximal vorkommenden
+        % Signalamplitude nicht überschreiten. Alle Sequenzen werden auf
+        % identische quiet- delays zugeschnitten (sync)
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        PRE_DELAY = 500;
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        if (~isempty( find(lowvol < PRE_DELAY) ))
+            warning('Zu wenig quiet delay')
+        end
+        
+        for m=1:size(objectsNew,2)
+            objectsNew{m}(1:lowvol(m)-PRE_DELAY) = [];
+        end
+        
+        [MI, I] = min(cellfun(@length, objectsNew));
+        for m=1:length(objectsNew)
+             if m~=I
+                objectsNew{m}(MI+1:end)=[];
+             end
+        end
+        
+        TIT={'Vorher ','Vorher ','Nachher ','Nachher ';...
+             'SprachCmd','Ref1','SprachCmd','Ref1'};
+        objects={objectsOld{:}, objectsNew{:}};
+        for m=1:length(sb)
+            subplot(sb(m));
+            y=objects{m};
+            plot(sb(m), y); hold all;
+            xlim([0,length(y)]);
+            title([TIT{1,m}, TIT{2,m}]);
+            for k=1:DIVS
+                line([0,length(y)],[max(y),max(y)]*k/DIVS,'Color','red','Linestyle','--') 
+            end
+            hold off;
+        end
+        objCmd{1} = objectsNew{1};
+        objRef1{1} = objectsNew{2};
+
+    end
+
+
+    
+    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referenz- und Sprachkommando plotten
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     if fsCmd~=fsRef1
+%         error('Sample rates not equal')
+%     end
+%     fs=fsCmd;      % Oder fsRef1
+%     tt = [0:1/fs:max(length(y),length(yref1))/fs-1/fs]';
+%     f1 = figure(1); clf; hold all;
+%     pl(1) = plot(tt(1:length(y)), y);
+%     pl(2) = plot(tt(1:length(yref1)), yref1);
+%     hold off; grid on;
+%     legend('Sprachkommando','Referenz')
+%     title(sprintf('Sprachkommando und Referenz @ fs = %g samples/sec', fs));
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% - audioplayer- objekte erzeugen
+% - Zeitsequenzen plotten und ui für playbutton erzeugen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if 1
+        mpCmd   = audioplayer(objCmd{:,1}, objCmd{1,2});
+        mpRef1  = audioplayer(objRef1{:,1}, objRef1{1,2});
+    end
+    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ToDo:
+% Normalize!!!!!!!!!!!!!!!!
+%
+%   Pegel der audio sequenzen normalisieren....
+%
+
+
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   !!!   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Überprüfen ob audioplayer Objekt xy den standardmäßig als 'private'
+% implementierten struct- member (field) 'AudioData' besitzt. Wenn nicht,
+% in Klasse audioplayer.m die definitionen für 'Persistent internal
+% properties' von private auf public ändern
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%   !!!   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+errStr=['Überprüfen ob audioplayer Objekt xy den standardmäßig als ',...
+        '''private'' implementierten struct- member (field) ''AudioData''',...
+        'besitzt. Wenn nicht, in Klasse audioplayer.m die Definitionen für ',...
+        '''Persistent internal properties'' von private auf public ändern'];
+
+    if isempty( find(~cellfun(@isempty,strfind(fieldnames(mpCmd), 'AudioData'))) )
+        error(errStr)
+    end
+    
+	mpCmd.UserData = [min(mpCmd.AudioData), max(mpCmd.AudioData)];
+	mpRef1.UserData = [min(mpRef1.AudioData), max(mpRef1.AudioData)];
+    disp('');
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    
+    while 1     % apply filters and plot step response
+        while 0 % HP filter coefficients 
+            %% -------------------------------------------------------------------------
+            % HP Filter konstruieren
+            % --------------------------------------------------------------------------
+            Fpass = 3.5e3;  Fstop = 5e3;    Fs = [objCmd{1,2}, objRef1{1,2}];    
+            Apass = 20;     Astop = 1;      N = 4;
+
+            % Filter Koeffizienten
+            ctp = firls(N, [0 Fpass Fstop Fs(1)/2]/(Fs(1)/2), [1 1 0 0], [Apass, Astop]);
+            ofir1 = dsp.FIRFilter('Numerator', ctp);   
+            ctp = firls(N, [0 Fpass Fstop Fs(2)/2]/(Fs(2)/2), [1 1 0 0], [Apass, Astop]);
+            ofir2 = dsp.FIRFilter('Numerator', ctp);  
+
+            % Frequenzgang der Filter plotten
+            if 1
+                ofir1.freqz(max(size(objCmd{1})))        
+            end
+            
+            %% -------------------------------------------------------------------------
+            % Filter anwenden
+            % --------------------------------------------------------------------------
+            stCmd.orig = objCmd{1};
+            stCmd.hped = step(ofir1, objCmd{1});
+            stRef1.orig = objRef1{1};
+            stRef1.hped = step(ofir2, objRef1{1});
+
+            break;
+        end
+        
+        %% -------------------------------------------------------------------------
+        % rectify
+        % --------------------------------------------------------------------------
+         objCmd{3} = objCmd{1};%abs(objCmd{1});
+         objRef1{3} = objRef1{1};% abs(objRef1{1});
+%        objCmd{3} = abs(objCmd{1});
+%        objRef1{3} = abs(objRef1{1});
+
+        %% -------------------------------------------------------------------------
+        % Design an order N lowpass filter with transition band: 
+        % --------------------------------------------------------------------------
+        Fpass = 3.8e3;  Fcut = 5e3;    N = 20;    
+        Fs = [objCmd{1,2}, objRef1{1,2}];    
+
+        % Filter Koeffizienten
+%         ctp = firls(N, [0 Fpass Fcut Fs(1)/2]/(Fs(1)/2), [1 1 0 0]);
+%         ofir1 = dsp.FIRFilter('Numerator', ctp);   
+%         ctp = firls(N, [0 Fpass Fcut Fs(2)/2]/(Fs(2)/2), [1 1 0 0]);
+%         ofir2 = dsp.FIRFilter('Numerator', ctp);  
+
+        % Frequenzgang der Filter plotten
+        if 0
+            ofir1.freqz(max(size(objCmd{1})))     
+            set(gca,'XTickLabel', num2str(max(length(objCmd{1}))*str2num(get(gca,'XTickLabel'))))
+        end
+
+        N = 10;  
+        Fc = 0.4;
+        B = fir1(N,Fc);
+        Hf1 = dsp.FIRFilter('Numerator',B);
+        %freqz(b,1,512)
+        
+
+        %% -------------------------------------------------------------------------
+        % Filter anwenden (auf gleichgerichtete sequenz)
+        % --------------------------------------------------------------------------
+        stCmd.orig = objCmd{3};
+        stCmd.tped = step(Hf1, objCmd{3});
+        stRef1.orig = objRef1{3};
+        stRef1.tped = step(Hf1, objRef1{3});            
+
+%         break;
+        
+        %% -------------------------------------------------------------------------
+        % Step response plotten
+        % --------------------------------------------------------------------------
+        f7 = figure(7); clf; SUB=220; 
+        clear tt su pl;
+        tt{1} = [0:1/Fs(1):length(stCmd.orig)/Fs(1)-1/Fs(1)]';
+
+        if isfield(stCmd,'hped')
+            DATA = {stCmd.orig, stCmd.hped, stRef1.orig, stRef1.hped};
+            VNAMEV = {'stCmd.orig', 'stCmd.tped','stRef1.orig', 'stRef1.tped'};
+            KEY = {'Ungefiltert', 'HP- gefiltert', 'Ungefiltert', 'HP- gefiltert'};
+        else
+            DATA = {stCmd.orig, stCmd.tped, stRef1.orig, stRef1.tped};
+            VNAMEV = {'stCmd.orig', 'stCmd.tped','stRef1.orig', 'stRef1.tped'};
+            KEY = {'Ungefiltert', 'TP- gefiltert', 'Ungefiltert', 'TP- gefiltert'};
+        end
+        for k=1:4
+            su(k)=subplot(SUB+k); hold all; grid on;
+            pl(k,:) = plot(tt{1}, DATA{k}); hold off;
+            title(sprintf(['%s   fs = %g samples/sec'], KEY{k}, Fs(1)));
+            legend(VNAMEV{k})
+        end
+
+        %% ------------------------------------------------------------------------
+        % -------------------------------------------------------------------------
+        uicontrol('Style', 'pushbutton', 'String', 'play mdb',...
+        'Units','Normalized', 'Position', [5 50 5 3]/100,...
+        'Callback', {@playbutton, mpCmd, su(1)}); 
+
+        uicontrol('Style', 'pushbutton', 'String', 'play Waus',...
+        'Units','Normalized','Position', [5 5 5 3]/100,...
+        'Callback', {@playbutton, mpRef1, su(3)}); 
+
+        % -------------------------------------------------------------------------
+        % -------------------------------------------------------------------------
+        break;
+    end
+    
+    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Klassifizierung der gleichgerichteten, TP- gefilterten sequenzen.
+% Anwenden des munkres algorithmus
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% classify audio sequencs and apply algorithm
+    clear classSeq;
+    
+    classSeq(1,:) = cell2mat( classification_2bit(stCmd.tped') );
+    classSeq(2,:) = cell2mat( classification_2bit(stRef1.tped') );
+    % --------------------------------------------------------------------------
+    % klassifizierte Sequenzen in Symbolpakete aufteilen und munkres anwenden
+    % --------------------------------------------------------------------------
+    
+    SYMPACLEN = 30;
+    NPACS = round(length(classSeq(1,:)) / 30);
+
+%     for k=1:NPACS-1
+%         classSeq(1,:)
+%     end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Distanz der Klassifizierung 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if 0
+    S = classSeq(1,:);
+    R = classSeq(2,:);
+    
+    makeAssign = zeros(1,NPACS);
+    makeCost = zeros(1,NPACS);
+    A = zeros(SYMPACLEN, SYMPACLEN);
+    costsVec = zeros(1,NPACS);
+    
+    for k=1:NPACS-1
+        tic
+        for i=1:SYMPACLEN
+            for j=1:SYMPACLEN
+                A(i,j)=abs(R(SYMPACLEN+i)-S(SYMPACLEN+j));
+            end
+        end
+        
+%         for i=1:SYMPACLEN
+%             for j=1:SYMPACLEN
+%         %        aa(i,j)=mod(s2(i),s1(j));
+%                 switch(abs(R(0*SYMPACLEN+i)-S(0*SYMPACLEN+j)))
+%         %         switch(kkk)
+%                     case 0
+%                         A(i,j) = 0;
+%                     case 1
+%                         A(i,j) = 5;
+%                     case 2
+%                         A(i,j) = 10;
+%                     case 3
+%                         A(i,j) = 8;
+%                     case 4
+%                         A(i,j) = 10;
+%                     otherwise
+%                 warning('bad solution')
+%                 end
+%             end
+%         end        
+%         
+%         
+        makeCost(k) = toc;
+
+        tic
+        [assign, costs] = munkres(A);
+        makeAssign(k) = toc;
+        
+        costsVec(k) = costs;
+    end
+end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Klassifizierung wird hier noch nicht angewendet
+%%% Vorerst direkt mit Abtastwerten
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if 1
+    R = stRef1.orig;
+    S = stCmd.orig;
+    
+    makeAssign = zeros(1,NPACS);
+    makeCost = zeros(1,NPACS);
+    A = zeros(SYMPACLEN, SYMPACLEN);
+    costsVec = zeros(1,NPACS);
+    
+    for k=1:NPACS-1
+        R = stRef1.tped;
+        S = stCmd.tped;
+        tic
+        for i=1:SYMPACLEN
+            for j=1:SYMPACLEN
+                A(i,j)=abs(R(SYMPACLEN+i)-S(SYMPACLEN+j));
+            end
+        end
+        makeCost(k) = toc;
+
+        tic
+        [assign, costs] = munkres(A);
+        makeAssign(k) = toc;
+        
+        costsVec(k) = costs;
+    end
+end
+
+% 	fprintf('%s\n',ds);
+%     switch (k)
+%         case 1
+%             fprintf('fernseher aus\n');
+%         case 2
+%             fprintf('radio aus\n');
+%         case 3
+%             fprintf('fenster zu\n');
+%         case 4
+%             fprintf('Türe auf\n');
+%         otherwise
+%             fprintf('häää\n');
+%     end
+        
+
+	fprintf('%ix%i Kostenmatrix erzeugen:\n\tmean(makeCost) = %.4gs\n\tsum(makeCost) = %.4gs\n',...
+        SYMPACLEN, SYMPACLEN, mean(makeCost), sum(makeCost))
+	fprintf('%s\n',ds);
+	fprintf('Munkres auf %ix%i Matrix anwenden:\n\tmean(makeAssign) = %.4gs\n\tsum(makeAssign) = %.4gs\n',...
+        SYMPACLEN, SYMPACLEN, mean(makeAssign), sum(makeAssign))
+	fprintf('%s\n',ds);
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Rückgabeparameter setzen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if nargout >= 0
+        varargout{1} = sum(costsVec);
+    end
+    if nargout >= 2
+        varargout{2} = costsVec;
+    end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%       fprintf('Munkres assign:\n');
+ %       disp( strrep(mprintf(assign,0),'0','.') )
+
+ 
+    
+% Bei den Zeitsignalen könnte der Matrixeintrag durch a(i,j)=abs(R(i)-S(J)) bestimmt werden.
+% 
+% Bei den Symbolen durch eine Umsetztabelle
+% 
+%            R             F         Max         Min
+% R        0            10        5                8
+% F        10            0        8                5
+% Max    5             8         0               10
+% Min    8              5        10               0
+    
+    
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FFT analyze and plot
+
+if 0
+DATA = {stCmd.tped, stCmd.orig, stRef1.tped, stRef1.orig};
+
+
+[Y ffopt]=genSpectraMatrix(DATA, Fs(1));
+specObj = {Y ffopt};
+fv = ffopt.freqLin;
+NFFT = ffopt.NFFT;
+X = sym('X')
+
+
+XSCAL = 0.05;
+XSCAL = 1;
+XSCAL = double(solve(length(fv)*X==round(length(fv)*XSCAL),X));
+%XSCALFIL = double(solve(length(fv)*X==round(length(fv)*XSCAL),X));
+
+% Plot Spektrum
+%%%%%%%%%%%%%%%%%%%%%
+
+f10=figure(10);
+clf;
+f11=figure(11);
+clf;
+%SUB=(100*min(size(Y)) + 10);
+SUB=220;
+
+figure(f10)
+for N=1:4
+    suSpLg(N) = subplot(SUB+N); hold all;
+end
+
+figure(f11)
+for N=1:4
+    suSpLi(N) = subplot(SUB+N); hold all;
+end
+% X- Vektor mit lin. Frequenzen
+% Y- Matritzen lin. und log
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SF = fv(1:length(fv)*XSCAL);
+for k=1:size(Y,2)
+    YLI(:,k) = 2*abs( Y(1:XSCAL*(NFFT/2+1),k) ); 
+    YLG(:,k) = 10*log10( 2*abs(Y(1:XSCAL*(NFFT/2+1),k)) );
+end
+
+% log. diagramm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+MINY_LOG = round(0.1*min(YLG(:)))*10;
+
+    for k=1:min(size(Y))
+        pl(k) = plot(suSpLg(k),SF, YLG(:,k)'); 
+    end
+%     subplot(su(2));
+    legend({'acw: orig'; 'facw: filtered'; 'fdcw: rect+fil'},'Interpreter','none');
+    title('LOG Referenz- und Test Spektren, linear')
+    xlabel('Freq / [Hz]')
+    grid 'on';
+
+    set(suSpLg,'XGrid','on','YGrid','on');
+    set(pl(1),'Color','blue');
+    set(pl(2),'Color','green');
+    set(pl(3),'Color','red');
+
+    
+% lin diagramm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+MINY_LIN = round(0.1*min(YLI(:)))*10;
+
+    for k=1:min(size(Y))
+        plLi(k) = plot(suSpLi(k),SF, YLI(:,k)'); 
+    end
+%     subplot(su(2));
+    legend({'acw: orig'; 'facw: filtered'; 'fdcw: rect+fil'},'Interpreter','none');
+    title('LIN Referenz- und Test Spektren, linear')
+    xlabel('Freq / [Hz]')
+    grid 'on';
+
+    set(suSpLi,'XGrid','on','YGrid','on');
+    set(plLi(1),'Color','blue');
+    set(plLi(2),'Color','green');
+    set(plLi(3),'Color','red');
+
+end
+%     %% ------------------------------------------------------------------------
+%     % -------------------------------------------------------------------------
+% %    SLID_POS=[[400, 20, 200, 20]; [400, 20, 200, 20]]
+%      SLID_POS=[[5 50 5 3]/100; [55 50 55 3]/100];
+%     for k=1:4
+% %        subplot(suSpLg(k));
+% %         hax = axes('Units','pixels');
+%         set(suSpLi(k),'Units','normalized');
+%         uicontrol('Style', 'slider',...
+%                 'Min',50,'Max',8e3,'Value',8e3,...
+%                 'Position', SLID_POS(1,:),...
+%             'Callback', {@surfbandw,suSpLi(k)}); 
+%     end
+%     % -------------------------------------------------------------------------
+%     % -------------------------------------------------------------------------
+%     
+    
+    
+    
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+% 
+% 
+%         [Yff opt]=genSpectraMatrix(DATA, Fs(1));
+% 
+%         % --------------------------------------------------------------------------
+%         % Step response plotten
+%         % --------------------------------------------------------------------------
+%         f8 = figure(8); clf; SUB=220; 
+%         clear DATA;
+% %         tt{1} = [0:1/Fs(1):length(stRt.orig)/Fs(1)-1/Fs(1)]';
+% 
+% %        DATA = {stRt.orig, stRt.hped, stRef1.orig, stRef1.hped};
+%         VNAMEV = {vname(stCmd.orig), vname(stCmd.hped), vname(stRef1.orig), vname(stRef1.orig)};
+%         KEY = {'Ungefiltert', 'HP- gefiltert', 'Ungefiltert', 'HP- gefiltert'};
+%         
+%         for k=1:4
+%             su(k)=subplot(SUB+k); hold all; grid on;
+%             pl(k) = plot(opt(k).freqLin, Yff(:,k)); hold off;
+%             title(sprintf(['%s   fs = %g samples/sec'], VNAMEV{k}, Fs(1)));
+%         end    
+%             
+% while 0
+%     %% -------------------------------------------------------------------------
+%     % Grundton dämpfen, Filter konstruieren
+%     % --------------------------------------------------------------------------
+%     Fpass = 3.5e3;  Fstop = 5e3;    Fs = [objMdb{1,2}, objWaus{1,2}];    
+%     Apass = 20;     Astop = 1;      N = 4;
+% 
+%     % Filter Koeffizienten
+%     ctp = firls(N, [0 Fpass Fstop Fs(1)/2]/(Fs(1)/2), [1 1 0 0], [Apass, Astop]);
+%     ofir1 = dsp.FIRFilter('Numerator', ctp);   
+%     ctp = firls(N, [0 Fpass Fstop Fs(2)/2]/(Fs(2)/2), [1 1 0 0], [Apass, Astop]);
+%     ofir2 = dsp.FIRFilter('Numerator', ctp);  
+% 
+%     %% --------------------------------------------------------------------------
+%     % Step response plotten
+%     % --------------------------------------------------------------------------
+%     f7 = figure(7); clf; SUB=210; 
+%     tt{1} = [0:1/Fs(1):length(objMdb{1})/Fs(1)-1/Fs(1)]';
+%     su(1)=subplot(SUB+1); hold all; grid on;
+%     wavMdb = plot(tt{1}, step(ofir1, objMdb{1}));
+%     title(sprintf('%s   fs = %g samples/sec', vname(objMdb), Fs(1)));
+% 
+%     tt{2} = [0:1/Fs(2):length(objWaus{1})/Fs(2)-1/Fs(2)]';
+%     su(2)=subplot(SUB+2); hold all; grid on;
+%     wavWaus = plot(tt{2}, step(ofir2, objWaus{1}));
+%     title(sprintf('%s   fs = %g samples/sec', vname(objWaus), Fs(2)));
+% 
+%     hold off;
+%     break;
+% end
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Callbacks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% -------------------------------------------------------------------------
+% Surf freq- axis
+% --------------------------------------------------------------------------
+function surfbandw(hObj,event,ax) 
+    val = get(hObj,'Value');
+
+    xlim([1, val])
+
+end
+
+%% -------------------------------------------------------------------------
+% Play buttons callbacks
+% --------------------------------------------------------------------------
+function playbutton(hObj,event,mpobj,hsub)
+    na = get(hObj, 'String');
+    val = get(hObj,'Value');
+    
+    if ~isempty(na)
+        idx=find(cellfun(@isempty, strfind({'play rt';'play ref1'},na)));        
+        subplot(hsub); hold on; 
+        
+        play(mpobj);
+        CUR = mpobj.CurrentSample;
+
+        while CUR > 1
+           li=line([CUR, CUR]/mpobj.SampleRate,[mpobj.UserData],'Color','Red');
+           drawnow;
+           CUR = mpobj.CurrentSample;
+           delete(li); 
+        end
+        
+        hold off;
+    end
+end
+
+end

@@ -1,0 +1,1158 @@
+Model {
+  Name			  "Parkhaus_graphical_function"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Apr 16 16:28:15 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jun 07 17:23:17 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:48>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "1000000000"
+  SolverMode		  "Auto"
+  Solver		  "FixedStepDiscrete"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.01"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Parkhaus_graphical_function"
+    Location		    [338, 263, 1005, 629]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Display
+      Name		      "Anzahl Autos"
+      Ports		      [1]
+      Position		      [500, 150, 590, 180]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Besetzt"
+      Ports		      [1]
+      Position		      [500, 215, 590, 245]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Enable"
+      Position		      [30, 245, 60, 275]
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a1"
+      Position		      [25, 18, 45, 42]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a2"
+      Position		      [30, 123, 50, 147]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Lichtschranke2"
+      Position		      [30, 163, 50, 187]
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch2"
+      Ports		      [2, 1]
+      Position		      [120, 137, 150, 173]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch3"
+      Ports		      [2, 1]
+      Position		      [105, 32, 135, 68]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [5, 1]
+      Position		      [270, 34, 275, 186]
+      ShowName		      off
+      Inputs		      "5"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start"
+      Position		      [25, 51, 45, 79]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Steuerung"
+      Ports		      [0, 2, 0, 1]
+      Position		      [330, 133, 435, 262]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private'"
+",'sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl',"
+"'Center','VerticalAl','Bottom');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Steuerung"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  " input events "
+	  Ports			  [0, 1]
+	  Position		  [20, 101, 40, 119]
+	  TriggerType		  "either"
+	  ShowOutputPort	  on
+	  OutputDataType	  "auto"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 180, 320, 220]
+	  Outputs		  "1"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function Parkhaus_graphical_fun"
+"ction 1"
+	  Ports			  [1, 3]
+	  Position		  [180, 100, 230, 180]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 3]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 191, 480, 209]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Autos"
+	  Position		  [460, 101, 480, 119]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Besetzt"
+	  Position		  [460, 136, 480, 154]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "Autos"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  3
+	  DstBlock		  "Besetzt"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " input events "
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [100, 0]
+      DstBlock		      "Steuerung"
+      DstPort		      trigger
+    }
+    Line {
+      SrcBlock		      "Lichtschranke2"
+      SrcPort		      1
+      Points		      [35, 0; 0, -10]
+      DstBlock		      "Manual Switch2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a2"
+      SrcPort		      1
+      Points		      [50, 0]
+      DstBlock		      "Manual Switch2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Start"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Manual Switch3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Manual Switch3"
+      SrcPort		      1
+      Points		      [60, 0]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 30]
+	DstBlock		"Mux"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Steuerung"
+      SrcPort		      1
+      DstBlock		      "Anzahl Autos"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Getraenk2a1"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Manual Switch3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Steuerung"
+      SrcPort		      2
+      DstBlock		      "Besetzt"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch2"
+      SrcPort		      1
+      Points		      [25, 0; 0, -45; 20, 0]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, 30]
+	DstBlock		"Mux"
+	DstPort			4
+      }
+    }
+    Line {
+      SrcBlock		      "Enable"
+      SrcPort		      1
+      Points		      [125, 0; 0, -90]
+      DstBlock		      "Mux"
+      DstPort		      5
+    }
+    Annotation {
+      Position		      [42, 91]
+      Text		      "Lichtschranke1"
+    }
+  }
+}
+
+# Finite State Machines
+# -- File save dated 07-Jun-2001 17:23:18
+#
+#    Stateflow Version 4.0 (R12) dated Oct  4 2000, 19:47:56
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"Parkhaus_graphical_function"
+		created              		"16-Apr-2001 16:28:16"
+		firstTarget          		44
+		sfVersion            		40012071
+	}
+
+	chart {
+		id                       		2
+		name                     		"Steuerung"
+		windowPosition           		[56.25 44.25 807 529.5]
+		viewLimits               		[0 763.5 45.196 538.696]
+		screen                   		[1 1 1152 864 1.333333333333333]
+		treeNode                 		[0 3 0 0]
+		firstTransition          		14
+		viewObj                  		2
+		visible                  		1
+		machine                  		1
+		subviewS {
+		}
+		decomposition            		CLUSTER_CHART
+		firstEvent               		35
+		firstData                		40
+		chartFileNumber          		1
+	}
+
+	state {
+		id             		3
+		labelString    		"Idle\n"
+						"entry:\n"
+						"Besetzt=parkhaus2(Autos,Plaetze)"
+		position       		[209.831 76.611 212.919 53.104]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 0 8]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		4
+		labelString    		"ZE1"
+		position       		[112.245 151.195 76.625 42.375]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 8 9]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		5
+		labelString    		"ZA3"
+		position       		[435.303 292.944 76.625 42.375]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 6 7]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		6
+		labelString    		"ZE2"
+		position       		[114.641 223.362 76.625 42.375]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 9 5]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		7
+		labelString    		"ZE3"
+		position       		[115.391 299.111 76.625 42.375]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 5 10]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		8
+		labelString    		"ZA1"
+		position       		[431.299 131.778 76.625 42.375]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 3 4]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		9
+		labelString    		"ZA2"
+		position       		[432.248 212.638 76.625 42.375]
+		fontSize       		10
+		chart          		2
+		treeNode       		[2 0 4 6]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		10
+		labelString    		"y = parkhaus2(a1,a2)"
+		position       		[186 376.688 257.281 160.219]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 0 7 0]
+		firstTransition		29
+		firstJunction  		11
+		subviewer      		2
+		type           		FUNC_STATE
+		decomposition  		CLUSTER_STATE
+		firstData      		32
+	}
+
+	junction {
+		id         		11
+		position   		[329.7499999999997 460.1250000000001 7]
+		chart      		2
+		linkNode   		[10 0 13]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	junction {
+		id         		12
+		position   		[280.0624999999997 509.8125000000001 7]
+		chart      		2
+		linkNode   		[10 13 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	junction {
+		id         		13
+		position   		[368.1874999999997 506.0625000000001 7]
+		chart      		2
+		linkNode   		[10 11 12]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		14
+		labelPosition  		[262.527 54.555 8.25 14.977]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 266.0173682782676 47.36089635037016 0]
+		}
+		dst {
+			id          		3
+			intersection		[1 0 -1 0.2638888888888876 266.0174583333331 76.6105 
+								  0]
+		}
+		midPoint       		[262.526767538166 54.97681441743535]
+		chart          		2
+		linkNode       		[2 0 16]
+		dataLimits     		[262.521 268.417 47.361 76.611]
+		subviewer      		2
+	}
+
+	transition {
+		id             		15
+		labelString    		"a"
+		labelPosition  		[169.133 106.448 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		3
+			intersection		[4 -1 0 0.711111111111123 209.8305 91.95165555555492 
+								  0]
+		}
+		dst {
+			id          		4
+			intersection		[1 0 -1 0.7714170744970088 171.3543333333333 151.1945 
+								  0]
+		}
+		midPoint       		[181.0912274409815 110.0222083520497]
+		chart          		2
+		linkNode       		[2 16 22]
+		dataLimits     		[168.954 209.831 91.952 151.195]
+		subviewer      		2
+	}
+
+	transition {
+		id             		16
+		labelString    		"c"
+		labelPosition  		[452.062 93.182 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		3
+			intersection		[2 1 0 0.2592592592592474 422.7495 90.37820370370308 
+								  0]
+		}
+		dst {
+			id          		8
+			intersection		[1 0 -1 0.2761708326875307 452.4605900546821 131.7775 
+								  0]
+		}
+		midPoint       		[447.5121083886996 106.4683678313902]
+		chart          		2
+		linkNode       		[2 14 15]
+		dataLimits     		[422.75 454.861 90.378 131.778]
+		subviewer      		2
+	}
+
+	transition {
+		id             		17
+		labelString    		"c"
+		labelPosition  		[165.624 199.109 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		4
+			intersection		[3 0 1 0.2152599911464871 172.3752031784005 193.5695 
+								  0]
+		}
+		dst {
+			id          		6
+			intersection		[1 0 -1 0.7534669760564833 172.374907040328 223.3615 
+								  0]
+		}
+		midPoint       		[172.3751770465446 204.8524082261468]
+		chart          		2
+		linkNode       		[2 20 25]
+		dataLimits     		[169.975 174.775 193.57 223.362]
+		subviewer      		2
+	}
+
+	transition {
+		id             		18
+		labelString    		"b"
+		labelPosition  		[228.774 167.917 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		4
+			intersection		[2 1 0 0.4867256637168121 188.8695 171.8194999999999 
+								  0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.7924528301886833 254.0212358490558 129.7145 
+								  0]
+		}
+		midPoint       		[232.715018240741 164.1290151186434]
+		chart          		2
+		linkNode       		[2 22 28]
+		dataLimits     		[188.869 256.421 129.714 171.865]
+		subviewer      		2
+	}
+
+	transition {
+		id             		19
+		labelString    		"d"
+		labelPosition  		[389.457 153.402 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		8
+			intersection		[4 -1 0 0.5685840707964609 431.299 150.05875 0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.2028644380280651 379.5558067195025 129.7145 
+								  0]
+		}
+		midPoint       		[398.1153551080971 150.9333468007108]
+		chart          		2
+		linkNode       		[2 28 24]
+		dataLimits     		[377.156 431.299 129.714 151.948]
+		subviewer      		2
+	}
+
+	transition {
+		id             		20
+		labelString    		"a"
+		labelPosition  		[456.445 183.868 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		8
+			intersection		[3 0 1 0.7234866775421424 452.4868333333334 174.1525 
+								  0]
+		}
+		dst {
+			id          		9
+			intersection		[1 0 -1 0.2641218053289826 452.4863333333333 212.6385 
+								  0]
+		}
+		midPoint       		[452.4866666666667 189.9712078573192]
+		chart          		2
+		linkNode       		[2 23 17]
+		dataLimits     		[450.086 454.886 174.153 212.638]
+		subviewer      		2
+	}
+
+	transition {
+		id             		21
+		labelString    		"d"
+		labelPosition  		[459.673 267.308 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		9
+			intersection		[3 0 1 0.7114083741163682 454.3613333333333 255.0135 
+								  0]
+		}
+		dst {
+			id          		5
+			intersection		[1 0 -1 0.2487286568787384 454.3618333333334 292.9435 
+								  0]
+		}
+		midPoint       		[454.3616666666667 270.5420991616671]
+		chart          		2
+		linkNode       		[2 27 26]
+		dataLimits     		[451.962 456.762 255.013 292.943]
+		subviewer      		2
+	}
+
+	transition {
+		id             		22
+		labelString    		"d/Autos++"
+		labelPosition  		[229.218 305.52 47.25 13.48]
+		fontSize       		10
+		src {
+			id          		7
+			intersection		[3 0 1 0.2030277324632959 176.4585 341.4865 0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.6336832824680013 287.8262891801957 129.7145 
+								  0]
+		}
+		midPoint       		[235.7716646163941 292.664231874139]
+		chart          		2
+		linkNode       		[2 15 18]
+		dataLimits     		[176.459 294.54 129.714 348.885]
+		subviewer      		2
+	}
+
+	transition {
+		id             		23
+		labelString    		"d"
+		labelPosition  		[82.947 194.616 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		6
+			intersection		[4 -1 0 0.7253333333333372 114.6405 235.0004999999999 
+								  0]
+		}
+		dst {
+			id          		4
+			intersection		[4 -1 0 0.6345296471902182 112.2445 166.6813062003145 
+								  0]
+		}
+		midPoint       		[92.04547510804224 198.6142872674531]
+		chart          		2
+		linkNode       		[2 24 20]
+		dataLimits     		[91.811 114.641 164.281 235]
+		subviewer      		2
+	}
+
+	transition {
+		id             		24
+		labelString    		"b"
+		labelPosition  		[537.172 180.44 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		9
+			intersection		[2 1 0 0.3535411492699585 508.8730000000001 227.6198062003145 
+								  0]
+		}
+		dst {
+			id          		8
+			intersection		[2 1 0 0.3738715327507853 507.924 147.6203062003145 0]
+		}
+		midPoint       		[532.5919448492031 185.0127543387219]
+		chart          		2
+		linkNode       		[2 19 23]
+		dataLimits     		[507.924 532.632 145.22 227.62]
+		subviewer      		2
+	}
+
+	transition {
+		id             		25
+		labelString    		"c"
+		labelPosition  		[536.027 269.5 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		5
+			intersection		[2 1 0 0.3906030961726136 511.9280000000001 309.4953062003145 
+								  0]
+		}
+		dst {
+			id          		9
+			intersection		[2 1 0 0.6190278749336753 508.8730000000001 238.8698062003145 
+								  0]
+		}
+		midPoint       		[532.2010956720018 271.8807682287523]
+		chart          		2
+		linkNode       		[2 17 27]
+		dataLimits     		[508.873 532.2 236.47 309.495]
+		subviewer      		2
+	}
+
+	transition {
+		id             		26
+		labelString    		"b"
+		labelPosition  		[166.836 274.087 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		6
+			intersection		[3 0 1 0.2272256661228933 173.8543333333333 265.7365 
+								  0]
+		}
+		dst {
+			id          		7
+			intersection		[1 0 -1 0.762986405655247 173.8543333333333 299.1115 
+								  0]
+		}
+		midPoint       		[173.8543333333333 278.8888382921016]
+		chart          		2
+		linkNode       		[2 21 0]
+		dataLimits     		[171.454 176.254 265.736 299.111]
+		subviewer      		2
+	}
+
+	transition {
+		id             		27
+		labelString    		"a"
+		labelPosition  		[84.754 275.568 6.75 13.48]
+		fontSize       		10
+		src {
+			id          		7
+			intersection		[4 -1 0 0.5853733050073267 115.3905 316.6813062003145 
+								  0]
+		}
+		dst {
+			id          		6
+			intersection		[4 -1 0 0.4201815645943474 114.6405 247.9313062003145 
+								  0]
+		}
+		midPoint       		[93.57432348726053 280.0658710067581]
+		chart          		2
+		linkNode       		[2 25 21]
+		dataLimits     		[93.45 115.391 245.531 316.681]
+		subviewer      		2
+	}
+
+	transition {
+		id             		28
+		labelString    		"b/Autos--"
+		labelPosition  		[348.385 299.297 41.25 13.48]
+		fontSize       		10
+		src {
+			id          		5
+			intersection		[3 0 1 0.7594279499728114 453.7368333333333 335.319 0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.4592098403618281 324.975 129.7145 0]
+		}
+		midPoint       		[385.5824590095311 290.4951778946424]
+		chart          		2
+		linkNode       		[2 18 19]
+		dataLimits     		[319.936 453.737 129.714 343.881]
+		subviewer      		2
+	}
+
+	transition {
+		id             		29
+		labelPosition  		[318.218 427.055 8.25 14.977]
+		fontSize       		12
+		src {
+			intersection		[0 0.894427190999916 -0.447213595499958 0 309.8489950002516 
+								  420.3229900005038 0]
+		}
+		dst {
+			id          		11
+			intersection		[0 -0.447213595499958 -0.894427190999916 -1 326.6195048315 
+								  453.8640096630007 0]
+		}
+		midPoint       		[318.2183987723681 427.0549017302496]
+		chart          		2
+		linkNode       		[10 0 31]
+		dataLimits     		[309.849 326.62 420.012 453.864]
+		subviewer      		2
+	}
+
+	transition {
+		id             		30
+		labelString    		"[a1<a2]{y=0;}"
+		labelPosition  		[360.337 469.546 70.5 14.977]
+		fontSize       		12
+		src {
+			id          		11
+			intersection		[0 0.6417226326736842 0.7669368049026959 -1 334.2420584287155 
+								  465.4935576343189 0]
+		}
+		dst {
+			id          		13
+			intersection		[0 -0.6417226326736842 -0.7669368049026959 -1 363.6954415712839 
+								  500.6939423656812 0]
+		}
+		midPoint       		[346.8748499887731 480.5912841329243]
+		chart          		2
+		linkNode       		[10 31 0]
+		dataLimits     		[334.242 363.695 465.494 500.694]
+		subviewer      		2
+		drawStyle      		STRAIGHT
+	}
+
+	transition {
+		id             		31
+		labelString    		"[a1>=a2]{y=1;}"
+		labelPosition  		[211.862 464.506 77.25 14.977]
+		fontSize       		12
+		src {
+			id          		11
+			intersection		[0 -0.894427190999916 0.447213595499958 -1 323.4890096630003 
+								  463.2554951684998 0]
+		}
+		dst {
+			id          		12
+			intersection		[0 -0.196116135138184 -0.9805806756909201 -1 278.6896870540325 
+								  502.9484352701636 0]
+		}
+		midPoint       		[290.876797949269 475.7709650006077]
+		chart          		2
+		linkNode       		[10 29 30]
+		dataLimits     		[274.767 323.489 463.255 502.948]
+		subviewer      		2
+	}
+
+	data {
+		id               		32
+		name             		"y"
+		linkNode         		[10 0 33]
+		scope            		FUNCTION_OUTPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		33
+		name             		"a1"
+		linkNode         		[10 32 34]
+		scope            		FUNCTION_INPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		34
+		name             		"a2"
+		linkNode         		[10 33 0]
+		scope            		FUNCTION_INPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	event {
+		id         		35
+		name       		"a"
+		linkNode   		[2 0 36]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		36
+		name       		"b"
+		linkNode   		[2 35 37]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		37
+		name       		"c"
+		linkNode   		[2 36 38]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		38
+		name       		"d"
+		linkNode   		[2 37 39]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		39
+		name       		"Enable"
+		linkNode   		[2 38 0]
+		scope      		INPUT_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	data {
+		id               		40
+		name             		"Autos"
+		linkNode         		[2 0 41]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		41
+		name             		"Besetzt"
+		linkNode         		[2 40 42]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		42
+		name             		"Plaetze"
+		linkNode         		[2 41 0]
+		scope            		CONSTANT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			initialValue		"5"
+		}
+	}
+
+	instance {
+		id     		43
+		name   		"Steuerung"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id               		44
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}

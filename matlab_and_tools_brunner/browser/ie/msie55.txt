@@ -1,0 +1,1 @@
+i:\msie55\ie5setup.exe /c:"ie5wzd.exe /d /s:""#E""

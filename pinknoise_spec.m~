@@ -1,0 +1,17 @@
+
+Fs=1000;
+tt=[0:1/Fs:1-1/Fs];
+pnt=pinknoise(length(tt))
+
+f1=figure(1);
+plot(tt,pnt)
+title('pink noise - time domain');
+
+NFFT = 2^nextpow2(length(pnt)); % Next power of 2 from length of y
+pnf = fft(pnt,NFFT)/length(pnt);
+ff = Fs/2*linspace(0,1,NFFT/2+1);
+
+f2=figure(2);
+% Plot single-sided amplitude spectrum.
+plot(ff,2*abs(pnf(1:NFFT/2+1))) 
+title('Chirp Signal frequency domain')

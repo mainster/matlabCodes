@@ -1,0 +1,541 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>GalvoModel_v3_detailed</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="GalvoModel_v3_detailed"><div class="titlepage"><div><div><h1 class="title"><a name="d0e1"></a>GalvoModel_v3_detailed</h1></div><div><h2 class="subtitle"></h2></div><div><div class="mediaobject"><map name="d0e14"><area coords="46,300,76,314" shape="rect" href="#3782ef4bd40c9c7a9c4084f213a80f6b"><area coords="646,393,686,431" shape="rect" href="#5b3f4735375f1085ec4bb70a8af52e7f"><area coords="546,284,581,330" shape="rect" href="#e0c2ce4cef862f141c8e274a369fa905"><area coords="506,347,536,377" shape="rect" href="#f556a5254f229be02139bb760b96ca54"><area coords="491,292,521,322" shape="rect" href="#78c75ccff7ae0b2c1d0c3e6967bf5b1a"><area coords="746,292,776,322" shape="rect" href="#6a8a102efd32945ab5a9634df4ab07ed"><area coords="151,278,206,336" shape="rect" href="#344c1f56cc1c700aae9466123d3fb642"><area coords="806,284,851,330" shape="rect" href="#aec6732cf74c1abac210110635f8d8b9"><area coords="46,232,76,262" shape="rect" href="#d6f10e432da44e0898680440230d8d9a"><area coords="436,292,466,322" shape="rect" href="#f0d138520302437943583cec130ef994"><area coords="701,297,721,317" shape="rect" href="#2c241d452fce032af8ef7ec41457cf4b"><area coords="266,297,286,317" shape="rect" href="#3f98e9751b9af1bd0269a3a5d953474a"><area coords="111,297,131,317" shape="rect" href="#3e8581342d7e1cd8e2f2868ba0cb3d86"><area coords="631,287,676,327" shape="rect" href="#3fd20e77166d722605a08d3dd0b260c0"><area coords="871,229,911,265" shape="rect" href="#a8fc1bd6271dfe1e82aec9efce036a96"><area coords="321,293,366,321" shape="rect" href="#8530e0246578140226427d243396143d"><area coords="441,231,476,263" shape="rect" href="#a747cb0325247d8971d40965782e9199"><area coords="771,344,816,380" shape="rect" href="#5bacfb11ae6b0236d7a452324afdb88e"><area coords="911,292,941,322" shape="rect" href="#eec3a25c4ed9ad6b2b8c131e539f74d0"><area coords="256,432,311,482" shape="rect" href="#72fdc605f447975f034d5d6ceb0531a9"><area coords="631,242,661,252" shape="rect" href="#12c4eea705b00b8bd9196d57ab507477"><area coords="1031,300,1061,314" shape="rect" href="#3654b44a14db77bcf9e4c800badfb2f4"></map><img src="GalvoModel_v3_detailed_files/image-001-sl.png" usemap="%0A                #d0e14" ismap="" border="0"></div></div><div><div class="author"><h3 class="author"><span class="firstname">mainster
+ </span></h3></div></div><div><p class="pubdate">23-Jul-2014 00:35:55</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#d0e79">Model - GalvoModel_v3_detailed</a></span></dt><dt><span class="chapter"><a href="#d0e181">System - GalvoModel_v3_detailed</a></span></dt><dt><span class="chapter"><a href="#d0e1657">Appendix</a></span></dt></dl></div><div class="list-of-tables"><p><b>List of Tables</b></p><dl><dt>1. <a href="#d0e251">Gain Block Properties</a></dt><dt>2. <a href="#d0e542">Inport Block Properties</a></dt><dt>3. <a href="#d0e577">Integrator Block Properties</a></dt><dt>4. <a href="#d0e674">Outport Block Properties</a></dt><dt>5. <a href="#d0e810">PID 1dof Block Properties</a></dt><dt>6. <a href="#d0e1405">Step Block Properties</a></dt><dt>7. <a href="#d0e1458">Sum Block Properties</a></dt><dt>8. <a href="#d0e1662">Block Type Count</a></dt><dt>9. <a href="#d0e1844">Model Functions</a></dt></dl></div><div class="chapter" title="Model - GalvoModel_v3_detailed"><div class="titlepage"><div><div><h2 class="title"><a name="d0e79"></a>Model - GalvoModel_v3_detailed</h2></div></div></div><a name="5330d3979f8fa64ad372e41ccf2d163a"></a><div class="orderedlist" title="Full Model Hierarchy"><p class="title"><b>Full Model Hierarchy</b></p><ol class="orderedlist" type="1" compact><li class="listitem"><p class="simpara">
+            <a class="link" href="#5330d3979f8fa64ad372e41ccf2d163a">GalvoModel_v3_detailed</a>
+        </p><div class="orderedlist"><ol class="orderedlist" type="1" compact><li class="listitem">
+                    Subsystem
+                </li><li class="listitem">
+                    Subsystem1
+                </li><li class="listitem">
+                    Subsystem2
+                </li></ol></div></li></ol></div><a name="d0e112"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1" width="100%"><col width="9000*"><col width="30000*"><thead><tr>
+            <th align="left">Simulation Parameter</th>
+            <th align="left">Value</th>
+        </tr></thead><tbody><tr>
+            <td align="left">Solver</td>
+            <td align="left">ode45</td>
+        </tr><tr>
+            <td align="left">RelTol</td>
+            <td align="left">1e-3</td>
+        </tr><tr>
+            <td align="left">Refine</td>
+            <td align="left">1</td>
+        </tr><tr>
+            <td align="left">MaxStep</td>
+            <td align="left">1e-6</td>
+        </tr><tr>
+            <td align="left">MaxOrder</td>
+            <td align="left">5</td>
+        </tr><tr>
+            <td align="left">ZeroCross</td>
+            <td align="left">on</td>
+        </tr></tbody></table></div></div><p>
+    <a class="link" href="#appendix-sl">
+        <span class="emphasis"><em>[more info]</em></span>
+    </a>
+</p></div><div class="chapter" title="System - GalvoModel_v3_detailed"><div class="titlepage"><div><div><h2 class="title"><a name="d0e181"></a>System - GalvoModel_v3_detailed</h2></div></div></div><a name="cb31ab18f2369eb519ebf45767a45d59"></a><div class="mediaobject"><map name="d0e188"><area coords="46,300,76,314" shape="rect" href="#3782ef4bd40c9c7a9c4084f213a80f6b"><area coords="646,393,686,431" shape="rect" href="#5b3f4735375f1085ec4bb70a8af52e7f"><area coords="546,284,581,330" shape="rect" href="#e0c2ce4cef862f141c8e274a369fa905"><area coords="506,347,536,377" shape="rect" href="#f556a5254f229be02139bb760b96ca54"><area coords="491,292,521,322" shape="rect" href="#78c75ccff7ae0b2c1d0c3e6967bf5b1a"><area coords="746,292,776,322" shape="rect" href="#6a8a102efd32945ab5a9634df4ab07ed"><area coords="151,278,206,336" shape="rect" href="#344c1f56cc1c700aae9466123d3fb642"><area coords="806,284,851,330" shape="rect" href="#aec6732cf74c1abac210110635f8d8b9"><area coords="46,232,76,262" shape="rect" href="#d6f10e432da44e0898680440230d8d9a"><area coords="436,292,466,322" shape="rect" href="#f0d138520302437943583cec130ef994"><area coords="701,297,721,317" shape="rect" href="#2c241d452fce032af8ef7ec41457cf4b"><area coords="266,297,286,317" shape="rect" href="#3f98e9751b9af1bd0269a3a5d953474a"><area coords="111,297,131,317" shape="rect" href="#3e8581342d7e1cd8e2f2868ba0cb3d86"><area coords="631,287,676,327" shape="rect" href="#3fd20e77166d722605a08d3dd0b260c0"><area coords="871,229,911,265" shape="rect" href="#a8fc1bd6271dfe1e82aec9efce036a96"><area coords="321,293,366,321" shape="rect" href="#8530e0246578140226427d243396143d"><area coords="441,231,476,263" shape="rect" href="#a747cb0325247d8971d40965782e9199"><area coords="771,344,816,380" shape="rect" href="#5bacfb11ae6b0236d7a452324afdb88e"><area coords="911,292,941,322" shape="rect" href="#eec3a25c4ed9ad6b2b8c131e539f74d0"><area coords="256,432,311,482" shape="rect" href="#72fdc605f447975f034d5d6ceb0531a9"><area coords="631,242,661,252" shape="rect" href="#12c4eea705b00b8bd9196d57ab507477"><area coords="1031,300,1061,314" shape="rect" href="#3654b44a14db77bcf9e4c800badfb2f4"></map><img src="GalvoModel_v3_detailed_files/image-005-sl.png" usemap="%0A                #d0e188" ismap="" border="0"></div><a name="d0e251"></a><div class="table"><p class="title"><b>Table&nbsp;1.&nbsp;Gain Block Properties</b></p><div class="table-contents"><table summary="Gain Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Gain</th>
+            <th align="left">Multiplication</th>
+            <th align="left">Param Data Type Str</th>
+            <th align="left">Out Data Type Str</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Rnd Meth</th>
+            <th align="left">Saturate On Integer Overflow</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="5b3f4735375f1085ec4bb70a8af52e7f"></a>Back el. motive force</td>
+            <td align="left">BEM</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="e0c2ce4cef862f141c8e274a369fa905"></a>Coil Inductance</td>
+            <td align="left">1/CL</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="f556a5254f229be02139bb760b96ca54"></a>Coil resistance (including shunt)</td>
+            <td align="left">CR</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="a747cb0325247d8971d40965782e9199"></a>current shunt resistor</td>
+            <td align="left">0.1</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="5bacfb11ae6b0236d7a452324afdb88e"></a>friction torque constant</td>
+            <td align="left">FR</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="72fdc605f447975f034d5d6ceb0531a9"></a>position demodulator (capacitive angular pos. sensor)</td>
+            <td align="left">180/pi</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="aec6732cf74c1abac210110635f8d8b9"></a>Rotor inertia</td>
+            <td align="left">1/RIN</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="3fd20e77166d722605a08d3dd0b260c0"></a>Torque constant</td>
+            <td align="left">TRC</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="a8fc1bd6271dfe1e82aec9efce036a96"></a>Torsionbar  const</td>
+            <td align="left">KTR</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr></tbody></table></div></div><a name="d0e542"></a><div class="table"><p class="title"><b>Table&nbsp;2.&nbsp;Inport Block Properties</b></p><div class="table-contents"><table summary="Inport Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Port</th>
+            <th align="left">Defined In Blk</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="3782ef4bd40c9c7a9c4084f213a80f6b"></a>u</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#5330d3979f8fa64ad372e41ccf2d163a">GalvoModel_v3_detailed (model)</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d0e577"></a><div class="table"><p class="title"><b>Table&nbsp;3.&nbsp;Integrator Block Properties</b></p><div class="table-contents"><table summary="Integrator Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">External Reset</th>
+            <th align="left">Initial Condition Source</th>
+            <th align="left">Absolute Tolerance</th>
+            <th align="left">Zero Cross</th>
+            <th align="left">Continuous State Attributes</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="78c75ccff7ae0b2c1d0c3e6967bf5b1a"></a>Int1</td>
+            <td align="left">none</td>
+            <td align="left">internal</td>
+            <td align="left">auto</td>
+            <td align="left">on</td>
+            <td align="left">''</td>
+        </tr><tr>
+            <td align="left">
+                <a name="6a8a102efd32945ab5a9634df4ab07ed"></a>Int2</td>
+            <td align="left">none</td>
+            <td align="left">internal</td>
+            <td align="left">auto</td>
+            <td align="left">on</td>
+            <td align="left">''</td>
+        </tr><tr>
+            <td align="left">
+                <a name="eec3a25c4ed9ad6b2b8c131e539f74d0"></a>int3</td>
+            <td align="left">none</td>
+            <td align="left">internal</td>
+            <td align="left">auto</td>
+            <td align="left">on</td>
+            <td align="left">''</td>
+        </tr></tbody></table></div></div><a name="d0e674"></a><div class="table"><p class="title"><b>Table&nbsp;4.&nbsp;Outport Block Properties</b></p><div class="table-contents"><table summary="Outport Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Port</th>
+            <th align="left">Icon Display</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Var Size Sig</th>
+            <th align="left">Signal Type</th>
+            <th align="left">Sampling Mode</th>
+            <th align="left">Source Of Initial Output Value</th>
+            <th align="left">Output When Disabled</th>
+            <th align="left">Used By Blk</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="12c4eea705b00b8bd9196d57ab507477"></a>current</td>
+            <td align="left">1</td>
+            <td align="left">Port number</td>
+            <td align="left">off</td>
+            <td align="left">Inherit</td>
+            <td align="left">auto</td>
+            <td align="left">auto</td>
+            <td align="left">Dialog</td>
+            <td align="left">held</td>
+            <td align="left">
+                <a class="link" href="#a747cb0325247d8971d40965782e9199">current shunt resistor</a>, <a class="link" href="#5330d3979f8fa64ad372e41ccf2d163a">GalvoModel_v3_detailed (model)</a>, <a class="link" href="#3fd20e77166d722605a08d3dd0b260c0">Torque constant</a>, <a class="link" href="#f556a5254f229be02139bb760b96ca54">Coil resistance (including shunt)</a>
+            </td>
+        </tr><tr>
+            <td align="left">
+                <a name="3654b44a14db77bcf9e4c800badfb2f4"></a>pos</td>
+            <td align="left">2</td>
+            <td align="left">Port number</td>
+            <td align="left">off</td>
+            <td align="left">Inherit</td>
+            <td align="left">auto</td>
+            <td align="left">auto</td>
+            <td align="left">Dialog</td>
+            <td align="left">held</td>
+            <td align="left">
+                <a class="link" href="#a8fc1bd6271dfe1e82aec9efce036a96">Torsionbar  const</a>, <a class="link" href="#5330d3979f8fa64ad372e41ccf2d163a">GalvoModel_v3_detailed (model)</a>, <a class="link" href="#72fdc605f447975f034d5d6ceb0531a9">position demodulator (capacitive angular pos. sensor)</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d0e810"></a><div class="table"><p class="title"><b>Table&nbsp;5.&nbsp;PID 1dof Block Properties</b></p><div class="table-contents"><table summary="PID 1dof Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Controller</th>
+            <th align="left">Time Domain</th>
+            <th align="left">Sample Time</th>
+            <th align="left">Integrator Method</th>
+            <th align="left">Filter Method</th>
+            <th align="left">Form</th>
+            <th align="left">P</th>
+            <th align="left">I</th>
+            <th align="left">D</th>
+            <th align="left">N</th>
+            <th align="left">Initial Condition Source</th>
+            <th align="left">Initial Condition For Integrator</th>
+            <th align="left">Initial Condition For Filter</th>
+            <th align="left">External Reset</th>
+            <th align="left">Zero Cross</th>
+            <th align="left">Limit Output</th>
+            <th align="left">Upper Saturation Limit</th>
+            <th align="left">Lower Saturation Limit</th>
+            <th align="left">Linearize As Gain</th>
+            <th align="left">Anti Windup Mode</th>
+            <th align="left">Kb</th>
+            <th align="left">Tracking Mode</th>
+            <th align="left">Kt</th>
+            <th align="left">Rnd Meth</th>
+            <th align="left">Saturate On Integer Overflow</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">PParam Data Type Str</th>
+            <th align="left">IParam Data Type Str</th>
+            <th align="left">DParam Data Type Str</th>
+            <th align="left">NParam Data Type Str</th>
+            <th align="left">Kb Param Data Type Str</th>
+            <th align="left">Kt Param Data Type Str</th>
+            <th align="left">POut Data Type Str</th>
+            <th align="left">IOut Data Type Str</th>
+            <th align="left">DOut Data Type Str</th>
+            <th align="left">NOut Data Type Str</th>
+            <th align="left">Kb Out Data Type Str</th>
+            <th align="left">Kt Out Data Type Str</th>
+            <th align="left">Integrator Out Data Type Str</th>
+            <th align="left">Filter Out Data Type Str</th>
+            <th align="left">Sum Out Data Type Str</th>
+            <th align="left">Sum I1Out Data Type Str</th>
+            <th align="left">Sum I2Out Data Type Str</th>
+            <th align="left">Sum I3Out Data Type Str</th>
+            <th align="left">Sum DOut Data Type Str</th>
+            <th align="left">Sum Accum Data Type Str</th>
+            <th align="left">Sum I1Accum Data Type Str</th>
+            <th align="left">Sum I2Accum Data Type Str</th>
+            <th align="left">Sum I3Accum Data Type Str</th>
+            <th align="left">Sum DAccum Data Type Str</th>
+            <th align="left">Saturation Out Data Type Str</th>
+            <th align="left">Integrator Continuous State Attributes</th>
+            <th align="left">Integrator State Must Resolve To Signal Object</th>
+            <th align="left">Integrator RTWState Storage Class</th>
+            <th align="left">Filter Continuous State Attributes</th>
+            <th align="left">Filter State Must Resolve To Signal Object</th>
+            <th align="left">Filter RTWState Storage Class</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="8530e0246578140226427d243396143d"></a>current ctrl</td>
+            <td align="left">P</td>
+            <td align="left">Continuous-time</td>
+            <td align="left">1</td>
+            <td align="left">Forward Euler</td>
+            <td align="left">Forward Euler</td>
+            <td align="left">Parallel</td>
+            <td align="left">10</td>
+            <td align="left">0.7525</td>
+            <td align="left">0.156</td>
+            <td align="left">100</td>
+            <td align="left">internal</td>
+            <td align="left">0</td>
+            <td align="left">0</td>
+            <td align="left">none</td>
+            <td align="left">on</td>
+            <td align="left">on</td>
+            <td align="left">15</td>
+            <td align="left">-15</td>
+            <td align="left">off</td>
+            <td align="left">none</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">1</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Same as input</td>
+            <td align="left">''</td>
+            <td align="left">off</td>
+            <td align="left">Auto</td>
+            <td align="left">''</td>
+            <td align="left">off</td>
+            <td align="left">Auto</td>
+        </tr><tr>
+            <td align="left">
+                <a name="344c1f56cc1c700aae9466123d3fb642"></a>PID</td>
+            <td align="left">PID</td>
+            <td align="left">Continuous-time</td>
+            <td align="left">1</td>
+            <td align="left">Forward Euler</td>
+            <td align="left">Forward Euler</td>
+            <td align="left">Parallel</td>
+            <td align="left">-0.525615682210098</td>
+            <td align="left">-94.7302112579193</td>
+            <td align="left">-0.000647991179235254</td>
+            <td align="left">3530530.13982102</td>
+            <td align="left">internal</td>
+            <td align="left">0</td>
+            <td align="left">0</td>
+            <td align="left">none</td>
+            <td align="left">on</td>
+            <td align="left">on</td>
+            <td align="left">10</td>
+            <td align="left">-10</td>
+            <td align="left">off</td>
+            <td align="left">none</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">0</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Same as input</td>
+            <td align="left">''</td>
+            <td align="left">off</td>
+            <td align="left">Auto</td>
+            <td align="left">''</td>
+            <td align="left">off</td>
+            <td align="left">Auto</td>
+        </tr></tbody></table></div></div><a name="d0e1405"></a><div class="table"><p class="title"><b>Table&nbsp;6.&nbsp;Step Block Properties</b></p><div class="table-contents"><table summary="Step Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Time</th>
+            <th align="left">Before</th>
+            <th align="left">After</th>
+            <th align="left">Sample Time</th>
+            <th align="left">Zero Cross</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="d6f10e432da44e0898680440230d8d9a"></a>Step</td>
+            <td align="left">1e-3</td>
+            <td align="left">0</td>
+            <td align="left">2</td>
+            <td align="left">0</td>
+            <td align="left">on</td>
+        </tr></tbody></table></div></div><a name="d0e1458"></a><div class="table"><p class="title"><b>Table&nbsp;7.&nbsp;Sum Block Properties</b></p><div class="table-contents"><table summary="Sum Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Icon Shape</th>
+            <th align="left">Inputs</th>
+            <th align="left">Collapse Mode</th>
+            <th align="left">Collapse Dim</th>
+            <th align="left">Input Same DT</th>
+            <th align="left">Accum Data Type Str</th>
+            <th align="left">Out Data Type Str</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Rnd Meth</th>
+            <th align="left">Saturate On Integer Overflow</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="f0d138520302437943583cec130ef994"></a>Sum1</td>
+            <td align="left">round</td>
+            <td align="left">||+--</td>
+            <td align="left">All dimensions</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="2c241d452fce032af8ef7ec41457cf4b"></a>Sum2</td>
+            <td align="left">round</td>
+            <td align="left">-+-</td>
+            <td align="left">All dimensions</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="3f98e9751b9af1bd0269a3a5d953474a"></a>Sum3</td>
+            <td align="left">round</td>
+            <td align="left">-+|</td>
+            <td align="left">All dimensions</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="3e8581342d7e1cd8e2f2868ba0cb3d86"></a>Sum4</td>
+            <td align="left">round</td>
+            <td align="left">++-</td>
+            <td align="left">All dimensions</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr></tbody></table></div></div></div><div class="chapter" title="Appendix"><div class="titlepage"><div><div><h2 class="title"><a name="d0e1657"></a>Appendix</h2></div></div></div><a name="appendix-sl"></a><a name="d0e1662"></a><div class="table"><p class="title"><b>Table&nbsp;8.&nbsp;Block Type Count</b></p><div class="table-contents"><table summary="Block Type Count" border="1" cellspacing="0" fastRender="1" width="100%"><col width="120*"><col width="60*"><col width="240*"><thead><tr>
+            <th align="left">BlockType</th>
+            <th align="left">Count</th>
+            <th align="left">Block Names</th>
+        </tr></thead><tbody><tr>
+            <td align="left">Gain</td>
+            <td align="left">9</td>
+            <td align="left">
+                <a class="link" href="#5b3f4735375f1085ec4bb70a8af52e7f">Back el. motive force</a>, <a class="link" href="#e0c2ce4cef862f141c8e274a369fa905">Coil Inductance</a>, <a class="link" href="#f556a5254f229be02139bb760b96ca54">Coil resistance (including shunt)</a>, <a class="link" href="#aec6732cf74c1abac210110635f8d8b9">Rotor inertia</a>, <a class="link" href="#3fd20e77166d722605a08d3dd0b260c0">Torque constant</a>, <a class="link" href="#a8fc1bd6271dfe1e82aec9efce036a96">Torsionbar  const</a>, <a class="link" href="#a747cb0325247d8971d40965782e9199">current shunt resistor</a>, <a class="link" href="#5bacfb11ae6b0236d7a452324afdb88e">friction torque constant</a>, <a class="link" href="#72fdc605f447975f034d5d6ceb0531a9">position demodulator (capacitive angular pos. sensor)</a>
+            </td>
+        </tr><tr>
+            <td align="left">Sum</td>
+            <td align="left">4</td>
+            <td align="left">
+                <a class="link" href="#f0d138520302437943583cec130ef994">Sum1</a>, <a class="link" href="#2c241d452fce032af8ef7ec41457cf4b">Sum2</a>, <a class="link" href="#3f98e9751b9af1bd0269a3a5d953474a">Sum3</a>, <a class="link" href="#3e8581342d7e1cd8e2f2868ba0cb3d86">Sum4</a>
+            </td>
+        </tr><tr>
+            <td align="left">SubSystem</td>
+            <td align="left">3</td>
+            <td align="left">
+                Subsystem, Subsystem1, Subsystem2
+            </td>
+        </tr><tr>
+            <td align="left">Integrator</td>
+            <td align="left">3</td>
+            <td align="left">
+                <a class="link" href="#78c75ccff7ae0b2c1d0c3e6967bf5b1a">Int1</a>, <a class="link" href="#6a8a102efd32945ab5a9634df4ab07ed">Int2</a>, <a class="link" href="#eec3a25c4ed9ad6b2b8c131e539f74d0">int3</a>
+            </td>
+        </tr><tr>
+            <td align="left">PID 1dof (m)</td>
+            <td align="left">2</td>
+            <td align="left">
+                <a class="link" href="#344c1f56cc1c700aae9466123d3fb642">PID</a>, <a class="link" href="#8530e0246578140226427d243396143d">current ctrl</a>
+            </td>
+        </tr><tr>
+            <td align="left">Outport</td>
+            <td align="left">2</td>
+            <td align="left">
+                <a class="link" href="#12c4eea705b00b8bd9196d57ab507477">current</a>, <a class="link" href="#3654b44a14db77bcf9e4c800badfb2f4">pos</a>
+            </td>
+        </tr><tr>
+            <td align="left">Step</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#d6f10e432da44e0898680440230d8d9a">Step</a>
+            </td>
+        </tr><tr>
+            <td align="left">Inport</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#3782ef4bd40c9c7a9c4084f213a80f6b">u</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d0e1844"></a><div class="table"><p class="title"><b>Table&nbsp;9.&nbsp;Model Functions</b></p><div class="table-contents"><table summary="Model Functions" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="240*"><col width="120*"><thead><tr>
+            <th align="left">Function Name</th>
+            <th align="left">Parent Blocks</th>
+            <th align="left">Calling string</th>
+        </tr></thead><tbody><tr>
+            <td align="left">pi</td>
+            <td align="left">
+                <a class="link" href="#72fdc605f447975f034d5d6ceb0531a9">position demodulator (capacitive angular pos. sensor)</a>
+            </td>
+            <td align="left">
+                <table border="0" summary="Simple list" class="simplelist"><tr><td>
+                        <code class="computeroutput">180/pi</code>
+                    </td></tr></table>
+            </td>
+        </tr></tbody></table></div></div><a name="appendix-sf"></a></div></div></body></html>

@@ -1,0 +1,119 @@
+% RT Klausurvorbereitung
+% Uebung 2013-14
+
+delete(findall(0,'type','line'))
+clf
+
+p1=tf([0.67],[0.33 1 0])
+p2=tf([0.67],[0.33 1])
+
+syms k;
+
+
+f1=figure(1);
+SUB=220;
+
+% subplot(SUB+1);
+% hold all;
+% pzmap(p1)
+% pzmap(p2)
+% hold off;
+
+xticks=[0:.25:5];
+
+subplot(SUB+1);
+hold all;
+impulse(p1)
+step(p2)
+hold off;
+grid on;
+set(gca,'XTick',xticks);
+legend('p1');
+
+subplot(SUB+2);
+hold all;
+step(p1)
+hold off;
+grid on;
+set(gca,'XTick',xticks);
+legend('p1');
+
+
+subplot(SUB+3);
+hold all;
+impulse(p2)
+hold off;
+grid on;
+set(gca,'XTick',xticks);
+legend('p2');
+
+subplot(SUB+4);
+hold all;
+step(p2)
+hold off;
+grid on;
+set(gca,'XTick',xticks);
+legend('p2');
+
+%%%%%%%%%%%%%%%%%%%%%%%
+A=[0 0; 1 -3];
+b=[1;0];
+c=[0 3*.65];
+[p1a_num p1a_den]=ss2tf(A,b,c,0);
+p1a=tf(p1a_num,p1a_den);
+
+[A2,b2,c,~]=tf2ss(p1.num{1},p1.den{1})
+
+f2=figure(2);
+SUB=130;
+
+xticks=[0:.25:5];
+subplot(SUB+1);
+
+hold all;
+impulse(p1);
+impulse(p1a);
+hold off;
+grid on
+set(gca,'XTick',xticks);
+legend('p1','p1a');
+
+%%% mehrfachpole ohne dominierenden pol
+
+g1=zpk([],[-1+j*3 -1-j*3 -1],1)
+
+subplot(SUB+2);
+hold all;
+step(g1);
+hold off;
+grid on
+%set(gca,'XTick',xticks);
+legend('g1');
+
+
+syms k;
+k=0.2;
+c1=tf(k*[5 1],[1 0]);
+
+subplot(SUB+3);
+hold all;
+P=nyquistoptions;
+P.showFullContour='off';
+nyquist(c1*p1,P)
+hold off;
+grid on
+%set(gca,'XTick',xticks);
+legend('g1');
+axis([-2 2 -2 2];
+
+
+ar=sort(findall(0,'type','figure'));
+set(ar,'WindowStyle','docked');
+
+
+
+
+
+
+
+

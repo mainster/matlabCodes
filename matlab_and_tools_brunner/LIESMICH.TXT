@@ -1,0 +1,72 @@
+MATLAB und Tools
+ISBN 3-8273-1895-5
+Hoffmann / Brunner
+Addison-Wesley Verlag, ein Imprint der
+Pearson Education Deutschland GmbH
+
+
+======================================================================================
+
+Der Gebrauch der Begleitprogramme:
+
+Die Begleitprogramme sind für jedes Kapitel in einem separaten Verzeichnis abgelegt. So z.B. sind die Programme des 4. Kapitels im Verzeichnis Kap.4 
+Bei einigen Anwendungen wird das Modell (SIMULINK-Programm) direkt mit Werten parametriert und die Simulation per Hand (über die Menüleiste) durchgeführt. Die Daten werden in To-Workspace-Senken eingefangen und danach über ein MATLAB-Programm dargestellt. Dieses Programm ist mit dem Vorspann d_... (d_*.m) bezeichnet. Einige Modelle werden mit Variablen aus einem MATLAB-Programm mit der Kennzeichnung p_... (p_*.m) parametriert, danach die Simulation mit dem Modell s_... (s_*.mdl) über das Menü durchgeführt und anschließend werden die Ergebnisse mit dem Programm d_... (d_*.m) bearbeitet und dargestellt. Oft werden die Simulationen direkt aus einem MATLAB-Programm aufgerufen. 
+Um all diese Programme leichter zu finden, tragen sie als Namen (z.B. nach den gezeigten Vorspannen) eine Abkürzung der Bezeichnung der Anwendung und sind im Buch auch in der Beschriftung der Bilder, die durch diese Programme entstanden sind, angegeben. Der Name beinhaltet am Ende eine Ziffer, gewöhnlich 1, um nachfolgende Erweiterungen leicht mit 2, 3,... usw. zu versehen und sie mit derselben Anwendung zu verbinden. 
+
+Setzen des Pfades
+Um mit den Programmen und Modellen eines Kapitels zu arbeiten, kopiert man diese in ein Verzeichnis, das z.B. d:\arbeit\kap_5\ sein kann. Aus der MATLAB-Umgebung erreicht man dann die Programme dieses Verzeichnisses am einfachsten über den alten DOS-Befehl:
+>> cd d:\arbeit\kap_5\ 
+Er wird im MATLAB-Kommandofenster nach dem Prompt-Zeichen eingegeben. Dadurch wird der Suchpfad (Search-Path) mit diesem Verzeichnis für die laufende Arbeitssitzung erweitert. Diese Methode ist auch beim Arbeiten mit Studenten in einem vernetzten Rechnerpool zu empfehlen. Die Studentengruppen sind sehr einfallsreich in der Wahl der Verzeichnisse, in welchen sie arbeiten wollen, und in dieser Form kann jeder selbständig sein. Nach dem Verlassen von MATLAB ist diese Verbindung gelöscht. 
+
+Es gibt auch andere Möglichkeiten, den Suchpfad zu erweitern, z.B. mit der Funktion
+path('c:\my_files', path);  
+wird die Suche mit diesem Verzeichnis beginnen, und durch
+path(path, 'c:\my_files');
+wird  das Verzeichnis an das Ende des Suchpfades gesetzt. Der Aufruf path; allein zeigt die Verzeichnisse des Suchpfades an. Mit addpath und rmpath kann ein Verzeichnis dem Suchpfad hinzugefügt oder aus diesem entfernt werden.
+
+Funktionen und Modelle, die eine Bibliothek bilden sollten, werden in einem Verzeichnis eingebunden und über den Path-Browser, der über die Menüleiste File und Set-Path zu erreichen ist, wird der Suchpfad mit diesem Verzeichnis erweitert. Als Quellen für MATLAB- und SIMULINK-Programme, die sich lohnen in einer Bibliothek zusammenzufassen, gelten die Programme aus Büchern, aus dem Internet und die eigenen, die allgemein als Werkzeuge (Tools) einzusetzen sind. 
+
+
+
+============ Inhalt der CD zum Buch =================
+
+\Liesmich.txt          
+Diese Datei lesen Sie gerade.
+
+\buchdaten
+Hier befinden sich alle zum Buch relevanten Daten.
+
+\browser
+Hier finden Sie die Internet Browser Internet Explorer 5.5, 
+Netscape Navigator 4.75 und Opera 5.12.
+
+\software
+Im Ordner Programme finden Sie ein umfangreichen Sharewarepool (Win).
+
+\Web
+Webdaten zur Steuerung der CD-ROM Oberfläche.
+
+
+Im Falle eines Defekts der CD:
+===============================
+Bei einem physikalischen Defekt senden Sie bitte die CD mit einer genauen Fehlerbeschreibung an unseren Support. Diese wird Ihnen dann kostenlos ausgetauscht. 
+Vorher sollten Sie die CD aber testen, testen und nochmals testen. 
+
+Keinen Support können wir Ihnen für Programme von Drittanbietern, sei es Shareware, Freeware oder Demo-Software, geben. 
+In diesem Fall wenden Sie sich bitte an den entsprechenden Hersteller des Produkts.
+Kontaktadressen finden Sie gewöhnlich in der jeweiligen Readme-Datei.
+Shareware-Programme dürfen für eine festgelegte Testzeit kostenlos getestet werden. Nach Ablauf dieser Testzeit müssen Sie diese Programme entweder von der Festplatte löschen oder Sie müssen sich als Benutzer bei dem entsprechenden Hersteller registrieren lassen.
+In der Regel ist die Software, die in unseren Büchern besprochen wird, nicht Teil des Lieferumfangs. Bei Fragen dazu wenden Sie sich an den entsprechenden Software-Hersteller.
+
+
+Kontaktieren können Sie uns unter:
+Addison-Wesley Verlag 
+Technischer Support
+Martin-Kollar-Straße 10 - 12
+81829 München
+
+Tel.: 089/46003-371
+E-Mail: support@pearson.de
+------------------------------------------
+CD-ROM-Produktion: Gregor Kopietz /Addison-Wesley Verlag, ein Imprint der
+Pearson Education Deutschland GmbH

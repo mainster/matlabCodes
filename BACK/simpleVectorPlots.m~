@@ -1,0 +1,66 @@
+% Einfache Vektoren / Ebenen plotten
+%
+delete(findall(0,'type','line'))    % Inhalte der letzten plots löschen, figure handle behalten
+delete(findall(0,'type','surface'))    % Inhalte der letzten plots löschen, figure handle behalten
+clc;
+
+% 3D- Ortsvektor:
+% ersten Spalte x-Werte
+% zweite Spalte y-Werte
+% dritte Spalte z-Werte
+v1=[0 0 0; 5 5 5];  
+v2=[0 0 0; 5 0 5];  
+
+% Ebene
+%
+%f1=@(x,y) -1/5*x.^2-1/5*y.^2+3;
+[x y] = meshgrid (-10:0.3:10);
+
+x0=1.1; y0=0.1;
+[xt yt] = meshgrid (-2*sqrt(x0^2+y0^2):0.3:2*sqrt(x0^2+y0^2));
+
+f0=f2(x0,y0);
+[fx fy]=gradientSelf(@f2, x0,y0);
+te=f0+fx*(x-x0)+fy*(y-y0);
+
+ts=20;
+
+fig1=figure(1);
+hold on
+surf(x,y,f2(x,y));
+colormap hsv
+surf(x,y(1:,te(1:ts,1:ts));
+%plot3(v1(:,1), v1(:,2), v1(:,3),'LineWidth',4);
+%plot3(v2(:,1), v2(:,2), v2(:,3),'r','LineWidth',4);
+
+plot3(x0,y0,f2(x0,y0),'ro','MarkerSize',10,'MarkerFaceColor','r')
+
+hold off;
+grid on;
+axis equal;
+LIM=[-10 10];
+xlim(LIM);ylim(LIM);zlim(LIM);
+xlabel('x --->');
+ylabel('y --->');
+zlabel('z --->');
+
+
+LIM2=[0 5];
+p1=[1 0.5 0];
+p2=[3 2 4];
+fig2=figure(2);
+plot3([p1(1) p2(1)], [p1(2) p2(2)], [p1(3) p2(3)],'-r<');grid on;
+axis equal;
+xlim(LIM2);ylim(LIM2);zlim(LIM2);
+
+arr=sort(findall(0,'type','figure'));
+delete(arr(2:end))
+
+% x=0:0.1:1;
+% y=0:0.1:1;
+% [X,Y]=meshgrid(x,y);
+% Z=3-x+5*y;
+% Z2 = repmat(Z,length(y),1);
+% fig3=figure(3);
+% surf(X,Y,Z);
+

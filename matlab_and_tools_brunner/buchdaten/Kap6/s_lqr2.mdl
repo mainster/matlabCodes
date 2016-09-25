@@ -1,0 +1,755 @@
+Model {
+  Name			  "s_lqr2"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Jul 06 10:23:47 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jul 06 10:49:31 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "200"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.10"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "s_lqr2"
+    Location		    [33, 74, 748, 567]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      StateSpace
+      Name		      "A"
+      Position		      [410, 165, 440, 195]
+      Orientation	      "left"
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "A"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "A_"
+      Position		      [415, 290, 445, 320]
+      Orientation	      "left"
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "A"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "B"
+      Position		      [340, 106, 365, 134]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "B"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "B_"
+      Position		      [290, 221, 315, 249]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "B"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "C"
+      Position		      [505, 116, 530, 144]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "C"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "C_"
+      Position		      [510, 241, 535, 269]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "C"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [1, 1]
+      Position		      [435, 114, 460, 146]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "[x0]"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Ports		      [1, 1]
+      Position		      [440, 239, 465, 271]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "[0]"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "Ke"
+      Position		      [520, 335, 550, 365]
+      Orientation	      "left"
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "Ke"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [170, 195, 200, 225]
+      Floating		      off
+      Location		      [417, 33, 748, 347]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "on"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "200.000000"
+      YMin		      "-10.600000"
+      YMax		      "10.600000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "Array"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step Input1"
+      Position		      [90, 60, 110, 80]
+      Time		      "0"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [395, 114, 415, 141]
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [390, 239, 410, 266]
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1]
+      Position		      [570, 184, 590, 211]
+      IconShape		      "rectangular"
+      Inputs		      "+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Ports		      [2, 1]
+      Position		      [340, 229, 360, 256]
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum4"
+      Ports		      [2, 1]
+      Position		      [155, 94, 175, 121]
+      IconShape		      "rectangular"
+      Inputs		      "+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Ports		      [2, 1]
+      Position		      [270, 104, 290, 131]
+      IconShape		      "rectangular"
+      Inputs		      "+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "k1x1 + k2x2 + k3x3 + k4x4 + k5x5"
+      Position		      [275, 355, 305, 385]
+      Orientation	      "left"
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      Realization	      "auto"
+      AbsoluteTolerance	      "auto"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix to pr"
+"oduce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskTunableValueString  "on"
+      MaskEnableString	      "on"
+      MaskVisibilityString    "on"
+      MaskToolTipString	      "on"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "k15"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "k6/C(6)"
+      Position		      [210, 97, 235, 123]
+      Gain		      "k6/C(6)"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport1"
+      Position		      [215, 55, 235, 75]
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport2"
+      Position		      [580, 85, 600, 105]
+      Port		      "2"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[0, 115]
+	DstBlock		"k1x1 + k2x2 + k3x3 + k4x4 + k5x5"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 0]
+	Branch {
+	  DstBlock		  "C_"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 50]
+	  DstBlock		  "A_"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "k1x1 + k2x2 + k3x3 + k4x4 + k5x5"
+      SrcPort		      1
+      Points		      [-25, 0; 0, -245]
+      DstBlock		      "Sum5"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[0, 45; -40, 0; 0, 70]
+	DstBlock		"B_"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"B"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "k6/C(6)"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum4"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, -45]
+	DstBlock		"Outport1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"k6/C(6)"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "C"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[75, 0; 0, 285; -485, 0; 0, -205]
+	Branch {
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -95]
+	  DstBlock		  "Sum4"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Outport2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Step Input1"
+      SrcPort		      1
+      Points		      [20, 0; 0, 30]
+      DstBlock		      "Sum4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "B_"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ke"
+      SrcPort		      1
+      Points		      [-190, 0]
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [10, 0; 0, 150]
+      DstBlock		      "Ke"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "C_"
+      SrcPort		      1
+      Points		      [5, 0; 0, -50]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "A_"
+      SrcPort		      1
+      Points		      [-35, 0]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Integrator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"C"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"A"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "A"
+      SrcPort		      1
+      Points		      [-30, 0; 0, -45]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "B"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [407, 82]
+      VerticalAlignment	      "top"
+      Text		      "Prozess"
+    }
+    Annotation {
+      Position		      [557, 162]
+      VerticalAlignment	      "top"
+      Text		      "y"
+    }
+    Annotation {
+      Position		      [492, 182]
+      VerticalAlignment	      "top"
+      Text		      "x"
+    }
+    Annotation {
+      Position		      [497, 307]
+      VerticalAlignment	      "top"
+      Text		      "x_"
+    }
+    Annotation {
+      Position		      [442, 217]
+      VerticalAlignment	      "top"
+      Text		      "Beobachter"
+    }
+    Annotation {
+      Position		      [562, 222]
+      VerticalAlignment	      "top"
+      Text		      "y_"
+    }
+    Annotation {
+      Position		      [577, 332]
+      VerticalAlignment	      "top"
+      Text		      "y-y_"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+function fun = f2(x,y)
+%
+%z=5.*cos(x)+x.^3-2.*x.^2-6.*x+10;
+%fun=x.^2-2;
+%fun=sin(x);
+%fun=-1/5*x.^2-1/5*y.^2+3;
+%fun=(2*x+y)./(1+x.*y);
+fun=sin(x).*y;
+end

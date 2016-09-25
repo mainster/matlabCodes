@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel= "stylesheet" href="explorer_files/dtree.css" type="text/css" />
+    <script type="text/javascript" src="explorer_files/dtree.js"></script>
+    <script type="text/javascript" src="slwebview.js"></script>
+    <script type="text/javascript" src="id_mapping.js"></script>
+    <title>Simulink Web View</title>
+  </head>
+  <body leftmargin="3"  topmargin="0" marginwidth="3" marginheight="3">
+    <script type="text/javascript">
+<!--
+var explorer = new dTree('explorer');
+explorer.add(0,-1,"Simulink Root","javascript:toggleExpose();","Simulink Root","GalvoModel_v53_slwebview_model");
+explorer.add(1,0,"GalvoModel_v53","javascript:changeSysByName('GalvoModel_v53',1);","GalvoModel_v53","GalvoModel_v53_slwebview_model","explorer_files/SimulinkModelIcon.png","explorer_files/SimulinkModelIcon.png",1);
+var svgState = getSvgState(gHomeSys);
+svgState.tree = explorer;
+document.write(svgState.tree);
+//-->
+    </script>
+  </body>
+</html>
+

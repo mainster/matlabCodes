@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - biquad_coeffs.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('biquad_coeffs_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../biquad_coeffs.c" target="rtwreport_document_frame" id="linkToText_plain">biquad_coeffs.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: biquad_coeffs.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'Equalizer'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.393</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.4 (R2013a) 13-Feb-2013</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * TLC version                    : 8.4 (Jan 18 2013)</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> * C/C++ source code generated on : Sat Nov 15 02:12:07 2014</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Embedded hardware selection: Analog Devices-&gt;Blackfin</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * Code generation objectives: Unspecified</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="16">   16   </a>
+</span><span><a class="LN" name="17">   17   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwtypes.h&quot;</font>
+</span><span><a class="LN" name="18">   18   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;Equalizer_types.h&quot;</font>
+</span><span><a class="LN" name="19">   19   </a>
+</span><span><a class="LN" name="20">   20   </a><span class="CT">/* Exported data definition */</span>
+</span><span><a class="LN" name="21">   21   </a>
+</span><span><a class="LN" name="22">   22   </a><span class="CT">/* Design Specifications</span>
+</span><span><a class="LN" name="23">   23   </a><span class="CT">   Sampling Frequency : 48 kHz</span>
+</span><span><a class="LN" name="24">   24   </a><span class="CT">   Response           : Parametric Equalizer</span>
+</span><span><a class="LN" name="25">   25   </a><span class="CT">   Specification      : N,F0,BW,Gref,G0,GBW</span>
+</span><span><a class="LN" name="26">   26   </a><span class="CT">   Filter Order       : 2</span>
+</span><span><a class="LN" name="27">   27   </a><span class="CT">   F0                 : 763.9437 Hz</span>
+</span><span><a class="LN" name="28">   28   </a><span class="CT">   BW                 : 2.2918 kHz</span>
+</span><span><a class="LN" name="29">   29   </a><span class="CT">   Gref               : 0 dB</span>
+</span><span><a class="LN" name="30">   30   </a><span class="CT">   G0                 : 5 dB</span>
+</span><span><a class="LN" name="31">   31   </a><span class="CT">   GBW                : 3.535 dB</span>
+</span><span><a class="LN" name="32">   32   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="33">   33   </a><a href="rtwtypes_h.html#type_real32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T');" target="rtwreport_document_frame"><font color="#1122aa">real32_T</font></a> <a name="var_CoeffsMatrix1">CoeffsMatrix1</a>[5] = <b>{</b> 1.11763632F, -1.68922007F, 0.580065072F,
+</span><span><a class="LN" name="34">   34   </a>  -1.68922007F, 0.697701454F <b>}</b> ;
+</span><span><a class="LN" name="35">   35   </a>
+</span><span><a class="LN" name="36">   36   </a><span class="CT">/* Design Specifications</span>
+</span><span><a class="LN" name="37">   37   </a><span class="CT">   Sampling Frequency : 48 kHz</span>
+</span><span><a class="LN" name="38">   38   </a><span class="CT">   Response           : Parametric Equalizer</span>
+</span><span><a class="LN" name="39">   39   </a><span class="CT">   Specification      : N,F0,BW,Gref,G0,GBW</span>
+</span><span><a class="LN" name="40">   40   </a><span class="CT">   Filter Order       : 2</span>
+</span><span><a class="LN" name="41">   41   </a><span class="CT">   F0                 : 4.8 kHz</span>
+</span><span><a class="LN" name="42">   42   </a><span class="CT">   BW                 : 2.2918 kHz</span>
+</span><span><a class="LN" name="43">   43   </a><span class="CT">   Gref               : 0 dB</span>
+</span><span><a class="LN" name="44">   44   </a><span class="CT">   G0                 : 7.999 dB</span>
+</span><span><a class="LN" name="45">   45   </a><span class="CT">   GBW                : 5.6553 dB</span>
+</span><span><a class="LN" name="46">   46   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="47">   47   </a><a href="rtwtypes_h.html#type_real32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T');" target="rtwreport_document_frame"><font color="#1122aa">real32_T</font></a> <a name="var_CoeffsMatrix2">CoeffsMatrix2</a>[5] = <b>{</b> 1.19997728F, -1.40397763F, 0.535434604F,
+</span><span><a class="LN" name="48">   48   </a>  -1.40397763F, 0.735411882F <b>}</b> ;
+</span><span><a class="LN" name="49">   49   </a>
+</span><span><a class="LN" name="50">   50   </a><span class="CT">/* Design Specifications</span>
+</span><span><a class="LN" name="51">   51   </a><span class="CT">   Sampling Frequency : 48 kHz</span>
+</span><span><a class="LN" name="52">   52   </a><span class="CT">   Response           : Parametric Equalizer</span>
+</span><span><a class="LN" name="53">   53   </a><span class="CT">   Specification      : N,F0,BW,Gref,G0,GBW</span>
+</span><span><a class="LN" name="54">   54   </a><span class="CT">   Filter Order       : 2</span>
+</span><span><a class="LN" name="55">   55   </a><span class="CT">   F0                 : 6 kHz</span>
+</span><span><a class="LN" name="56">   56   </a><span class="CT">   BW                 : 2.2918 kHz</span>
+</span><span><a class="LN" name="57">   57   </a><span class="CT">   Gref               : 0 dB</span>
+</span><span><a class="LN" name="58">   58   </a><span class="CT">   G0                 : -4.7917 dB</span>
+</span><span><a class="LN" name="59">   59   </a><span class="CT">   GBW                : -3.3877 dB</span>
+</span><span><a class="LN" name="60">   60   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="61">   61   </a><a href="rtwtypes_h.html#type_real32_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T');" target="rtwreport_document_frame"><font color="#1122aa">real32_T</font></a> <a name="var_CoeffsMatrix3">CoeffsMatrix3</a>[5] = <b>{</b> 0.899025202F, -1.07742751F, 0.624687254F,
+</span><span><a class="LN" name="62">   62   </a>  -1.07742751F, 0.523712397F <b>}</b> ;
+</span><span><a class="LN" name="63">   63   </a>
+</span><span><a class="LN" name="64">   64   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="65">   65   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="66">   66   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="67">   67   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="68">   68   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="69">   69   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

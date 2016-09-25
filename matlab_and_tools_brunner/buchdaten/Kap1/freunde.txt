@@ -1,0 +1,5 @@
+Michael         18      1.84
+Helmuth         22      1.72
+Martin          24      1.64
+John            20      1.75
+

@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" class="canvas" display="inline" height="95%" id="canvas.Galvo_sys_cc_neu_v31" original_viewBox="245.03 29.00 686.95 331.00" preserveAspectRatio="xMinYMin meet" viewBox="245.03 29.00 686.95 331.00" width="100%" x="0" y="0" zoomAndPan="disable">
+  <defs/>
+  <g fill="none" stroke="black" stroke-width="1" fill-rule="evenodd" stroke-linecap="square" stroke-linejoin="bevel">
+    <g id="background" stroke="none" fill-opacity="1" fill="#ffffff">
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M251.031,35 L925.98,35 L925.98,354 L251.031,354 L251.031,35z "/>
+      </g>
+    </g>
+    <title id="title.Galvo_sys_cc_neu_v31">Galvo_sys_cc_neu_v31</title>
+    <g id="prop.Galvo_sys_cc_neu_v31/w" class="proptable" display="none" pointer-events="none" extent_Height="200.6328125" extent_Width="190.296875" preferred_X="320" preferred_Y="243">
+      <rect x="0" y="0" width="190.296875" height="200.6328125" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Port</text>
+      <text x="132.5390625" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">1</text>
+      <rect x="0" y="14.2421875" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IconDisplay</text>
+      <text x="132.5390625" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Port number</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutputFunctionCall</text>
+      <text x="132.5390625" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="40.7265625" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutMin</text>
+      <text x="132.5390625" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutMax</text>
+      <text x="132.5390625" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="67.2109375" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutDataTypeStr</text>
+      <text x="132.5390625" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: auto</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LockScale</text>
+      <text x="132.5390625" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="93.6953125" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">PortDimensions</text>
+      <text x="132.5390625" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">-1</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">VarSizeSig</text>
+      <text x="132.5390625" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit</text>
+      <rect x="0" y="120.1796875" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SampleTime</text>
+      <text x="132.5390625" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">-1</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalType</text>
+      <text x="132.5390625" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">auto</text>
+      <rect x="0" y="146.6640625" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SamplingMode</text>
+      <text x="132.5390625" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">auto</text>
+      <text x="3" y="170.1484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LatchByDelayingOutsideSignal</text>
+      <text x="132.5390625" y="170.1484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="173.1484375" width="190.296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="183.390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LatchInputForFeedbackSignals</text>
+      <text x="132.5390625" y="183.390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <text x="3" y="196.6328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Interpolate</text>
+      <text x="132.5390625" y="196.6328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <rect x="0" y="0" width="190.296875" height="200.6328125" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/w" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/w">w</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,285,238)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M7,0 L23,0 C26.866,0 30,3.13401 30,7 C30,10.866 26.866,14 23,14 L7,14 C3.13401,14 0,10.866 0,7 C0,3.13401 3.13401,0 7,0 z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,300,245)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-2.25" y="2.25" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">1</text>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,285,238)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M7,0 L23,0 C26.866,0 30,3.13401 30,7 C30,10.866 26.866,14 23,14 L7,14 C3.13401,14 0,10.866 0,7 C0,3.13401 3.13401,0 7,0 z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,300,254)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-4.12305,0 L4.12305,0 L4.12305,14 L-4.12305,14 L-4.12305,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,295.877,254)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4.5" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">w</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/PID" class="proptable" display="none" pointer-events="none" extent_Height="1352.703125" extent_Width="307.79296875" preferred_X="465" preferred_Y="229">
+      <rect x="0" y="0" width="307.79296875" height="1352.703125" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Controller</text>
+      <text x="181.28125" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">PID</text>
+      <rect x="0" y="14.2421875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TimeDomain</text>
+      <text x="181.28125" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Continuous-time</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SampleTime</text>
+      <text x="181.28125" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">1</text>
+      <rect x="0" y="40.7265625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorMethod</text>
+      <text x="181.28125" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Forward Euler</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterMethod</text>
+      <text x="181.28125" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Forward Euler</text>
+      <rect x="0" y="67.2109375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Form</text>
+      <text x="181.28125" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Ideal</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">P</text>
+      <text x="181.28125" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5.80637204199794</text>
+      <rect x="0" y="93.6953125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">I</text>
+      <text x="181.28125" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">20.9623797027831</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">D</text>
+      <text x="181.28125" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0.0037150147392085</text>
+      <rect x="0" y="120.1796875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">N</text>
+      <text x="181.28125" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">9551.68244277248</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">InitialConditionSource</text>
+      <text x="181.28125" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">internal</text>
+      <rect x="0" y="146.6640625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">InitialConditionForIntegrator</text>
+      <text x="181.28125" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="170.1484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">InitialConditionForFilter</text>
+      <text x="181.28125" y="170.1484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="173.1484375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="183.390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ExternalReset</text>
+      <text x="181.28125" y="183.390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">none</text>
+      <text x="3" y="196.6328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IgnoreLimit</text>
+      <text x="181.28125" y="196.6328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <rect x="0" y="199.6328125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="209.875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ZeroCross</text>
+      <text x="181.28125" y="209.875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <text x="3" y="223.1171875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LimitOutput</text>
+      <text x="181.28125" y="223.1171875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <rect x="0" y="226.1171875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="236.359375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UpperSaturationLimit</text>
+      <text x="181.28125" y="236.359375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">25</text>
+      <text x="3" y="249.6015625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LowerSaturationLimit</text>
+      <text x="181.28125" y="249.6015625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">-25</text>
+      <rect x="0" y="252.6015625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="262.84375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LinearizeAsGain</text>
+      <text x="181.28125" y="262.84375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <text x="3" y="276.0859375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">AntiWindupMode</text>
+      <text x="181.28125" y="276.0859375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">clamping</text>
+      <rect x="0" y="279.0859375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="289.328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Kb</text>
+      <text x="181.28125" y="289.328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">1e-5</text>
+      <text x="3" y="302.5703125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TrackingMode</text>
+      <text x="181.28125" y="302.5703125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="305.5703125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="315.8125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Kt</text>
+      <text x="181.28125" y="315.8125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="329.0546875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RndMeth</text>
+      <text x="181.28125" y="329.0546875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Floor</text>
+      <rect x="0" y="332.0546875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="342.296875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SaturateOnIntegerOverflow</text>
+      <text x="181.28125" y="342.296875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <text x="3" y="355.5390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LockScale</text>
+      <text x="181.28125" y="355.5390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="358.5390625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="368.78125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">PParamMin</text>
+      <text x="181.28125" y="368.78125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="382.0234375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">PParamMax</text>
+      <text x="181.28125" y="382.0234375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="385.0234375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="395.265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">PParamDataTypeStr</text>
+      <text x="181.28125" y="395.265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="408.5078125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IParamMin</text>
+      <text x="181.28125" y="408.5078125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="411.5078125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="421.75" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IParamMax</text>
+      <text x="181.28125" y="421.75" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="434.9921875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IParamDataTypeStr</text>
+      <text x="181.28125" y="434.9921875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="437.9921875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="448.234375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DParamMin</text>
+      <text x="181.28125" y="448.234375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="461.4765625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DParamMax</text>
+      <text x="181.28125" y="461.4765625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="464.4765625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="474.71875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DParamDataTypeStr</text>
+      <text x="181.28125" y="474.71875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="487.9609375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">NParamMin</text>
+      <text x="181.28125" y="487.9609375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="490.9609375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="501.203125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">NParamMax</text>
+      <text x="181.28125" y="501.203125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="514.4453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">NParamDataTypeStr</text>
+      <text x="181.28125" y="514.4453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="517.4453125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="527.6875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KbParamMin</text>
+      <text x="181.28125" y="527.6875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="540.9296875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KbParamMax</text>
+      <text x="181.28125" y="540.9296875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="543.9296875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="554.171875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KbParamDataTypeStr</text>
+      <text x="181.28125" y="554.171875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="567.4140625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KtParamMin</text>
+      <text x="181.28125" y="567.4140625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="570.4140625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="580.65625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KtParamMax</text>
+      <text x="181.28125" y="580.65625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="593.8984375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KtParamDataTypeStr</text>
+      <text x="181.28125" y="593.8984375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="596.8984375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="607.140625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">POutMin</text>
+      <text x="181.28125" y="607.140625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="620.3828125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">POutMax</text>
+      <text x="181.28125" y="620.3828125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="623.3828125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="633.625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">POutDataTypeStr</text>
+      <text x="181.28125" y="633.625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="646.8671875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IOutMin</text>
+      <text x="181.28125" y="646.8671875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="649.8671875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="660.109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IOutMax</text>
+      <text x="181.28125" y="660.109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="673.3515625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IOutDataTypeStr</text>
+      <text x="181.28125" y="673.3515625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="676.3515625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="686.59375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DOutMin</text>
+      <text x="181.28125" y="686.59375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="699.8359375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DOutMax</text>
+      <text x="181.28125" y="699.8359375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="702.8359375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="713.078125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DOutDataTypeStr</text>
+      <text x="181.28125" y="713.078125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="726.3203125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">NOutMin</text>
+      <text x="181.28125" y="726.3203125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="729.3203125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="739.5625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">NOutMax</text>
+      <text x="181.28125" y="739.5625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="752.8046875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">NOutDataTypeStr</text>
+      <text x="181.28125" y="752.8046875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="755.8046875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="766.046875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KbOutMin</text>
+      <text x="181.28125" y="766.046875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="779.2890625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KbOutMax</text>
+      <text x="181.28125" y="779.2890625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="782.2890625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="792.53125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KbOutDataTypeStr</text>
+      <text x="181.28125" y="792.53125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="805.7734375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KtOutMin</text>
+      <text x="181.28125" y="805.7734375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="808.7734375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="819.015625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KtOutMax</text>
+      <text x="181.28125" y="819.015625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="832.2578125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">KtOutDataTypeStr</text>
+      <text x="181.28125" y="832.2578125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="835.2578125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="845.5" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorOutMin</text>
+      <text x="181.28125" y="845.5" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="858.7421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorOutMax</text>
+      <text x="181.28125" y="858.7421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="861.7421875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="871.984375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorOutDataTypeStr</text>
+      <text x="181.28125" y="871.984375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="885.2265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterOutMin</text>
+      <text x="181.28125" y="885.2265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="888.2265625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="898.46875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterOutMax</text>
+      <text x="181.28125" y="898.46875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="911.7109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterOutDataTypeStr</text>
+      <text x="181.28125" y="911.7109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="914.7109375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="924.953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumOutMin</text>
+      <text x="181.28125" y="924.953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="938.1953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumOutMax</text>
+      <text x="181.28125" y="938.1953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="941.1953125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="951.4375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumOutDataTypeStr</text>
+      <text x="181.28125" y="951.4375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="964.6796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI1OutMin</text>
+      <text x="181.28125" y="964.6796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="967.6796875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="977.921875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI1OutMax</text>
+      <text x="181.28125" y="977.921875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="991.1640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI1OutDataTypeStr</text>
+      <text x="181.28125" y="991.1640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="994.1640625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1004.40625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI2OutMin</text>
+      <text x="181.28125" y="1004.40625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="1017.6484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI2OutMax</text>
+      <text x="181.28125" y="1017.6484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="1020.6484375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1030.890625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI2OutDataTypeStr</text>
+      <text x="181.28125" y="1030.890625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="1044.1328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI3OutMin</text>
+      <text x="181.28125" y="1044.1328125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="1047.1328125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1057.375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI3OutMax</text>
+      <text x="181.28125" y="1057.375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="1070.6171875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI3OutDataTypeStr</text>
+      <text x="181.28125" y="1070.6171875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="1073.6171875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1083.859375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumDOutMin</text>
+      <text x="181.28125" y="1083.859375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="1097.1015625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumDOutMax</text>
+      <text x="181.28125" y="1097.1015625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="1100.1015625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1110.34375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumDOutDataTypeStr</text>
+      <text x="181.28125" y="1110.34375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="1123.5859375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumAccumDataTypeStr</text>
+      <text x="181.28125" y="1123.5859375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="1126.5859375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1136.828125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI1AccumDataTypeStr</text>
+      <text x="181.28125" y="1136.828125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="1150.0703125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI2AccumDataTypeStr</text>
+      <text x="181.28125" y="1150.0703125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="1153.0703125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1163.3125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumI3AccumDataTypeStr</text>
+      <text x="181.28125" y="1163.3125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="1176.5546875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SumDAccumDataTypeStr</text>
+      <text x="181.28125" y="1176.5546875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="1179.5546875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1189.796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SaturationOutMin</text>
+      <text x="181.28125" y="1189.796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="1203.0390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SaturationOutMax</text>
+      <text x="181.28125" y="1203.0390625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="1206.0390625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1216.28125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SaturationOutDataTypeStr</text>
+      <text x="181.28125" y="1216.28125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Same as input</text>
+      <text x="3" y="1229.5234375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorContinuousStateAttributes</text>
+      <text x="181.28125" y="1229.5234375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">''</text>
+      <rect x="0" y="1232.5234375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1242.765625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorStateIdentifier</text>
+      <text x="181.28125" y="1242.765625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <text x="3" y="1256.0078125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorStateMustResolveToSignalObject</text>
+      <text x="181.28125" y="1256.0078125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="1259.0078125" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1269.25" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorRTWStateStorageClass</text>
+      <text x="181.28125" y="1269.25" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <text x="3" y="1282.4921875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IntegratorRTWStateStorageTypeQualifier</text>
+      <text x="181.28125" y="1282.4921875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="1285.4921875" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1295.734375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterContinuousStateAttributes</text>
+      <text x="181.28125" y="1295.734375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">''</text>
+      <text x="3" y="1308.9765625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterStateIdentifier</text>
+      <text x="181.28125" y="1308.9765625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="1311.9765625" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1322.21875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterStateMustResolveToSignalObject</text>
+      <text x="181.28125" y="1322.21875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <text x="3" y="1335.4609375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterRTWStateStorageClass</text>
+      <text x="181.28125" y="1335.4609375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="1338.4609375" width="307.79296875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="1348.703125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FilterRTWStateStorageTypeQualifier</text>
+      <text x="181.28125" y="1348.703125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="307.79296875" height="1352.703125" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/PID" linkid="Galvo_sys_cc_neu_v31/PID" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/PID">PID</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,405,224)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L55,0 L55,42 L0,42 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M405,224 L460,224 L460,266 L405,266 L405,224z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <image x="405" y="265" width="1" height="1" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAEElEQVQokWNgGAWjYBTAAAADEAABC3uRhAAAAABJRU5ErkJggg=="/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,432,245)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-13.5" y="2.25" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">PID(s)</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="447,249 451,249 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="451,249 453,241 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="453,241 457,241 "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,405,224)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L55,0 L55,42 L0,42 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,432.5,222)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-9.99414,-14 L9.99414,-14 L9.99414,0 L-9.99414,0 L-9.99414,-14z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,422.506,208)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">PID</text>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,432.5,208)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-60.9609,-74 L60.9609,-74 L60.9609,0 L-60.9609,0 L-60.9609,-74z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="0.6" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,371.539,134)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="99.9375" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">AWM=clamping</text>
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="4" y="88" font-family="Courier" font-size="40" font-weight="400" font-style="normal">D=0.0037150147392085</text>
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="27.9844" y="136" font-family="Courier" font-size="40" font-weight="400" font-style="normal">I=20.9623797027831</text>
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="27.9844" y="184" font-family="Courier" font-size="40" font-weight="400" font-style="normal">N=9551.68244277248</text>
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="27.9844" y="232" font-family="Courier" font-size="40" font-weight="400" font-style="normal">P=5.80637204199794</text>
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="123.922" y="280" font-family="Courier" font-size="40" font-weight="400" font-style="normal">Limit=+-25</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/Sum4" class="proptable" display="none" pointer-events="none" extent_Height="147.6640625" extent_Width="244.28515625" preferred_X="375" preferred_Y="240">
+      <rect x="0" y="0" width="244.28515625" height="147.6640625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">IconShape</text>
+      <text x="117.7734375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">round</text>
+      <rect x="0" y="14.2421875" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inputs</text>
+      <text x="117.7734375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">++-</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">InputSameDT</text>
+      <text x="117.7734375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="40.7265625" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">AccumDataTypeStr</text>
+      <text x="117.7734375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutMin</text>
+      <text x="117.7734375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="67.2109375" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutMax</text>
+      <text x="117.7734375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutDataTypeStr</text>
+      <text x="117.7734375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="93.6953125" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LockScale</text>
+      <text x="117.7734375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RndMeth</text>
+      <text x="117.7734375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Floor</text>
+      <rect x="0" y="120.1796875" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SaturateOnIntegerOverflow</text>
+      <text x="117.7734375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SampleTime</text>
+      <text x="117.7734375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">-1</text>
+      <rect x="0" y="0" width="244.28515625" height="147.6640625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/Sum4" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/Sum4">Sum4</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,350,235)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M20,10 C20,15.5228 15.5228,20 10,20 C4.47715,20 0,15.5228 0,10 C0,4.47715 4.47715,0 10,0 C15.5228,0 20,4.47715 20,10 z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="358,240 362,240 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="360,238 360,242 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="353,245 357,245 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="355,243 355,247 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="358,250 362,250 "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,350,235)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M20,10 C20,15.5228 15.5228,20 10,20 C4.47715,20 0,15.5228 0,10 C0,4.47715 4.47715,0 10,0 C15.5228,0 20,4.47715 20,10 z "/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/position demodulator" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="244.28515625" preferred_X="675" preferred_Y="302">
+      <rect x="0" y="0" width="244.28515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Gain</text>
+      <text x="117.7734375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">1</text>
+      <rect x="0" y="14.2421875" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Multiplication</text>
+      <text x="117.7734375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Element-wise(K.*u)</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParamMin</text>
+      <text x="117.7734375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="40.7265625" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParamMax</text>
+      <text x="117.7734375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParamDataTypeStr</text>
+      <text x="117.7734375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <rect x="0" y="67.2109375" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutMin</text>
+      <text x="117.7734375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutMax</text>
+      <text x="117.7734375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[]</text>
+      <rect x="0" y="93.6953125" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OutDataTypeStr</text>
+      <text x="117.7734375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Inherit: Inherit via internal rule</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">LockScale</text>
+      <text x="117.7734375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RndMeth</text>
+      <text x="117.7734375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Floor</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SaturateOnIntegerOverflow</text>
+      <text x="117.7734375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="146.6640625" width="244.28515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SampleTime</text>
+      <text x="117.7734375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">-1</text>
+      <rect x="0" y="0" width="244.28515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/position demodulator" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/position demodulator">position demodulator</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,630,297)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M40,26 L0,13 L40,0 L40,26z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,659,310)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-2.25" y="2.25" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">1</text>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,630,297)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M40,26 L0,13 L40,0 L40,26z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,650,325)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-33.9785,0 L33.9785,0 L33.9785,26 L-33.9785,26 L-33.9785,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,616.021,325)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="39.9688" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">position</text>
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="88" font-family="Courier" font-size="40" font-weight="400" font-style="normal">demodulator</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/Step" class="proptable" display="none" pointer-events="none" extent_Height="81.453125" extent_Width="122.5234375" preferred_X="320" preferred_Y="175">
+      <rect x="0" y="0" width="122.5234375" height="81.453125" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Time</text>
+      <text x="76.50390625" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">1e-3</text>
+      <rect x="0" y="14.2421875" width="122.5234375" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Before</text>
+      <text x="76.50390625" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">After</text>
+      <text x="76.50390625" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">10*pi/180</text>
+      <rect x="0" y="40.7265625" width="122.5234375" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SampleTime</text>
+      <text x="76.50390625" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">VectorParams1D</text>
+      <text x="76.50390625" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <rect x="0" y="67.2109375" width="122.5234375" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ZeroCross</text>
+      <text x="76.50390625" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="0" width="122.5234375" height="81.453125" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/Step" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/Step">Step</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,285,170)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L30,0 L30,30 L0,30 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="285,197 300,197 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="300,197 300,172 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="300,172 314,172 "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,285,170)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L30,0 L30,30 L0,30 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,300,202)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-12.9922,0 L12.9922,0 L12.9922,14 L-12.9922,14 L-12.9922,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,287.008,202)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">Step</text>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,300,216)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-48.9688,0 L48.9688,0 L48.9688,14 L-48.9688,14 L-48.9688,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="0.6" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,251.031,216)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="0.6" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">Ampl.: 10*pi/180</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/GalvoModel" class="proptable" display="none" pointer-events="none" extent_Height="107.9375" extent_Width="237.796875" preferred_X="830" preferred_Y="207">
+      <rect x="0" y="0" width="237.796875" height="107.9375" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ModelNameDialog</text>
+      <text x="148.53125" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">GalvoModel_v53.slx</text>
+      <rect x="0" y="14.2421875" width="237.796875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParameterArgumentNames</text>
+      <text x="148.53125" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParameterArgumentValues</text>
+      <text x="148.53125" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="40.7265625" width="237.796875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SimulationMode</text>
+      <text x="148.53125" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Accelerator</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Variant</text>
+      <text x="148.53125" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <rect x="0" y="67.2109375" width="237.796875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OverrideUsingVariant</text>
+      <text x="148.53125" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">v53_neuer_cc</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ActiveVariant</text>
+      <text x="148.53125" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">v53_neuer_cc</text>
+      <rect x="0" y="93.6953125" width="237.796875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">GeneratePreprocessorConditionals</text>
+      <text x="148.53125" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="0" width="237.796875" height="107.9375" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/GalvoModel" linkid="GalvoModel_v53" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/GalvoModel">GalvoModel (GalvoModel_v53)</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,690,202)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L135,0 L135,56 L0,56 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M690,202 L825,202 L825,258 L690,258 L690,202z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,693,229)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">I</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,699,235)" font-family="Courier" font-size="6" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="6" font-weight="400" font-style="normal">Coil</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#0000cc" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,804,254)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#0000cc" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">Pos</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,792,234)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">Speed</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,801,209)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">U</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,807,215)" font-family="Courier" font-size="6" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="6" font-weight="400" font-style="normal">BEM</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,692,216)" font-family="Courier" font-size="9" font-weight="700" font-style="italic">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="9" font-weight="700" font-style="italic">GalvoModel_v53</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,710,254)" font-family="Courier" font-size="7.5" font-weight="400" font-style="italic">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="italic">mechanics</text>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,690,202)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L135,0 L135,56 L0,56 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,757.5,260)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-30.9805,0 L30.9805,0 L30.9805,14 L-30.9805,14 L-30.9805,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,726.52,260)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">GalvoModel</text>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,690.5,257.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-15.1046 0.895431,-16 2,-16 L14,-16 C15.1046,-16 16,-15.1046 16,-14 L16,-2 C16,-0.895431 15.1046,0 14,0 L2,0 C0.895431,0 0,-0.895431 0,-2 L0,-14z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,689.5,240.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.8">
+        <image x="0" y="0" width="21" height="21" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAL5JREFUOI3dlEEOwyAMBNer3NMH8bA+oQ/zg8IH1r3QiCYhApVT54QsM4FFjkVEApAkJZIJwIprsiQn6QDczLzRh6VTCAArySQJJAGgLe0UnsR3WERsncKabGaPO2kMCndxM+O4ZmvUW73P+mtsnGIkjlVSqgu/XL/mK+NZUpiZfdat6/8EAeTpUkk+W0ySPlu8AHCSKDPdO6632LEwY2xPr1+iGOK45yQtszySby57dpaLJgfwGv1pDxzi33kDyKKqZttcTncAAAAASUVORK5CYII="/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,691.5,242.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFpJREFUOI3FkssNwDAIQ03V9djJO2UOz9TeqqohERUHfATr8QWKMgBw9ytjHmNYmMgAVp4jU3mnMuCMgiSndiVNcZLWP0I/4Fni+86S/gG+HxZdYaX+HZQBZd1xIRm4rL6WOAAAAABJRU5ErkJggg=="/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/pos. sensor dynamic" class="proptable" display="none" pointer-events="none" extent_Height="54.96875" extent_Width="151.0390625" preferred_X="775" preferred_Y="299">
+      <rect x="0" y="0" width="151.0390625" height="54.96875" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Numerator</text>
+      <text x="112.52734375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[1e-6 1]</text>
+      <rect x="0" y="14.2421875" width="151.0390625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Denominator</text>
+      <text x="112.52734375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">[1e-6 1]</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">AbsoluteTolerance</text>
+      <text x="112.52734375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">auto</text>
+      <rect x="0" y="40.7265625" width="151.0390625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ContinuousStateAttributes</text>
+      <text x="112.52734375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">''</text>
+      <rect x="0" y="0" width="151.0390625" height="54.96875" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/pos. sensor dynamic" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/pos. sensor dynamic">pos. sensor dynamic</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,715,294)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L55,0 L55,32 L0,32 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,721,306)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">1e-6s+1</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,721,322)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">1e-6s+1</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="721,310 763,310 "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,715,294)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L55,0 L55,32 L0,32 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,742.5,328)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-33.9785,0 L33.9785,0 L33.9785,26 L-33.9785,26 L-33.9785,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,708.521,328)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">pos. sensor</text>
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="51.9688" y="88" font-family="Courier" font-size="40" font-weight="400" font-style="normal">dynamic</text>
+      </g>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/Terminator" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/Terminator">Terminator</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,885,220)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L20,0 L20,20 L0,20 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="891,235 901,235 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="901,235 901,225 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="901,225 891,225 "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1,0,0,1,0.5,0.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <polyline fill="none" vector-effect="none" points="887,230 901,230 "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,885,220)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L20,0 L20,20 L0,20 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,895,242)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-30.9805,0 L30.9805,0 L30.9805,14 L-30.9805,14 L-30.9805,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,864.02,242)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">Terminator</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/GalvoModel1" class="proptable" display="none" pointer-events="none" extent_Height="107.9375" extent_Width="243.7890625" preferred_X="640" preferred_Y="205">
+      <rect x="0" y="0" width="243.7890625" height="107.9375" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ModelNameDialog</text>
+      <text x="148.53125" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">CurrentComp_v20.slx</text>
+      <rect x="0" y="14.2421875" width="243.7890625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParameterArgumentNames</text>
+      <text x="148.53125" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ParameterArgumentValues</text>
+      <text x="148.53125" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="40.7265625" width="243.7890625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SimulationMode</text>
+      <text x="148.53125" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Accelerator</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Variant</text>
+      <text x="148.53125" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">on</text>
+      <rect x="0" y="67.2109375" width="243.7890625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">OverrideUsingVariant</text>
+      <text x="148.53125" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">cc_v20</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ActiveVariant</text>
+      <text x="148.53125" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">cc_v20</text>
+      <rect x="0" y="93.6953125" width="243.7890625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">GeneratePreprocessorConditionals</text>
+      <text x="148.53125" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="0" width="243.7890625" height="107.9375" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/GalvoModel1" linkid="CurrentComp_v20" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/GalvoModel1">GalvoModel1 (CurrentComp_v20)</title>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,545,200)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L90,0 L90,60 L0,60 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="non-scaling-stroke" fill-rule="evenodd" d="M545,200 L635,200 L635,260 L545,260 L545,200z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,548,244)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">I</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,554,250)" font-family="Courier" font-size="6" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="6" font-weight="400" font-style="normal">Set Coil</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#e60000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,548,214)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#e60000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">U</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#e60000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,554,220)" font-family="Courier" font-size="6" font-weight="400" font-style="normal">
+        <text fill="#e60000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="6" font-weight="400" font-style="normal">BEM</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,606,229)" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="7.5" font-weight="400" font-style="normal">I</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,612,235)" font-family="Courier" font-size="6" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="6" font-weight="400" font-style="normal">Coil</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,591,212)" font-family="Courier" font-size="9" font-weight="700" font-style="italic">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="9" font-weight="700" font-style="italic">G</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,598,218)" font-family="Courier" font-size="6.75" font-weight="700" font-style="italic">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="6.75" font-weight="700" font-style="italic">cc</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,609,212)" font-family="Courier" font-size="9" font-weight="700" font-style="italic">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="0" font-family="Courier" font-size="9" font-weight="700" font-style="italic">(s)</text>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,545,200)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L90,0 L90,60 L0,60 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,590,262)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-33.9785,0 L33.9785,0 L33.9785,14 L-33.9785,14 L-33.9785,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,556.021,262)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">GalvoModel1</text>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,545.5,259.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-15.1046 0.895431,-16 2,-16 L14,-16 C15.1046,-16 16,-15.1046 16,-14 L16,-2 C16,-0.895431 15.1046,0 14,0 L2,0 C0.895431,0 0,-0.895431 0,-2 L0,-14z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,544.5,242.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.8">
+        <image x="0" y="0" width="21" height="21" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAL5JREFUOI3dlEEOwyAMBNer3NMH8bA+oQ/zg8IH1r3QiCYhApVT54QsM4FFjkVEApAkJZIJwIprsiQn6QDczLzRh6VTCAArySQJJAGgLe0UnsR3WERsncKabGaPO2kMCndxM+O4ZmvUW73P+mtsnGIkjlVSqgu/XL/mK+NZUpiZfdat6/8EAeTpUkk+W0ySPlu8AHCSKDPdO6632LEwY2xPr1+iGOK45yQtszySby57dpaLJgfwGv1pDxzi33kDyKKqZttcTncAAAAASUVORK5CYII="/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,546.5,244.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAFpJREFUOI3FkssNwDAIQ03V9djJO2UOz9TeqqohERUHfATr8QWKMgBw9ytjHmNYmMgAVp4jU3mnMuCMgiSndiVNcZLWP0I/4Fni+86S/gG+HxZdYaX+HZQBZd1xIRm4rL6WOAAAAABJRU5ErkJggg=="/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/Current Ctrl" class="proptable" display="none" pointer-events="none" extent_Height="81.453125" extent_Width="186.4921875" preferred_X="765" preferred_Y="40">
+      <rect x="0" y="0" width="186.4921875" height="81.453125" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ShowPortLabels</text>
+      <text x="123.9921875" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">FromPortIcon</text>
+      <rect x="0" y="14.2421875" width="186.4921875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Permissions</text>
+      <text x="123.9921875" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ReadWrite</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">ErrorFcn</text>
+      <text x="123.9921875" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="40.7265625" width="186.4921875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">PermitHierarchicalResolution</text>
+      <text x="123.9921875" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">All</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TreatAsAtomicUnit</text>
+      <text x="123.9921875" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="67.2109375" width="186.4921875" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWSystemCode</text>
+      <text x="123.9921875" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="0" width="186.4921875" height="81.453125" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/Current Ctrl" linkid="Galvo_sys_cc_neu_v31/Current Ctrl" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill">
+      <title id="title.Galvo_sys_cc_neu_v31/Current Ctrl">Current Ctrl</title>
+      <g fill="#000000" fill-opacity="0" stroke="#000000" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(-1,0,0,-1,645,50)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M5,-5 L0,0 L5,5"/>
+      </g>
+      <g fill="#000000" fill-opacity="0" stroke="#000000" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,760,65)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,-5 L5,0 L0,5"/>
+      </g>
+      <g fill="#000000" fill-opacity="0" stroke="#000000" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(-1,0,0,-1,645,80)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M5,-5 L0,0 L5,5"/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,645,35)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L115,0 L115,60 L0,60 L0,0z "/>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,648,50)" font-family="Courier" font-size="6.75" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="1.5" font-family="Courier" font-size="6.75" font-weight="400" font-style="normal">U_BEM</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,648,80)" font-family="Courier" font-size="6.75" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="0" y="1.5" font-family="Courier" font-size="6.75" font-weight="400" font-style="normal">I_set</text>
+      </g>
+      <g fill="#ffffff" fill-opacity="1" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(1.33333,0,0,1.33333,757,65)" font-family="Courier" font-size="6.75" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="-8.07812" y="1.5" font-family="Courier" font-size="6.75" font-weight="400" font-style="normal">Ic</text>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,645,35)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L115,0 L115,60 L0,60 L0,0z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,702.5,97)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-36.9766,0 L36.9766,0 L36.9766,14 L-36.9766,14 L-36.9766,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,665.523,97)" font-family="Courier" font-size="40" font-weight="400" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="40" font-family="Courier" font-size="40" font-weight="400" font-style="normal">Current Ctrl</text>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,645.5,94.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-15.1046 0.895431,-16 2,-16 L14,-16 C15.1046,-16 16,-15.1046 16,-14 L16,-2 C16,-0.895431 15.1046,0 14,0 L2,0 C0.895431,0 0,-0.895431 0,-2 L0,-14z "/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,644.5,77.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.8">
+        <image x="0" y="0" width="21" height="21" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAI5JREFUOI3t1MENwjAMheFni3sZKIN1BAbzQMkC73FoiEoFUsG9gPqfIiX64pNNUgFQSBZ3LwAm7KuRDHcPAGFmMW4kzZKqvq9Kmte/OclPpnvV1I2RSapJFACamV3XqJLgApnZ4+xHgNtO9ER/BW0HOE+Gk4x3L/e2Nbzvw8y0rRujC4AAcMsu6cRQ/9YdRpp8HBgXdnsAAAAASUVORK5CYII="/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,646.5,79.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAf5JREFUOI3Fkk1I1FEUxX/z6YiKM1QoSUK0qJDaFS4LEgnKwBatyk2TtaimhRBDQZRBMEZRWg6F9EGEuJhoIWWDShluSsNFtCyUykWT2ny9N3PfaxHzZ6aPRbTowl3cxznnHs678I/lAojH49blcv0V0VpLd3e3y1t6CIfDfwQrpdBao5RyOplMAuD+GTz3YZapd5OIEWdTKv2Fa09jGGOw1lbgveXDjbGrjM48oiHYyNDETYaODWOM4croJVbVrHYEjTGVAlprAB6+vEvyzDRVvgD7Yrv4mFpgObPExNsxHp8aR0QcFyWOGyCbzQJQ7a9mITVPRqX5mk7h9wToTZzleFsPXpcPYwwigog4HC9ALpcDoPfAZQ717ydXyHGivYc371+xuPSJ3Vs7yKs8xULREShxvOUOtm1o5fm5WUQEpRUdfTuJ7r3AvRe3uTM1iM/j53T7eTataXE47pKD8i/SWjMy/YCm0Dqags0kXg8zcvQJsc4BBib7fu9Aa+0knM5/4/qzPga77rOSWaa+OojbeqgPhMgX8hhjfs1AKYW1Fmstt8b72bGxjcbatRSLReqq6ogmTrK48pk9LZ2U5+Y4KAmIEayFrtYjaK0REaLtF5mbn6HGX0tzaD3luXmBH6EpBYAxhoPbDyMijoCIsLlhS8UFikjlJUYiEf5LfQdwkjtotrHoMAAAAABJRU5ErkJggg=="/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/yrad_uniq_id_0" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">yrad</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/yrad_uniq_id_0" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/yrad_uniq_id_0">yrad</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(6.12323e-17,-1,1,6.12323e-17,360,255)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M630,310 L360,310 L360,263"/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/_uniq_id_1" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/_uniq_id_1" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/_uniq_id_1"/>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,670,310)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M715,310 L678,310"/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/_uniq_id_2" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/_uniq_id_2" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/_uniq_id_2"/>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(6.12323e-17,1,-1,6.12323e-17,360,235)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M315,185 L360,185 L360,227"/>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/Pos_uniq_id_3" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Pos</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/Pos_uniq_id_3" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/Pos_uniq_id_3">Pos</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(-1,1.22465e-16,-1.22465e-16,-1,770,310)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M825,250 L841,250 L841,310 L778,310"/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,813,308.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-11.7988,-16 L11.7988,-16 L11.7988,0 L-11.7988,0 L-11.7988,-16z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,801.201,292.5)" font-family="Courier" font-size="48" font-weight="700" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="48" font-family="Courier" font-size="48" font-weight="700" font-style="normal">Pos</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/err_uniq_id_4" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">err</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/err_uniq_id_4" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/err_uniq_id_4">err</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,405,245)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M370,245 L397,245"/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,382.5,246.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-11.9238,0 L11.9238,0 L11.9238,16 L-11.9238,16 L-11.9238,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,370.576,246.5)" font-family="Courier" font-size="48" font-weight="700" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4.5" y="48" font-family="Courier" font-size="48" font-weight="700" font-style="normal">err</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/Ic_set_uniq_id_5" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Ic_set</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/Ic_set_uniq_id_5" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/Ic_set_uniq_id_5">Ic_set</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,545,245)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M460,245 L537,245"/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,465,246.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M0,0 L45.1953,0 L45.1953,16 L0,16 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,465,246.5)" font-family="Courier" font-size="48" font-weight="700" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="48" font-family="Courier" font-size="48" font-weight="700" font-style="normal">Ic_set</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/I_coil_uniq_id_6" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">I_coil</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/I_coil_uniq_id_6" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/I_coil_uniq_id_6">I_coil</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,690,230)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M635,230 L682,230"/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,675,231.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-45.1953,0 L0,0 L0,16 L-45.1953,16 L-45.1953,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,629.805,231.5)" font-family="Courier" font-size="48" font-weight="700" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="48" font-family="Courier" font-size="48" font-weight="700" font-style="normal">I_coil</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/w_uniq_id_7" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">w</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/w_uniq_id_7" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/w_uniq_id_7">w</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,350,245)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M315,245 L342,245"/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,327.5,246.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-4.59961,0 L4.59961,0 L4.59961,16 L-4.59961,16 L-4.59961,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,322.9,246.5)" font-family="Courier" font-size="48" font-weight="700" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4" y="48" font-family="Courier" font-size="48" font-weight="700" font-style="normal">w</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/U_BEM_uniq_id_8" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">U_BEM</text>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/U_BEM_uniq_id_8" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/U_BEM_uniq_id_8">U_BEM</title>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,545,215)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M825,210 L839,210 L839,167 L530,167 L530,215 L537,215"/>
+      </g>
+      <g fill="none" stroke="none" transform="matrix(1,0,0,1,684.5,165.5)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M-19.123,-16 L19.123,-16 L19.123,0 L-19.123,0 L-19.123,-16z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="square" stroke-linejoin="bevel" transform="matrix(0.25,0,0,0.25,665.377,149.5)" font-family="Courier" font-size="48" font-weight="700" font-style="normal">
+        <text fill="#000000" fill-opacity="1" stroke="none" xml:space="preserve" x="4.5" y="48" font-family="Courier" font-size="48" font-weight="700" font-style="normal">U_BEM</text>
+      </g>
+    </g>
+    <g id="prop.Galvo_sys_cc_neu_v31/_uniq_id_9" class="proptable" display="none" pointer-events="none" extent_Height="160.90625" extent_Width="197.03515625" preferred_X="5" preferred_Y="5">
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="none" fill="rgb(100%,100%,100%)"/>
+      <text x="3" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLogging</text>
+      <text x="122.0234375" y="11.2421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <rect x="0" y="14.2421875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingNameMode</text>
+      <text x="122.0234375" y="24.484375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Use signal name</text>
+      <text x="3" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">UserSpecifiedLogName</text>
+      <text x="122.0234375" y="37.7265625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="40.7265625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimateData</text>
+      <text x="122.0234375" y="50.96875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingDecimation</text>
+      <text x="122.0234375" y="64.2109375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">2</text>
+      <rect x="0" y="67.2109375" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingLimitDataPoints</text>
+      <text x="122.0234375" y="77.453125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">DataLoggingMaxPoints</text>
+      <text x="122.0234375" y="90.6953125" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">5000</text>
+      <rect x="0" y="93.6953125" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">TestPoint</text>
+      <text x="122.0234375" y="103.9375" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">SignalPropagation</text>
+      <text x="122.0234375" y="117.1796875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">off</text>
+      <rect x="0" y="120.1796875" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">MustResolveToSignalObject</text>
+      <text x="122.0234375" y="130.421875" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">0</text>
+      <text x="3" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">StorageClass</text>
+      <text x="122.0234375" y="143.6640625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">Auto</text>
+      <rect x="0" y="146.6640625" width="197.03515625" height="13.2421875" stroke="none" fill="rgb(90.2%,90.2%,90.2%)"/>
+      <text x="3" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9">RTWStorageTypeQualifier</text>
+      <text x="122.0234375" y="156.90625" fill="rgb(0%,0%,0%)" stroke="none" font-family="Helvetica" font-size="9"/>
+      <rect x="0" y="0" width="197.03515625" height="160.90625" rx="4" ry="4" stroke="rgb(0%,0%,0%)" fill="none"/>
+    </g>
+    <g id="Galvo_sys_cc_neu_v31/_uniq_id_9" linkid="" onmouseover="showPropAndHighlight(evt)" onmouseout="hidePropAndUnhighlight(evt)" onclick="changeSys(evt)" highlight="fill,stroke">
+      <title id="title.Galvo_sys_cc_neu_v31/_uniq_id_9"/>
+      <g fill="#000000" fill-opacity="1" stroke="none" transform="matrix(1,0,0,1,885,230)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="nonzero" d="M0,0 L-8,-4 L-8,4 L0,0z "/>
+      </g>
+      <g fill="none" stroke="#000000" stroke-opacity="1" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="2" transform="matrix(1,0,0,1,0,0)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+        <path vector-effect="none" fill-rule="evenodd" d="M825,230 L877,230"/>
+      </g>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,825,210)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-16.2091 1.79086,-18 4,-18 L14,-18 C16.2091,-18 18,-16.2091 18,-14 L18,-4 C18,-1.79086 16.2091,0 14,0 L4,0 C1.79086,0 0,-1.79086 0,-4 L0,-14z "/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,827,194)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.4">
+      <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXBJREFUOI21kj2KFUEUhb8eJhrMZcQtPAQRNDCbXcgsQCM3YGAuiJmZkRjoEkwnUTF1AWJiqrzqvv8G9V73+xlMxAsFVUWd7546VfCPNQBcvr4qIJftGpbp7ulh2Fnx9snD4RRAZOL904uT6zpEFh6JeCGeNA3WEjz/8AmADpgEgPuvvvD1x+/euLYGam995/yMd49Ws2YDmAD4/P0X9fJi7q6qjOPIOI601mitsXrzk6xFcwIwiRxZNzNUFTPDzHB33B2ArJo1e1fYCiNiBojIDIoIADzr+isAtNaICNwdM5sBqro0iZo1swOP3APsulBVMpdXVs8DBzJhUdy7fYNbL74d5bFbq5tniCUiBw7Ek4+P75LVQ4oEj0S9UE8mTybd/AONwwwE8aKqqIKowqMP3UDEktGC0TroKMS1BFDdQRaeHWDRf+BkfYwaNMv9ECOCJkGxcZBFZBdvAd1BMmqy1pif9HQbzoPLZ38N77/VH2egcD0kPSsNAAAAAElFTkSuQmCC"/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,635,230)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-16.2091 1.79086,-18 4,-18 L14,-18 C16.2091,-18 18,-16.2091 18,-14 L18,-4 C18,-1.79086 16.2091,0 14,0 L4,0 C1.79086,0 0,-1.79086 0,-4 L0,-14z "/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,637,214)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.4">
+      <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXBJREFUOI21kj2KFUEUhb8eJhrMZcQtPAQRNDCbXcgsQCM3YGAuiJmZkRjoEkwnUTF1AWJiqrzqvv8G9V73+xlMxAsFVUWd7546VfCPNQBcvr4qIJftGpbp7ulh2Fnx9snD4RRAZOL904uT6zpEFh6JeCGeNA3WEjz/8AmADpgEgPuvvvD1x+/euLYGam995/yMd49Ws2YDmAD4/P0X9fJi7q6qjOPIOI601mitsXrzk6xFcwIwiRxZNzNUFTPDzHB33B2ArJo1e1fYCiNiBojIDIoIADzr+isAtNaICNwdM5sBqro0iZo1swOP3APsulBVMpdXVs8DBzJhUdy7fYNbL74d5bFbq5tniCUiBw7Ek4+P75LVQ4oEj0S9UE8mTybd/AONwwwE8aKqqIKowqMP3UDEktGC0TroKMS1BFDdQRaeHWDRf+BkfYwaNMv9ECOCJkGxcZBFZBdvAd1BMmqy1pif9HQbzoPLZ38N77/VH2egcD0kPSsNAAAAAElFTkSuQmCC"/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,460,245)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-16.2091 1.79086,-18 4,-18 L14,-18 C16.2091,-18 18,-16.2091 18,-14 L18,-4 C18,-1.79086 16.2091,0 14,0 L4,0 C1.79086,0 0,-1.79086 0,-4 L0,-14z "/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,462,229)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.4">
+      <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXBJREFUOI21kj2KFUEUhb8eJhrMZcQtPAQRNDCbXcgsQCM3YGAuiJmZkRjoEkwnUTF1AWJiqrzqvv8G9V73+xlMxAsFVUWd7546VfCPNQBcvr4qIJftGpbp7ulh2Fnx9snD4RRAZOL904uT6zpEFh6JeCGeNA3WEjz/8AmADpgEgPuvvvD1x+/euLYGam995/yMd49Ws2YDmAD4/P0X9fJi7q6qjOPIOI601mitsXrzk6xFcwIwiRxZNzNUFTPDzHB33B2ArJo1e1fYCiNiBojIDIoIADzr+isAtNaICNwdM5sBqro0iZo1swOP3APsulBVMpdXVs8DBzJhUdy7fYNbL74d5bFbq5tniCUiBw7Ek4+P75LVQ4oEj0S9UE8mTybd/AONwwwE8aKqqIKowqMP3UDEktGC0TroKMS1BFDdQRaeHWDRf+BkfYwaNMv9ECOCJkGxcZBFZBdvAd1BMmqy1pif9HQbzoPLZ38N77/VH2egcD0kPSsNAAAAAElFTkSuQmCC"/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,825,250)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-16.2091 1.79086,-18 4,-18 L14,-18 C16.2091,-18 18,-16.2091 18,-14 L18,-4 C18,-1.79086 16.2091,0 14,0 L4,0 C1.79086,0 0,-1.79086 0,-4 L0,-14z "/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,827,234)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.4">
+      <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXBJREFUOI21kj2KFUEUhb8eJhrMZcQtPAQRNDCbXcgsQCM3YGAuiJmZkRjoEkwnUTF1AWJiqrzqvv8G9V73+xlMxAsFVUWd7546VfCPNQBcvr4qIJftGpbp7ulh2Fnx9snD4RRAZOL904uT6zpEFh6JeCGeNA3WEjz/8AmADpgEgPuvvvD1x+/euLYGam995/yMd49Ws2YDmAD4/P0X9fJi7q6qjOPIOI601mitsXrzk6xFcwIwiRxZNzNUFTPDzHB33B2ArJo1e1fYCiNiBojIDIoIADzr+isAtNaICNwdM5sBqro0iZo1swOP3APsulBVMpdXVs8DBzJhUdy7fYNbL74d5bFbq5tniCUiBw7Ek4+P75LVQ4oEj0S9UE8mTybd/AONwwwE8aKqqIKowqMP3UDEktGC0TroKMS1BFDdQRaeHWDRf+BkfYwaNMv9ECOCJkGxcZBFZBdvAd1BMmqy1pif9HQbzoPLZ38N77/VH2egcD0kPSsNAAAAAElFTkSuQmCC"/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,315,185)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-16.2091 1.79086,-18 4,-18 L14,-18 C16.2091,-18 18,-16.2091 18,-14 L18,-4 C18,-1.79086 16.2091,0 14,0 L4,0 C1.79086,0 0,-1.79086 0,-4 L0,-14z "/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,317,169)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.4">
+      <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXBJREFUOI21kj2KFUEUhb8eJhrMZcQtPAQRNDCbXcgsQCM3YGAuiJmZkRjoEkwnUTF1AWJiqrzqvv8G9V73+xlMxAsFVUWd7546VfCPNQBcvr4qIJftGpbp7ulh2Fnx9snD4RRAZOL904uT6zpEFh6JeCGeNA3WEjz/8AmADpgEgPuvvvD1x+/euLYGam995/yMd49Ws2YDmAD4/P0X9fJi7q6qjOPIOI601mitsXrzk6xFcwIwiRxZNzNUFTPDzHB33B2ArJo1e1fYCiNiBojIDIoIADzr+isAtNaICNwdM5sBqro0iZo1swOP3APsulBVMpdXVs8DBzJhUdy7fYNbL74d5bFbq5tniCUiBw7Ek4+P75LVQ4oEj0S9UE8mTybd/AONwwwE8aKqqIKowqMP3UDEktGC0TroKMS1BFDdQRaeHWDRf+BkfYwaNMv9ECOCJkGxcZBFZBdvAd1BMmqy1pif9HQbzoPLZ38N77/VH2egcD0kPSsNAAAAAElFTkSuQmCC"/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,370,245)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal">
+      <path vector-effect="none" fill-rule="evenodd" d="M0,-14 C0,-16.2091 1.79086,-18 4,-18 L14,-18 C16.2091,-18 18,-16.2091 18,-14 L18,-4 C18,-1.79086 16.2091,0 14,0 L4,0 C1.79086,0 0,-1.79086 0,-4 L0,-14z "/>
+    </g>
+    <g fill="none" stroke="none" transform="matrix(1,0,0,1,372,229)" font-family="Sans Serif" font-size="9" font-weight="400" font-style="normal" opacity="0.4">
+      <image x="-1" y="-1" width="16" height="16" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAXBJREFUOI21kj2KFUEUhb8eJhrMZcQtPAQRNDCbXcgsQCM3YGAuiJmZkRjoEkwnUTF1AWJiqrzqvv8G9V73+xlMxAsFVUWd7546VfCPNQBcvr4qIJftGpbp7ulh2Fnx9snD4RRAZOL904uT6zpEFh6JeCGeNA3WEjz/8AmADpgEgPuvvvD1x+/euLYGam995/yMd49Ws2YDmAD4/P0X9fJi7q6qjOPIOI601mitsXrzk6xFcwIwiRxZNzNUFTPDzHB33B2ArJo1e1fYCiNiBojIDIoIADzr+isAtNaICNwdM5sBqro0iZo1swOP3APsulBVMpdXVs8DBzJhUdy7fYNbL74d5bFbq5tniCUiBw7Ek4+P75LVQ4oEj0S9UE8mTybd/AONwwwE8aKqqIKowqMP3UDEktGC0TroKMS1BFDdQRaeHWDRf+BkfYwaNMv9ECOCJkGxcZBFZBdvAd1BMmqy1pif9HQbzoPLZ38N77/VH2egcD0kPSsNAAAAAElFTkSuQmCC"/>
+    </g>
+  </g>
+</svg>

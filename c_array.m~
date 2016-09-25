@@ -1,0 +1,25 @@
+
+ff=linspace(0,2^12,32);
+
+str=[];
+for k=1:length(ff)
+    if ~mod(k,8)
+        str=[str sprintf('%d ,\n',ff(k))];
+    else
+        str=[str sprintf('%d , ',ff(k))];
+    end
+end
+    
+%save('c_array_out', 'tytff', '-ASCII')    
+dlmwrite('/media/global_exchange/my_data.out',round(ff+2^15), ',')   
+    type '/media/global_exchange/my_data.out'
+    
+if exist('/media/global_exchange/my_data1.out')    
+    in=dlmread('/media/global_exchange/my_data1.out', ',');
+end
+
+% inn=[];
+% for k=1:4*length(in)
+%     inn=[inn in(k:k+4)];
+%     k
+% end

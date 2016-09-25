@@ -1,0 +1,1602 @@
+Model {
+  Name			  "nlm_1"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  on
+  ShowPortDataTypes	  on
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Oct 31 23:36:58 2003"
+  Creator		  "svenhoffmann"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "svenhoffmann"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Nov  3 07:49:15 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:17>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "WorkspaceI/O"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode45"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "600"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yp"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      SampleTime	      "-1"
+      Interpolate	      on
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "nlm_1"
+    Location		    [187, 264, 712, 514]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Filter"
+      Tag		      "FilterWizardSubSystem"
+      Ports		      [1, 1]
+      Position		      [180, 75, 255, 115]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Filter"
+	Location		[70, 200, 650, 460]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Input"
+	  Position		  [75, 67, 105, 83]
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay10"
+	  Ports			  [1, 1]
+	  Position		  [357, 850, 393, 885]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay11"
+	  Ports			  [1, 1]
+	  Position		  [357, 940, 393, 975]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay12"
+	  Ports			  [1, 1]
+	  Position		  [357, 1030, 393, 1065]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay13"
+	  Ports			  [1, 1]
+	  Position		  [357, 1120, 393, 1155]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay14"
+	  Ports			  [1, 1]
+	  Position		  [357, 1210, 393, 1245]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay15"
+	  Ports			  [1, 1]
+	  Position		  [357, 1300, 393, 1335]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay16"
+	  Ports			  [1, 1]
+	  Position		  [357, 1390, 393, 1425]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay17"
+	  Ports			  [1, 1]
+	  Position		  [357, 1480, 393, 1515]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay18"
+	  Ports			  [1, 1]
+	  Position		  [357, 1570, 393, 1605]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay2"
+	  Ports			  [1, 1]
+	  Position		  [357, 130, 393, 165]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay3"
+	  Ports			  [1, 1]
+	  Position		  [357, 220, 393, 255]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay4"
+	  Ports			  [1, 1]
+	  Position		  [357, 310, 393, 345]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay5"
+	  Ports			  [1, 1]
+	  Position		  [357, 400, 393, 435]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay6"
+	  Ports			  [1, 1]
+	  Position		  [357, 490, 393, 525]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay7"
+	  Ports			  [1, 1]
+	  Position		  [357, 580, 393, 615]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay8"
+	  Ports			  [1, 1]
+	  Position		  [357, 670, 393, 705]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay9"
+	  Ports			  [1, 1]
+	  Position		  [357, 760, 393, 795]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Integer Delay"
+	  SourceType		  "Integer Delay"
+	  delay			  "1"
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum10"
+	  Ports			  [2, 1]
+	  Position		  [545, 890, 575, 920]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum11"
+	  Ports			  [2, 1]
+	  Position		  [545, 980, 575, 1010]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum12"
+	  Ports			  [2, 1]
+	  Position		  [545, 1070, 575, 1100]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum13"
+	  Ports			  [2, 1]
+	  Position		  [545, 1160, 575, 1190]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum14"
+	  Ports			  [2, 1]
+	  Position		  [545, 1250, 575, 1280]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum15"
+	  Ports			  [2, 1]
+	  Position		  [545, 1340, 575, 1370]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum16"
+	  Ports			  [2, 1]
+	  Position		  [545, 1430, 575, 1460]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum17"
+	  Ports			  [2, 1]
+	  Position		  [545, 1520, 575, 1550]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum2"
+	  Ports			  [2, 1]
+	  Position		  [545, 170, 575, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum3"
+	  Ports			  [2, 1]
+	  Position		  [545, 260, 575, 290]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum4"
+	  Ports			  [2, 1]
+	  Position		  [545, 350, 575, 380]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum5"
+	  Ports			  [2, 1]
+	  Position		  [545, 440, 575, 470]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum6"
+	  Ports			  [2, 1]
+	  Position		  [545, 530, 575, 560]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum7"
+	  Ports			  [2, 1]
+	  Position		  [545, 620, 575, 650]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum8"
+	  Ports			  [2, 1]
+	  Position		  [545, 710, 575, 740]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum9"
+	  Ports			  [2, 1]
+	  Position		  [545, 800, 575, 830]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertA1"
+	  Ports			  [1, 1]
+	  Position		  [185, 59, 220, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  "on"
+	  RndMeth		  "Floor"
+	  DoSatur		  "on"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertOut"
+	  Ports			  [1, 1]
+	  Position		  [595, 59, 630, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  "on"
+	  RndMeth		  "Floor"
+	  DoSatur		  "on"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "GatewayIn"
+	  Ports			  [1, 1]
+	  Position		  [125, 60, 155, 90]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Gateway In"
+	  SourceType		  "Fixed-Point Gateway In"
+	  InRealWorld		  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  "on"
+	  RndMeth		  "Floor"
+	  DoSatur		  "on"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumR"
+	  Ports			  [2, 1]
+	  Position		  [545, 60, 575, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1)"
+	  Position		  [460, 59, 495, 91]
+	  Gain			  "-0.01397705078125"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(10)"
+	  Position		  [460, 889, 495, 921]
+	  Gain			  "0.412933349609375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(11)"
+	  Position		  [460, 979, 495, 1011]
+	  Gain			  "0.179290771484375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(12)"
+	  Position		  [460, 1069, 495, 1101]
+	  Gain			  "-0.047332763671875"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(13)"
+	  Position		  [460, 1159, 495, 1191]
+	  Gain			  "-0.084014892578125"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(14)"
+	  Position		  [460, 1249, 495, 1281]
+	  Gain			  "0.00531005859375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(15)"
+	  Position		  [460, 1339, 495, 1371]
+	  Gain			  "0.04925537109375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(16)"
+	  Position		  [460, 1429, 495, 1461]
+	  Gain			  "0.016448974609375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(17)"
+	  Position		  [460, 1519, 495, 1551]
+	  Gain			  "-0.061279296875"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(18)"
+	  Position		  [460, 1609, 495, 1641]
+	  Gain			  "-0.01397705078125"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2)"
+	  Position		  [460, 169, 495, 201]
+	  Gain			  "-0.061279296875"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3)"
+	  Position		  [460, 259, 495, 291]
+	  Gain			  "0.016448974609375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(4)"
+	  Position		  [460, 349, 495, 381]
+	  Gain			  "0.04925537109375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(5)"
+	  Position		  [460, 439, 495, 471]
+	  Gain			  "0.00531005859375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(6)"
+	  Position		  [460, 529, 495, 561]
+	  Gain			  "-0.084014892578125"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(7)"
+	  Position		  [460, 619, 495, 651]
+	  Gain			  "-0.047332763671875"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(8)"
+	  Position		  [460, 709, 495, 741]
+	  Gain			  "0.179290771484375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(9)"
+	  Position		  [460, 799, 495, 831]
+	  Gain			  "0.412933349609375"
+	  ShowAdditionalParam	  on
+	  ParameterDataType	  "float('double')"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Output"
+	  Position		  [655, 67, 685, 83]
+	}
+	Line {
+	  SrcBlock		  "GatewayIn"
+	  SrcPort		  1
+	  DstBlock		  "ConvertA1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Input"
+	  SrcPort		  1
+	  DstBlock		  "GatewayIn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertOut"
+	  SrcPort		  1
+	  DstBlock		  "Output"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HeadSumR"
+	  SrcPort		  1
+	  DstBlock		  "ConvertOut"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertA1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "b(1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [150, 0]
+	    DstBlock		    "BodyDelay2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(18)"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "BodyRSum17"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyDelay18"
+	  SrcPort		  1
+	  Points		  [0, 15]
+	  DstBlock		  "b(18)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyRSum17"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum16"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(17)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum17"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay17"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay18"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(17)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum16"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum15"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(16)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum16"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay16"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay17"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(16)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum15"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum14"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(15)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum15"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay15"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay16"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(15)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum14"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum13"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(14)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum14"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay14"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay15"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(14)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum13"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum12"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(13)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum13"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay13"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay14"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(13)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum12"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum11"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(12)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum12"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay12"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay13"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(12)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum11"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum10"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(11)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum11"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay11"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay12"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(11)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum10"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum9"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(10)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum10"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay10"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay11"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(10)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum9"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum8"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(9)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum9"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay9"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay10"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(9)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum8"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum7"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(8)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum8"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay8"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay9"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(8)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum7"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum6"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(7)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum7"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay7"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay8"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(7)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum6"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum5"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(6)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay6"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay7"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(6)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum5"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(5)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay5"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(5)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum4"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(4)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay4"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(4)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum3"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(3)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay3"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum2"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(2)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay2"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(1)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace"
+      Position		      [60, 83, 125, 107]
+      VariableName	      "vin"
+      SampleTime	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Gateway Out"
+      Ports		      [1, 1]
+      Position		      [315, 75, 355, 115]
+      SourceBlock	      "fixpt_lib_4/Data Type/Gateway Out"
+      SourceType	      "Fixed-Point Gateway Out"
+      OutRealWorld	      "Real World Value"
+      OutBuiltInType	      "double"
+      RndMeth		      "Floor"
+      DoSatur		      off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [420, 79, 450, 111]
+      Location		      [480, 691, 804, 930]
+      Open		      on
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      TimeRange		      "600"
+      YMin		      "-0.1"
+      YMax		      "0.15"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out1"
+      Position		      [420, 148, 450, 162]
+    }
+    Line {
+      SrcBlock		      "From\nWorkspace"
+      SrcPort		      1
+      DstBlock		      "Filter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Filter"
+      SrcPort		      1
+      DstBlock		      "Gateway Out"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gateway Out"
+      SrcPort		      1
+      Points		      [10, 0; 15, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Out1"
+	DstPort			1
+      }
+    }
+  }
+}

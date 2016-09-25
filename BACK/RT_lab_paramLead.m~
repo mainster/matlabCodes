@@ -1,0 +1,6 @@
+% Parametrierung eines Lead glieds
+% C(s)=
+
+% Lead mit konstantem k
+
+k=1;T=10;

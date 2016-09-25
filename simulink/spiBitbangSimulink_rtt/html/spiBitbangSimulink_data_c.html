@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - spiBitbangSimulink_data.c</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('spiBitbangSimulink_data_c_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../spiBitbangSimulink_data.c" target="rtwreport_document_frame" id="linkToText_plain">spiBitbangSimulink_data.c</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: spiBitbangSimulink_data.c</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'spiBitbangSimulink'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.15</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.5 (R2013b) 08-Aug-2013</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * TLC version                    : 8.5 (Aug  6 2013)</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> * C/C++ source code generated on : Sat Apr 19 21:32:51 2014</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Target selection: realtime.tlc</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Embedded hardware selection: ARM Compatible-&gt;ARM Cortex</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * Code generation objectives: Unspecified</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="16">   16   </a>
+</span><span><a class="LN" name="17">   17   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;spiBitbangSimulink.h&quot;</font>
+</span><span><a class="LN" name="18">   18   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;spiBitbangSimulink_private.h&quot;</font>
+</span><span><a class="LN" name="19">   19   </a>
+</span><span><a class="LN" name="20">   20   </a><span class="CT">/* Block parameters (auto storage) */</span>
+</span><span><a class="LN" name="21">   21   </a><a href="spiBitbangSimulink_types_h.html#type_P_spiBitbangSimulink_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_P_spiBitbangSimulink_T');" target="rtwreport_document_frame"><font color="#1122aa">P_spiBitbangSimulink_T</font></a> <a name="var_spiBitbangSimulink_P">spiBitbangSimulink_P</a> = <b>{</b>
+</span><span><a class="LN" name="22">   22   </a>  23U,                                 <span class="CT">/* Computed Parameter: GPIOWrite_p1</span>
+</span><span><a class="LN" name="23">   23   </a><span class="CT">                                        * Referenced by: '&lt;Root&gt;/GPIO Write'</span>
+</span><span><a class="LN" name="24">   24   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="25">   25   </a>  2U,                                  <span class="CT">/* Computed Parameter: GPIOWrite_p2</span>
+</span><span><a class="LN" name="26">   26   </a><span class="CT">                                        * Referenced by: '&lt;Root&gt;/GPIO Write'</span>
+</span><span><a class="LN" name="27">   27   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="28">   28   </a>  255U,                                <span class="CT">/* Computed Parameter: GPIOWrite_p3</span>
+</span><span><a class="LN" name="29">   29   </a><span class="CT">                                        * Referenced by: '&lt;Root&gt;/GPIO Write'</span>
+</span><span><a class="LN" name="30">   30   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="31">   31   </a>  0U,                                  <span class="CT">/* Computed Parameter: Constant_Value</span>
+</span><span><a class="LN" name="32">   32   </a><span class="CT">                                        * Referenced by: '&lt;S4&gt;/Constant'</span>
+</span><span><a class="LN" name="33">   33   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="34">   34   </a>  0U,                                  <span class="CT">/* Computed Parameter: Output_InitialCondition</span>
+</span><span><a class="LN" name="35">   35   </a><span class="CT">                                        * Referenced by: '&lt;S2&gt;/Output'</span>
+</span><span><a class="LN" name="36">   36   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="37">   37   </a>  0U,                                  <span class="CT">/* Expression: pinName</span>
+</span><span><a class="LN" name="38">   38   </a><span class="CT">                                        * Referenced by: '&lt;Root&gt;/GPIO Write'</span>
+</span><span><a class="LN" name="39">   39   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="40">   40   </a>  1U,                                  <span class="CT">/* Computed Parameter: FixPtConstant_Value</span>
+</span><span><a class="LN" name="41">   41   </a><span class="CT">                                        * Referenced by: '&lt;S3&gt;/FixPt Constant'</span>
+</span><span><a class="LN" name="42">   42   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="43">   43   </a>  1U,                                  <span class="CT">/* Computed Parameter: FixPtSwitch_Threshold</span>
+</span><span><a class="LN" name="44">   44   </a><span class="CT">                                        * Referenced by: '&lt;S4&gt;/FixPt Switch'</span>
+</span><span><a class="LN" name="45">   45   </a><span class="CT">                                        */</span>
+</span><span><a class="LN" name="46">   46   </a>
+</span><span><a class="LN" name="47">   47   </a>  <span class="CT">/*  Computed Parameter: Vector_Value</span>
+</span><span><a class="LN" name="48">   48   </a><span class="CT">   * Referenced by: '&lt;S1&gt;/Vector'</span>
+</span><span><a class="LN" name="49">   49   </a><span class="CT">   */</span>
+</span><span><a class="LN" name="50">   50   </a>  <b>{</b> 1, 0 <b>}</b>
+</span><span><a class="LN" name="51">   51   </a><b>}</b>;
+</span><span><a class="LN" name="52">   52   </a>
+</span><span><a class="LN" name="53">   53   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="54">   54   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="55">   55   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="56">   56   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="57">   57   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="58">   58   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

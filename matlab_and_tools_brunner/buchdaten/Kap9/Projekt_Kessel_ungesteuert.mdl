@@ -1,0 +1,2411 @@
+Model {
+  Name			  "Projekt_Kessel_ungesteuert"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Jul 25 10:20:49 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Sep 04 04:42:02 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:231>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "inf"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Projekt_Kessel_ungesteuert"
+    Location		    [176, 42, 833, 700]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "75"
+    AutoZoom		    off
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      TransportDelay
+      Name		      "Druckaufbau und\nRohrleitungen"
+      Position		      [395, 13, 470, 47]
+      Orientation	      "left"
+      DelayTime		      "2"
+      InitialInput	      "0"
+      BufferSize	      "1024"
+      PadeOrder		      "0"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Druckbereich"
+      Ports		      [1]
+      Position		      [450, 540, 540, 570]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Druckkessel"
+      Ports		      [3, 3]
+      Position		      [255, 74, 375, 256]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Druckkessel"
+	Location		[175, 110, 861, 636]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "Erzeuger"
+	  Position		  [75, 83, 105, 97]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Verbraucher"
+	  Position		  [70, 183, 100, 197]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Modellwahl"
+	  Position		  [70, 298, 100, 312]
+	  Port			  "3"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [440, 175, 470, 205]
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [440, 235, 470, 265]
+	  Value			  "1"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  Position		  [165, 255, 195, 285]
+	  Value			  "1"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant4"
+	  Position		  [440, 40, 470, 70]
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant5"
+	  Position		  [440, 105, 470, 135]
+	  Value			  "1"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Druck-\nschalter_1"
+	  Position		  [510, 75, 540, 105]
+	  Threshold		  "3"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Druck-\nschalter_2"
+	  Position		  [515, 205, 545, 235]
+	  Threshold		  "2.8"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Druckkessel"
+	  Ports			  [1, 1]
+	  Position		  [325, 52, 375, 128]
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "3.5"
+	  LimitOutput		  on
+	  UpperSaturationLimit	  "10"
+	  LowerSaturationLimit	  "0"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Gain"
+	  Position		  [185, 345, 230, 375]
+	  Orientation		  "left"
+	  Gain			  "0.43"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Modellum-\nschaltung"
+	  Position		  [250, 290, 280, 320]
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [140, 181, 185, 214]
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  DeadZone
+	  Name			  "Schutzventil"
+	  Position		  [295, 145, 325, 175]
+	  Orientation		  "left"
+	  LowerValue		  "-1."
+	  UpperValue		  "5"
+	  SaturateOnIntegerOverflow on
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1]
+	  Position		  [200, 80, 220, 100]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [200, 150, 220, 170]
+	  Orientation		  "up"
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Zeitskalierung"
+	  Ports			  [1, 1]
+	  Position		  [245, 75, 295, 105]
+	  SourceBlock		  "simulink3/Math/Slider\nGain"
+	  SourceType		  "Slider Gain"
+	  low			  "0"
+	  gain			  "0.001"
+	  high			  "0.2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PS_1"
+	  Position		  [565, 83, 595, 97]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "PS_2"
+	  Position		  [565, 213, 595, 227]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Druck"
+	  Position		  [565, 278, 595, 292]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Druckkessel"
+	  SrcPort		  1
+	  Points		  [-15, 0; 20, 0]
+	  Branch {
+	    Points		    [25, 0]
+	    Branch {
+	      DstBlock		      "Druck-\nschalter_1"
+	      DstPort		      2
+	    }
+	    Branch {
+	      Points		      [0, 70]
+	      Branch {
+		Points			[75, 0; 0, 60]
+		DstBlock		"Druck-\nschalter_2"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 125]
+		DstBlock		"Druck"
+		DstPort			1
+	      }
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 70]
+	    Branch {
+	      DstBlock		      "Schutzventil"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 200]
+	      DstBlock		      "Gain"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Constant4"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Druck-\nschalter_1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant5"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Druck-\nschalter_1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Druck-\nschalter_1"
+	  SrcPort		  1
+	  DstBlock		  "PS_1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Druck-\nschalter_2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Druck-\nschalter_2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Druck-\nschalter_2"
+	  SrcPort		  1
+	  DstBlock		  "PS_2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Zeitskalierung"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Zeitskalierung"
+	  SrcPort		  1
+	  DstBlock		  "Druckkessel"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Verbraucher"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Schutzventil"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Modellwahl"
+	  SrcPort		  1
+	  DstBlock		  "Modellum-\nschaltung"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  Points		  [25, 0; 0, 25]
+	  DstBlock		  "Modellum-\nschaltung"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Modellum-\nschaltung"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -65; -205, 0; 0, -35]
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Erzeuger"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Gain"
+	  SrcPort		  1
+	  Points		  [-10, 0; 0, -45]
+	  DstBlock		  "Modellum-\nschaltung"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Enable"
+      Position		      [495, 50, 525, 80]
+      Time		      "0.5"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a1"
+      Position		      [55, 408, 75, 432]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a2"
+      Position		      [50, 518, 70, 542]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a3"
+      Position		      [55, 78, 75, 102]
+      ShowName		      off
+      Value		      "1.1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a4"
+      Position		      [55, 163, 75, 187]
+      ShowName		      off
+      Value		      "1.4"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a7"
+      Position		      [55, 253, 75, 277]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a8"
+      Position		      [435, 438, 455, 462]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a9"
+      Position		      [435, 588, 455, 612]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Handbetrieb"
+      Ports		      [2, 1, 0, 1]
+      Position		      [310, 457, 410, 648]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private'"
+",'sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl',"
+"'Center','VerticalAl','Bottom');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Handbetrieb"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "on_A"
+	  Position		  [20, 101, 40, 119]
+	  Port			  "1"
+	  PortDimensions	  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "on_B"
+	  Position		  [20, 136, 40, 154]
+	  Port			  "2"
+	  PortDimensions	  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  " input events "
+	  Ports			  [0, 1]
+	  Position		  [20, 171, 40, 189]
+	  TriggerType		  "either"
+	  ShowOutputPort	  on
+	  OutputDataType	  "auto"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 220, 320, 260]
+	  Outputs		  "1"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function Projekt_Kessel_ungeste"
+"uert 1"
+	  Ports			  [3, 2]
+	  Position		  [180, 100, 230, 220]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[3 2]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 231, 480, 249]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Bereich"
+	  Position		  [460, 101, 480, 119]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "Bereich"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "on_A"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "on_B"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  " input events "
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Kompressor_A"
+      Ports		      [2, 1]
+      Position		      [615, 455, 705, 510]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Kompressor_A"
+	Location		[391, 281, 887, 713]
+	Open			on
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "On/Off"
+	  Position		  [60, 193, 90, 207]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "gestört"
+	  Position		  [60, 68, 90, 82]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Aus"
+	  Position		  [135, 210, 165, 240]
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ein"
+	  Position		  [135, 155, 165, 185]
+	  Value			  "2."
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Hauptschalter"
+	  Position		  [220, 185, 250, 215]
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Hilfsschalter"
+	  Position		  [225, 60, 255, 90]
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [305, 176, 350, 209]
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "defekt"
+	  Position		  [150, 25, 180, 55]
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "ungestört"
+	  Position		  [150, 85, 180, 115]
+	  Value			  "1"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Druckluft"
+	  Position		  [400, 188, 430, 202]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Ein"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 20]
+	  DstBlock		  "Hauptschalter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Aus"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -15]
+	  DstBlock		  "Hauptschalter"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "On/Off"
+	  SrcPort		  1
+	  DstBlock		  "Hauptschalter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "defekt"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 25]
+	  DstBlock		  "Hilfsschalter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ungestört"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -15]
+	  DstBlock		  "Hilfsschalter"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "gestört"
+	  SrcPort		  1
+	  DstBlock		  "Hilfsschalter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Hauptschalter"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Druckluft"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Hilfsschalter"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 110]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Kompressor_B"
+      Ports		      [2, 1]
+      Position		      [620, 605, 710, 660]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"Kompressor_B"
+	Location		[613, 395, 1105, 771]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "On/Off"
+	  Position		  [20, 193, 50, 207]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "gestört"
+	  Position		  [20, 68, 50, 82]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Aus"
+	  Position		  [95, 210, 125, 240]
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Ein"
+	  Position		  [95, 155, 125, 185]
+	  Value			  "2."
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Hauptschalter"
+	  Position		  [180, 185, 210, 215]
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Switch
+	  Name			  "Hilfsschalter"
+	  Position		  [185, 60, 215, 90]
+	  Threshold		  "0.5"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1]
+	  Position		  [265, 176, 310, 209]
+	  Inputs		  "2"
+	  Multiplication	  "Element-wise(.*)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "defekt"
+	  Position		  [110, 25, 140, 55]
+	  Value			  "0"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "ungestört"
+	  Position		  [110, 85, 140, 115]
+	  Value			  "1"
+	  VectorParams1D	  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Druckluft"
+	  Position		  [360, 188, 390, 202]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Ein"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 20]
+	  DstBlock		  "Hauptschalter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Aus"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -15]
+	  DstBlock		  "Hauptschalter"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "On/Off"
+	  SrcPort		  1
+	  DstBlock		  "Hauptschalter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "defekt"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, 25]
+	  DstBlock		  "Hilfsschalter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ungestört"
+	  SrcPort		  1
+	  Points		  [15, 0; 0, -15]
+	  DstBlock		  "Hilfsschalter"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "gestört"
+	  SrcPort		  1
+	  DstBlock		  "Hilfsschalter"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Hauptschalter"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Druckluft"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Hilfsschalter"
+	  SrcPort		  1
+	  Points		  [20, 0; 0, 110]
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Kontroll-\nanzeige"
+      Ports		      [1]
+      Position		      [410, 209, 440, 241]
+      Floating		      off
+      Location		      [37, 447, 492, 768]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "10"
+      YMin		      "4.5425"
+      YMax		      "4.575"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch1"
+      Ports		      [2, 1]
+      Position		      [135, 177, 165, 213]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch2"
+      Ports		      [2, 1]
+      Position		      [110, 522, 140, 558]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch3"
+      Ports		      [2, 1]
+      Position		      [125, 437, 155, 473]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch4"
+      Ports		      [2, 1]
+      Position		      [140, 107, 170, 143]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch7"
+      Ports		      [2, 1]
+      Position		      [130, 277, 160, 313]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "1"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch8"
+      Ports		      [2, 1]
+      Position		      [510, 452, 540, 488]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch9"
+      Ports		      [2, 1]
+      Position		      [510, 602, 540, 638]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [13, 1]
+      Position		      [600, 65, 640, 305]
+      ShowName		      off
+      Inputs		      "13"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start"
+      Position		      [55, 451, 75, 479]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start1"
+      Position		      [55, 121, 75, 149]
+      ShowName		      off
+      Value		      "0.2"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start2"
+      Position		      [55, 211, 75, 239]
+      ShowName		      off
+      Value		      "0.4"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start5"
+      Position		      [50, 561, 70, 589]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start6"
+      Position		      [55, 291, 75, 319]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start7"
+      Position		      [435, 476, 455, 504]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start8"
+      Position		      [435, 626, 455, 654]
+      ShowName		      off
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [195, 155, 215, 175]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Ports		      [2, 1]
+      Position		      [740, 475, 760, 495]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      SaturateOnIntegerOverflow	on
+    }
+    Line {
+      SrcBlock		      "Enable"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [75, 0; 0, 220; -360, 0]
+      DstBlock		      "Handbetrieb"
+      DstPort		      trigger
+    }
+    Line {
+      SrcBlock		      "Start5"
+      SrcPort		      1
+      Points		      [10, 0; 0, -25]
+      DstBlock		      "Manual Switch2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a2"
+      SrcPort		      1
+      DstBlock		      "Manual Switch2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Start"
+      SrcPort		      1
+      DstBlock		      "Manual Switch3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a1"
+      SrcPort		      1
+      Points		      [20, 0; 0, 25]
+      DstBlock		      "Manual Switch3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Start1"
+      SrcPort		      1
+      DstBlock		      "Manual Switch4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a3"
+      SrcPort		      1
+      Points		      [25, 0; 0, 25]
+      DstBlock		      "Manual Switch4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Start2"
+      SrcPort		      1
+      Points		      [10, 0; 0, -20]
+      DstBlock		      "Manual Switch1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Kompressor_A"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Druckaufbau und\nRohrleitungen"
+      SrcPort		      1
+      Points		      [-180, 0; 0, 75]
+      DstBlock		      "Druckkessel"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [40, 0; 0, -455]
+      DstBlock		      "Druckaufbau und\nRohrleitungen"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch3"
+      SrcPort		      1
+      Points		      [90, 0]
+      Branch {
+	Points			[0, -145; 205, 0; 0, -145; 105, 0]
+	Branch {
+	  DstBlock		  "Mux"
+	  DstPort		  6
+	}
+	Branch {
+	  Points		  [0, 40]
+	  DstBlock		  "Mux"
+	  DstPort		  8
+	}
+      }
+      Branch {
+	Points			[0, 265; 335, 0; 0, -225]
+	DstBlock		"Kompressor_A"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Manual Switch2"
+      SrcPort		      1
+      Points		      [80, 0]
+      Branch {
+	Points			[45, 0; 0, -200; 205, 0; 0, -155; 100, 0]
+	Branch {
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Branch {
+	  Points		  [0, 40]
+	  DstBlock		  "Mux"
+	  DstPort		  9
+	}
+      }
+      Branch {
+	Points			[0, 195; 375, 0; 0, -90]
+	DstBlock		"Kompressor_B"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Druckkessel"
+      SrcPort		      3
+      DstBlock		      "Kontroll-\nanzeige"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Start6"
+      SrcPort		      1
+      DstBlock		      "Manual Switch7"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a7"
+      SrcPort		      1
+      Points		      [20, 0; 0, 20]
+      DstBlock		      "Manual Switch7"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Start7"
+      SrcPort		      1
+      Points		      [20, 0; 0, -10]
+      DstBlock		      "Manual Switch8"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a8"
+      SrcPort		      1
+      Points		      [25, 0; 0, 10]
+      DstBlock		      "Manual Switch8"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch8"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	DstBlock		"Kompressor_A"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -85]
+	Branch {
+	  Points		  [0, -120]
+	  Branch {
+	    Points		    [0, -20]
+	    DstBlock		    "Mux"
+	    DstPort		    10
+	  }
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    11
+	  }
+	}
+	Branch {
+	  Points		  [-260, 0; 0, 120]
+	  DstBlock		  "Handbetrieb"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Handbetrieb"
+      SrcPort		      1
+      DstBlock		      "Druckbereich"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Kompressor_B"
+      SrcPort		      1
+      Points		      [35, 0]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Start8"
+      SrcPort		      1
+      Points		      [20, 0; 0, -10]
+      DstBlock		      "Manual Switch9"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a9"
+      SrcPort		      1
+      Points		      [25, 0; 0, 10]
+      DstBlock		      "Manual Switch9"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Druckkessel"
+      SrcPort		      1
+      Points		      [155, 0]
+      Branch {
+	Points			[0, -20]
+	DstBlock		"Mux"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Mux"
+	DstPort			3
+      }
+    }
+    Line {
+      Labels		      [2, 0]
+      SrcBlock		      "Druckkessel"
+      SrcPort		      2
+      Points		      [50, 0; 0, -40; 105, 0]
+      Branch {
+	DstBlock		"Mux"
+	DstPort			4
+      }
+      Branch {
+	Points			[0, 20]
+	DstBlock		"Mux"
+	DstPort			5
+      }
+    }
+    Line {
+      SrcBlock		      "Manual Switch9"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	Points			[0, -315]
+	Branch {
+	  Points		  [0, 0; 0, -20]
+	  DstBlock		  "Mux"
+	  DstPort		  12
+	}
+	Branch {
+	  DstBlock		  "Mux"
+	  DstPort		  13
+	}
+      }
+      Branch {
+	DstBlock		"Kompressor_B"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 55; -280, 0; 0, -75]
+	DstBlock		"Handbetrieb"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Getraenk2a4"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Manual Switch1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch7"
+      SrcPort		      1
+      Points		      [45, 0; 0, -70]
+      DstBlock		      "Druckkessel"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Druckkessel"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Manual Switch1"
+      SrcPort		      1
+      Points		      [35, 0]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Manual Switch4"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [137, 491]
+      Text		      "Motor_A gestört nur im Betrieb möglich"
+    }
+    Annotation {
+      Position		      [127, 151]
+      Text		      "Verbraucher_1"
+    }
+    Annotation {
+      Position		      [137, 221]
+      Text		      "Verbraucher_2"
+    }
+    Annotation {
+      Position		      [137, 606]
+      Text		      "Motor_B gestört nur im Betrieb möglich"
+    }
+    Annotation {
+      Position		      [137, 321]
+      Text		      "Modellumschaltung"
+    }
+    Annotation {
+      Position		      [517, 506]
+      Text		      "Einschalten Motor_A "
+    }
+    Annotation {
+      Position		      [512, 651]
+      Text		      "Einschalten Motor_B "
+    }
+  }
+}
+
+# Finite State Machines
+# -- File save dated 04-Sep-2001 04:42:03
+#
+#    Stateflow Version 4.0 (R12) dated Oct  4 2000, 19:47:56
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"Projekt_Kessel_ungesteuert"
+		created              		"25-Jul-2001 11:21:22"
+		firstTarget          		56
+		debug {
+			breakOn              		[1 1 1]
+			runTimeCheck         		[1 0 1 1]
+		}
+		sfVersion            		40012071
+	}
+
+	chart {
+		id                       		2
+		name                     		"Handbetrieb"
+		windowPosition           		[88.759 14.276 453.724 385.448]
+		viewLimits               		[0 835.448 79.347 790.243]
+		zoomFactor               		2
+		screen                   		[1 1 1024 768 1.611111111111111]
+		treeNode                 		[0 4 0 0]
+		firstTransition          		26
+		viewObj                  		2
+		visible                  		1
+		machine                  		1
+		subviewS {
+		}
+		decomposition            		SET_CHART
+		firstEvent               		39
+		firstData                		52
+		chartFileNumber          		1
+	}
+
+	state {
+		id             		3
+		labelString    		"Kessel"
+		position       		[40.708 410.673 276.12 348.924]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 5 4 14]
+		firstTransition		22
+		subviewer      		2
+		type           		AND_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		4
+		labelString    		"Motor_A"
+		position       		[350.8 191.101 403.553 257.586]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 9 0 3]
+		firstTransition		25
+		firstJunction  		15
+		subviewer      		2
+		type           		AND_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		5
+		labelString    		"Druck_hoch\n"
+						"entry:Bereich=3;"
+		position       		[82.651 450.634 152.679 67.725]
+		fontSize       		12
+		chart          		2
+		treeNode       		[3 0 0 7]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		6
+		labelString    		"On"
+		position       		[443.646 677.281 117.345 52.707]
+		fontSize       		12
+		chart          		2
+		treeNode       		[14 0 13 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		7
+		labelString    		"Druck_mittel\n"
+						"en:Bereich=2;"
+		position       		[80.632 569.447 143.501 69.149]
+		fontSize       		12
+		chart          		2
+		treeNode       		[3 0 5 8]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		8
+		labelString    		"Druck_tief\n"
+						"en:Bereich=1;"
+		position       		[80.497 682.303 132.545 45.524]
+		fontSize       		12
+		chart          		2
+		treeNode       		[3 0 7 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		9
+		labelString    		"Off"
+		position       		[384.98 243.48 119.259 48.724]
+		fontSize       		12
+		chart          		2
+		treeNode       		[4 0 0 11]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		10
+		labelString    		"On"
+		position       		[474.346 359.715 122.449 63.611]
+		fontSize       		12
+		chart          		2
+		treeNode       		[4 0 11 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		11
+		labelString    		"Down"
+		position       		[609.088 284.995 116.776 51.172]
+		fontSize       		12
+		chart          		2
+		treeNode       		[4 0 9 10]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		12
+		labelString    		"Off"
+		position       		[369.085 553.028 138.733 52.164]
+		fontSize       		12
+		chart          		2
+		treeNode       		[14 0 0 13]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		13
+		labelString    		"Down"
+		position       		[607.284 624.439 112.707 45.466]
+		fontSize       		12
+		chart          		2
+		treeNode       		[14 0 12 6]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		14
+		labelString    		"Motor_B"
+		position       		[358.754 488.837 393.82 265.154]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 12 3 0]
+		firstTransition		33
+		firstJunction  		16
+		subviewer      		2
+		type           		AND_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	junction {
+		id         		15
+		position   		[595.2171525560046 240.4331896551723 7]
+		chart      		2
+		linkNode   		[4 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	junction {
+		id         		16
+		position   		[576.9617646249701 585.3377327586204 7]
+		chart      		2
+		linkNode   		[14 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		17
+		labelPosition  		[183.443 395.708 8.681 17.37]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 185.670850862069 392.7669913793102 0]
+		}
+		dst {
+			id          		3
+			intersection		[1 0 -1 0.525 185.670850862069 410.6732413793101 0]
+		}
+		midPoint       		[183.5339333803562 397.4293567939563]
+		chart          		2
+		linkNode       		[2 26 34]
+		dataLimits     		[183.271 188.071 392.767 410.673]
+		subviewer      		2
+	}
+
+	transition {
+		id             		18
+		labelString    		"PS_1_s"
+		labelPosition  		[264.96 504.061 42.163 17.37]
+		fontSize       		12
+		src {
+			id          		5
+			intersection		[2 1 0 0.5375 235.3298965517242 487.0359749999996 0]
+		}
+		dst {
+			id          		7
+			intersection		[2 1 0 0.5687499999999991 224.1330689655172 608.7757655172409 
+								  0]
+		}
+		midPoint       		[264.8709503986772 555.0944037258596]
+		chart          		2
+		linkNode       		[3 21 20]
+		dataLimits     		[224.133 265.334 487.036 611.176]
+		subviewer      		2
+	}
+
+	transition {
+		id             		19
+		labelString    		"PS_2_s"
+		labelPosition  		[240.693 692.546 42.163 17.37]
+		fontSize       		12
+		src {
+			id          		7
+			intersection		[2 1 0 0.806249999999999 224.1330689655172 625.1985793103443 
+								  0]
+		}
+		dst {
+			id          		8
+			intersection		[2 1 0 0.593749999999999 213.041275862069 709.332549568965 
+								  0]
+		}
+		midPoint       		[237.3822118702779 689.1602719318714]
+		chart          		2
+		linkNode       		[3 20 0]
+		dataLimits     		[213.041 241.589 625.199 711.733]
+		subviewer      		2
+	}
+
+	transition {
+		id             		20
+		labelString    		"PS_2_f"
+		labelPosition  		[66.757 649.376 40.923 17.37]
+		fontSize       		12
+		src {
+			id          		8
+			intersection		[4 -1 0 0.606250000000001 80.49651724137934 700.2277081896546 
+								  0]
+		}
+		dst {
+			id          		7
+			intersection		[4 -1 0 0.418750000000001 80.63179310344829 609.6401241379305 
+								  0]
+		}
+		midPoint       		[63.84506531707425 685.9165755839267]
+		chart          		2
+		linkNode       		[3 18 19]
+		dataLimits     		[53.587 80.632 607.24 700.228]
+		subviewer      		2
+	}
+
+	transition {
+		id             		21
+		labelString    		"PS_1_f"
+		labelPosition  		[66.932 538.544 40.923 17.37]
+		fontSize       		12
+		src {
+			id          		7
+			intersection		[4 -1 0 0.631250000000001 80.63179310344829 594.9460275862064 
+								  0]
+		}
+		dst {
+			id          		5
+			intersection		[4 -1 0 0.6625 82.65086206896552 473.490912931034 0]
+		}
+		midPoint       		[62.00815713574454 529.9137198958608]
+		chart          		2
+		linkNode       		[3 22 18]
+		dataLimits     		[61.072 82.651 471.091 594.946]
+		subviewer      		2
+	}
+
+	transition {
+		id             		22
+		labelPosition  		[201.716 434.417 8.681 17.37]
+		fontSize       		12
+		src {
+			intersection		[0 0 0 0 201.3157862843527 429.2586206896549 0]
+		}
+		dst {
+			id          		5
+			intersection		[1 0 -1 0.7833585313174947 202.2532862843524 450.6336206896548 
+								  0]
+		}
+		midPoint       		[201.9269681697804 436.1474141356094]
+		chart          		2
+		linkNode       		[3 0 21]
+		dataLimits     		[199.853 204.653 429.259 450.634]
+		subviewer      		2
+	}
+
+	transition {
+		id             		23
+		labelString    		"Ein_A"
+		labelPosition  		[502.786 310.425 32.242 17.37]
+		fontSize       		12
+		src {
+			id          		9
+			intersection		[3 0 1 0.3712977777777779 459.9578150191571 292.204068965517 
+								  0]
+		}
+		dst {
+			id          		10
+			intersection		[1 0 -1 0.3977884000852155 523.0553157111795 359.7147241379307 
+								  0]
+		}
+		midPoint       		[493.2719996802465 323.945418172803]
+		chart          		2
+		linkNode       		[4 27 28]
+		dataLimits     		[459.958 525.455 292.204 359.715]
+		subviewer      		2
+	}
+
+	transition {
+		id             		24
+		labelString    		"OK_A"
+		labelPosition  		[658.074 232.25 32.242 17.37]
+		fontSize       		12
+		src {
+			id          		11
+			intersection		[1 0 -1 0.5463721243289729 672.8910068634508 284.9948965517239 
+								  0]
+		}
+		dst {
+			id          		15
+			intersection		[0 0.847998304005088 -0.52999894000318 -1 601.1531406840403 
+								  236.7231970751501 0]
+		}
+		midPoint       		[647.2210872670096 240.7813861284823]
+		chart          		2
+		linkNode       		[4 25 35]
+		dataLimits     		[601.153 672.891 229.735 284.995]
+		subviewer      		2
+	}
+
+	transition {
+		id             		25
+		labelPosition  		[475.271 228.481 8.681 17.37]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 477.6909526850866 223.2003143070205 0]
+		}
+		dst {
+			id          		9
+			intersection		[1 0 -1 0.7773970298879612 477.6909526850867 243.4799310344826 
+								  0]
+		}
+		midPoint       		[475.2707995258629 228.4806484725995]
+		chart          		2
+		linkNode       		[4 0 24]
+		dataLimits     		[475.233 480.091 223.2 243.48]
+		subviewer      		2
+	}
+
+	transition {
+		id             		26
+		labelPosition  		[449.889 176.102 8.681 17.37]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 452.3088121712902 170.8208275647081 0]
+		}
+		dst {
+			id          		4
+			intersection		[1 0 -1 0.2515376144800751 452.3088543470971 191.1007586206895 
+								  0]
+		}
+		midPoint       		[449.8886324819395 176.1012486072511]
+		chart          		2
+		linkNode       		[2 0 17]
+		dataLimits     		[449.851 454.709 170.821 191.101]
+		subviewer      		2
+	}
+
+	transition {
+		id             		27
+		labelString    		"Aus_A"
+		labelPosition  		[422.38 340.452 35.963 17.37]
+		fontSize       		12
+		src {
+			id          		10
+			intersection		[4 -1 0 0.4144310187597743 474.3464827586208 396.9634939478396 
+								  0]
+		}
+		dst {
+			id          		9
+			intersection		[3 0 1 0.8109088888888886 407.5304002681993 292.204068965517 
+								  0]
+		}
+		midPoint       		[428.2270089485552 363.5882526334398]
+		chart          		2
+		linkNode       		[4 36 23]
+		dataLimits     		[405.13 474.346 292.204 396.963]
+		subviewer      		2
+	}
+
+	transition {
+		id             		28
+		labelString    		"Down_A"
+		labelPosition  		[641.541 392.795 44.643 17.37]
+		fontSize       		12
+		src {
+			id          		10
+			intersection		[2 1 0 0.4553601007655753 596.7955862068966 388.6807454222368 
+								  0]
+		}
+		dst {
+			id          		11
+			intersection		[3 0 1 0.4341155466666674 675.1695759039081 336.1673103448272 
+								  0]
+		}
+		midPoint       		[650.4676134159445 376.307601064649]
+		chart          		2
+		linkNode       		[4 23 0]
+		dataLimits     		[596.796 677.57 336.167 388.681]
+		subviewer      		2
+	}
+
+	transition {
+		id             		29
+		labelString    		"Aus_B"
+		labelPosition  		[410.428 650.553 35.963 17.37]
+		fontSize       		12
+		src {
+			id          		6
+			intersection		[4 -1 0 0.3350432743014563 443.6461034482758 712.3290122493179 
+								  0]
+		}
+		dst {
+			id          		12
+			intersection		[3 0 1 0.7591413721413716 402.500223259732 605.1916551724135 
+								  0]
+		}
+		midPoint       		[409.0490853320087 674.2495136034343]
+		chart          		2
+		linkNode       		[14 32 31]
+		dataLimits     		[400.1 443.646 605.192 712.329]
+		subviewer      		2
+	}
+
+	transition {
+		id             		30
+		labelString    		"Down_B"
+		labelPosition  		[630.063 720.258 44.643 17.37]
+		fontSize       		12
+		src {
+			id          		6
+			intersection		[2 1 0 0.7062790397481306 560.9909310344829 714.5069831812073 
+								  0]
+		}
+		dst {
+			id          		13
+			intersection		[3 0 1 0.4742428616600762 666.540938160829 669.9042413793102 
+								  0]
+		}
+		midPoint       		[626.6622614825435 711.9082974211347]
+		chart          		2
+		linkNode       		[14 31 0]
+		dataLimits     		[560.991 668.941 669.904 716.131]
+		subviewer      		2
+	}
+
+	transition {
+		id             		31
+		labelString    		"Ein_B"
+		labelPosition  		[478.922 618.134 32.242 17.37]
+		fontSize       		12
+		src {
+			id          		12
+			intersection		[3 0 1 0.3272721854892905 462.4146268872487 605.1916551724135 
+								  0]
+		}
+		dst {
+			id          		6
+			intersection		[1 0 -1 0.4310832914251463 494.2314979558543 677.2812068965516 
+								  0]
+		}
+		midPoint       		[479.8394982025403 639.3560061448757]
+		chart          		2
+		linkNode       		[14 29 30]
+		dataLimits     		[462.415 496.631 605.192 677.281]
+		subviewer      		2
+	}
+
+	transition {
+		id             		32
+		labelString    		"[on_B==1]"
+		labelPosition  		[582.428 592.716 54.564 17.37]
+		fontSize       		12
+		src {
+			id          		16
+			intersection		[0 -0.3559953275919878 0.9344877349289681 -1 574.4697973318262 
+								  591.8791469031232 0]
+		}
+		dst {
+			id          		6
+			intersection		[1 0 -1 0.8175336731045356 539.5794513646461 677.2812068965516 
+								  0]
+		}
+		midPoint       		[551.8155314277774 633.2487530090037]
+		chart          		2
+		linkNode       		[14 37 29]
+		dataLimits     		[537.179 574.47 591.879 677.281]
+		subviewer      		2
+	}
+
+	transition {
+		id             		33
+		labelPosition  		[426.429 539.411 8.681 17.37]
+		fontSize       		12
+		src {
+			intersection		[0 0 0 0 425.2465251314926 535.7163560111226 0]
+		}
+		dst {
+			id          		12
+			intersection		[1 0 -1 0.4228360135716268 427.7464479862775 553.0278620689652 
+								  0]
+		}
+		midPoint       		[426.8763434926333 540.46461955167]
+		chart          		2
+		linkNode       		[14 0 38]
+		dataLimits     		[425.247 430.146 535.716 553.028]
+		subviewer      		2
+	}
+
+	transition {
+		id             		34
+		labelPosition  		[441.617 476.259 8.681 17.37]
+		fontSize       		12
+		src {
+			intersection		[0 0 0 0.7949926625345148 444.4179532288157 473.1992691724135 
+								  0]
+		}
+		dst {
+			id          		14
+			intersection		[1 0 -1 0.2008563643441028 437.8554532288157 488.8366551724135 
+								  0]
+		}
+		midPoint       		[440.1396800308211 476.925193157879]
+		chart          		2
+		linkNode       		[2 17 0]
+		dataLimits     		[435.455 444.418 473.199 488.837]
+		subviewer      		2
+	}
+
+	transition {
+		id             		35
+		labelPosition  		[544.383 256.965 8.681 17.37]
+		fontSize       		12
+		src {
+			id          		15
+			intersection		[0 -0.9191450300180579 0.3939192985791677 -1 588.7831373458782 
+								  243.1906247452265 0]
+		}
+		dst {
+			id          		9
+			intersection		[2 1 0 0.3562733333333333 504.238275862069 260.8390420689653 
+								  0]
+		}
+		midPoint       		[549.9966635128404 255.0798304062005]
+		chart          		2
+		linkNode       		[4 24 36]
+		dataLimits     		[504.238 588.783 243.191 263.239]
+		subviewer      		2
+	}
+
+	transition {
+		id             		36
+		labelString    		"[on_A==1]"
+		labelPosition  		[530.235 218.367 54.564 17.37]
+		fontSize       		12
+		src {
+			id          		15
+			intersection		[0 0.4181736727477403 0.9083670950781219 -1 598.1443682652388 
+								  246.7917593207192 0]
+		}
+		dst {
+			id          		10
+			intersection		[1 0 -1 0.6680772544444518 556.1519435995296 359.7147241379307 
+								  0]
+		}
+		midPoint       		[581.9327027184743 300.7992164208697]
+		chart          		2
+		linkNode       		[4 35 27]
+		dataLimits     		[553.752 600.571 246.792 359.715]
+		subviewer      		2
+	}
+
+	transition {
+		id             		37
+		labelPosition  		[537.581 571.819 8.681 17.37]
+		fontSize       		12
+		src {
+			id          		16
+			intersection		[0 -0.9312427797057534 -0.3643993485805122 -1 570.4430651670298 
+								  582.7869373185569 0]
+		}
+		dst {
+			id          		12
+			intersection		[2 1 0 0.2746006600660057 507.818 567.3520740867186 0]
+		}
+		midPoint       		[541.2984457903532 573.0236357772375]
+		chart          		2
+		linkNode       		[14 38 32]
+		dataLimits     		[507.818 570.443 564.952 582.787]
+		subviewer      		2
+	}
+
+	transition {
+		id             		38
+		labelString    		"OK_B"
+		labelPosition  		[641.216 536.515 32.242 17.37]
+		fontSize       		12
+		src {
+			id          		13
+			intersection		[1 0 -1 0.7207490118577095 688.517867077825 624.4387241379309 
+								  0]
+		}
+		dst {
+			id          		16
+			intersection		[0 0.6170415694574104 -0.7869305570134735 -1 581.281055611172 
+								  579.8292188595261 0]
+		}
+		midPoint       		[626.2814178934572 553.0352358000157]
+		chart          		2
+		linkNode       		[14 33 37]
+		dataLimits     		[581.281 688.518 552.894 624.439]
+		subviewer      		2
+	}
+
+	event {
+		id         		39
+		name       		"Enable"
+		linkNode   		[2 0 40]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		40
+		name       		"PS_1_s"
+		linkNode   		[2 39 41]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		41
+		name       		"PS_1_f"
+		linkNode   		[2 40 42]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		42
+		name       		"PS_2_s"
+		linkNode   		[2 41 43]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		43
+		name       		"PS_2_f"
+		linkNode   		[2 42 44]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		44
+		name       		"Down_A"
+		linkNode   		[2 43 45]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		45
+		name       		"Down_B"
+		linkNode   		[2 44 46]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		46
+		name       		"OK_A"
+		linkNode   		[2 45 47]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		47
+		name       		"OK_B"
+		linkNode   		[2 46 48]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		48
+		name       		"Ein_A"
+		linkNode   		[2 47 49]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		49
+		name       		"Aus_A"
+		linkNode   		[2 48 50]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		50
+		name       		"Ein_B"
+		linkNode   		[2 49 51]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		51
+		name       		"Aus_B"
+		linkNode   		[2 50 0]
+		scope      		INPUT_EVENT
+		trigger    		FALLING_EDGE_EVENT
+		machine    		1
+	}
+
+	data {
+		id               		52
+		name             		"Bereich"
+		linkNode         		[2 0 53]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+			initialValue		"3"
+		}
+	}
+
+	data {
+		id               		53
+		name             		"on_A"
+		linkNode         		[2 52 54]
+		scope            		INPUT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		54
+		name             		"on_B"
+		linkNode         		[2 53 0]
+		scope            		INPUT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	instance {
+		id     		55
+		name   		"Handbetrieb"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id               		56
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 57]
+	}
+
+	target {
+		id               		57
+		description      		"Default Simulink S-Function Target."
+		codeFlags        		"-bitsets-silent-nocomments"
+		machine          		1
+		linkNode         		[1 56 0]
+	}
+}

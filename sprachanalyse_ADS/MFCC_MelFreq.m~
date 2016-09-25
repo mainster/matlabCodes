@@ -1,0 +1,253 @@
+% Mel Frequency Cepstral Coefficients
+%
+% Die lineare Modellierung von Spracherzeugung dient als
+% eigentliche Grundlage für die Erzeugung von MFCCs: Ein
+% periodisches Anregungssignal (Stimmbänder) wird durch einen
+% „linearen Filter“ (Mund, Zunge, Nasenhöhlen, …) geformt. Für
+% die Spracherkennung ist in erster Linie der Filter (bzw. dessen
+% Impulsantwort) von Bedeutung, da „was gesagt wurde“ und nicht
+% „in welcher Tonlage“ für die Analyse von Interesse ist. Die
+% Berechnung der MFCC ist eine elegante Methode, das
+% Anregungssignal und die Impulsantwort des Filters zu trennen.
+% 
+% Mathematisch formuliert wird die Impulsantwort des Filters mit
+% dem Anregungssignal gefaltet, um das Sprachsignal zu erzeugen.
+% Bei Berechnung des Cepstrums wird die Faltungsoperation auf
+% Grund des Logarithmus in eine Addition transformiert, die
+% einfach zu trennen ist, womit man das Sprachsignal in Anregung
+% (excitation) und Quelle (source) trennen kann.
+% 
+% MFCCs werden durch die folgenden Schritte berechnet:
+% 
+% 1. Unterteilung des Eingabesignals in Blöcke bzw. Fenster (z. B.
+%    Hamming-Fensterfunktion um Kanteneffekte zu vermeiden).
+%    Überlappende Fenster sind üblich. (Diskrete)
+%% 20ms gelten als quasistationär
+% 2. Fourier-Transformation jedes einzelnen Fensters (Dadurch wird
+%    die Faltung von Anregungssignal und Impulsantwort in eine
+%    Multiplikation transformiert). 
+% 3. Erzeugung des Betragsspektrum.
+% 4. Logarithmierung des Betragsspektrums. Dadurch wird die
+%    Multiplikation von Anregungssignal und Impulsantwort in eine
+%    Addition transformiert. 
+% 5. Reduktion der Anzahl der Frequenzbänder
+%    (z. B. 256) durch Zusammenfassen (auf z. B. 40). (Abbildung auf
+%    die Mel-Scala in diskreten Schritten mittels Dreiecksfiltern
+%    (effektiv eine Bandfilterung)). 
+% 6. Abschließende Dekorrelation
+%    durch entweder eine Diskrete Kosinustransformation oder eine
+%    Hauptkomponentenanalyse (auch Karhunen-Loève-Transformation
+%    genannt). (Ursprünglich wurden die logarithmierten
+%    Fourier-Koeffizienten (ohne Mel-Bandpassfilterung) invers
+%    Fouriertransformiert. Die Anregungsfrequenz ist dann eine
+%    einzelne Spitze und leicht zu erkennen bzw. herauszufiltern.
+%    Wird dieses Verfahren angewandt, spricht man von Cepstrum. Der
+%    Vorteil ist im Wesentlichen, dass eine Faltung (z. B.
+%    Filterung) im Zeitbereich einer Addition im logarithmierten
+%    Frequenzbereich entspricht. Aufgabe der Koeffizienten ist es,
+%    die Information des Audiosignals in dekorellierter Form (d. h.
+%    möglichst effektiv) zu repräsentieren. Deshalb werden die
+%    logarithmierten Frequenzen einer DCT unterzogen, die ähnlich
+%    gute Eigenschaften wie die Karhunen-Loève-Transformation
+%    aufweist und zudem einfach zu implementieren ist).
+% 
+% 
+
+PATHA = '/home/mainster/CODES_local/matlab_workspace/wavefiles/14_56_53/';
+PATHB = '/home/mainster/CODES_local/matlab_workspace/wavefiles/16_48_38/';
+clear mp Pxx* speech* fs* mp* pl* Hpsd; 
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mute detect and remove
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if 1
+    waveMuteOff(PATHA,'restore','plot');
+    waveMuteOff(PATHB,'restore','plot');
+end
+speech = {};
+speechB = {};
+
+%%%%
+%   waveout_%i.wav      und
+%   wav_numberB_%i.wav  sind beides aufnahmen 1...9
+%%%%
+
+for k=1:9
+%    fss(k) = eval('audioinfo([PATHA, sprintf(''waveout_%i.wav'',1)]);');
+    
+    CMD = 'audioread';
+    speech{k}  = eval( strrep([CMD '([PATHB, ''orig_wav_numberB_%i.wav''])'], '%i', num2str(k)));
+    speechB{k} = eval( strrep([CMD '([PATHB, ''wav_numberB_%i.wav''])'], '%i', num2str(k)));
+    CMD = 'audioinfo';
+    fss(k)  = eval( strrep([CMD '([PATHB, ''orig_wav_numberB_%i.wav''])'], '%i', num2str(k)));
+    fssB(k) = eval( strrep([CMD '([PATHB, ''wav_numberB_%i.wav''])'], '%i', num2str(k)));
+    
+    if fss(k).TotalSamples ~= length(speech{k})
+        warning(['file #' num2str(k) ', different sizes??'])
+    end
+    mp(k) = audioplayer(speech{k},fss(k).SampleRate);
+    mpB(k) = audioplayer(speechB{k},fssB(k).SampleRate);
+end
+
+   f39 = figure(39); clf;
+   title('PSD using Yule-Walker AR method');
+   f40 = figure(40); clf;
+   f41 = figure(41); clf;
+   f42=figure(42); clf;
+   SUB = 330;
+   
+   for k=1:size(speech,2)
+    order = 12;
+    nfft = 1024;
+    Fs = fss(k).SampleRate;
+    [Pxx{k} freyu1{k}] = pyulear(speech{k},order,nfft,Fs);
+    [PxxB{k} freyu2{k}] = pyulear(speechB{k},order,nfft,Fs);
+    
+    if 1
+        figure(f39);
+        suf(k) = subplot(SUB+k); hold all
+        plf(k) = plot(Pxx{k},'LineWidth',1); grid on;
+        plfB(k) = plot(PxxB{k},'LineWidth',1); grid on;
+        hold off;
+
+        figure(f40);
+        suf(k) = subplot(SUB+k); hold all
+        plf(k) = plot(10*log10(Pxx{k}),'LineWidth',1); grid on;
+        plfB(k) = plot(10*log10(PxxB{k}),'LineWidth',1); grid on;
+        hold off;
+    else
+        figure(f39);
+        ff=[1:length(Pxx{k})];
+        suf(k) = subplot(SUB+k); hold on
+        [plf(k,:), obj1, obj2] = plotyy(ff, Pxx{k}, ff, 10*log10(Pxx{k})); 
+        grid on;
+        [plfB(k,:), objB1, objB2] = plotyy(ff, PxxB{k}, ff, 10*log10(PxxB{k})); 
+        grid on;
+        hold off;
+        
+        set(obj1, 'Color','red')
+        set(obj2, 'Color','green')
+        set(objB1, 'Color','blue')
+        set(objB2, 'Color','black')
+    end        
+    
+    figure(f41);
+    su(k) = subplot(SUB+k); hold all
+    pl(k) = plot(speech{k},'LineWidth',1); grid on;
+    plB(k) = plot(speechB{k},'LineWidth',1); grid on;
+    hold off;
+    NOS{k} = num2str(k);
+    title(['Number ' num2str(k)]);
+    
+    tt=linspace(0,fss(3).Duration,fss(3).TotalSamples );
+    x=speech{k};
+    Fs = fss(k).SampleRate;        
+    nfftPsd = 2^nextpow2(length(x));
+    Pxx2{k} = abs(fft(x,nfftPsd)).^2/length(x)/Fs;
+    % Create a single-sided spectrum
+    Hpsd{k} = dspdata.psd(Pxx2{k}(1:length(Pxx2{k})/2),'Fs',Fs);
+    
+    
+    figure(f42);
+    ffyu=linspace( Hpsd{k}.Frequencies(1), Hpsd{k}.Frequencies(end), length(Pxx{k}));
+    
+    su(k) = subplot(SUB+k); hold all
+    plpsd(k) = plot(Hpsd{k}.Frequencies/1e3, 10*log10(Hpsd{k}.Data),'g','LineWidth',0.1); 
+    lgpsd(k) = plot(ffyu/1e3, 10*log10(Pxx{k})); grid on;
+    hold off;
+    NOS{k} = num2str(k);
+    if k==1
+        title(['Yule-Walker PSD Estimate - Number ' num2str(k)]);
+        xlabel(su(k), 'Frequency (kHz)');
+        ylabel(su(k), 'Power/frequency (dB/Hz)');
+    else
+        title(['Number ' num2str(k)]);
+    end
+
+
+% %%    
+%     fsRef1=infoRef1.SampleRate;
+%     objRef1 = {yref1, fsRef1};
+
+%    yref1 = yref1(round([0.4:1/fsRef1:1]*fsRef1),1);      % Anfang ausklammern
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%    objectsOld = { speech(:,8), speechB(:,8) };
+    objectsOld = speech;
+%    objectsNew = { speech(:,8), speechB(:,8) };
+    objectsNew = speech;
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% beide waves auf lowvolume bereich prüfen, der kürzeste Bereich mit
+% lowvolume bestimmt, wie viel samples am anfang der seuenzen  gekappt
+% werden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    if 0
+        DIVS = 20;
+
+%         f2 = figure(2); clf;
+%         SUB=220;
+%         sb(1) = subplot(SUB+1);
+%         sb(2) = subplot(SUB+3);
+%         sb(3) = subplot(SUB+2);
+%         sb(4) = subplot(SUB+4);
+        
+        for m=1:size(objectsOld,2)
+            y=objectsOld{m};
+            LOWERTHAN(m) = max(y)*3/DIVS;
+            LOWERTHAN_MEAN = mean(LOWERTHAN);
+            lowvol(m) = find(diff( find(y < LOWERTHAN_MEAN) )-1, 1, 'first'); 
+        end
+        
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        % Festlegung: Referenz- Signale und Sprachcommando müssen die
+        % ersten PRE_DELAY samples ein quiet delay besitzen. Die Audiopegel in
+        % diesem Bereich dürfen den Wert 3/DIVS (3/20) der maximal vorkommenden
+        % Signalamplitude nicht überschreiten. Alle Sequenzen werden auf
+        % identische quiet- delays zugeschnitten (sync)
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        PRE_DELAY = 500;
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        if (~isempty( find(lowvol < PRE_DELAY) ))
+            error('Zu wenig quiet delay')
+        end
+        
+        for m=1:size(objectsNew,2)
+            objectsNew{m}(1:lowvol(m)-PRE_DELAY) = [];
+        end
+        
+        [MI, I] = min(cellfun(@length, objectsNew));
+        for m=1:length(objectsNew)
+             if m~=I
+                objectsNew{m}(MI+1:end)=[];
+             end
+        end
+        
+        audiowrite( strrep([PATHB 'wav_number_sh_%i.wav'],'%i',num2str(8) ),...
+               objectsNew{m}, 8000 );           
+        audiowrite( strrep([PATHB 'wav_numberB_sh_%i.wav'],'%i',num2str(8) ),...
+               objectsNew{m}, 8000 );           
+
+    end    
+   end
+
+   if 0
+        disp(['speech:'; speech'])
+        disp(['speechB:'; speechB'])
+        disp(['freyu1:'; freyu1'])
+        disp(['freyu2:'; freyu2'])
+
+        disp(['Pxx:'; Pxx'])
+        disp(['PxxB:'; PxxB'])
+        fprintf('fss.SampleRate:\n')
+        disp(arrayfun(@(x) x.SampleRate, fss)')
+        fprintf('fssB.SampleRate:\n')
+        disp(arrayfun(@(x) x.SampleRate, fssB)')
+   end
+
+return
+
+
+
+
+
+

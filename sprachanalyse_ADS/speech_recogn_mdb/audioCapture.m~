@@ -1,0 +1,190 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% audioCapture.m                                                      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function [varargout] = audioCapture(FS, N_CHAN, REC_DURATION, PATH_TO_REF, varargin)
+%function [varargout] = audioCapture(varargin)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% @@@MDB
+% funktion zum aufnehmen (mic) bzw. einlesen von offline-
+% Sprachkommandos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Check function arguments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+clear pars;
+varargout{1} = -1;
+varargout{2} = -1;
+
+p = inputParser;
+%refNa = {'haus','maus','raus','vogel','eins','zwei','drei','vier','funf'};
+refNa = {'haus','maus','raus','vogel','eins'};
+expSel = {'mic','load','yes','no'};
+
+valSel  = @(x) ischar(x)    && ~isempty(regexp(x,expSel)); 
+valPath = @(x) ischar(x)    && ~isempty(x); 
+valFs   = @(x) isnumeric(x) && isscalar(x) && (x) > 100;
+valChan = @(x) isnumeric(x) && ((x)==1 || (x)==2);
+valDur  = @(x) isnumeric(x) && isscalar(x) && (x) > 0 && (x) < 10;
+
+addOptional(p,'FS', valFs);
+addOptional(p,'N_CHAN', 2, valChan);
+addOptional(p,'REC_DURATION', 1, valDur);
+addOptional(p,'PATH_TO_REF', ' ', valPath);
+addParamValue(p,'select','mic',valSel);
+addParamValue(p,'overwrite','no',valSel);
+
+%parse(p, FS, N_CHAN, REC_DURATION, varargin{:});
+parse(p, FS, N_CHAN, REC_DURATION, PATH_TO_REF, varargin{:});
+%parse(p, varargin{:});
+pars = p.Results;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+global refs refslo
+ds = evalin('base','ds');
+ol = evalin('base','ol');
+evalin('base','global refs refslo');
+
+PA = pars.PATH_TO_REF;
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Haus maus raus ... Sequenzen in basis workspace laden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if strcmpi(pars.select,'load')
+    if isempty(PA)
+        error('please specify PATH_TO_REF is ''load'' selected ')
+    end
+    for k=1:length(refNa)
+        refs.(refNa{k}) = audioread(fullfile(PA, [refNa{k} '.wav']));
+        refs.info.(refNa{k}) = audioinfo(fullfile(PA, [refNa{k} '.wav']));
+    end
+    
+%     load('ymic.mat');
+
+    % Was sollte dass hier???       10-12-2014
+    
+    if isfield(pars, 'FS') && (pars.FS ~= refs.info.haus.SampleRate)
+        fprintf('\n%s\nResampling sequences by %i/%i = %.2g\n%s\n',[ds ds],...
+            pars.FS, refs.info.(refNa{k}).SampleRate,...
+            pars.FS/refs.info.(refNa{k}).SampleRate, [ds ds]);
+            
+            refslo.info = refs.info;
+        for k=1:length(refNa)
+            refslo.(refNa{k}) = resample(refs.(refNa{k}),pars.FS,...
+                                    refs.info.(refNa{k}).SampleRate);
+            refslo.info.(refNa{k}).SampleRate = pars.FS;
+            refslo.info.(refNa{k}).TotalSamples = length(refslo.(refNa{k}));
+        end
+    end
+    
+    varargout{1} = sprintf('\nloaded\n');
+% return;
+end
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sprachkommando aufnehmen (recCmd) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%MODE = 0;   % aufnahme über mic
+if ~isnumeric(pars.FS) 
+    error('parameter FS needed when select = mic')
+end
+
+savedSeq = fullfile(ol.projectsPath, 'ymic.mat');
+
+if strcmpi(pars.select,'mic')
+    if strcmpi(pars.overwrite,'yes')
+        if exist(savedSeq,'file')
+            delete(savedSeq);
+        end
+    else
+        if exist(savedSeq,'file')
+            load(savedSeq);
+            fsSavedSeq = opt{1};
+                
+            if fsSavedSeq ~= pars.FS    % True wenn die gespeicherte Sequenz
+                                        % anders abgetastet wurde
+                                        % wie jetzt verlang!
+                if fsSavedSeq > pars.FS
+                    fprintf('\n%s\nResampling saved sequences by %i/%i = %.2g\n%s\n',[ds ds],...
+                            pars.FS, fs...
+            pars.FS/refs.info.(refNa{k}).SampleRate, [ds ds]);
+            
+            refslo.info = refs.info;
+        for k=1:length(refNa)
+            refslo.(refNa{k}) = resample(refs.(refNa{k}),pars.FS,...
+                                    refs.info.(refNa{k}).SampleRate);
+            refslo.info.(refNa{k}).SampleRate = pars.FS;
+            refslo.info.(refNa{k}).TotalSamples = length(refslo.(refNa{k}));
+        end
+                end
+    
+                
+                
+        else
+            warning(sprintf(['Unable to read file ymic.mat',...
+                '\nParameter ''overwrite'' switched from ''No'' to ''yes''']))
+        end
+    end        
+    
+     if ~exist(savedSeq,'file')
+        input('Start audio recording ???');
+
+        for k=5:-1:1
+            disp([num2str(k*.5) 's'])
+            delayWait(0.5);
+        end
+%         choice = questdlg('Aufnahme starten','Rec','Yes','No',optmsg)
+        disp('Enter voice command ...');
+        delayWait(0.2);
+        
+        [ymic, mpCmd, opt] = recCmd(FS, N_CHAN, REC_DURATION); %play(mpCmd)
+        save(savedSeq,'ymic', 'mpCmd', 'opt');
+    else
+        load(savedSeq);
+        CMD_SRC = 'Stored mic command';
+    end
+    y = ymic;
+%
+%%  FIXME: opt ist unbekannt wenn wav- sequenz aus ymic.mat geladen wird
+%
+    fsCmd = opt{1};                             
+    if nargout >= 0
+%% Nicht immer ist Chan 1 der, muss überprüft werden        
+%         varargout{1}= y(:,1);   
+%         [C,I] = max( sum(abs(y)) );
+
+%         g1=figure(999);
+%         subplot(211);
+%         plot(y(:,1));
+%         subplot(212);
+%         plot(y(:,2));
+%         legend('Ch1', 'Ch2');
+        
+%         inchan=input('Channel 1 or Channel 2 ???');
+%         if ~isnumeric(inchan) 
+%             warning('select numeric 1 or two... as fallback Chan1 is used ')
+%             inchan = 1;
+%         else
+%             if (inchan < 1) || (inchan > 2)
+%                 warning('bad select range... as fallback Chan1 is used ')
+%                 inchan = 1;
+%             end
+%         end
+        
+%        varargout{1}= y(:,inchan);   
+        varargout{1}= y(:,1);   
+    end
+    if nargout >= 2
+        varargout{2}= fsCmd;
+    end
+    
+    if nargout >= 3
+        varargout{3}= CMD_SRC;
+    end
+    
+
+    return
+end
+
+objOut = -1;
+
+end
+
+
+%

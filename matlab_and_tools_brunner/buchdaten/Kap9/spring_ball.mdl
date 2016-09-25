@@ -1,0 +1,922 @@
+Model {
+  Name			  "spring_ball"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu Mar 29 15:55:44 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Brunner"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Sep 07 14:09:36 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:38>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "WorkspaceI/O"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "0.01"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.001"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWOptions		  "-aExtMode=0 -aForceParamTrailComments=0 -aInlineInv"
+"ariantSignals=0 -aLocalBlockOutputs=1 -aLogVarNameModifier=\"rt_\" -aRTWVerbo"
+"se=1 -aRollThreshold=5 -aShowEliminatedStatements=1"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "spring_ball"
+    Location		    [73, 74, 917, 590]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Scope
+      Name		      "Ballposition"
+      Ports		      [1]
+      Position		      [680, 84, 710, 116]
+      Floating		      off
+      Location		      [183, 133, 772, 633]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Chart"
+      Ports		      [1, 2, 0, 1]
+      Position		      [250, 332, 345, 423]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private'"
+",'sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl',"
+"'Center','VerticalAl','Bottom');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Chart"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "velocity"
+	  Position		  [20, 101, 40, 119]
+	  Port			  "1"
+	  PortDimensions	  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  " input events "
+	  Ports			  [0, 1]
+	  Position		  [20, 136, 40, 154]
+	  TriggerType		  "either"
+	  ShowOutputPort	  on
+	  OutputDataType	  "auto"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 180, 320, 220]
+	  Outputs		  "1"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function spring_ball 1"
+	  Ports			  [2, 3]
+	  Position		  [180, 100, 230, 180]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[2 3]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 191, 480, 209]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Reset"
+	  Position		  [460, 101, 480, 119]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "v0"
+	  Position		  [460, 136, 480, 154]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [0, 85]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "Reset"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  3
+	  DstBlock		  "v0"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "velocity"
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " input events "
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Erd-\nbeschleunigung"
+      Position		      [155, 175, 185, 205]
+      Gain		      "-9.81"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Fcn"
+      Position		      [405, 110, 465, 140]
+      Orientation	      "left"
+      Expr		      "u*u"
+    }
+    Block {
+      BlockType		      HitCross
+      Name		      "Hit Crossing\n(Ballradius)"
+      Ports		      [1, 1]
+      Position		      [620, 185, 650, 215]
+      HitCrossingOffset	      "0.1"
+      HitCrossingDirection    "falling"
+      ShowOutputPort	      on
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integration\n(Anfangshöhe)"
+      Ports		      [1, 1]
+      Position		      [540, 185, 570, 215]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "5"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Ports		      [3, 1]
+      Position		      [380, 171, 435, 229]
+      ShowName		      off
+      ExternalReset	      "rising"
+      InitialConditionSource  "external"
+      InitialCondition	      "Stossvelocity"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Model Info1"
+      Ports		      []
+      Position		      [510, 314, 768, 393]
+      ShowName		      off
+      FontName		      "Arial"
+      SourceBlock	      "simulink3/Signals\n& Systems/Model Info"
+      SourceType	      "CMBlock"
+      InitialBlockCM	      "none"
+      BlockCM		      "none"
+      Frame		      "on"
+      DisplayStringWithTags   "Modell eines auf einer Fläche springenden Balls"
+"\n(Annahme:  elastischer Stoß)"
+      MaskDisplayString	      "Modell eines auf einer Fläche springenden Balls"
+"\\n(Annahme:  elastischer Stoß)"
+      HorizontalTextAlignment "Center"
+      LeftAlignmentValue      "0.5"
+      SourceBlockDiagram      "spring_ball_alt"
+      TagMaxNumber	      "20"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [3, 1]
+      Position		      [210, 311, 215, 359]
+      ShowName		      off
+      Inputs		      "3"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [2, 1]
+      Position		      [615, 81, 620, 119]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Product"
+      Ports		      [2, 1]
+      Position		      [255, 101, 300, 134]
+      Orientation	      "left"
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Reibungskoeff."
+      Position		      [355, 110, 385, 140]
+      Orientation	      "left"
+      Gain		      "0.05"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Signum
+      Name		      "Sign"
+      Position		      [330, 75, 360, 105]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Start"
+      Position		      [70, 240, 100, 270]
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Stoßzeitpunkte"
+      Ports		      [1]
+      Position		      [705, 184, 735, 216]
+      Floating		      off
+      Location		      [567, 209, 1035, 407]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [230, 161, 250, 199]
+      ShowName		      off
+      IconShape		      "rectangular"
+      Inputs		      "-+"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      HitCross
+      Name		      "Umkehrpunkt"
+      Ports		      [1, 1]
+      Position		      [195, 445, 225, 475]
+      Orientation	      "left"
+      HitCrossingOffset	      "0"
+      HitCrossingDirection    "falling"
+      ShowOutputPort	      on
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Umkehrzeitpunkte"
+      Ports		      [1]
+      Position		      [90, 444, 120, 476]
+      Orientation	      "left"
+      Floating		      off
+      Location		      [565, 458, 1033, 656]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out1"
+      Position		      [680, 143, 710, 157]
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Line {
+      SrcBlock		      "Fcn"
+      SrcPort		      1
+      DstBlock		      "Reibungskoeff."
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Hit Crossing\n(Ballradius)"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	Points			[0, 85; -500, 0; 0, 35]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Stoßzeitpunkte"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Start"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	Points			[0, -65]
+	DstBlock		"Erd-\nbeschleunigung"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 80]
+	DstBlock		"Mux"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Integrator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	DstBlock		"Integration\n(Anfangshöhe)"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -75]
+	Branch {
+	  DstBlock		  "Fcn"
+	  DstPort		  1
+	}
+	Branch {
+	  Labels		  [1, 0]
+	  Points		  [0, -35]
+	  Branch {
+	    DstBlock		    "Mux1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Sign"
+	    DstPort		    1
+	  }
+	}
+      }
+      Branch {
+	Points			[0, 260; -80, 0]
+	Branch {
+	  DstBlock		  "Umkehrpunkt"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -20; -175, 0]
+	  DstBlock		  "Chart"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Integration\n(Anfangshöhe)"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	DstBlock		"Hit Crossing\n(Ballradius)"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -90]
+	DstBlock		"Mux1"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	DstBlock		"Ballposition"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"Out1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Chart"
+      SrcPort		      1
+      Points		      [35, 0; 0, -90; -65, 0; 0, -65]
+      DstBlock		      "Integrator1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Chart"
+      SrcPort		      2
+      Points		      [65, 0; 0, -155; -65, 0; 0, -25]
+      DstBlock		      "Integrator1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Reibungskoeff."
+      SrcPort		      1
+      DstBlock		      "Product"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sign"
+      SrcPort		      1
+      Points		      [-10, 0]
+      DstBlock		      "Product"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Product"
+      SrcPort		      1
+      Points		      [-55, 0; 0, 50]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Erd-\nbeschleunigung"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [20, 0; 0, -25; 55, 0]
+      DstBlock		      "Chart"
+      DstPort		      trigger
+    }
+    Line {
+      SrcBlock		      "Umkehrpunkt"
+      SrcPort		      1
+      Points		      [-20, 0]
+      Branch {
+	Points			[0, -110]
+	DstBlock		"Mux"
+	DstPort			3
+      }
+      Branch {
+	DstBlock		"Umkehrzeitpunkte"
+	DstPort			1
+      }
+    }
+    Annotation {
+      Position		      [217, 74]
+      Text		      "Modellierung des Luftwiderstands\nals quadratis"
+"cher Reibungseffekt"
+    }
+  }
+}
+
+# Finite State Machines
+# -- File save dated 07-Sep-2001 14:09:36
+#
+#    Stateflow Version 4.0 (R12) dated Oct  4 2000, 19:47:56
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"spring_ball"
+		created              		"29-Mar-2001 16:10:33"
+		firstTarget          		15
+		sfVersion            		40012071
+	}
+
+	chart {
+		id                       		2
+		name                     		"Chart"
+		windowPosition           		[68.276 81.931 416.483 348.828]
+		viewLimits               		[27.082 374.329 15.347 306.59]
+		zoomFactor               		0.931
+		screen                   		[1 1 1152 864 1.333333333333333]
+		treeNode                 		[0 3 0 0]
+		firstTransition          		5
+		viewObj                  		2
+		machine                  		1
+		subviewS {
+		}
+		decomposition            		CLUSTER_CHART
+		firstEvent               		8
+		firstData                		11
+		chartFileNumber          		1
+	}
+
+	state {
+		id             		3
+		labelString    		"Ball_fallend/\n"
+						"entry:Reset=0;\n"
+						"v0=0;"
+		position       		[79.768 93.656 90 60]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 0 0 4]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		4
+		labelString    		"Ball_steigend/\n"
+						"entry: v0=-velocity;\n"
+						"Reset=1;"
+		position       		[215.768 187.406 113.883 71.935]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 0 3 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	transition {
+		id             		5
+		labelPosition  		[141.268 68.906 8.367 16.064]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 142.7677084647014 63.65624071159363 0]
+		}
+		dst {
+			id          		3
+			intersection		[1 0 -1 0.7 142.7677084647015 93.65624071159363 0]
+		}
+		midPoint       		[139.1875325791093 71.46753355288564]
+		chart          		2
+		linkNode       		[2 0 6]
+		dataLimits     		[139.182 145.168 63.656 93.656]
+		subviewer      		2
+	}
+
+	transition {
+		id             		6
+		labelString    		"Aufprall"
+		labelPosition  		[236.235 112.696 43.232 16.064]
+		fontSize       		12
+		src {
+			id          		3
+			intersection		[2 1 0 0.4125 169.7677084647015 118.4062407115936 0]
+		}
+		dst {
+			id          		4
+			intersection		[1 0 -1 0.6583333333333333 290.7410388370203 187.406 
+								  0]
+		}
+		midPoint       		[246.6142478701919 128.6583291708443]
+		chart          		2
+		linkNode       		[2 5 7]
+		dataLimits     		[169.768 293.141 118.098 187.406]
+		subviewer      		2
+	}
+
+	transition {
+		id             		7
+		labelString    		"Umkehr"
+		labelPosition  		[149.107 202.902 44.626 16.064]
+		fontSize       		12
+		src {
+			id          		4
+			intersection		[4 -1 0 0.253968253968254 215.768 241.0720538065547 0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.55 120.2677084647015 153.6562407115936 0]
+		}
+		midPoint       		[150.8250101432286 217.095896647512]
+		chart          		2
+		linkNode       		[2 6 0]
+		dataLimits     		[117.868 215.768 153.656 241.072]
+		subviewer      		2
+	}
+
+	event {
+		id         		8
+		name       		"Aufprall"
+		linkNode   		[2 0 9]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		9
+		name       		"Enable"
+		linkNode   		[2 8 10]
+		scope      		INPUT_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		10
+		name       		"Umkehr"
+		linkNode   		[2 9 0]
+		scope      		INPUT_EVENT
+		trigger    		RISING_EDGE_EVENT
+		machine    		1
+	}
+
+	data {
+		id               		11
+		name             		"Reset"
+		linkNode         		[2 0 12]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		12
+		name             		"v0"
+		linkNode         		[2 11 13]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		13
+		name             		"velocity"
+		linkNode         		[2 12 0]
+		scope            		INPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	instance {
+		id     		14
+		name   		"Chart"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id               		15
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}

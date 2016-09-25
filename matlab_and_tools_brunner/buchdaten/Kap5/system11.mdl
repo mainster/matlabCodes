@@ -1,0 +1,452 @@
+Model {
+  Name			  "system11"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Thu Jun 28 08:44:41 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Jun 30 05:36:20 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:38>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "system11"
+    Location		    [94, 122, 928, 436]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      Position		      [85, 195, 105, 215]
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Input Point1"
+      Ports		      [1, 1]
+      Position		      [235, 130, 255, 150]
+      SourceBlock	      "cstblocks/Input Point"
+      SourceType	      "InputPoint"
+    }
+    Block {
+      BlockType		      Lookup
+      Name		      "Look-Up\nTable"
+      Position		      [335, 114, 385, 166]
+      InputValues	      "[-50. -15,- 10, 0, 10, 15, 50]"
+      OutputValues	      "[-15, -12, -10, 0, 10, 12, 15]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Output Point"
+      Ports		      [1, 1]
+      Position		      [370, 210, 390, 230]
+      Orientation	      "left"
+      SourceBlock	      "cstblocks/Output Point"
+      SourceType	      "OutputPoint"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "PID Controller\n(with Approximate\nDerivative)"
+      Ports		      [1, 1]
+      Position		      [155, 119, 205, 161]
+      SourceBlock	      "simulink_extras/Additional\nLinear/PID Controll"
+"er\n(with Approximate\nDerivative)"
+      SourceType	      "PID(2) Controller"
+      P			      "10"
+      I			      "8"
+      D			      "1"
+      N			      "20"
+    }
+    Block {
+      BlockType		      RateLimiter
+      Name		      "Rate Limiter"
+      Position		      [280, 125, 310, 155]
+      NamePlacement	      "alternate"
+      RisingSlewLimit	      "50"
+      FallingSlewLimit	      "-50"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [330, 60, 360, 90]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [595, 514, 919, 753]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope1"
+      Ports		      [1]
+      Position		      [695, 60, 725, 90]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Floating		      off
+      Location		      [231, 518, 555, 757]
+      Open		      on
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step"
+      Position		      [80, 50, 110, 80]
+      Time		      "0"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step1"
+      Position		      [450, 60, 480, 90]
+      Time		      "0"
+      Before		      "0"
+      After		      "0"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [100, 125, 130, 155]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [505, 125, 535, 155]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      Position		      [295, 245, 315, 265]
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Transfer Fcn\n(with initial states)"
+      Ports		      [1, 1]
+      Position		      [420, 122, 480, 158]
+      SourceBlock	      "simulink_extras/Additional\nLinear/Transfer Fcn"
+"\n(with initial states)"
+      SourceType	      "Transfer Function with Initial States"
+      N			      "[1]"
+      D			      "[1  1]"
+      X0		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Transfer Fcn\n(with initial states)1"
+      Ports		      [1, 1]
+      Position		      [560, 122, 620, 158]
+      SourceBlock	      "simulink_extras/Additional\nLinear/Transfer Fcn"
+"\n(with initial states)"
+      SourceType	      "Transfer Function with Initial States"
+      N			      "[1]"
+      D			      "[1  1]"
+      X0		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Transfer Fcn\n(with initial states)2"
+      Ports		      [1, 1]
+      Position		      [655, 119, 735, 161]
+      SourceBlock	      "simulink_extras/Additional\nLinear/Transfer Fcn"
+"\n(with initial states)"
+      SourceType	      "Transfer Function with Initial States"
+      N			      "[1]"
+      D			      "[1 2 8]"
+      X0		      "0"
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "PID Controller\n(with Approximate\nDerivative)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn\n(with initial states)"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Step1"
+      SrcPort		      1
+      Points		      [35, 0]
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PID Controller\n(with Approximate\nDerivative)"
+      SrcPort		      1
+      DstBlock		      "Input Point1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Transfer Fcn\n(with initial states)1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn\n(with initial states)2"
+      SrcPort		      1
+      Points		      [0, 0; 20, 0]
+      Branch {
+	Points			[0, 80]
+	DstBlock		"Output Point"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -65]
+	DstBlock		"Scope1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn\n(with initial states)1"
+      SrcPort		      1
+      DstBlock		      "Transfer Fcn\n(with initial states)2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Rate Limiter"
+      SrcPort		      1
+      DstBlock		      "Look-Up\nTable"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Look-Up\nTable"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Transfer Fcn\n(with initial states)"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -65]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Ground"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Output Point"
+      SrcPort		      1
+      Points		      [-95, 0; 0, 35]
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Input Point1"
+      SrcPort		      1
+      DstBlock		      "Rate Limiter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Step"
+      SrcPort		      1
+      Points		      [30, 0; 0, 40; -65, 0; 0, 35]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+  }
+}

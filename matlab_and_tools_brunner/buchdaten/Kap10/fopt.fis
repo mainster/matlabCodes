@@ -1,0 +1,33 @@
+[System]
+Name='fopt'
+Type='sugeno'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='x'
+Range=[-10 10]
+NumMFs=3
+MF1='unten':'trapmf',[-19 -11 -9.42759244012819 -0.276515459114902]
+MF2='mitte':'trapmf',[-8.60653450212798 -1.81730598010633 1.73317693892927 8.59486310815138]
+MF3='oben':'trapmf',[0.28369664976629 9.24306894836313 11 19]
+
+[Output1]
+Name='y'
+Range=[0 1]
+NumMFs=3
+MF1='mf1':'linear',[13.4007035597367 105.085620835602]
+MF2='mf2':'linear',[5.59145548152218 19.9865003707986]
+MF3='mf3':'linear',[12.8432834213335 -63.4147374276322]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1

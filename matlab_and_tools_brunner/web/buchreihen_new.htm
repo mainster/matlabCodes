@@ -1,0 +1,762 @@
+<html>
+<head>
+<title>AW</title>
+
+<style type="text/css">
+<!--
+.babytd {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #FF9900}
+.babytd a:link {  color: #FF9900; text-decoration: none}
+.babytd a:visited {  color: #666666}
+.babytd a:hover {  color: #333333; text-decoration: underline}
+.babytd a:active {  color: #333333; text-decoration: underline}
+.babytd a:link {  color: #FF9900; text-decoration: none}
+.babytd a:visited {  color: #666666; text-decoration: none}
+.babytd a:hover {  color: #333333; text-decoration: underline}
+.babytd a:active {  color: #333333; text-decoration: underline}
+.orangehead {  font-family: Arial, Helvetica, sans-serif; font-size: 40px; color: #FFBE63; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: normal}
+.grayhead { font-family: Arial, Helvetica, sans-serif; font-size: 40px; color: #CCCCCC; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px}
+.graytext { font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; color: #999999; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px }
+-->
+  
+#divUpControl{position:absolute; width:478; left:55; top:40; z-index:1; text-align: right} 
+#divDownControl{position:absolute; width:478; left:55; top:435; z-index:1; text-align: right} 
+#divContainer{position:absolute; width:478; height:220; overflow:hidden; top:112; left:60; clip:rect(0,478,220,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0} 
+
+</style>
+
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function P7AniMagic(el, x, y, a, b, c, s) { //v2.5 PVII
+ var g,elo=el,f="",m=false,d="";x=parseInt(x);y=parseInt(y);
+ var t = 'g.p7Magic = setTimeout("P7AniMagic(\''+elo+'\','; 
+ if ((g=MM_findObj(el))!=null) {d=(document.layers)?g:g.style;}else{return;}
+ if (parseInt(s)>0) {eval(t+x+','+y+','+a+','+b+','+c+',0)",' + s+')');return;}
+ var xx=(parseInt(d.left))?parseInt(d.left):0;
+ var yy=(parseInt(d.top))?parseInt(d.top):0;
+ if(parseInt(c)==1) {x+=xx;y+=yy;m=true;c=0;}
+ else if (c==2) {m=false;clearTimeout(g.p7Magic);}
+ else {var i=parseInt(a);
+  if (eval(g.moved)){clearTimeout(g.p7Magic);}
+  if (xx<x){xx+=i;m=true;if(xx>x){xx=x;}}
+  if (xx>x){xx-=i;m=true;if(xx<x){xx=x;}}
+  if (yy<y){yy+=i;m=true;if(yy>y){yy=y;}}
+  if (yy>y){yy-=i;m=true;if(yy<y){yy=y;}}}
+ if (m) {if((navigator.appName=="Netscape") && parseInt(navigator.appVersion)>4){
+    xx+="px";yy+="px";}
+  d.left=xx;d.top=yy;g.moved=true;eval(t+x+','+y+','+a+','+b+','+c+',0)",'+b+')');
+  }else {g.moved=false;}
+}
+//-->
+// begin absolutely positioned scrollable area object scripts 
+// Extension developed by David G. Miles 
+// Original Scrollable Area code developed by Thomas Brattli 
+function verifyCompatibleBrowser(){ 
+    this.ver=navigator.appVersion 
+    this.dom=document.getElementById?1:0 
+    this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0; 
+    this.ie4=(document.all && !this.dom)?1:0; 
+    this.ns5=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+ 
+    this.ns4=(document.layers && !this.dom)?1:0; 
+    this.bw=(this.ie5 || this.ie4 || this.ns4 || this.ns5) 
+    return this 
+} 
+bw=new verifyCompatibleBrowser() 
+ 
+ 
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+ 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+} 
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+ 
+function PerformScroll(speed){ 
+	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+	} 
+} 
+ 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible' 
+    initialised=true; 
+} 
+// end absolutely positioned scrollable area object scripts 
+
+</script>
+
+<LINK href="images/styles.css" rel=stylesheet>
+<SCRIPT language=JavaScript src="images/Rollover.js"></SCRIPT>
+
+<SCRIPT language=Javascript src="images/projector.js"></SCRIPT>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="InitialiseScrollableArea()">
+<!-- begin absolutely positioned scrollable area object--> 
+<div id="divUpControl"> <a href="javascript:;" onMouseOver="PerformScroll(-10)" onMouseOut="CeaseScroll()">[scroll 
+  up]</a> </div>
+<div id="divDownControl"> <a href="javascript:;" onMouseOver="PerformScroll(10)" onMouseOut="CeaseScroll()">[scroll 
+  down]</a> </div>
+<div id="divContainer" style=""> 
+  <div id="divContent" style="left: 485px; top: 38px"> 
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr> 
+        <td width="72%" class="defaulttxt">&nbsp;</td>
+        <td width="28%" valign="top" align="right">&nbsp;&nbsp;&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="defaulttxt">&nbsp; </td>
+        <td width="28%" align="right" valign="top"><img src="images/agenten.jpg" width="100" height="142"></td>
+      </tr>
+      <tr> 
+        <td width="72%">
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="header"><br>
+          Business & Computing</td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="defaulttxt">Business & Computing Die Reihe Business 
+          & Computing widmet sich gezielt dem Einsatz von Informationstechnik 
+          in Unternehmen. Im Vordergrund steht die betriebswirtschaftliche Zielsetzung. 
+          Die Bücher der Reihe vermitteln das nötige Expertenwissen, um IT-Systeme 
+          für betriebswirtschaftliche Zwecke zu beurteilen, einzuführen, einzurichten, 
+          zu optimieren und anzuwenden. Ihr Kennzeichen ist der pragmatische, 
+          auf qualifizierbaren Erfolg und Nutzen ausgerichtete Zugriff. Sie wenden 
+          sich an Manager, Berater, IT-Experten und Fachanwender. <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/buisness.jpg" width="100" height="135"></td>
+      </tr>
+      <tr> 
+        <td width="72%">
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="header"><br>
+          Datacom Akademie </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="defaulttxt">Die Bücher dieser Reihe wenden sich 
+          an Netzwerkadministratoren, Kommunikationstechniker und technische Führungskräfte. 
+          Top-Experten, die zum großen Teil aus der Datacom Akademie stammen, 
+          machen den Leser mit aktuellsten Techniken und Entwicklungen aus den 
+          Bereichen Computernetzwerke und (Tele-) Kommunikation vertraut. Die 
+          Datacom Akademie ist der renommierte Seminar- und Kongreß-Anbieter auf 
+          dem Gebiet der modernen Informationstechnologie.<br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/datcom.jpg" width="100" height="142"></td>
+      </tr>
+      <tr> 
+        <td width="72%">
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="header"><br>
+          dpi</td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="defaulttxt" align="left" valign="top">Der Computer 
+          hat sich zum zentralen Werkzeug für die digitale Gestaltung und Medienproduktion 
+          entwickelt. Die Buchreihe dpi deckt alle relevanten Themen von der Gestaltung 
+          über Technologien bis hin zu den Tools ab: Grafik, Design, Bildbearbeitung, 
+          3D-Visualisierung, Publishing, Imaging und Multimedia. <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/dpi.jpg" width="100" height="140"></td>
+      </tr>
+      <tr> 
+        <td width="72%">
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="header"><br>
+          Edition Lotus</td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="defaulttxt" align="left" valign="top">Die Edition 
+          Lotus behandelt zentrale Fragen und Probleme der Nutzung von Notes und 
+          Domino. Sie richtet sich an Experten, die Notes und Domino als Kommunikationsplattform 
+          insbesondere in Unternehmen professionell einsetzen oder Beratungen 
+          und Entwicklungen für Kunden anbieten. <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/editionlotus.jpg" width="100" height="143"></td>
+      </tr>
+      <tr> 
+        <td width="72%">
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="header"><br>
+          Edition Oracle </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" class="defaulttxt" align="left" valign="top">Erfahrene 
+          Oracle-Spezialisten vermitteln in dieser Buchreihe ihre professionellen, 
+          durch jahrelange tägliche Arbeit erworbenen Techniken und Problemlösungen 
+          für den effizienten Einsatz der Oracle-Produkte. Die Edition Oracle 
+          erscheint in Zusammenarbeit mit der ORACLE Deutschland GmbH. <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/editionOracle.jpg" width="100" height="146"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"> <img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Edition SAP </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Die Edition 
+          SAP behandelt alle relevanten technischen und betriebswirtschaftlichen 
+          Themen in Bezug auf die Einführung, den Betrieb und die Nutzung der 
+          SAP Software. Die Reihe wendet sich an betriebswirtschaftlich und/oder 
+          infomationstechnisch ausgebildete Experten (vom Berater über den Administrator 
+          bis hin zum Entwickler). Die Bücher der Reihe werden von Fachleuten 
+          der SAP sowie anderen ausgewiesenen SAP-Experten geschrieben. Sie zeichnen 
+          sich durch hohe Qualität, Aktualität und Praxisbezug aus. <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/editopnsap.jpg" width="100" height="151"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Go To - Die Aufsteigerreihe </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Unsere Go 
+          To-Titel sind die sicheren Führer auf Ihrem Weg zum Professionellen 
+          Programmierer. Zu allen relevanten Programmiersprachen und -tools finden 
+          ambitionierte Einsteiger, Umsteiger und fortgeschrittene Programmierer 
+          das Buch, das sie brauchen. Die Autoren sorgen dafür, daß Sie das nötige 
+          Grundlagenwissen erhalten, zuverlässig und verständlich - immer mit 
+          Blick auf die praktische Anwendung. <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/goto.jpg" width="100" height="143"></td>
+      </tr>
+      <tr> 
+        <td width="72%">
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Die Unilog Integrata-Qualifizierung </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Diese Reihe 
+          wird gemeinsam von der Unilog Integrata Training AG und Addison-Wesley 
+          herausgegeben. Im Mittelpunkt der Reihe steht die Darstellung spezifischer 
+          Berufsbilder und Tätigkeitsgruppen in der Informationstechnologie. <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/intergrata.jpg" width="100" height="141"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Lernen - Die Einsteigerreihe </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Anfangen, 
+          anwenden, verstehen! Ob Sie nun Java, Perl, Viual Basic, Delphi oder 
+          C++ lernen oder mit Visual Basic für Applikationen Ihre Office-Anwendungen 
+          optimieren wollen, unsere erfolgreichen Lernen-Bücher verschaffen Ihnen 
+          einen schnellen und motivierenden Einstieg. Entscheidend für den Erfolg 
+          ist die richtige Mischung aus Theorie und praktischen Übungen. <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/lernen.jpg" width="100" height="142"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Linux Specials </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Die Reihe 
+          Linux Specials richtet sich an fortgeschrittene, professionelle Linux-Anwender 
+          und -Entwickler sowie Berater. Sie vermittelt erprobltes Linux-Wissen 
+          von Experten und Entwicklern, die Linux von der Stunde Null an kennen. 
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/linux-specials.jpg" width="100" height="147"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          MCSE-Trainer</td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Die MCSE-Trainer 
+          von Michael Völk bieten Ihnen die optimale Vorbereitung für die MCSE-Prüfungen 
+          zu Windows 2000. Mit Hilfe der originalgetreuen, deutschsprachigen Fragen 
+          bereiten Sie sich effizinet auf die Prüfungssituation vor. Tipps für 
+          eine erfolgreiche Prüfungsstrategie sowie Verweise auf die Microsoft-Dokumentationen 
+          ergänzen die Lösungsangaben. <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/mcse.jpg" width="100" height="143"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          net.com </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Webapplikationen, 
+          Internet-Technologien, Telekommunikation - zu diesen Themen bietet Ihnen 
+          net.com umfassende, praxisnahe Information. Beschrieben werden Standards, 
+          Protokolle, Technologien und Tools. Die Autoren geben ihr praxiserprobtes 
+          Wissen weiter und helfen Ihnen auf diese Weise, die Vorteile von Tecnologien 
+          und Konzepten zu bewerten und Probleme bei der täglichen Arbeit effizient 
+          zu lösen. <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/netcom.jpg" width="100" height="136"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Nitty Gritty </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Die wichtigsten 
+          Internet- und Programmierthemen auf den Punkt gebracht: klar, übersichtlich 
+          und modern. Immer unter dem Aspekt "to get down to the nitty gritty" 
+          (zur Sache kommen), richten sie sich an Einsteiger mit Grundkenntnissen 
+          und an Fortgeschrittene. Suchen Sie gezielte Antworten auf konkrete 
+          Fragen? Die Aufteilung in Einführung, Kurzreferenz, Tipps und Tricks 
+          ermöglicht Ihnen einen schnellen ugang zum jeweiligen Kernwissen. Weitere 
+          Informationen zur Reihe und zu den einzelnen Titel finden Sie auch auf 
+          unserer Website unter www.nitty-gritty.de. <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/nitty.jpg" width="100" height="137"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header">Novell-Bibliothek 
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Mit den Standardwerken 
+          von eric Tierling bietet die Novell-Bibliothek umfassende Informationen 
+          zu Novells NetWare 5. <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/novell.jpg" width="100" height="144"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Programmer´s Choice</td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Die Wahl 
+          für professionelle Programmierer und Softwareentwickler. Anerkannte 
+          Experten wie z.B. Bjarne Stroustrup, der Erfinder von C++, liefern umfassendes 
+          Fachwissen zu allen wichtigen Programmiersprachen und den neuesten Technologien, 
+          aber auch Tipps aus der Praxis. Die Reihe von Profis für Profis! <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/progr_choice.jpg" width="100" height="145"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          SAP-Anwenderedition </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Diese von 
+          der CDI - eines der größten deutschen privaten Weiterbildungsunternehmen 
+          - betreute Fachbuchreihe ist speziell auf die Bedürfnisse der Endanwender 
+          hin konzipiert und erschließt die gesamte Palette der wichtigsten SAP 
+          R/3-Anwendungen (Version 4.6). Sie wendet sich an Einsteiger und fortgeschrittene 
+          R/3-Endanwender, ist aber auch geeignet für angehende R/3-Berater bzw. 
+          -Administratoren. Die Fachbücher behandeln in thematisch geschlossenen 
+          Kapiteln die für den Endanwender relevanten Funktionen der jeweiligen 
+          SAP R/3-Softwaremodule. Darstellungsziel ist stets die konkrete Problemlösung. 
+          Alle Bücher sind kompatibel mit dem IDES-System der SAP. <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/sap_anwender.jpg" width="100" height="143"></td>
+      </tr>
+      <tr> 
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="header"><br>
+          Scientific Computing </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%" align="left" valign="top" class="defaulttxt">Diese Reihe 
+          wendet sich an Fachleute mit naturwissenschaftlichem, technischem oder 
+          statistischem Hintergrund aus Hochschulen, Fachhochschulen und aus der 
+          Industrie. Für diesen Anwenderkreis wird der Umgang mit wissenschaftlichen 
+          Tools wie Matlab, SPSS oder Latex beschrieben. <br>
+          <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top"><img src="images/scientific.jpg" width="100" height="133"></td>
+      </tr>
+      <tr>
+        <td width="72%"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top" class="header"><br>
+          win.tec </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top" height="234" class="defaulttxt">Die 
+          Reihe windows technologies richtet sich an IT-Spezialisten, die Mirosoft-Technologien 
+          professionell einsetzen. Diese erhalten umfassende, praxisnahe Informationen 
+          zu Windows NT/2000. Neben Fragen der Systemeinrichtung, -verwaltung 
+          und -optimierung greift sie auch Themen wie Sicherheit oder Programmierung 
+          auf. Erfahrene Autoren geben ihr in der Praxis erprobtes Wissen an den 
+          Leser weiter. <br>
+          <br>
+          <br>
+        </td>
+        <td width="28%" align="right" valign="top" height="234"><img src="images/wintec.jpg" width="100" height="143"></td>
+      </tr>
+      <tr>
+        <td width="72%" class="header"> 
+          <div align="center"><img src="images/verlauf.gif" width="300" height="1"></div>
+        </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top" class="header"><br>
+          workshop </td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top" class="defaulttxt">Die praktischen 
+          Arbeitsbücher zu fortgeschrittenen Internet- und Programmierthemen. 
+          Vertiefen und überprüfen Sie Ihr Wissen - konkret, schnell und übersichtlich. 
+          Sie finden in unseren workshop-Büchern Antworten auf Fragen der täglichen 
+          Programmierpraxis und Tipps für elegante Lösungen. Mit den Übungen zu 
+          den einzelnen Themen können Sie sich den Stoff praktisch aneignen. Stellen 
+          Sie Ihr Können dann im Online-Test auf CD-ROM unter Beweis und erwerben 
+          Sie das Addison-Wesley-Zertifikat für Computing Professionals. </td>
+        <td width="28%" align="right" valign="top"><img src="images/workshop.jpg" width="100" height="143"></td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top">&nbsp;</td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top">&nbsp;</td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top">&nbsp;</td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td width="72%" align="left" valign="top">&nbsp;</td>
+        <td width="28%" align="right" valign="top">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td width="72%">&nbsp;</td>
+        <td width="28%" align="right" valign="top">&nbsp;&nbsp;</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- end absolutely positioned scrollable area object --> <br>
+<table border=0 cellpadding=0 cellspacing=0 width=580 vspace="0" hspace="10" height="362">
+  <tbody> 
+  <tr> 
+    <td height=31 width=1><span class=actionlink></span><img height=7 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td height=31 width=15><img height=1 src="images/trans.gif" 
+            width=1></td>
+    <td width=22 height="31"><img height=1 src="images/trans.gif" 
+          width=1></td>
+    <td class=header rowspan=3 valign=top 
+            width=412>&nbsp;&nbsp;&nbsp;<font face="Times New Roman, Times, serif" size="4">&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="3" class="header">Buchreihen-&Uuml;bersicht</font><br>
+      <br>
+      </font></td>
+    <td height=31 width=22><img height=1 src="images/trans.gif" 
+            width=1></td>
+    <td height=31 width=15><img height=1 src="images/trans.gif" 
+            width=1></td>
+    <td height=31 width=1><img height=7 src="buchtext-Dateien/trans.gif" 
+            width=1></td>
+  </tr>
+  <tr> 
+    <td bgcolor=#4abdfo rowspan=5 width=1><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo rowspan=5 width=1><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+  </tr>
+  <tr> 
+    <td height=15 width=15><img height=15 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td height=15 width=22></td>
+    <td height=15 width=22></td>
+    <td height=15 width=15></td>
+  </tr>
+  <tr> 
+    <td width=15>&nbsp;</td>
+    <td colspan=3 valign=top> 
+      <table bgcolor=#e0f0fb border=0 cellpadding=22 cellspacing=0 
+            width="100%">
+        <tbody> 
+        <tr valign=top> 
+          <td> <br>
+            <span class="header"><font size="1">Agententechnologie</font> </span> 
+            <br>
+            <span class="defaulttxt">Intelligente Agenten sind Computersysteme, 
+            die selbstständig entscheidend Probleme lösen und Anfragen beantworten 
+            können. Gerade die zunehmende Informationsflut, verbunden mit einem 
+            steigenden Wissensdrang des Menschen, macht den Einsatz dieser Technologie 
+            zur Informationssteuerung notwendig. Prof. Dr. Stefan Kirn, Lehrstuhlinhaber 
+            des Fachbereichs Wirtschaftsinformatik der Technischen Universität 
+            Ilmenau, ist Herausgeber dieser Reihe</span>. <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+    <td width=15>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height=15 width=15></td>
+    <td height=15 width=22></td>
+    <td height=15 width=412>&nbsp;</td>
+    <td height=15 width=22></td>
+    <td height=15 width=15></td>
+  </tr>
+  <tr> 
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td height=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+  </tr>
+  </tbody> 
+</table>
+<br>
+<table width="603" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="85" align="left" valign="top"><a href="http://www.pearsoned.de/" 
+      target=_blank><img border=0 height=47 
+      src="images/pearson-edu.gif" width=74></a></td>
+    <td width="518" align="left" valign="top" class="copyright"> Copyright © 2001 
+      Pearson Education Deutschland GmbH | Alle Rechte vorbehalten<br>
+      All rights reserved| <a href="impressum.htm" target="_top">Impresum</a><br>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

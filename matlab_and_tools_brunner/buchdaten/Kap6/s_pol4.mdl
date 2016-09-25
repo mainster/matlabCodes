@@ -1,0 +1,379 @@
+Model {
+  Name			  "s_pol4"
+  Version		  2.00
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  WideVectorLines	  off
+  PaperOrientation	  landscape
+  StartTime		  "0.0"
+  StopTime		  "50"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.10"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "s_pol4"
+    Location		    [27, 101, 740, 458]
+    Open		    on
+    ScreenColor		    white
+    Block {
+      BlockType		      Gain
+      Name		      "1/T1"
+      Position		      [385, 180, 415, 210]
+      Orientation	      left
+      Gain		      "1/T1"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "1/T1_"
+      Position		      [320, 127, 345, 153]
+      Gain		      "1/T1"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "1/T2"
+      Position		      [560, 185, 590, 215]
+      Orientation	      left
+      Gain		      "1/T2"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "1/T2_"
+      Position		      [490, 132, 515, 158]
+      Gain		      "1/T2"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Position		      [420, 127, 440, 163]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Position		      [595, 132, 615, 168]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator2"
+      Position		      [210, 112, 230, 148]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Position		      [525, 52, 560, 88]
+      Inputs		      "3"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Position		      [150, 205, 180, 235]
+      Floating		      off
+      Location		      [459, 2, 790, 316]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "50.000000"
+      YMin		      "-1.540000"
+      YMax		      "1.540000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step Input"
+      Position		      [70, 60, 90, 80]
+      Time		      "0"
+      Before		      "0"
+      After		      "1"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Position		      [365, 135, 385, 155]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Position		      [540, 140, 560, 160]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Position		      [270, 122, 290, 158]
+      Inputs		      "+--"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Position		      [120, 112, 140, 148]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "k1"
+      Position		      [335, 220, 365, 250]
+      Orientation	      left
+      Gain		      "k1"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "k2"
+      Position		      [485, 260, 515, 290]
+      Orientation	      left
+      Gain		      "k2"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "ki"
+      Position		      [165, 115, 195, 145]
+      Gain		      "ki"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      " "
+      Position		      [595, 60, 615, 80]
+      Port		      "1"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, -50]
+	DstBlock		"Mux"
+	DstPort			3
+      }
+      Branch {
+	DstBlock		"ki"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      " "
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator2"
+      SrcPort		      1
+      DstBlock		      "Sum2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "ki"
+      SrcPort		      1
+      DstBlock		      "Integrator2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "k2"
+      SrcPort		      1
+      Points		      [-240, 0; 0, -125]
+      DstBlock		      "Sum2"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Step Input"
+      SrcPort		      1
+      Points		      [5, 0; 0, 50]
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "k1"
+      SrcPort		      1
+      Points		      [-80, 0; 0, -95]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[0, -35; -155, 0; 0, -45]
+	DstBlock		"Mux"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, 165; -535, 0; 0, -95]
+	Branch {
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -80]
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	Points			[0, 125]
+	DstBlock		"k2"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"1/T2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "1/T1_"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[0, -85]
+	DstBlock		"Mux"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 90]
+	DstBlock		"k1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"1/T2_"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"1/T1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Integrator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "1/T2"
+      SrcPort		      1
+      Points		      [-30, 0]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "1/T2_"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "1/T1"
+      SrcPort		      1
+      Points		      [-30, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "1/T1_"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+  }
+}

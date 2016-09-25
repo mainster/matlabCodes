@@ -1,0 +1,753 @@
+Model {
+  Name			  "analog_hp_12"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Jun 01 19:48:49 2003"
+  Creator		  "svenhoffmann"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "svenhoffmann"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jun 27 21:59:46 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:169>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "WorkspaceI/O"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode45"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "0.1"
+  MaxOrder		  5
+  MaxStep		  "1e-5"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  off
+  MaxDataPoints		  "5000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Inputs		      "4"
+      ShowAdditionalParam     off
+      zeroidx		      off
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      RandomNumber
+      Mean		      "0"
+      Variance		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      StateSpace
+      A			      "1"
+      B			      "1"
+      C			      "1"
+      D			      "1"
+      X0		      "0"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "analog_hp_12"
+    Location		    [612, 88, 1368, 638]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Sin
+      Name		      "100 Hz"
+      Position		      [80, 145, 110, 175]
+      SineType		      "Time based"
+      Frequency		      "2*pi*100"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "300 Hz"
+      Position		      [80, 215, 110, 245]
+      SineType		      "Time based"
+      Amplitude		      "1/3"
+      Frequency		      "2*pi*300"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "500 Hz"
+      Position		      [85, 285, 115, 315]
+      SineType		      "Time based"
+      Amplitude		      "1/5"
+      Frequency		      "2*pi*500"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Bessel"
+      Position		      [350, 52, 410, 88]
+      BackgroundColor	      "yellow"
+      Numerator		      "[b(1,:)]"
+      Denominator	      "[a(1,:)]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Butterworth"
+      Position		      [350, 117, 410, 153]
+      BackgroundColor	      "yellow"
+      Numerator		      "[b(2,:)]"
+      Denominator	      "[a(2,:)]"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [460, 30, 505, 60]
+      Value		      "Typ"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [75, 470, 105, 500]
+      Value		      "0.5"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Ellip"
+      Position		      [350, 247, 410, 283]
+      BackgroundColor	      "yellow"
+      Numerator		      "[b(5,:)]"
+      Denominator	      "[a(5,:)]"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain 0"
+      Position		      [205, 55, 235, 85]
+      Gain		      "10"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain 1"
+      Position		      [155, 144, 215, 176]
+      Gain		      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain 2"
+      Position		      [145, 213, 205, 247]
+      Gain		      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain 3"
+      Position		      [145, 283, 210, 317]
+      Gain		      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain 4"
+      Position		      [170, 353, 235, 387]
+      Gain		      "0"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain 5"
+      Position		      [220, 460, 250, 490]
+      Gain		      "0"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [1, 1]
+      Position		      [170, 460, 200, 490]
+    }
+    Block {
+      BlockType		      MultiPortSwitch
+      Name		      "Multiport\nSwitch"
+      Ports		      [6, 1]
+      Position		      [485, 142, 515, 243]
+      Inputs		      "5"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [2, 1]
+      Position		      [590, 286, 595, 324]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      RandomNumber
+      Name		      "Random\nNumber"
+      Position		      [75, 55, 105, 85]
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [635, 289, 665, 321]
+      Location		      [163, 378, 487, 617]
+      Open		      on
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      YMin		      "-1"
+      YMax		      "1"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [6, 1]
+      Position		      [285, 124, 305, 271]
+      ShowName		      off
+      Inputs		      "++++++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Ports		      [2, 1]
+      Position		      [130, 445, 145, 500]
+      ShowName		      off
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Tschebyschev I"
+      Position		      [350, 182, 410, 218]
+      BackgroundColor	      "yellow"
+      Numerator		      "[b(3,:)]"
+      Denominator	      "[a(3,:)]"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Tschebyschev II"
+      Position		      [350, 317, 410, 353]
+      BackgroundColor	      "yellow"
+      Numerator		      "[b(4,:)]"
+      Denominator	      "[a(4,:)]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "frausch"
+      Ports		      [1, 1]
+      Position		      [135, 42, 180, 98]
+      SourceBlock	      "dsparch4/Analog\nFilter Design"
+      SourceType	      "Analog Filter Design"
+      method		      "Elliptic"
+      filttype		      "Bandpass"
+      N			      "8"
+      Wlo		      "2*pi*1000"
+      Whi		      "2*pi*5000"
+      Rp		      "1"
+      Rs		      "60"
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      Name		      "frechteck"
+      Position		      [80, 353, 125, 387]
+      PulseType		      "Time based"
+      Period		      "1/100"
+      PulseWidth	      "10"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out1"
+      Position		      [635, 358, 665, 372]
+    }
+    Line {
+      SrcBlock		      "Random\nNumber"
+      SrcPort		      1
+      DstBlock		      "frausch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "100 Hz"
+      SrcPort		      1
+      DstBlock		      "Gain 1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "300 Hz"
+      SrcPort		      1
+      DstBlock		      "Gain 2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "500 Hz"
+      SrcPort		      1
+      DstBlock		      "Gain 3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain 0"
+      SrcPort		      1
+      Points		      [25, 0; 0, 65]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain 1"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain 2"
+      SrcPort		      1
+      Points		      [10, 0; 0, -45]
+      DstBlock		      "Sum"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Gain 3"
+      SrcPort		      1
+      Points		      [20, 0; 0, -90]
+      DstBlock		      "Sum"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [0, 0; 15, 0]
+      Branch {
+	Points			[0, -65]
+	Branch {
+	  DstBlock		  "Butterworth"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, -65]
+	  DstBlock		  "Bessel"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	Points			[0, 0]
+	Branch {
+	  DstBlock		  "Tschebyschev I"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 65]
+	  Branch {
+	    Points		    [0, 70]
+	    Branch {
+	      DstBlock		      "Tschebyschev II"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 50; 145, 0; 0, -70]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	  }
+	  Branch {
+	    DstBlock		    "Ellip"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Bessel"
+      SrcPort		      1
+      Points		      [25, 0; 0, 100]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Butterworth"
+      SrcPort		      1
+      Points		      [15, 0; 0, 50]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Tschebyschev I"
+      SrcPort		      1
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Ellip"
+      SrcPort		      1
+      Points		      [15, 0; 0, -50]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Tschebyschev II"
+      SrcPort		      1
+      Points		      [25, 0; 0, -105]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      6
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [15, 0; 0, 60; -65, 0; 0, 50]
+      DstBlock		      "Multiport\nSwitch"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Out1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Multiport\nSwitch"
+      SrcPort		      1
+      Points		      [35, 0; 0, 100]
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "frausch"
+      SrcPort		      1
+      DstBlock		      "Gain 0"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "frechteck"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"Gain 4"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50; -35, 0; 0, 40]
+	DstBlock		"Sum1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      DstBlock		      "Gain 5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain 4"
+      SrcPort		      1
+      Points		      [10, 0; 0, -135]
+      DstBlock		      "Sum"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Gain 5"
+      SrcPort		      1
+      Points		      [10, 0; 0, -215]
+      DstBlock		      "Sum"
+      DstPort		      6
+    }
+    Annotation {
+      Name		      "1 Bessel\n2 Butterworth\n3 Tschebyschev I\n4 El"
+"lip\n5 Tschebyschev II\n"
+      Position		      [582, 154]
+    }
+  }
+}

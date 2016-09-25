@@ -1,0 +1,85 @@
+% MATLAB kann ein Signal mit nur weißem Rauschen mit der Funktion wgn()
+% generieren: my_noise = wgn(m, n, power); Der Rückgabewert von my_noise
+% ist eine m-von-n-Matrix mit einem zufälligen Wert des weißen Rauschens.
+
+%my_noise = wgn(100, 1, 1);
+
+% MATLAB kann mithilfe der Funktion agwn() weißes Rauschen zu einem
+% vorhandenen Signal hinzufügen: my_noisy_signal = awgn(my_signal, snr)
+
+% Data compression format (Format #65534) is not supported
+% http://social.msdn.microsoft.com/Forums/en-US/f58b74b4-8903-4801-8671-b100b2ab975d/cannot-load-the-wav-file-captured-by-audiocaptureraw-in-matlab?forum=kinectsdkaudioapi
+% Changing the "compression code" to 0x0003 (eg. in a hex editor), you can
+% now read the wav in matlab and it actually looks like a wave file in 4
+% channels...
+% A small matlab hack, that does the trick is:
+
+delete(findall(0,'type','line'));
+
+fname='wavefiles/Mjackson1000.wav';
+f=fopen(fname,'r+'); 
+fseek(f,20,0); 
+fwrite(f,[3 0]); 
+fclose(f); 
+[yin FsIn]=wavread(fname);
+
+yin=yin(:,1);   % clear left channel;
+
+% weißes rauschen erzeugen, addieren
+yinN=awgn(yin,5,'measured');
+yinN(end/2:end)=yin(end/2:end); % hinteren Teil mit unverrauschtem Signal überschreiben
+yinN=yin;
+
+mpl=audioplayer(yinN,FsIn);   % generate audioplayer object mpl
+%play(mpl)                   % play wave stored in y from beginning to end
+
+L=FsIn;
+NFFT = 2^nextpow2(L); % Next power of 2 from length of y
+YIN = fft(yin,NFFT)/L;
+YINN = fft(yinN,NFFT)/L;
+f = FsIn/2*linspace(0,1,NFFT/2+1);
+
+f1=figure(1);
+SUB=210;
+% Plot single-sided amplitude spectrum.
+subplot(SUB+1);
+plot(f,2*abs(YIN(1:NFFT/2+1)));
+grid on;
+title('Single-Sided Amplitude Spectrum of y(t)')
+xlabel('Frequency (Hz)')
+ylabel('|Y(f)|')
+
+subplot(SUB+2);
+plot(f,2*abs(YINN(1:NFFT/2+1)));
+grid on;
+title('Single-Sided Noisy Amplitude Spectrum of y(t)')
+xlabel('Frequency (Hz)')
+ylabel('|Y(f)|')
+
+huell1=abs(hilbert(yin));
+huell2=abs(hilbert(yinN));
+corHuell = xcorr(huell1, huell2); 
+
+cor = xcorr(yin, yin); 
+
+
+f2=figure(2);
+clf('reset');
+
+hold all;
+plot(corHuell);
+plot(cor);
+hold off;
+grid on;
+legend('corrHuell','corr');
+
+
+
+
+
+
+
+
+
+
+

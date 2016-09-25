@@ -1,0 +1,709 @@
+Model {
+  Name			  "Stoppuhr"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Dec 15 09:45:11 2000"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Apr 25 21:16:57 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:49>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "10000000000."
+  SolverMode		  "Auto"
+  Solver		  "FixedStepDiscrete"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.001"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Stoppuhr"
+    Location		    [36, 90, 696, 434]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Step
+      Name		      "Enable"
+      Position		      [40, 280, 70, 310]
+      Time		      "0.1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a1"
+      Position		      [45, 193, 65, 217]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a2"
+      Position		      [45, 118, 65, 142]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Getraenk2a3"
+      Position		      [45, 38, 65, 62]
+      ShowName		      off
+      Value		      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch1"
+      Ports		      [2, 1]
+      Position		      [135, 202, 165, 238]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch2"
+      Ports		      [2, 1]
+      Position		      [130, 127, 160, 163]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Manual Switch3"
+      Ports		      [2, 1]
+      Position		      [125, 52, 155, 88]
+      ShowName		      off
+      SourceBlock	      "simulink3/Nonlinear/Manual Switch"
+      SourceType	      "Manual Switch"
+      sw		      "0"
+      action		      "0"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [4, 1]
+      Position		      [195, 32, 270, 333]
+      ShowName		      off
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Reset"
+      Position		      [45, 228, 65, 252]
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Start"
+      Position		      [45, 71, 65, 99]
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Stop"
+      Position		      [45, 153, 65, 177]
+      Value		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Zeitdauer"
+      Ports		      [1]
+      Position		      [550, 155, 640, 185]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Zeitmesser"
+      Ports		      [0, 1, 0, 1]
+      Position		      [370, 93, 470, 247]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      on
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private'"
+",'sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl',"
+"'Center','VerticalAl','Bottom');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Zeitmesser"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  TriggerPort
+	  Name			  " input events "
+	  Ports			  [0, 1]
+	  Position		  [20, 101, 40, 119]
+	  TriggerType		  "either"
+	  ShowOutputPort	  on
+	  OutputDataType	  "auto"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function Stoppuhr 1"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Zeit"
+	  Position		  [460, 101, 480, 119]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [0, 65]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "Zeit"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " input events "
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [45, 0; 0, -130; 100, 0]
+      DstBlock		      "Zeitmesser"
+      DstPort		      trigger
+    }
+    Line {
+      SrcBlock		      "Getraenk2a2"
+      SrcPort		      1
+      Points		      [45, 0]
+      DstBlock		      "Manual Switch2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Getraenk2a3"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Manual Switch3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch1"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Zeitmesser"
+      SrcPort		      1
+      DstBlock		      "Zeitdauer"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Enable"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Manual Switch3"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Manual Switch2"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Stop"
+      SrcPort		      1
+      Points		      [45, 0]
+      DstBlock		      "Manual Switch2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Start"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "Manual Switch3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Getraenk2a1"
+      SrcPort		      1
+      Points		      [50, 0]
+      DstBlock		      "Manual Switch1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Reset"
+      SrcPort		      1
+      Points		      [50, 0]
+      DstBlock		      "Manual Switch1"
+      DstPort		      2
+    }
+  }
+}
+
+# Finite State Machines
+# -- File save dated 25-Apr-2001 21:16:57
+#
+#    Stateflow Version 4.0 (R12) dated Oct  4 2000, 19:47:56
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"Stoppuhr"
+		created              		"15-Dec-2000 09:45:15"
+		firstTarget          		18
+		sfVersion            		40012071
+	}
+
+	chart {
+		id                       		2
+		name                     		"Zeitmesser"
+		windowPosition           		[328 135.917 417 348.75]
+		viewLimits               		[13.994 358.361 14.7 303.055]
+		zoomFactor               		0.922
+		screen                   		[1 1 1024 768 1.333333333333333]
+		treeNode                 		[0 3 0 0]
+		firstTransition          		6
+		viewObj                  		2
+		visible                  		1
+		machine                  		1
+		subviewS {
+		}
+		decomposition            		CLUSTER_CHART
+		firstEvent               		11
+		firstData                		15
+		chartFileNumber          		1
+	}
+
+	state {
+		id             		3
+		labelString    		"Ruhezustand/\n"
+						"entry:Zeit=0;"
+		position       		[38.711 57.544 90 60]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 0 0 4]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		4
+		labelString    		"Zeit_steht/\n"
+						"entry: Zeit=Zeit+DT;\n"
+						"exit:  DT=0;"
+		position       		[100.3 130.443 123.487 85.117]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 0 3 5]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		5
+		labelString    		"Zeit_laeuft/"
+		position       		[243.645 212.007 90 60]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 0 4 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	transition {
+		id             		6
+		labelPosition  		[95.006 35.355 8.265 15.829]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 98.585561225018 27.54421732499199 0]
+		}
+		dst {
+			id          		3
+			intersection		[1 0 -1 0.6652777777777778 98.585561225018 57.54421732499199 
+								  0]
+		}
+		midPoint       		[95.0053853394258 35.35551016628401]
+		chart          		2
+		linkNode       		[2 0 10]
+		dataLimits     		[95 100.986 27.544 57.544]
+		subviewer      		2
+	}
+
+	transition {
+		id             		7
+		labelString    		"Reset"
+		labelPosition  		[61.354 141.354 33.748 15.829]
+		fontSize       		12
+		src {
+			id          		4
+			intersection		[4 -1 0 0.5125 100.3 171.9374875434381 0]
+		}
+		dst {
+			id          		3
+			intersection		[3 0 1 0.8347222222222223 53.585561225018 117.544217324992 
+								  0]
+		}
+		midPoint       		[65.48627588007891 154.9123483711743]
+		chart          		2
+		linkNode       		[2 10 8]
+		dataLimits     		[51.186 100.3 117.544 171.937]
+		subviewer      		2
+	}
+
+	transition {
+		id             		8
+		labelString    		"Start/ml('tic')"
+		labelPosition  		[233.466 160.198 68.185 15.829]
+		fontSize       		12
+		src {
+			id          		4
+			intersection		[2 1 0 0.5 223.7872414250271 173.0014487625006 0]
+		}
+		dst {
+			id          		5
+			intersection		[1 0 -1 0.4958333333333334 288.2695983500006 212.0069257500345 
+								  0]
+		}
+		midPoint       		[266.8822041983079 180.3207523289128]
+		chart          		2
+		linkNode       		[2 7 9]
+		dataLimits     		[223.787 290.67 172.99 212.007]
+		subviewer      		2
+	}
+
+	transition {
+		id             		9
+		labelString    		"Stop/DT=ml('toc')"
+		labelPosition  		[141.856 248.296 96.423 15.829]
+		fontSize       		12
+		src {
+			id          		5
+			intersection		[3 0 1 0.7125 269.5195983500006 272.0069257500345 0]
+		}
+		dst {
+			id          		4
+			intersection		[3 0 1 0.8333333333333334 120.8812069041711 215.5598975250012 
+								  0]
+		}
+		midPoint       		[197.788514209918 285.3329886309477]
+		chart          		2
+		linkNode       		[2 8 0]
+		dataLimits     		[118.481 269.52 215.56 290.21]
+		subviewer      		2
+	}
+
+	transition {
+		id             		10
+		labelString    		"Start/ml('tic')"
+		labelPosition  		[235.504 89.938 68.185 15.829]
+		fontSize       		12
+		src {
+			id          		3
+			intersection		[2 1 0 0.39375 128.710561225018 81.16921732499199 0]
+		}
+		dst {
+			id          		5
+			intersection		[1 0 -1 0.8291666666666667 318.2695983500006 212.0069257500345 
+								  0]
+		}
+		midPoint       		[255.1389316294177 115.1395755183127]
+		chart          		2
+		linkNode       		[2 6 7]
+		dataLimits     		[128.711 320.67 81.169 212.007]
+		subviewer      		2
+	}
+
+	event {
+		id         		11
+		name       		"Start"
+		linkNode   		[2 0 12]
+		scope      		INPUT_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		12
+		name       		"Stop"
+		linkNode   		[2 11 13]
+		scope      		INPUT_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		13
+		name       		"Reset"
+		linkNode   		[2 12 14]
+		scope      		INPUT_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	event {
+		id         		14
+		name       		"Enable"
+		linkNode   		[2 13 0]
+		scope      		INPUT_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	data {
+		id               		15
+		name             		"Zeit"
+		linkNode         		[2 0 16]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		16
+		name             		"DT"
+		linkNode         		[2 15 0]
+		scope            		LOCAL_DATA
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	instance {
+		id     		17
+		name   		"Zeitmesser"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id               		18
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		codeFlags        		"-debug-nocomments-preservenames-bitsets-sfun"
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}

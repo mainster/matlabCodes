@@ -1,0 +1,23 @@
+
+f10 = figure(10);
+set(f10, 'Name', 'simouBB');
+
+plot(simoutTime.signals.values,simoutBand.signals.values)
+title('Verlauf Re(GMSKmod)');
+grid('on');
+
+
+f11 = figure(10);
+set(f11, 'Name', 'simoutShapeRe');
+plot(simoutTime.signals.values,simoutReShape.signals.values)
+title('Verlauf Re(simoutShapeRe)');
+
+grid('on');
+
+% subplot(3,1,2);
+% plot(simoutTime.signals.values,imag(simoutGMSKmod.signals.values))
+% title('Verlauf Im(GMSKmod)');
+% 
+% subplot(3,1,3);
+% plot(simoutTime.signals.values,angle(simoutGMSKmod.signals.values).*(180/pi))
+% title('Verlauf arg(GMSKmod)');

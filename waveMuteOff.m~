@@ -1,0 +1,138 @@
+function [out] = waveMuteOff (varargin)
+%%  waveMuteOff (PATH)
+% PATH:     path to a directory; backup all *.wav files in
+%           subdirectory and save the MuteOff'ed wav in PATH
+%%  waveMuteOff (PATH, 'restore')
+% restore:  if parameter string 'restore' is passed to function
+%           and PATH owens already a subfolder 'backup', all
+%           *.wav inside PATH will be deleted and backup files
+%           PATH/backup/*.wav are used as input files for function
+%
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% beide waves auf lowvolume bereich prüfen, der kürzeste Bereich mit
+% lowvolume bestimmt, wie viel samples am anfang der seuenzen  gekappt
+% werden
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RESTORE = 0;
+
+if ~nargin 
+   error('Please specify path to wav file(s)')
+end
+if nargin >= 1
+   if ischar(varargin{1})
+       if ~isempty( strfind(varargin{1}, '.wav') ) % single file
+          FILE = varargin{1};
+       else                     % directory
+          PATHTO = varargin{1};
+       end
+   else
+      if iscell(varargin{1})    % dateiliste in cell übergeben
+        PATHES = varargin{1}
+      end
+        error('need a string / character array')      
+   end
+end
+if nargin >= 2
+   if ischar(varargin{2})
+       if strcmpi(varargin{2},'restore')
+           if ~exist(fullfile(PATHTO,'backup'))
+               warning('no backup directory found')
+               dir(PATHTO);
+           else
+               RESTORE = 1;
+           end
+       end
+   end
+end
+
+if exist('FILE','var')  % single file
+   N = 1;
+else
+    if exist('PATHTO','var')  % kompletter Verzeichnissinhalt
+        if RESTORE
+            delete(fullfile(PATHTO, '*.wav'));
+            copyfile(   fullfile(PATHTO, 'backup', '*.wav'), PATHTO)
+            l = struct2cell(dir(PATHTO));
+            idx = find(~cellfun(@isempty, strfind(l(1,:),'.wav')));
+            N = length(idx);
+        else
+            if exist(fullfile(PATHTO,'backup'),'dir')
+                mkdir([PATHTO, 'backbackup']);
+                try
+                    copyfile(fullfile(PATHTO,'backup','*.wav'), fullfile(PATHTO,'backbackup'));
+                catch err
+                    warning(err.identifier, 'Warning backup folder is empty...')
+                end
+ %               delete (fullfile(PATHTO,'backup','*.wav'));
+            else
+                mkdir([PATHTO, 'backup']);
+            end            
+            l = struct2cell(dir(PATHTO));
+            idx = find(~cellfun(@isempty, strfind(l(1,:),'.wav')));
+            N = length(idx);
+            for k=1:length(idx)
+                copyfile(fullfile(PATHTO, l{1,idx(k)}),fullfile(PATHTO, 'backup'));
+            end
+            delete fullfile(PATHTO, '*.wav')
+        end            
+        dir(PATHTO)
+    else
+        if exist('PATHES','var')  % dateiliste
+            warning('FixME FixME FixME FixME FixME FixME FixME ')
+        else
+           error('Hä?')
+        end
+    end
+end
+
+     
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   % Festlegung: Referenz- Signale und Sprachcommando müssen die
+   % ersten PRE_DELAY samples ein quiet delay besitzen. Die Audiopegel in
+   % diesem Bereich dürfen den Wert 3/DIVS (3/20) der maximal vorkommenden
+   % Signalamplitude nicht überschreiten. Alle Sequenzen werden auf
+   % identische quiet- delays zugeschnitten (sync)
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   PRE_DELAY = 500;
+   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   DIVS = 20;
+
+     for m=1:N
+         y=audioread(fullfile(PATHTO, l{1,idx(m)}));
+         info = audioinfo(fullfile(PATHTO, l{1,idx(m)}));
+         fs = info.SampleRate;
+         LOWERTHAN(m) = max(y(:,1))*3/DIVS;
+         LOWERTHAN_MEAN = mean(LOWERTHAN);
+         lowvol(m) = find(diff( find(y(:,1) < LOWERTHAN_MEAN) )-1, 1, 'first'); 
+
+        if (~isempty( find(lowvol < PRE_DELAY) ))
+            warning('Zu wenig quiet delay')
+        end
+        
+        % Vorne wegschneiden....
+         y(1:lowvol(m)-PRE_DELAY) = [];
+
+%         % Hinten einpassen....
+%          [MI, I] = min(cellfun(@length, objectsNew));
+%          for m=1:length(objectsNew)
+%               if m~=I
+%                  objectsNew{m}(MI+1:end)=[];
+%               end
+%          end
+     audiowrite(fullfile(PATHTO, ['sh_' l{1,idx(m)}]), y, fs );   
+     end
+     
+     figure(99);
+     o=round(sqrt(length(idx)));
+     SUB = 100*o+10*o;
+     
+     for m=1:length(idx)
+         subplot(SUB+)
+     plot(audioread( fullfile(PATHTO, ['' l{1,idx(m)}]) ))
+      
+     dir(PATHTO)
+%      audiowrite( strrep([PATHF 'wav_numberB_sh_%i.wav'],'%i',num2str(8) ),...
+%             objectsNew{m}, 8000 );           
+
+end

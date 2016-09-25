@@ -1,0 +1,478 @@
+Model {
+  Name			  "bld_4_0"
+  Version		  5.1
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  SortedOrder		  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Fri Jan 16 22:57:21 2004"
+  Creator		  "svenhoffmann"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "svenhoffmann"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Fri Jan 16 23:55:04 2004"
+  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode45"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "bld_4_0"
+    Location		    [732, 92, 1322, 467]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      "Downsample"
+      Ports		      [1, 1]
+      Position		      [125, 38, 160, 72]
+      SourceBlock	      "dspsigops/Downsample"
+      SourceType	      "Downsample"
+      N			      "2"
+      phase		      "0"
+      ic		      "0"
+      smode		      "Allow multirate"
+      fmode		      "Maintain input frame size"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Dyadic Analysis\nFilter Bank"
+      Ports		      [1, 3]
+      Position		      [295, 245, 360, 295]
+      SourceBlock	      "dspmlti4/Dyadic Analysis\nFilter Bank"
+      SourceType	      "Dyadic Analysis Filter Bank"
+      Wname		      "User-defined"
+      OrdRec_ordDec	      "[1 / 1]"
+      Order		      "2"
+      LPF		      "[0.0352   -0.0854   -0.1350   0.4599   0.8069  "
+" 0.3327]"
+      HPF		      "[-0.3327    0.8069   -0.4599   -0.1350    0.085"
+"4    0.0352]"
+      NumLevels		      "2"
+      tree		      "Asymmetric"
+      Output		      "Multiple ports"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Dyadic Synthesis\nFilter Bank"
+      Ports		      [3, 1]
+      Position		      [405, 245, 470, 295]
+      SourceBlock	      "dspmlti4/Dyadic Synthesis\nFilter Bank"
+      SourceType	      "Dyadic Synthesis Filter Bank"
+      Wname		      "User-defined"
+      OrdRec_ordDec	      "[1 / 1]"
+      Order		      "2"
+      LPF		      "[0.3327    0.8069    0.4599   -0.1350   -0.0854"
+"    0.0352]"
+      HPF		      "[0.0352    0.0854   -0.1350   -0.4599    0.8069"
+"   -0.3327]"
+      NumLevels		      "2"
+      tree		      "Asymmetric"
+      Input		      "Multiple ports"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "FIR\nDecimation"
+      Ports		      [1, 1]
+      Position		      [50, 129, 115, 181]
+      SourceBlock	      "dspmlti3/FIR\nDecimation"
+      SourceType	      "FIR Decimation"
+      h			      "fir1(35,0.4)"
+      D			      "2"
+      framing		      "Maintain input frame size"
+      outputBufInitCond	      "0"
+      additionalParams	      off
+      allowOverrides	      on
+      firstCoeffMode	      "Same as input"
+      firstCoeffWordLength    "32"
+      firstCoeffFracLength    "30"
+      outputMode	      "Same as input"
+      outputWordLength	      "32"
+      outputFracLength	      "30"
+      accumMode		      "Same as output"
+      accumWordLength	      "32"
+      accumFracLength	      "30"
+      prodOutputMode	      "Same as accumulator"
+      prodOutputWordLength    "32"
+      prodOutputFracLength    "30"
+      roundingMode	      "Floor"
+      overflowMode	      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "FIR\nInterpolation"
+      Ports		      [1, 1]
+      Position		      [185, 129, 250, 181]
+      SourceBlock	      "dspmlti3/FIR\nInterpolation"
+      SourceType	      "FIR Interpolation"
+      h			      "fir1(15,1/4)"
+      L			      "3"
+      framing		      "Maintain input frame size"
+      outputBufInitCond	      "0"
+      additionalParams	      off
+      allowOverrides	      on
+      firstCoeffMode	      "Same as input"
+      firstCoeffWordLength    "16"
+      firstCoeffFracLength    "15"
+      outputMode	      "Same as input"
+      outputWordLength	      "32"
+      outputFracLength	      "30"
+      accumMode		      "Same as output"
+      accumWordLength	      "32"
+      accumFracLength	      "30"
+      prodOutputMode	      "Same as accumulator"
+      prodOutputWordLength    "32"
+      prodOutputFracLength    "30"
+      roundingMode	      "Floor"
+      overflowMode	      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "FIR Rate\nConversion"
+      Ports		      [1, 1]
+      Position		      [330, 124, 395, 176]
+      SourceBlock	      "dspmlti3/FIR Rate\nConversion"
+      SourceType	      "FIR Rate Conversion"
+      L			      "3"
+      h			      "remez(70,[0 .28 .32 1],[1 1 0 0])"
+      M			      "2"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Interpolation"
+      Ports		      [1, 1]
+      Position		      [215, 34, 300, 76]
+      SourceBlock	      "dspsigops/Interpolation"
+      SourceType	      "Interpolation"
+      InterpSource	      "Specify via dialog"
+      InterpPoints	      "[1.1 4.8 2.67 1.6 3.2]'"
+      InterpMode	      "Linear"
+      InterpL		      "3"
+      InterpR		      "3"
+      InterpAlpha	      "0.5"
+      InvalidMode	      "Clip"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Two-Channel Analysis\nSubband Filter"
+      Ports		      [1, 2]
+      Position		      [50, 249, 115, 296]
+      SourceBlock	      "dspmlti4/Two-Channel Analysis\nSubband Filter"
+      SourceType	      "Two-Channel Analysis Subband Filter"
+      lpf		      "[0.0352   -0.0854   -0.1350   0.4599   0.8069  "
+" 0.3327]"
+      hpf		      "[-0.3327    0.8069   -0.4599   -0.1350    0.085"
+"4    0.0352]"
+      framing		      "Maintain input frame size"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Two-Channel Synthesis\nSubband Filter"
+      Ports		      [2, 1]
+      Position		      [170, 249, 235, 296]
+      SourceBlock	      "dspmlti4/Two-Channel Synthesis\nSubband Filter"
+      SourceType	      "Two-Channel Synthesis Subband Filter"
+      lpf		      "[0.3327    0.8069    0.4599   -0.1350   -0.0854"
+"    0.0352]"
+      hpf		      "[0.0352    0.0854   -0.1350   -0.4599    0.8069"
+"   -0.3327]"
+      framing		      "Maintain input frame rate"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Upsample"
+      Ports		      [1, 1]
+      Position		      [45, 38, 80, 72]
+      SourceBlock	      "dspsigops/Upsample"
+      SourceType	      "Upsample"
+      N			      "3"
+      phase		      "0"
+      ic		      "0"
+      mode		      "Maintain input frame size"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Variable\nFractional Delay"
+      Ports		      [2, 1]
+      Position		      [355, 30, 440, 70]
+      SourceBlock	      "dspsigops/Variable\nFractional Delay"
+      SourceType	      "Variable Fractional Delay"
+      mode		      "Linear Interpolation"
+      dmax		      "100"
+      L			      "4"
+      R			      "10"
+      alpha		      "1"
+      ic		      "0"
+    }
+    Annotation {
+      Name		      "1)"
+      Position		      [60, 104]
+    }
+    Annotation {
+      Name		      "2)"
+      Position		      [141, 104]
+    }
+    Annotation {
+      Name		      "3)"
+      Position		      [248, 102]
+    }
+    Annotation {
+      Name		      "4)"
+      Position		      [392, 104]
+    }
+    Annotation {
+      Name		      "5)"
+      Position		      [75, 225]
+    }
+    Annotation {
+      Name		      "6)"
+      Position		      [210, 222]
+    }
+    Annotation {
+      Name		      "7)"
+      Position		      [355, 217]
+    }
+    Annotation {
+      Name		      "8)"
+      Position		      [70, 341]
+    }
+    Annotation {
+      Name		      "9)"
+      Position		      [198, 341]
+    }
+    Annotation {
+      Name		      "10)"
+      Position		      [323, 341]
+    }
+    Annotation {
+      Name		      "11)"
+      Position		      [432, 340]
+    }
+    Annotation {
+      Name		      "DSP-Blockset\nSignal-Operation"
+      Position		      [525, 42]
+    }
+    Annotation {
+      Name		      "DSP-Blockset\nFiltering\nMultirate Filters"
+      Position		      [530, 197]
+    }
+  }
+}

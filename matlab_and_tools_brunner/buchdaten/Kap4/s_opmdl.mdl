@@ -1,0 +1,469 @@
+Model {
+  Name			  "s_opmdl"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Sep 10 08:33:42 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Sep 10 08:34:29 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "999999"
+  SolverMode		  "SingleTasking"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "10"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "s_opmdl"
+    Location		    [294, 272, 794, 551]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Inport
+      Name		      "up_"
+      Position		      [70, 50, 90, 70]
+      Port		      "1"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "un_"
+      Position		      [70, 95, 90, 115]
+      Port		      "2"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "un"
+      Position		      [175, 215, 195, 235]
+      Port		      "3"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Name		      "up"
+      Position		      [175, 160, 195, 180]
+      Port		      "4"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "1/ wT"
+      Position		      [175, 57, 200, 83]
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "Ausgangs-\nspannung"
+      Position		      [350, 51, 385, 89]
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Intg."
+      Ports		      [1, 1]
+      Position		      [290, 52, 315, 88]
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "OP-Modell"
+      Ports		      [2, 1]
+      Position		      [250, 172, 280, 223]
+      ShowPortLabels	      off
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      System {
+	Name			"OP-Modell"
+	Location		[25, 306, 510, 466]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "in_1"
+	  Position		  [85, 40, 105, 60]
+	  Port			  "1"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "in_2"
+	  Position		  [85, 90, 105, 110]
+	  Port			  "2"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1/ wT1"
+	  Position		  [180, 62, 205, 88]
+	  Gain			  "1"
+	  Multiplication	  "Element-wise(K.*u)"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Ausgangs-\nspannung1"
+	  Position		  [355, 56, 390, 94]
+	  UpperLimit		  "0.5"
+	  LowerLimit		  "-0.5"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Intg.1"
+	  Ports			  [1, 1]
+	  Position		  [295, 57, 320, 93]
+	  ExternalReset		  "none"
+	  InitialConditionSource  "internal"
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Slew-Rate1"
+	  Position		  [235, 56, 260, 94]
+	  UpperLimit		  "0.5"
+	  LowerLimit		  "-0.5"
+	  LinearizeAsGain	  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [135, 57, 160, 93]
+	  IconShape		  "rectangular"
+	  Inputs		  "+-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [420, 65, 440, 85]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "in_2"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Ausgangs-\nspannung1"
+	  SrcPort		  1
+	  DstBlock		  "out_1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "in_1"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "1/ wT1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/ wT1"
+	  SrcPort		  1
+	  DstBlock		  "Slew-Rate1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Slew-Rate1"
+	  SrcPort		  1
+	  DstBlock		  "Intg.1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Intg.1"
+	  SrcPort		  1
+	  DstBlock		  "Ausgangs-\nspannung1"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [212, 47]
+	  VerticalAlignment	  "top"
+	  Text			  "dua/dt1"
+	}
+	Annotation {
+	  Position		  [407, 47]
+	  VerticalAlignment	  "top"
+	  Text			  "ua"
+	}
+      }
+    }
+    Block {
+      BlockType		      Saturate
+      Name		      "Slew-Rate"
+      Position		      [230, 51, 255, 89]
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [130, 52, 155, 88]
+      IconShape		      "rectangular"
+      Inputs		      "+-"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport"
+      Position		      [420, 60, 440, 80]
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport1"
+      Position		      [325, 190, 345, 210]
+      Port		      "2"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Line {
+      SrcBlock		      "OP-Modell"
+      SrcPort		      1
+      DstBlock		      "Outport1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "un"
+      SrcPort		      1
+      Points		      [15, 0; 0, -15]
+      DstBlock		      "OP-Modell"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "up"
+      SrcPort		      1
+      Points		      [15, 0; 0, 15]
+      DstBlock		      "OP-Modell"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ausgangs-\nspannung"
+      SrcPort		      1
+      DstBlock		      "Outport"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Intg."
+      SrcPort		      1
+      DstBlock		      "Ausgangs-\nspannung"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Slew-Rate"
+      SrcPort		      1
+      DstBlock		      "Intg."
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "1/ wT"
+      SrcPort		      1
+      DstBlock		      "Slew-Rate"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "1/ wT"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "un_"
+      SrcPort		      1
+      Points		      [15, 0; 0, -25]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "up_"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [207, 42]
+      VerticalAlignment	      "top"
+      Text		      "dua/dt"
+    }
+  }
+}

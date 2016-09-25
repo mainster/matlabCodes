@@ -1,0 +1,360 @@
+Model {
+  Name			  "ball1"
+  Version		  2.00
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  WideVectorLines	  off
+  PaperOrientation	  landscape
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "ball1"
+    Location		    [18, 92, 535, 491]
+    Open		    on
+    ScreenColor		    white
+    Block {
+      BlockType		      Constant
+      Name		      "Anfangs-\ngewindigkeit\nv0"
+      Position		      [240, 70, 260, 90]
+      Value		      "1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      Position		      [205, 259, 250, 281]
+      Value		      "10"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      Position		      [110, 114, 170, 146]
+      Orientation	      left
+      NamePlacement	      alternate
+      Gain		      "-0.8"
+    }
+    Block {
+      BlockType		      InitialCondition
+      Name		      "IC"
+      Position		      [100, 210, 130, 240]
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Position		      [310, 64, 340, 96]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator1"
+      Position		      [180, 164, 225, 236]
+      ExternalReset	      falling
+      InitialConditionSource      external
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      on
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator2"
+      Position		      [285, 180, 330, 255]
+      ExternalReset	      none
+      InitialConditionSource      external
+      InitialCondition	      "0"
+      LimitOutput	      on
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "0"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Position		      [410, 205, 440, 235]
+      Floating		      off
+      Location		      [471, 31, 795, 270]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "10"
+      YMin		      "0"
+      YMax		      "10"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "XY Graph"
+      Position		      [395, 72, 425, 103]
+      ShowPortLabels	      on
+      MaskType		      "XY scope."
+      MaskDescription	      "XY scope using MATLAB graph window.  First "
+			      "input is used as time base.  Enter plotting "
+			      "ranges.             "
+      MaskHelp		      "This block can be used to explore limit cycles. "
+			      "Look at the m-file sfunxy.m to see how it works."
+      MaskPromptString	      "x-min|x-max|y-min|y-max|Sample Time"
+      MaskStyleString	      "edit,edit,edit,edit,edit"
+      MaskVariables	      "ax(1)=@1;ax(2)=@2;ax(3)=@3;ax(4)=@4;st=@5;"
+      MaskDisplay	      "plot([.05 .95 .95 .05 .05],[.45 .45 .95 .95 "
+			      ".45], 0.5+cos(0:0.1:2*pi)*0.3,0.7+sin(0:0.1:2*pi"
+			      ")*0.2)"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      normalized
+      MaskValueString	      "0|10|0|10|-1"
+      System {
+	Name			"XY Graph"
+	Location		[59, 56, 365, 239]
+	Open			off
+	ScreenColor		white
+	Block {
+	  BlockType		  Inport
+	  Name			  "x"
+	  Position		  [10, 30, 30, 50]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "y"
+	  Position		  [10, 100, 30, 120]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Position		  [100, 61, 130, 94]
+	  ShowName		  off
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "S-function\nM-file which plots\nlines\n"
+	  Position		  [185, 70, 235, 90]
+	  CopyFcn		  "sfunxy([],[],[],'CopyBlock')"
+	  DeleteFcn		  "sfunxy([],[],[],'DeleteBlock')"
+	  LoadFcn		  "sfunxy([],[],[],'LoadBlock')"
+	  FunctionName		  "sfunxy"
+	  Parameters		  "ax, st"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  Position		  [265, 71, 285, 89]
+	  ShowName		  off
+	}
+	Line {
+	  SrcBlock		  "S-function\nM-file which plots\nlines\n"
+	  SrcPort		  1
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "y"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -25]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "x"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 30]
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "S-function\nM-file which plots\nlines\n"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "g"
+      Position		      [95, 163, 135, 187]
+      Value		      "-9.81"
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      1
+      DstBlock		      "Integrator2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      DstBlock		      "Integrator2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "IC"
+      SrcPort		      1
+      DstBlock		      "Integrator1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Integrator1"
+      SrcPort		      state
+      DstBlock		      "Gain"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      Points		      [-40, 0; 0, 95]
+      DstBlock		      "IC"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "g"
+      SrcPort		      1
+      DstBlock		      "Integrator1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator2"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	Points			[0, 90; -220, 0; 0, -110]
+	DstBlock		"Integrator1"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -125]
+	DstBlock		"XY Graph"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Anfangs-\ngewindigkeit\nv0"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      DstBlock		      "XY Graph"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [249, 119]
+      Text		      "\n"
+    }
+    Annotation {
+      Position		      [275, 60]
+      Text		      "x'(t)"
+    }
+    Annotation {
+      Position		      [356, 59]
+      Text		      "x(t)"
+    }
+    Annotation {
+      Position		      [294, 289]
+      Text		      "Anfangs-\nhöhe h"
+    }
+    Annotation {
+      Position		      [150, 163]
+      Text		      "y''(t)"
+    }
+    Annotation {
+      Position		      [246, 187]
+      Text		      "y'(t)"
+    }
+    Annotation {
+      Position		      [346, 204]
+      Text		      "y(t)"
+    }
+    Annotation {
+      Position		      [249, 149]
+      Text		      "y'(T) Aufprall\nGeschwindigkeit"
+    }
+  }
+}

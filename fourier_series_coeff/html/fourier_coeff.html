@@ -1,0 +1,790 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>fourier_coeff</title><meta name="generator" content="MATLAB 8.1"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-06-13"><meta name="DC.source" content="fourier_coeff.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, tt, code { font-size:12px; }
+pre { margin:0px 0px 20px; }
+pre.error { color:red; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> [freq,coeff,APspec] = fourier_coeff(fun,t0,T,M,N,method,res,num_P)
+<span class="comment">%</span>
+<span class="comment">% Calculate the Fourier coefficients of the series expansion of a function,</span>
+<span class="comment">% and the amplitude and phase spectra. The script contains some theory and</span>
+<span class="comment">% 3 different methods to calculate the coefficients.</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%USAGE</span>
+<span class="comment">%-----</span>
+<span class="comment">% fourier_coeff(fun,t0,T)</span>
+<span class="comment">% fourier_coeff(fun,t0,T,M)</span>
+<span class="comment">% fourier_coeff(fun,t0,T,M,N)</span>
+<span class="comment">% fourier_coeff(fun,t0,T,M,N,method)</span>
+<span class="comment">% fourier_coeff(fun,t0,T,M,N,method,res)</span>
+<span class="comment">% fourier_coeff(fun,t0,T,M,N,method,res,num_P)</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%INPUT</span>
+<span class="comment">%-----</span>
+<span class="comment">% - FUN   : character string representing the function with "t" as the</span>
+<span class="comment">%   independent variable (e.g. '10*cos(2*pi*3*t-pi/4)'). Dot-arithmetic</span>
+<span class="comment">%   operators must be used (.* ./ .\ .^). FUN must be defined for [T0,T0+T]</span>
+<span class="comment">% - T0    : initial "t" for the definition of FUN</span>
+<span class="comment">% - T     : period of the function</span>
+<span class="comment">% - M     : number of frequencies (default: 5)</span>
+<span class="comment">% - N     : number of data points per period (default: 100)</span>
+<span class="comment">% - METHOD: 1 (least-squares), 2 (integrals [default]) or 3 (FFT)</span>
+<span class="comment">% - RES   : 1 (plot results) or 0 (do not plot [default])</span>
+<span class="comment">% - NUM_P : number of periods the function will be sampled at. Only</span>
+<span class="comment">%   effective when RES=1 (default: 1)</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%OUTPUT</span>
+<span class="comment">%------</span>
+<span class="comment">% - FREQ : frequencies</span>
+<span class="comment">% - COEFF: Fourier series coefficients in the form in the form [a0 a1 ...</span>
+<span class="comment">%   aM b1 ... bM], where</span>
+<span class="comment">%   f(t) = a0 + \sum_{m=1}^M { a_m cos(2pi m t/T) + b_m sin(2pi m t/T) }</span>
+<span class="comment">%   So the corresponding frequencies are: 0, 1/T, 2/T, ..., M/T</span>
+<span class="comment">% - APSPEC: the first column contains the amplitude spectrum, and the</span>
+<span class="comment">%   second column the phase spectrum</span>
+<span class="comment">% - If RES=1:</span>
+<span class="comment">%   Figure the original function and the Fourier series expansion, and</span>
+<span class="comment">%   another with the amplitude and phase spectra</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%==========================================================================</span>
+<span class="comment">%             Fourier expansion of a periodic function f(t)</span>
+<span class="comment">%==========================================================================</span>
+<span class="comment">%</span>
+<span class="comment">% T: period of f(t)</span>
+<span class="comment">% M: number of harmonics (the equalities hold when M-&gt;infinity)</span>
+<span class="comment">% w0 = 2pi/T</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% Three equivalent forms:</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% 1) Sine-cosine form</span>
+<span class="comment">%    ----------------</span>
+<span class="comment">%  f(t) = a0 + \sum_{m=1}^M { a_m cos(m w0 t) + b_m sin(m w0 t) }</span>
+<span class="comment">% Fourier coefficients:</span>
+<span class="comment">%   a0  = 1/T \int_0^T f(t) dt (DC term)</span>
+<span class="comment">%   a_m = 2/T \int_0^T f(t) cos(m w0 t) dt</span>
+<span class="comment">%   b_m = 2/T \int_0^T f(t) sin(m w0 t) dt</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% 2) Amplitude-phase form</span>
+<span class="comment">%    --------------------</span>
+<span class="comment">%  f(t) = A0 + \sum_{m=1}^M { A_m cos(m w0 t - phi_m) }</span>
+<span class="comment">% Fourier coefficients:</span>
+<span class="comment">%   a0    = A0 (DC term)</span>
+<span class="comment">%   a_m   = A_m cos(phi_m)</span>
+<span class="comment">%   b_m   = A_m sin(phi_m)</span>
+<span class="comment">%   |A_m| = sqrt( a_m^2 + b_m^2 )  (amplitude)</span>
+<span class="comment">%   phi_m = arctan(b_m/a_m)        (phase)</span>
+<span class="comment">% Spectral plots:</span>
+<span class="comment">% - Amplitude spectrum: amplitude vs. harmonic frequency</span>
+<span class="comment">% - Phase spectrum: phase vs. harmonic frequency</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% 3) Complex exponential form</span>
+<span class="comment">%    ------------------------</span>
+<span class="comment">%  f(t) = \sum_{m=-M}^M { c_m exp^{i m w0 t} }</span>
+<span class="comment">% Complex Fourier coefficients:</span>
+<span class="comment">%   c_m = 1/T \int_0^T f(t) exp^{-i m w0 t} dt</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% Relationship between froms (3) and (1):</span>
+<span class="comment">%   c0     = a0</span>
+<span class="comment">%   c_m    = ( a_m - ib_m )/2        , m=1,2,...,M</span>
+<span class="comment">%   c_{-m} = c_m* = ( a_m + ib_m )/2 , m=1,2,...,M</span>
+<span class="comment">%</span>
+<span class="comment">%   a0  = c0</span>
+<span class="comment">%   a_m = c_m + c_{-m} = 2 real(c_m)     , m=0,1,...,M</span>
+<span class="comment">%   b_m = i(c_m - c_{-m}) = -2 imag(c_m) , m=1,...,M</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% Relationship between froms (3) and (2):</span>
+<span class="comment">%   c_m = |c_m|exp(i theta_m)</span>
+<span class="comment">% For m=0,1,...,M:</span>
+<span class="comment">%    |c_m| = |c_{-m}| = |A_m|/2</span>
+<span class="comment">%    tan(theta_m)    =  tan(phi_m)</span>
+<span class="comment">%    tan(theta_{-m}) = -tan(phi_m)</span>
+<span class="comment">%</span>
+<span class="comment">% Obs.: All the integrals above must be made within a period, that is, can</span>
+<span class="comment">% be from t0 to t0+T for an arbitrary t0</span>
+<span class="comment">%</span>
+<span class="comment">% REFERENCE:</span>
+<span class="comment">% Tan, Li. Digital signal processing: fundamentals and applications.</span>
+<span class="comment">% Academic Press, USA, 2008 - pp. 709-711</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%==========================================================================</span>
+<span class="comment">%                 Calculating the Fourier coefficients</span>
+<span class="comment">%==========================================================================</span>
+<span class="comment">%</span>
+<span class="comment">% This function calculates the Fourier coefficients using three methods:</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% 1) This method explores the fact that Fourier coefficients give the best</span>
+<span class="comment">%    least-squares fit when a function is expanded in a set of orthonormal</span>
+<span class="comment">%    functions:</span>
+<span class="comment">% Sampling the function: f(tn) = f_n, tn = n T/N, n=1,2,...N</span>
+<span class="comment">% =&gt; f_n = a0 + \sum_{m=1}^M { a_m cos(2 pi m n/N) + b_m sin(2 pi m n/N) }</span>
+<span class="comment">% Problem statement:</span>
+<span class="comment">%   Given a column vector f = [f1 f2 ... fN]', find the set of</span>
+<span class="comment">%   coefficients coef = [a0 a1 ... an b1 ... bn]' that best fit the</span>
+<span class="comment">%   expansion above.</span>
+<span class="comment">% Definition:</span>
+<span class="comment">% A = [1 cos(w0.t1) ... cos(n.w0.t1) sin(w0.t1) ... sin(n.w0.t1)]</span>
+<span class="comment">%     [1 cos(w0.t2) ... cos(n.w0.t2) sin(w0.t2) ... sin(n.w0.t2)]</span>
+<span class="comment">%     [...    ...     ...    ...          ...     ...    ...      ]</span>
+<span class="comment">%     [1 cos(w0.tN) ... cos(n.w0.tN) sin(w0.tN) ... sin(n.w0.tN)]</span>
+<span class="comment">% Therefore, we can use ordinary least-squares to find the "coef" matrix</span>
+<span class="comment">% such that: f=A.coef =&gt; coef = A^(-1)f</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% 2) This method finds the a_m and b_m coefficients from the sine-cosine</span>
+<span class="comment">%    form above, using all the ways Matlab offers to calculate integrals.</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% 3) This method utilizes the Discrete Fourier Transform (DFT)</span>
+<span class="comment">%</span>
+<span class="comment">% Discrete Fourier Transform (DFT) of f(t):</span>
+<span class="comment">%   F_m = \sum_{n=0}^{N-1} { f_n exp^{-2 pi i m n/N} }</span>
+<span class="comment">%   - m = 0,1,...,N-1</span>
+<span class="comment">%   - f(t) was sampled in N samples: f_n = f(t_n), n = 0,1,...,N-1</span>
+<span class="comment">%</span>
+<span class="comment">% Inverse DFT: f_n = 1/N \sum_{m=0}^{N-1} { F_m exp^{2 pi i m n/N} }</span>
+<span class="comment">%</span>
+<span class="comment">% REFERENCE:</span>
+<span class="comment">% &gt;&gt; help fft.m</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">% From the integral definition of c_m above, one can relate it to F_m:</span>
+<span class="comment">%  Let us choose t_n/T = 0,1/N,...,(N-1)/N = n/N, n=0,1,...,N-1</span>
+<span class="comment">%  =&gt; c_m \approx 1/T \sum_{n=0}^{N-1} { f_n exp^{-2 pi i m n/N } \Delta t</span>
+<span class="comment">%  But \Delta t/T = 1/N. Therefore:</span>
+<span class="comment">%  N c_m \approx F_m</span>
+<span class="comment">%</span>
+
+<span class="comment">% Guilherme Coco Beltramini (guicoco@gmail.com)</span>
+<span class="comment">% 2011-Jul-27, 12:09 am</span>
+
+
+thresh = 10^(-8); <span class="comment">% threshold to consider the values 0</span>
+<span class="comment">% (for numerical precision in the phase estimation)</span>
+
+
+<span class="comment">% Input</span>
+<span class="comment">%==========================================================================</span>
+<span class="keyword">if</span> nargin&lt;8
+    num_P = 1;
+<span class="keyword">elseif</span> ~isnumeric(num_P) || num_P&lt;1 || floor(num_P)~=ceil(num_P)
+    error(<span class="string">'Invalid number of periods'</span>)
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargin&lt;7
+    res = 0;
+<span class="keyword">elseif</span> ~isequal(res,0) &amp;&amp; ~isequal(res,1)
+    error(<span class="string">'Invalid results option'</span>)
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargin&lt;6
+    method = 2;
+<span class="keyword">elseif</span> ~isequal(method,1) &amp;&amp; ~isequal(method,2) &amp;&amp; ~isequal(method,3)
+    error(<span class="string">'Invalid method'</span>)
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargin&lt;5
+    N = 100;
+<span class="keyword">elseif</span> ~isnumeric(N) || N&lt;1 || floor(N)~=ceil(N)
+    error(<span class="string">'Invalid number of data points per period'</span>)
+<span class="keyword">end</span>
+<span class="keyword">if</span> nargin&lt;4
+    M = 5;
+<span class="keyword">elseif</span> ~isnumeric(M) || M&lt;1 || floor(M)~=ceil(M)
+    error(<span class="string">'Invalid number of frequencies'</span>)
+<span class="keyword">end</span>
+
+
+<span class="comment">% Initialize</span>
+<span class="comment">%==========================================================================</span>
+
+t     = linspace(t0,t0+num_P*T,num_P*N)';
+num_P = N; <span class="comment">% number of data points per period</span>
+
+w0 = 2*pi/T;
+f_inline = inline(fun,<span class="string">'t'</span>);
+<span class="keyword">try</span>
+    y = f_inline(t);
+<span class="keyword">catch</span> ME
+    <span class="keyword">if</span> ~isempty(strfind(ME.message,<span class="string">'Inner matrix dimensions must agree'</span>))
+        disp(<span class="string">'Dot-arithmetic operators must be used (.* ./ .\ .^)'</span>)
+    <span class="keyword">end</span>
+    error(ME.identifier,ME.message)
+<span class="keyword">end</span>
+y = y(:); <span class="comment">% y must be a column vector</span>
+
+<span class="keyword">if</span> method==3 &amp;&amp; num_P&lt;M+1
+    method = 2;
+    fprintf(<span class="string">'Changing to method %d\n'</span>,method)
+<span class="keyword">end</span>
+
+
+<span class="comment">% Calculate the Fourier coefficients</span>
+<span class="comment">%==========================================================================</span>
+
+<span class="keyword">switch</span> method
+
+<span class="comment">%==========================================================================</span>
+<span class="keyword">case</span> 1    <span class="comment">% METHOD 1</span>
+<span class="comment">%==========================================================================</span>
+
+A = zeros(num_P,2*M+1);
+A(:,1) = 1;
+t_aux = t(1:num_P);
+<span class="keyword">for</span> m=2:M+1
+    A(:,m)   = cos(w0*(m-1)*t_aux);
+    A(:,m+M) = sin(w0*(m-1)*t_aux);
+<span class="keyword">end</span>
+
+<span class="comment">% Same as the for loop above (apparently it takes Matlab the same time):</span>
+<span class="comment">%t_aux = w0*repmat((1:M),N,1).*repmat(t,1,M);</span>
+<span class="comment">%A = zeros(N,2*M+1); A(:,1) = 1/2;</span>
+<span class="comment">%A(:,2:M+1) = cos(t_aux);</span>
+<span class="comment">%A(:,M+2:2*M+1) = sin(t_aux);</span>
+
+coeff = A\y(1:num_P);
+
+
+<span class="comment">%==========================================================================</span>
+<span class="keyword">case</span> 2    <span class="comment">% METHOD 2</span>
+<span class="comment">%==========================================================================</span>
+
+coeff = zeros(2*M+1,1);
+
+<span class="comment">% Five ways of calculating the integrals, in decreasing order of time to</span>
+<span class="comment">% evaluate the coefficients:</span>
+<span class="comment">% 1) trapz(x,y)</span>
+<span class="comment">% 2) quadl(fun,a,b)</span>
+<span class="comment">% 3) quad(fun,a,b)</span>
+<span class="comment">% 4) quadv(fun,a,b)</span>
+<span class="comment">% 5) quadgk(fun,a,b)</span>
+
+<span class="comment">% 1) trapz:</span>
+<span class="comment">% - depends on sampling</span>
+<span class="comment">% - can be applied to any set of data</span>
+<span class="comment">% - faster</span>
+<span class="comment">% yaux = A(1:num_P,:).*repmat(y(1:num_P),1,2*M+1);</span>
+<span class="comment">% for m=1:2*M+1</span>
+<span class="comment">%     coeff(m) = trapz(t(1:num_P),yaux(:,m));</span>
+<span class="comment">% end</span>
+<span class="comment">% coeff(1) = 2*coeff(1);</span>
+<span class="comment">% coeff    = 2/T*coeff;</span>
+
+<span class="comment">% 2-5) quadX:</span>
+<span class="comment">% - do not depend on sampling</span>
+<span class="comment">% - function must be known explicitly</span>
+<span class="comment">% - slower</span>
+coeff(1) = 1/T*quadl(f_inline,t0,t0+T);
+f_aux = inline([<span class="string">'('</span> fun <span class="string">')'</span> <span class="string">'.*cos(w0*m*t)'</span>],<span class="string">'t'</span>,<span class="string">'m'</span>,<span class="string">'w0'</span>);
+<span class="keyword">for</span> m=1:M
+    coeff(m+1) = quadl(f_aux,t0,t0+T,[],[],m,w0);
+<span class="keyword">end</span>
+f_aux = inline([<span class="string">'('</span> fun <span class="string">')'</span> <span class="string">'.*sin(w0*m*t)'</span>],<span class="string">'t'</span>,<span class="string">'m'</span>,<span class="string">'w0'</span>);
+<span class="keyword">for</span> m=1:M
+    coeff(m+M+1) = quadl(f_aux,t0,t0+T,[],[],m,w0);
+<span class="keyword">end</span>
+coeff(2:end) = 2/T * coeff(2:end);
+
+
+<span class="comment">%==========================================================================</span>
+<span class="keyword">case</span> 3    <span class="comment">% METHOD 3</span>
+<span class="comment">%==========================================================================</span>
+
+coeff = fft(y(1:num_P),num_P)/num_P; <span class="comment">% complex Fourier coefficients</span>
+
+<span class="comment">% FFT = fft(X,N) =&gt; FFT(1)=DC term, FFT(2)=FFT(N), FFT(3)=FFT(N-1), ...</span>
+<span class="comment">% FFT(k)=FFT(N-k+2), ..., FFT(N/2)=FFT(N/2+2) if N is even</span>
+<span class="comment">%                         FFT((N+1)/2)=FFT((N+3)/2) if N is odd</span>
+<span class="comment">% FFT(k) corresponds to increasing frequencies as k increases from 2 to N/2</span>
+<span class="comment">% for even N, or from 2 to (N+1)/2 for odd N.</span>
+<span class="comment">%</span>
+<span class="comment">% FFTsh = fftshift(fft(X,N)) =&gt;</span>
+<span class="comment">% - N even: FFTsh((N+2)/2)=DC term, FFTsh(2)=FFTsh(N), FFTsh(3)=FFTsh(N-1),</span>
+<span class="comment">% ..., FFTsh(k)=FFTsh(N-k+2), ..., FFTsh(N/2)=FFTsh(N/2+2)</span>
+<span class="comment">% - N odd: FFTsh((N+1)/2)=DC term, FFTsh(1)=FFTsh(N), FFTsh(2)=FFTsh(N-1),</span>
+<span class="comment">% ..., FFTsh(k)=FFTsh(N-k+1), ..., FFTsh((N-1)/2)=FFTsh((N+3)/2)</span>
+<span class="comment">% FFTsh(k) corresponds to decreasing frequencies as k increases from 2 to</span>
+<span class="comment">% N/2 for even N or (N-1)/2 for odd N.</span>
+
+coeff = coeff(1:M+1);
+coeff(2:end) = coeff(2:end).*exp(-2*pi*1i*t0/T*(1:M)).';
+coeff = [real(coeff(1)) ; 2*real(coeff(2:end)) ; -2*imag(coeff(2:end))];
+
+<span class="keyword">end</span>
+
+
+<span class="comment">% Amplitude and phase spectra</span>
+<span class="comment">%==========================================================================</span>
+freq  = (0:1:M)'/T;
+tmp   = coeff;
+Aspec = sqrt( tmp(1:(M+1)).^2 + [0;tmp(M+2:end).^2] );
+tmp(abs(tmp)&lt;thresh) = 0;
+Pspec = [0 ; atan2(tmp(M+2:end),tmp(2:M+1))];
+<span class="comment">%Pspec = [0 ; atan(tmp(M+2:end)./tmp(2:M+1))];</span>
+Pspec(isnan(Pspec)) = 0;
+APspec = [Aspec Pspec];
+
+
+<span class="comment">% Show results</span>
+<span class="comment">%==========================================================================</span>
+<span class="keyword">if</span> res
+
+    <span class="comment">% Approximate value for the funtion</span>
+    <span class="comment">%----------------------------------</span>
+    fseries = fourier_series(coeff,t,T);
+
+    figure
+    plot(t,y,<span class="string">'k'</span>,t,fseries,<span class="string">'r.'</span>)
+    legend(<span class="string">'Original function'</span>,<span class="string">'Fourier series'</span>)
+    grid <span class="string">on</span>
+    title(<span class="string">'Fourier series expansion'</span>)
+    xlabel(<span class="string">'t'</span>)
+
+    figure
+    subplot(1,2,1)
+    plot(freq,Aspec)
+    grid <span class="string">on</span>
+    title(<span class="string">'Amplitude spectrum: (a_m^2+b_m^2)^{1/2}'</span>)
+    xlabel(<span class="string">'Frequency (Hz)'</span>)
+
+    subplot(1,2,2)
+    plot(freq,Pspec*180/pi)
+    grid <span class="string">on</span>
+    title(<span class="string">'Phase spectrum: \phi_m (degrees)'</span>)
+    xlabel(<span class="string">'Frequency (Hz)'</span>)
+
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">Error using fourier_coeff (line 204)
+Not enough input arguments.</pre><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2013a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [freq,coeff,APspec] = fourier_coeff(fun,t0,T,M,N,method,res,num_P)
+% 
+% Calculate the Fourier coefficients of the series expansion of a function,
+% and the amplitude and phase spectra. The script contains some theory and
+% 3 different methods to calculate the coefficients.
+% 
+% 
+%USAGE
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% fourier_coeff(fun,t0,T)
+% fourier_coeff(fun,t0,T,M)
+% fourier_coeff(fun,t0,T,M,N)
+% fourier_coeff(fun,t0,T,M,N,method)
+% fourier_coeff(fun,t0,T,M,N,method,res)
+% fourier_coeff(fun,t0,T,M,N,method,res,num_P)
+% 
+% 
+%INPUT
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% - FUN   : character string representing the function with "t" as the
+%   independent variable (e.g. '10*cos(2*pi*3*t-pi/4)'). Dot-arithmetic
+%   operators must be used (.* ./ .\ .^). FUN must be defined for [T0,T0+T]
+% - T0    : initial "t" for the definition of FUN
+% - T     : period of the function
+% - M     : number of frequencies (default: 5)
+% - N     : number of data points per period (default: 100)
+% - METHOD: 1 (least-squares), 2 (integrals [default]) or 3 (FFT)
+% - RES   : 1 (plot results) or 0 (do not plot [default])
+% - NUM_P : number of periods the function will be sampled at. Only
+%   effective when RES=1 (default: 1)
+% 
+% 
+%OUTPUT
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+% - FREQ : frequencies
+% - COEFF: Fourier series coefficients in the form in the form [a0 a1 ...
+%   aM b1 ... bM], where
+%   f(t) = a0 + \sum_{m=1}^M { a_m cos(2pi m t/T) + b_m sin(2pi m t/T) }
+%   So the corresponding frequencies are: 0, 1/T, 2/T, ..., M/T
+% - APSPEC: the first column contains the amplitude spectrum, and the
+%   second column the phase spectrum
+% - If RES=1:
+%   Figure the original function and the Fourier series expansion, and
+%   another with the amplitude and phase spectra
+% 
+% 
+% 
+%==========================================================================
+%             Fourier expansion of a periodic function f(t)
+%==========================================================================
+% 
+% T: period of f(t)
+% M: number of harmonics (the equalities hold when M->infinity)
+% w0 = 2pi/T
+% 
+% 
+% Three equivalent forms:
+% 
+% 
+% 1) Sine-cosine form
+%    REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+%  f(t) = a0 + \sum_{m=1}^M { a_m cos(m w0 t) + b_m sin(m w0 t) }
+% Fourier coefficients:
+%   a0  = 1/T \int_0^T f(t) dt (DC term)
+%   a_m = 2/T \int_0^T f(t) cos(m w0 t) dt
+%   b_m = 2/T \int_0^T f(t) sin(m w0 t) dt
+% 
+% 
+% 2) Amplitude-phase form
+%    REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+%  f(t) = A0 + \sum_{m=1}^M { A_m cos(m w0 t - phi_m) }
+% Fourier coefficients:
+%   a0    = A0 (DC term)
+%   a_m   = A_m cos(phi_m)
+%   b_m   = A_m sin(phi_m)
+%   |A_m| = sqrt( a_m^2 + b_m^2 )  (amplitude)
+%   phi_m = arctan(b_m/a_m)        (phase)
+% Spectral plots:
+% - Amplitude spectrum: amplitude vs. harmonic frequency
+% - Phase spectrum: phase vs. harmonic frequency
+% 
+% 
+% 3) Complex exponential form
+%    REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+%  f(t) = \sum_{m=-M}^M { c_m exp^{i m w0 t} }
+% Complex Fourier coefficients:
+%   c_m = 1/T \int_0^T f(t) exp^{-i m w0 t} dt
+% 
+% 
+% Relationship between froms (3) and (1):
+%   c0     = a0
+%   c_m    = ( a_m - ib_m )/2        , m=1,2,...,M
+%   c_{-m} = c_m* = ( a_m + ib_m )/2 , m=1,2,...,M
+% 
+%   a0  = c0
+%   a_m = c_m + c_{-m} = 2 real(c_m)     , m=0,1,...,M
+%   b_m = i(c_m - c_{-m}) = -2 imag(c_m) , m=1,...,M
+% 
+% 
+% Relationship between froms (3) and (2):
+%   c_m = |c_m|exp(i theta_m)
+% For m=0,1,...,M:
+%    |c_m| = |c_{-m}| = |A_m|/2
+%    tan(theta_m)    =  tan(phi_m)
+%    tan(theta_{-m}) = -tan(phi_m)
+% 
+% Obs.: All the integrals above must be made within a period, that is, can
+% be from t0 to t0+T for an arbitrary t0
+% 
+% REFERENCE:
+% Tan, Li. Digital signal processing: fundamentals and applications.
+% Academic Press, USA, 2008 - pp. 709-711
+% 
+% 
+%==========================================================================
+%                 Calculating the Fourier coefficients
+%==========================================================================
+% 
+% This function calculates the Fourier coefficients using three methods:
+% 
+% 
+% 1) This method explores the fact that Fourier coefficients give the best
+%    least-squares fit when a function is expanded in a set of orthonormal
+%    functions:
+% Sampling the function: f(tn) = f_n, tn = n T/N, n=1,2,...N
+% => f_n = a0 + \sum_{m=1}^M { a_m cos(2 pi m n/N) + b_m sin(2 pi m n/N) }
+% Problem statement:
+%   Given a column vector f = [f1 f2 ... fN]', find the set of
+%   coefficients coef = [a0 a1 ... an b1 ... bn]' that best fit the
+%   expansion above.
+% Definition:
+% A = [1 cos(w0.t1) ... cos(n.w0.t1) sin(w0.t1) ... sin(n.w0.t1)]
+%     [1 cos(w0.t2) ... cos(n.w0.t2) sin(w0.t2) ... sin(n.w0.t2)]
+%     [...    ...     ...    ...          ...     ...    ...      ]
+%     [1 cos(w0.tN) ... cos(n.w0.tN) sin(w0.tN) ... sin(n.w0.tN)]
+% Therefore, we can use ordinary least-squares to find the "coef" matrix
+% such that: f=A.coef => coef = A^(-1)f
+% 
+% 
+% 2) This method finds the a_m and b_m coefficients from the sine-cosine
+%    form above, using all the ways Matlab offers to calculate integrals.
+% 
+% 
+% 3) This method utilizes the Discrete Fourier Transform (DFT)
+% 
+% Discrete Fourier Transform (DFT) of f(t):
+%   F_m = \sum_{n=0}^{N-1} { f_n exp^{-2 pi i m n/N} }
+%   - m = 0,1,...,N-1
+%   - f(t) was sampled in N samples: f_n = f(t_n), n = 0,1,...,N-1
+%
+% Inverse DFT: f_n = 1/N \sum_{m=0}^{N-1} { F_m exp^{2 pi i m n/N} }
+% 
+% REFERENCE:
+% >> help fft.m
+% 
+% 
+% From the integral definition of c_m above, one can relate it to F_m:
+%  Let us choose t_n/T = 0,1/N,...,(N-1)/N = n/N, n=0,1,...,N-1
+%  => c_m \approx 1/T \sum_{n=0}^{N-1} { f_n exp^{-2 pi i m n/N } \Delta t
+%  But \Delta t/T = 1/N. Therefore:
+%  N c_m \approx F_m
+%
+
+% Guilherme Coco Beltramini (guicoco@gmail.com)
+% 2011-Jul-27, 12:09 am
+
+
+thresh = 10^(-8); % threshold to consider the values 0
+% (for numerical precision in the phase estimation)
+
+
+% Input
+%==========================================================================
+if nargin<8
+    num_P = 1;
+elseif ~isnumeric(num_P) || num_P<1 || floor(num_P)~=ceil(num_P)
+    error('Invalid number of periods')
+end
+if nargin<7
+    res = 0;
+elseif ~isequal(res,0) && ~isequal(res,1)
+    error('Invalid results option')
+end
+if nargin<6
+    method = 2;
+elseif ~isequal(method,1) && ~isequal(method,2) && ~isequal(method,3)
+    error('Invalid method')
+end
+if nargin<5
+    N = 100;
+elseif ~isnumeric(N) || N<1 || floor(N)~=ceil(N)
+    error('Invalid number of data points per period')
+end
+if nargin<4
+    M = 5;
+elseif ~isnumeric(M) || M<1 || floor(M)~=ceil(M)
+    error('Invalid number of frequencies')
+end
+
+
+% Initialize
+%==========================================================================
+
+t     = linspace(t0,t0+num_P*T,num_P*N)';
+num_P = N; % number of data points per period
+
+w0 = 2*pi/T;
+f_inline = inline(fun,'t');
+try
+    y = f_inline(t);
+catch ME
+    if ~isempty(strfind(ME.message,'Inner matrix dimensions must agree'))
+        disp('Dot-arithmetic operators must be used (.* ./ .\ .^)')
+    end
+    error(ME.identifier,ME.message)
+end
+y = y(:); % y must be a column vector
+
+if method==3 && num_P<M+1
+    method = 2;
+    fprintf('Changing to method %d\n',method)
+end
+
+
+% Calculate the Fourier coefficients
+%==========================================================================
+
+switch method
+
+%==========================================================================
+case 1    % METHOD 1
+%==========================================================================
+
+A = zeros(num_P,2*M+1);
+A(:,1) = 1;
+t_aux = t(1:num_P);
+for m=2:M+1
+    A(:,m)   = cos(w0*(m-1)*t_aux);
+    A(:,m+M) = sin(w0*(m-1)*t_aux);
+end
+
+% Same as the for loop above (apparently it takes Matlab the same time):
+%t_aux = w0*repmat((1:M),N,1).*repmat(t,1,M);
+%A = zeros(N,2*M+1); A(:,1) = 1/2;
+%A(:,2:M+1) = cos(t_aux);
+%A(:,M+2:2*M+1) = sin(t_aux);
+
+coeff = A\y(1:num_P);
+
+
+%==========================================================================
+case 2    % METHOD 2
+%==========================================================================
+
+coeff = zeros(2*M+1,1);
+
+% Five ways of calculating the integrals, in decreasing order of time to
+% evaluate the coefficients:
+% 1) trapz(x,y)
+% 2) quadl(fun,a,b)
+% 3) quad(fun,a,b)
+% 4) quadv(fun,a,b)
+% 5) quadgk(fun,a,b)
+
+% 1) trapz:
+% - depends on sampling
+% - can be applied to any set of data
+% - faster
+% yaux = A(1:num_P,:).*repmat(y(1:num_P),1,2*M+1);
+% for m=1:2*M+1
+%     coeff(m) = trapz(t(1:num_P),yaux(:,m));
+% end
+% coeff(1) = 2*coeff(1);
+% coeff    = 2/T*coeff;
+
+% 2-5) quadX:
+% - do not depend on sampling
+% - function must be known explicitly
+% - slower
+coeff(1) = 1/T*quadl(f_inline,t0,t0+T);
+f_aux = inline(['(' fun ')' '.*cos(w0*m*t)'],'t','m','w0');
+for m=1:M
+    coeff(m+1) = quadl(f_aux,t0,t0+T,[],[],m,w0);
+end
+f_aux = inline(['(' fun ')' '.*sin(w0*m*t)'],'t','m','w0');
+for m=1:M
+    coeff(m+M+1) = quadl(f_aux,t0,t0+T,[],[],m,w0);
+end
+coeff(2:end) = 2/T * coeff(2:end);
+
+
+%==========================================================================
+case 3    % METHOD 3
+%==========================================================================
+
+coeff = fft(y(1:num_P),num_P)/num_P; % complex Fourier coefficients
+
+% FFT = fft(X,N) => FFT(1)=DC term, FFT(2)=FFT(N), FFT(3)=FFT(N-1), ...
+% FFT(k)=FFT(N-k+2), ..., FFT(N/2)=FFT(N/2+2) if N is even
+%                         FFT((N+1)/2)=FFT((N+3)/2) if N is odd
+% FFT(k) corresponds to increasing frequencies as k increases from 2 to N/2
+% for even N, or from 2 to (N+1)/2 for odd N.
+%
+% FFTsh = fftshift(fft(X,N)) =>
+% - N even: FFTsh((N+2)/2)=DC term, FFTsh(2)=FFTsh(N), FFTsh(3)=FFTsh(N-1),
+% ..., FFTsh(k)=FFTsh(N-k+2), ..., FFTsh(N/2)=FFTsh(N/2+2)
+% - N odd: FFTsh((N+1)/2)=DC term, FFTsh(1)=FFTsh(N), FFTsh(2)=FFTsh(N-1),
+% ..., FFTsh(k)=FFTsh(N-k+1), ..., FFTsh((N-1)/2)=FFTsh((N+3)/2)
+% FFTsh(k) corresponds to decreasing frequencies as k increases from 2 to
+% N/2 for even N or (N-1)/2 for odd N.
+
+coeff = coeff(1:M+1);
+coeff(2:end) = coeff(2:end).*exp(-2*pi*1i*t0/T*(1:M)).';
+coeff = [real(coeff(1)) ; 2*real(coeff(2:end)) ; -2*imag(coeff(2:end))];
+    
+end
+
+
+% Amplitude and phase spectra
+%==========================================================================
+freq  = (0:1:M)'/T;
+tmp   = coeff;
+Aspec = sqrt( tmp(1:(M+1)).^2 + [0;tmp(M+2:end).^2] );
+tmp(abs(tmp)<thresh) = 0;
+Pspec = [0 ; atan2(tmp(M+2:end),tmp(2:M+1))];
+%Pspec = [0 ; atan(tmp(M+2:end)./tmp(2:M+1))];
+Pspec(isnan(Pspec)) = 0;
+APspec = [Aspec Pspec];
+
+
+% Show results
+%==========================================================================
+if res
+    
+    % Approximate value for the funtion
+    %REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+    fseries = fourier_series(coeff,t,T);
+    
+    figure
+    plot(t,y,'k',t,fseries,'r.')
+    legend('Original function','Fourier series')
+    grid on
+    title('Fourier series expansion')
+    xlabel('t')
+    
+    figure
+    subplot(1,2,1)
+    plot(freq,Aspec)
+    grid on
+    title('Amplitude spectrum: (a_m^2+b_m^2)^{1/2}')
+    xlabel('Frequency (Hz)')
+    
+    subplot(1,2,2)
+    plot(freq,Pspec*180/pi)
+    grid on
+    title('Phase spectrum: \phi_m (degrees)')
+    xlabel('Frequency (Hz)')
+    
+end
+##### SOURCE END #####
+--></body></html>

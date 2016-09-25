@@ -1,0 +1,163 @@
+Model {
+  Name			  "integr_0"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "integr_0"
+    Location		    [171, 256, 671, 516]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Ports		      [3, 2, 0, 0, 1]
+      Position		      [225, 112, 285, 178]
+      ExternalReset	      rising
+      InitialConditionSource  external
+      InitialCondition	      "0"
+      LimitOutput	      on
+      UpperSaturationLimit    "4"
+      LowerSaturationLimit    "-4"
+      ShowSaturationPort      on
+      ShowStatePort	      on
+      AbsoluteTolerance	      "auto"
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      state
+      Points		      [0, -32]
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [35, 0]
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      2
+      Points		      [35, 0]
+    }
+    Line {
+      Points		      [180, 125]
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      Points		      [165, 145]
+      DstBlock		      "Integrator"
+      DstPort		      2
+    }
+    Line {
+      Points		      [145, 165]
+      DstBlock		      "Integrator"
+      DstPort		      3
+    }
+    Annotation {
+      Position		      [307, 69]
+      Text		      "Zustandsausgang"
+    }
+    Annotation {
+      Position		      [331, 118]
+      Text		      "Ausgang"
+    }
+    Annotation {
+      Position		      [352, 177]
+      Text		      "Saettigungszustand"
+    }
+    Annotation {
+      Position		      [117, 173]
+      Text		      "Externe \nAnfangsbedingung"
+    }
+    Annotation {
+      Position		      [120, 144]
+      Text		      "Ruecksetzung"
+    }
+    Annotation {
+      Position		      [146, 123]
+      Text		      "Eingang"
+    }
+  }
+}

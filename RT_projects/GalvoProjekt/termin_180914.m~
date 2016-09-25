@@ -1,0 +1,45 @@
+% 18.09.2014
+delete(findall(0,'type','line'));
+%SIMFILES={  'Galvo_sys_v20',...
+%            'GalvoModel_v43'};
+SIMFILES={  'Galvo_sys_cc_feed_v40',...
+            'CurrentComp_v20',...
+            'GalvoModel_v53',...
+            'Galvo_compare_cc_and_nocc_v1'};
+% *********************************************************************
+%               Init block models
+% *********************************************************************
+param = loadGalvoParam(4);
+paramCtrl = loadCtrlParam(4);
+evalGalvoParam(4)
+%init = 0;
+%SEARCH = {'Kp_cc'};
+%VAL = 1;
+%Kp_cc = 1;
+
+load_system(SIMFILES{4});
+%set_param(  [SIMFILES{1} '/GalvoModel'],'OverrideUsingVariant',SIMFILES{2});
+%set_param(SIMFILES{1}, 'AbsTol', '1e-5','MaxStep','1e-4');
+%set_param(SIMFILES{2}, 'AbsTol', 'auto');
+%sim(SIMFILES{1});
+FS = 5e-6;
+
+open_system(SIMFILES{4});
+SIMFILES={  'GalvoModel_v44_simply',...
+            'Galvo_compare_cc_and_nocc_v1',...
+            'Galvo_sys_cc_feed_v40'};
+
+%%
+open_system(SIMFILES{1})
+
+%%
+open_system(SIMFILES{2})
+
+%%
+
+
+
+
+
+
+

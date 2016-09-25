@@ -1,0 +1,10 @@
+Hallo Herr Brunner,
+da die Prüfungszeit vorbei ist, kann ich mich wieder voll auf mein Projekt konzentrieren.
+
+In den letzten tagen habe ich mich intensiv mit der Modellbildung von Galvanometer- bzw. Drehmomentmotoren beschäftigt. Den Großteil meines ersten Modells habe ich hauptsächlich aus der Laboreinheit 'Servo- Regler' abgeleitet. Nach einigen Recherchen habe ich ein detailliertes Modell gefunden und nach einigen Anpassungen ist dieses Modell (siehe Anhang) entstanden.
+Um mich weiter in die 'control system toolbox' von  Matlab / Simulink einzuarbeiten habe ich einige Regler simuliert, hauptsächlich Standard- PID, teilweise aber auch optimierte Regler höherer Ordnung. Beim arbeiten mit den siso und autotune- Komponenten von Matlab konnte ich bereits die ersten diskreten Systeme untersuchen um ein wenig 'Gefühl' für die angedachte Implementierung eines Software- Reglers zu bekommen.         
+Bei unserem Gespräch vor einigen Monaten hatten Sie erwähnt, dass man u.U. Versuche mit einem untersetzten Regelkreis für die Wicklungsströme durchführen sollte. Dazu habe ich einige interessante, jedoch allgemeine Beschreibungen zu mehrschleifigen Regelkreisen gefunden. Bei meinen ersten Versuchen (siehe Anhang) ist dabei ein Prozessmodell mit einem Eingang und zwei Ausgängen entstanden. Das Auftrennen des Galvanometer- Modells in zwei Teilprozesse, entsprechend einiger Beschreibungen aus dem Internet, gelingt mir nicht.
+Bin ich auf dem falschen Weg?
+Von meinem bisherigen Verständnis ausgehend macht es Sinn, da der Hersteller im Datenblatt der hier modellierten Galvos eine Drehmoment- Konstante in Nm/A angibt, welche für den Aussteuerbereich +-20° konstruktionsbedingt einen linearen Zusammenhang zwischen Strom und Drehmoment bildet. Damit kann doch aus der ursprünglichen Stellgröße "Motorspannung" ein "Rotorwellen- Drehmoment" abstrahiert werden!? Ein Integral später kommt dann schon das Winkelmoment, eine anschließende Multiplikation mit dem Kehrwert des Rotor- Trägheitsmoments liefert bereits die Winkelgeschwindigkeit der Welle bzw. des Spiegels.
+
+Gerne würde ich zu diesem T

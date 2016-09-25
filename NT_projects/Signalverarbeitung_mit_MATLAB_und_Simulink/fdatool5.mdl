@@ -1,0 +1,1871 @@
+Model {
+  Name			  "fdatool5"
+  Version		  5.1
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  on
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  SortedOrder		  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Nov  9 03:46:08 2003"
+  Creator		  "svenhoffmann"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "svenhoffmann"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sun Nov  9 06:15:42 2003"
+  ModelVersionFormat	  "1.%<AutoIncrement:7>"
+  ConfigurationManager	  "None"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock off
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "normal"
+  Solver		  "ode45"
+  SolverMode		  "Auto"
+  StartTime		  "0.0"
+  StopTime		  "0.5"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  on
+  BooleanDataType	  on
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      From
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Goto
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "fdatool5"
+    Location		    [1099, 89, 1606, 319]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Filter"
+      Tag		      "FilterWizardSubSystem"
+      Ports		      [1, 1]
+      Position		      [240, 70, 315, 110]
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Filter"
+	Location		[70, 200, 650, 460]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Input"
+	  Position		  [45, 67, 75, 83]
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1|a(1,1)"
+	  Position		  [350, 59, 380, 91]
+	  Gain			  "2"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterDataType	  "float('double')"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1|a(1,2)"
+	  Position		  [1050, 59, 1080, 91]
+	  Gain			  "2"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterDataType	  "float('double')"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1|a(1,3)"
+	  Position		  [1750, 59, 1780, 91]
+	  Gain			  "2"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterDataType	  "float('double')"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1|a(1,4)"
+	  Position		  [2450, 59, 2480, 91]
+	  Gain			  "2"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterDataType	  "float('double')"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(2,1)"
+	  Ports			  [1, 1]
+	  Position		  [427, 130, 463, 165]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(2,2)"
+	  Ports			  [1, 1]
+	  Position		  [1127, 130, 1163, 165]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(2,3)"
+	  Ports			  [1, 1]
+	  Position		  [1827, 130, 1863, 165]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(2,4)"
+	  Ports			  [1, 1]
+	  Position		  [2527, 130, 2563, 165]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(3,2)"
+	  Ports			  [1, 1]
+	  Position		  [1127, 220, 1163, 255]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(3,3)"
+	  Ports			  [1, 1]
+	  Position		  [1827, 220, 1863, 255]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "BodyDelay(3,4)"
+	  Ports			  [1, 1]
+	  Position		  [2527, 220, 2563, 255]
+	  Orientation		  "down"
+	  ShowName		  off
+	  SourceBlock		  "dspsigops/Delay"
+	  SourceType		  "Delay"
+	  dly_unit		  "Samples"
+	  delay			  "1"
+	  ic_detail		  off
+	  dif_ic_for_ch		  off
+	  dif_ic_for_dly	  off
+	  ic			  "0"
+	  reset_popup		  "None"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyLSum(2,2)"
+	  Ports			  [2, 1]
+	  Position		  [950, 170, 980, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|--"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyLSum(2,3)"
+	  Ports			  [2, 1]
+	  Position		  [1650, 170, 1680, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|--"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyLSum(2,4)"
+	  Ports			  [2, 1]
+	  Position		  [2350, 170, 2380, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|--"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum(2,2)"
+	  Ports			  [2, 1]
+	  Position		  [1315, 170, 1345, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum(2,3)"
+	  Ports			  [2, 1]
+	  Position		  [2015, 170, 2045, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "BodyRSum(2,4)"
+	  Ports			  [2, 1]
+	  Position		  [2715, 170, 2745, 200]
+	  Orientation		  "up"
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertA1"
+	  Ports			  [1, 1]
+	  Position		  [300, 59, 335, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertA2"
+	  Ports			  [1, 1]
+	  Position		  [1000, 59, 1035, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertA3"
+	  Ports			  [1, 1]
+	  Position		  [1700, 59, 1735, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertA4"
+	  Ports			  [1, 1]
+	  Position		  [2400, 59, 2435, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertOut"
+	  Ports			  [1, 1]
+	  Position		  [2820, 59, 2855, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertR1"
+	  Ports			  [1, 1]
+	  Position		  [395, 59, 430, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertR2"
+	  Ports			  [1, 1]
+	  Position		  [1095, 59, 1130, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertR3"
+	  Ports			  [1, 1]
+	  Position		  [1795, 59, 1830, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertR4"
+	  Ports			  [1, 1]
+	  Position		  [2495, 59, 2530, 91]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertS1"
+	  Ports			  [1, 1]
+	  Position		  [145, 60, 180, 90]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertS2"
+	  Ports			  [1, 1]
+	  Position		  [850, 60, 885, 90]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertS3"
+	  Ports			  [1, 1]
+	  Position		  [1550, 60, 1585, 90]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "ConvertS4"
+	  Ports			  [1, 1]
+	  Position		  [2250, 60, 2285, 90]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Conversion"
+	  SourceType		  "Fixed-Point to Fixed-Point Conversion"
+	  ConvertRealWorld	  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "GatewayIn"
+	  Ports			  [1, 1]
+	  Position		  [95, 60, 125, 90]
+	  ShowName		  off
+	  SourceBlock		  "fixpt_lib_4/Data Type/Gateway In"
+	  SourceType		  "Fixed-Point Gateway In"
+	  InRealWorld		  "Real World Value"
+	  OutputDataTypeScalingMode "Specify via dialog"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^-15"
+	  LockScale		  on
+	  RndMeth		  "Floor"
+	  DoSatur		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumL1"
+	  Ports			  [2, 1]
+	  Position		  [250, 60, 280, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|+-"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumL2"
+	  Ports			  [2, 1]
+	  Position		  [950, 60, 980, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumL3"
+	  Ports			  [2, 1]
+	  Position		  [1650, 60, 1680, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumL4"
+	  Ports			  [2, 1]
+	  Position		  [2350, 60, 2380, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumR1"
+	  Ports			  [2, 1]
+	  Position		  [615, 60, 645, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumR2"
+	  Ports			  [2, 1]
+	  Position		  [1315, 60, 1345, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumR3"
+	  Ports			  [2, 1]
+	  Position		  [2015, 60, 2045, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "HeadSumR4"
+	  Ports			  [2, 1]
+	  Position		  [2715, 60, 2745, 90]
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  ShowAdditionalParam	  on
+	  InputSameDT		  off
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn1"
+	  Position		  [780, 65, 835, 85]
+	  ShowName		  off
+	  GotoTag		  "Sect1"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn2"
+	  Position		  [1480, 65, 1535, 85]
+	  ShowName		  off
+	  GotoTag		  "Sect2"
+	}
+	Block {
+	  BlockType		  From
+	  Name			  "SectIn3"
+	  Position		  [2180, 65, 2235, 85]
+	  ShowName		  off
+	  GotoTag		  "Sect3"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut1"
+	  Position		  [665, 65, 720, 85]
+	  ShowName		  off
+	  GotoTag		  "Sect1"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut2"
+	  Position		  [1365, 65, 1420, 85]
+	  ShowName		  off
+	  GotoTag		  "Sect2"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Goto
+	  Name			  "SectOut3"
+	  Position		  [2065, 65, 2120, 85]
+	  ShowName		  off
+	  GotoTag		  "Sect3"
+	  TagVisibility		  "local"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,1)"
+	  Position		  [330, 169, 360, 201]
+	  Orientation		  "left"
+	  Gain			  "-0.350860595703125"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,2)"
+	  Position		  [1030, 169, 1060, 201]
+	  Orientation		  "left"
+	  Gain			  "-0.58465576171875"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,3)"
+	  Position		  [1730, 169, 1760, 201]
+	  Orientation		  "left"
+	  Gain			  "-0.3984375"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(2,4)"
+	  Position		  [2430, 169, 2460, 201]
+	  Orientation		  "left"
+	  Gain			  "-0.301483154296875"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,2)"
+	  Position		  [1030, 259, 1060, 291]
+	  Orientation		  "left"
+	  Gain			  "0.30194091796875"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,3)"
+	  Position		  [1730, 259, 1760, 291]
+	  Orientation		  "left"
+	  Gain			  "0.3970947265625"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "a(3,4)"
+	  Position		  [2430, 259, 2460, 291]
+	  Orientation		  "left"
+	  Gain			  "0.4696044921875"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,1)"
+	  Position		  [530, 59, 565, 91]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,2)"
+	  Position		  [1230, 59, 1265, 91]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,3)"
+	  Position		  [1930, 59, 1965, 91]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(1,4)"
+	  Position		  [2630, 59, 2665, 91]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,1)"
+	  Position		  [530, 169, 565, 201]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,2)"
+	  Position		  [1230, 169, 1265, 201]
+	  Gain			  "0.645355224609375"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,3)"
+	  Position		  [1930, 169, 1965, 201]
+	  Gain			  "0.239654541015625"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(2,4)"
+	  Position		  [2630, 169, 2665, 201]
+	  Gain			  "0.0732421875"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3,2)"
+	  Position		  [1230, 259, 1265, 291]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3,3)"
+	  Position		  [1930, 259, 1965, 291]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "b(3,4)"
+	  Position		  [2630, 259, 2665, 291]
+	  Gain			  "0.5"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(1)"
+	  Position		  [195, 60, 225, 90]
+	  Gain			  "0.149030999999999997"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(2)"
+	  Position		  [900, 60, 930, 90]
+	  Gain			  "0.132065999999999989"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(3)"
+	  Position		  [1600, 60, 1630, 90]
+	  Gain			  "0.400000000000000022"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "s(4)"
+	  Position		  [2300, 60, 2330, 90]
+	  Gain			  "0.622277999999999998"
+	  ShowAdditionalParam	  on
+	  ParameterDataTypeMode	  "Specify via dialog"
+	  ParameterScalingMode	  "Use specified scaling"
+	  ParameterScaling	  "2^-15"
+	  OutDataTypeMode	  "Specify via dialog"
+	  OutDataType		  "sfix(32)"
+	  OutScaling		  "2^-30"
+	  LockScale		  on
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Output"
+	  Position		  [2880, 67, 2910, 83]
+	}
+	Line {
+	  SrcBlock		  "GatewayIn"
+	  SrcPort		  1
+	  DstBlock		  "ConvertS1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Input"
+	  SrcPort		  1
+	  DstBlock		  "GatewayIn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertOut"
+	  SrcPort		  1
+	  DstBlock		  "Output"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HeadSumR4"
+	  SrcPort		  1
+	  DstBlock		  "ConvertOut"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertR4"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "BodyDelay(2,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(1,4)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "1|a(1,4)"
+	  SrcPort		  1
+	  DstBlock		  "ConvertR4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertR3"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "BodyDelay(2,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(1,3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "1|a(1,3)"
+	  SrcPort		  1
+	  DstBlock		  "ConvertR3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertR2"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "BodyDelay(2,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(1,2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "1|a(1,2)"
+	  SrcPort		  1
+	  DstBlock		  "ConvertR2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertR1"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [10, 0]
+	    DstBlock		    "BodyDelay(2,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "b(1,1)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "1|a(1,1)"
+	  SrcPort		  1
+	  DstBlock		  "ConvertR1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertA4"
+	  SrcPort		  1
+	  DstBlock		  "1|a(1,4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HeadSumL4"
+	  SrcPort		  1
+	  DstBlock		  "ConvertA4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertA3"
+	  SrcPort		  1
+	  DstBlock		  "1|a(1,3)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HeadSumL3"
+	  SrcPort		  1
+	  DstBlock		  "ConvertA3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertA2"
+	  SrcPort		  1
+	  DstBlock		  "1|a(1,2)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HeadSumL2"
+	  SrcPort		  1
+	  DstBlock		  "ConvertA2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertA1"
+	  SrcPort		  1
+	  DstBlock		  "1|a(1,1)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "HeadSumL1"
+	  SrcPort		  1
+	  DstBlock		  "ConvertA1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertS4"
+	  SrcPort		  1
+	  DstBlock		  "s(4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SectIn3"
+	  SrcPort		  1
+	  DstBlock		  "ConvertS4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertS3"
+	  SrcPort		  1
+	  DstBlock		  "s(3)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SectIn2"
+	  SrcPort		  1
+	  DstBlock		  "ConvertS3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertS2"
+	  SrcPort		  1
+	  DstBlock		  "s(2)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "SectIn1"
+	  SrcPort		  1
+	  DstBlock		  "ConvertS2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "ConvertS1"
+	  SrcPort		  1
+	  DstBlock		  "s(1)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(3,4)"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "BodyRSum(2,4)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,4)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "BodyLSum(2,4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(3,4)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(3,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(3,4)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum(2,4)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyLSum(2,4)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(2,4)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum(2,4)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "a(2,4)"
+	  SrcPort		  1
+	  DstBlock		  "BodyLSum(2,4)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(2,4)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay(3,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(2,4)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(2,4)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "b(1,4)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(4)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(3,3)"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "BodyRSum(2,3)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,3)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "BodyLSum(2,3)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(3,3)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(3,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(3,3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum(2,3)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyLSum(2,3)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(2,3)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum(2,3)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "a(2,3)"
+	  SrcPort		  1
+	  DstBlock		  "BodyLSum(2,3)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(2,3)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay(3,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(2,3)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(2,3)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "HeadSumR3"
+	  SrcPort		  1
+	  DstBlock		  "SectOut3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(1,3)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(3)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(3,2)"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "BodyRSum(2,2)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(3,2)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "BodyLSum(2,2)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(3,2)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(3,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(3,2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "BodyRSum(2,2)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyLSum(2,2)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "b(2,2)"
+	  SrcPort		  1
+	  DstBlock		  "BodyRSum(2,2)"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "a(2,2)"
+	  SrcPort		  1
+	  DstBlock		  "BodyLSum(2,2)"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(2,2)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    DstBlock		    "BodyDelay(3,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(2,2)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(2,2)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "HeadSumR2"
+	  SrcPort		  1
+	  DstBlock		  "SectOut2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(1,2)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(2)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(2,1)"
+	  SrcPort		  1
+	  Points		  [60, 0]
+	  DstBlock		  "HeadSumR1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "a(2,1)"
+	  SrcPort		  1
+	  Points		  [-60, 0]
+	  DstBlock		  "HeadSumL1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "BodyDelay(2,1)"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "b(2,1)"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 15]
+	    DstBlock		    "a(2,1)"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "HeadSumR1"
+	  SrcPort		  1
+	  DstBlock		  "SectOut1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "b(1,1)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumR1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "s(1)"
+	  SrcPort		  1
+	  DstBlock		  "HeadSumL1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [2]
+      Position		      [380, 66, 410, 99]
+      Location		      [100, 398, 424, 637]
+      Open		      on
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+	axes2			""
+      }
+      YMin		      "-5~-5"
+      YMax		      "5~5"
+      DataFormat	      "StructureWithTime"
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine Wave"
+      Position		      [140, 75, 170, 105]
+      SineType		      "Time based"
+      Amplitude		      "0.99996948"
+      Frequency		      "2*pi*10"
+      SampleTime	      "1/1000"
+    }
+    Line {
+      SrcBlock		      "Sine Wave"
+      SrcPort		      1
+      Points		      [25, 0]
+      Branch {
+	Points			[0, -55; 150, 0; 0, 40]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Filter"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Filter"
+      SrcPort		      1
+      DstBlock		      "Scope"
+      DstPort		      2
+    }
+    Annotation {
+      Name		      "Amplitude 1"
+      Position		      [151, 59]
+    }
+    Annotation {
+      Name		      "10 Hz\nfs = 1000 Hz"
+      Position		      [156, 143]
+    }
+    Annotation {
+      Name		      "IIR-Filter\nf/fs = 0,4"
+      Position		      [279, 151]
+    }
+  }
+}

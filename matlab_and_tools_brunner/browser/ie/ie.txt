@@ -1,0 +1,94 @@
+     -----------------------------------------------------------
+                       SYSTEMANFORDERUNGEN für
+          Microsoft Internet Explorer 5.5 und Internettools
+                             Juni 2000
+     -----------------------------------------------------------
+
+               (c) Copyright Microsoft Corporation, 2000
+
+
+Dieses Dokument stellt Informationen über die Systemanforderungen für 
+die Installation von Microsoft (R) Internet Explorer 5.5 und 
+Internettools zur Verfügung.
+
+Wenn Sie Informationen zu einem speziellen Programm oder einer 
+Komponente benötigen, können Sie in der Microsoft Knowledge Base 
+unter "http://support.microsoft.com" danach suchen.
+
+Falls Sie Interesse an zusätzlichen oder topaktuellen Informationen 
+haben, die Microsoft Internet Explorer 5.5 und Internettools 
+ergänzen, lesen Sie bitte die Infodatei "Readme.txt", die sich im 
+Unterverzeichnis "\Programme\Internet Explorer" auf Ihrem Computer
+befindet.
+
+
+--------------------------------
+SO VERWENDEN SIE DIESES DOKUMENT
+--------------------------------
+
+Maximieren Sie das Editor-Fenster, um die Datei "Ie.txt" unter 
+Verwendung von Editor auf dem Bildschirm anzuzeigen.
+
+Um die Datei "Ie.txt" zu drucken, öffnen Sie diese in Editor oder 
+einem anderen Textverarbeitungsprogramm und verwenden anschließend im 
+Menü "Datei" den Befehl "Drucken".
+
+
+INHALT
+======
+
+SYSTEMANFORDERUNGEN
+  Festplattenspeicheranforderungen für die Installation von Internet 
+  Explorer 5.5
+
+
+SYSTEMANFORDERUNGEN
+===================
+
+Um Internet Explorer 5.5 und Internettools ausführen zu können, muss Ihr
+Computer die nachfolgenden Mindestanforderungen erfüllen:
+
+- 486-Modell mit 66-MHz-Prozessor (Pentium-Prozessor empfohlen)
+
+- Unter Microsoft Windows(R) 95 oder Windows 98:
+  mindestens 16 MB RAM (Arbeitsspeicher)
+
+- Unter Microsoft Windows NT(R) 4.0:
+  mindestens 32 MB RAM
+  Service Pack 3 (oder höher) muss installiert sein.
+
+- Unter Microsoft Windows(R) 2000:
+  mindestens 64 MB RAM
+
+- Minimale Installation (Nur Browser):
+  	Anforderung für die Installation:    45 MB
+  	Anforderung für die Ausführung:        27 MB nach dem Neustart
+  Typische Installation:
+  	Anforderung für die Installation:    70 MB
+  	Anforderung für die Ausführung:        55 MB nach dem Neustart
+  Vollständige Installation:
+  	Anforderung für die Installation:   111 MB
+  	Anforderung für die Ausführung:        80 MB nach dem Neustart
+
+- Maus
+
+- Modem oder Verbindung mit dem Internet
+
+- CD-ROM-Laufwerk (falls die Installation von CD erfolgt)
+
+- Einige Komponenten erfordern möglicherweise weitere   
+Systemressourcen, die oben nicht aufgeführt sind.
+
+
+Festplattenspeicheranforderungen bei Installation von Internet 
+Explorer 5.5
+--------------------------------------------------------------
+Setup für Internet Explorer 5.5 und Internettools (Betaversion) 
+installiert die meisten Dateien auf dem Laufwerk, auf dem das 
+Betriebssystem Windows installiert wurde, unabhängig von dem von 
+Ihnen gewählten Installationspfad. Um Festplattenspeicher freizugeben 
+und so den Installationsanforderungen von Internet Explorer 5.5 an 
+den Speicherplatz zu entsprechen, müssen Sie Speicherplatz auf dem 
+Laufwerk freigeben, auf dem das Betriebssystem Windows installiert 
+ist.
+

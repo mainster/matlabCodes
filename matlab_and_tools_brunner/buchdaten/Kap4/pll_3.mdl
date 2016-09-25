@@ -1,0 +1,589 @@
+Model {
+  Name			  "pll_3"
+  Version		  2.20
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  SimulationMode	  normal
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWPlaceOutputsASAP	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "pll_3"
+    Location		    [15, 187, 378, 452]
+    Open		    on
+    ToolBar		    on
+    StatusBar		    on
+    ScreenColor		    white
+    PaperOrientation	    landscape
+    PaperPositionMode	    auto
+    PaperType		    usletter
+    PaperUnits		    inches
+    Block {
+      BlockType		      Inport
+      Name		      "In1"
+      Position		      [45, 73, 75, 87]
+      Port		      "1"
+      PortWidth		      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PLL"
+      Ports		      [1, 2, 0, 0, 0]
+      Position		      [115, 48, 200, 112]
+      NamePlacement	      alternate
+      ShowPortLabels	      on
+      System {
+	Name			"PLL"
+	Location		[115, 246, 706, 517]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  Inport
+	  Name			  "Eingang"
+	  Position		  [45, 38, 75, 52]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "2*pi*f0"
+	  Position		  [425, 154, 515, 176]
+	  Orientation		  left
+	  Value			  "2*pi*100"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn"
+	  Position		  [115, 123, 160, 157]
+	  Orientation		  left
+	  Expr			  "cos(u)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [280, 110, 305, 150]
+	  Orientation		  left
+	  ExternalReset		  none
+	  InitialConditionSource  internal
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Phasenfehler"
+	  Position		  [275, 178, 320, 202]
+	  Orientation		  left
+	  Value			  "pi/3"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [125, 37, 155, 68]
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Schleifen-Filter"
+	  Position		  [280, 37, 335, 73]
+	  Numerator		  "[1]"
+	  Denominator		  "[0.1 1]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [160, 200, 190, 230]
+	  Floating		  on
+	  Location		  [20, 26, 344, 265]
+	  Open			  off
+	  Grid			  on
+	  TickLabels		  on
+	  ZoomMode		  on
+	  TimeRange		  "0.1"
+	  YMin			  "-5"
+	  YMax			  "5"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [335, 104, 365, 151]
+	  Orientation		  left
+	  NamePlacement		  alternate
+	  Inputs		  "++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [205, 120, 240, 155]
+	  Orientation		  left
+	  NamePlacement		  alternate
+	  Inputs		  "++"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "kvco"
+	  Position		  [405, 100, 435, 130]
+	  Orientation		  left
+	  NamePlacement		  alternate
+	  Gain			  "100"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Loop-Filter"
+	  Position		  [495, 48, 525, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  " VCO"
+	  Position		  [70, 180, 100, 195]
+	  Orientation		  down
+	  Port			  "2"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Phasenfehler"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Schleifen-Filter"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  Branch {
+	    DstBlock		    "Loop-Filter"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 60]
+	    DstBlock		    "kvco"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "kvco"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "2*pi*f0"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, -25]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Schleifen-Filter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Fcn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Eingang"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Fcn"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  Branch {
+	    DstBlock		    " VCO"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	}
+	Annotation {
+	  Position		  [363, 179]
+	  Text			  "VCO"
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "PLL1"
+      Ports		      [1, 2, 0, 0, 0]
+      Position		      [115, 158, 200, 222]
+      NamePlacement	      alternate
+      ShowPortLabels	      on
+      System {
+	Name			"PLL1"
+	Location		[115, 246, 706, 517]
+	Open			off
+	ToolBar			off
+	StatusBar		off
+	ScreenColor		white
+	PaperOrientation	landscape
+	PaperPositionMode	auto
+	PaperType		usletter
+	PaperUnits		inches
+	Block {
+	  BlockType		  Inport
+	  Name			  "Eingang"
+	  Position		  [45, 38, 75, 52]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "2*pi*f0"
+	  Position		  [425, 154, 515, 176]
+	  Orientation		  left
+	  Value			  "2*pi*100"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Fcn"
+	  Position		  [115, 123, 160, 157]
+	  Orientation		  left
+	  Expr			  "cos(u)"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [280, 110, 305, 150]
+	  Orientation		  left
+	  ExternalReset		  none
+	  InitialConditionSource  internal
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Phasenfehler"
+	  Position		  [275, 178, 320, 202]
+	  Orientation		  left
+	  Value			  "pi/3"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [125, 37, 155, 68]
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Schleifen-Filter"
+	  Position		  [280, 37, 335, 73]
+	  Numerator		  "[1]"
+	  Denominator		  "[0.1 1]"
+	}
+	Block {
+	  BlockType		  Scope
+	  Name			  "Scope"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [160, 200, 190, 230]
+	  Floating		  on
+	  Location		  [20, 26, 344, 265]
+	  Open			  off
+	  Grid			  on
+	  TickLabels		  on
+	  ZoomMode		  on
+	  TimeRange		  "0.1"
+	  YMin			  "-5"
+	  YMax			  "5"
+	  SaveToWorkspace	  off
+	  SaveName		  "ScopeData"
+	  LimitMaxRows		  on
+	  MaxRows		  "5000"
+	  Decimation		  "1"
+	  SampleInput		  off
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [335, 104, 365, 151]
+	  Orientation		  left
+	  NamePlacement		  alternate
+	  Inputs		  "++"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [205, 120, 240, 155]
+	  Orientation		  left
+	  NamePlacement		  alternate
+	  Inputs		  "++"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "kvco"
+	  Position		  [410, 100, 440, 130]
+	  Orientation		  left
+	  NamePlacement		  alternate
+	  Gain			  "100"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Loop-Filter"
+	  Position		  [495, 48, 525, 62]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  " VCO"
+	  Position		  [70, 180, 100, 195]
+	  Orientation		  down
+	  Port			  "2"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Fcn"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  Branch {
+	    Points		    [0, -80]
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    " VCO"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Eingang"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Fcn"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  DstBlock		  "Schleifen-Filter"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "2*pi*f0"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, -25]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "kvco"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Schleifen-Filter"
+	  SrcPort		  1
+	  Points		  [120, 0]
+	  Branch {
+	    Points		    [0, 60]
+	    DstBlock		    "kvco"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Loop-Filter"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Phasenfehler"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [363, 179]
+	  Text			  "VCO"
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out1"
+      Position		      [280, 58, 310, 72]
+      Port		      "1"
+      OutputWhenDisabled      held
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Out2"
+      Position		      [280, 98, 310, 112]
+      Port		      "2"
+      OutputWhenDisabled      held
+      InitialOutput	      "[]"
+    }
+    Line {
+      SrcBlock		      "In1"
+      SrcPort		      1
+      DstBlock		      "PLL"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PLL"
+      SrcPort		      1
+      DstBlock		      "Out1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "PLL"
+      SrcPort		      2
+      Points		      [10, 0; 0, 10]
+      DstBlock		      "Out2"
+      DstPort		      1
+    }
+  }
+}

@@ -1,0 +1,618 @@
+Model {
+  Name			  "s_abeob2"
+  Version		  2.00
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  WideVectorLines	  on
+  PaperOrientation	  landscape
+  StartTime		  "0.0"
+  StopTime		  "20"
+  Solver		  ode45
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.10"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "s_abeob2"
+    Location		    [21, 45, 777, 516]
+    Open		    on
+    ScreenColor		    white
+    Block {
+      BlockType		      StateSpace
+      Name		      " kq2, kq3, kq4"
+      Position		      [345, 360, 375, 390]
+      Orientation	      left
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "[0 kq2 kq3 kq4]"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "A"
+      Position		      [445, 135, 475, 165]
+      Orientation	      left
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "A"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "Ad"
+      Position		      [450, 285, 480, 315]
+      Orientation	      left
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "Ad"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "B"
+      Position		      [375, 76, 400, 104]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "B"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "Bd"
+      Position		      [320, 206, 345, 234]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "Bd"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "C"
+      Position		      [540, 86, 565, 114]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "C"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "Cd"
+      Position		      [540, 226, 565, 254]
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "Cd"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "F"
+      Position		      [95, 57, 120, 83]
+      Gain		      "F"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Integrator"
+      Position		      [470, 84, 495, 116]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "[x0]"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      StateSpace
+      Name		      "Ke"
+      Position		      [395, 320, 425, 350]
+      Orientation	      left
+      A			      "[]"
+      B			      "[]"
+      C			      "[]"
+      D			      "K"
+      X0		      "0"
+      MaskType		      "Matrix Gain"
+      MaskDescription	      "Matrix Gain."
+      MaskHelp		      "Multiplies input vector by entered matrix "
+			      "to produce output vector (y=Au)."
+      MaskPromptString	      "Gain matrix:"
+      MaskStyleString	      "edit"
+      MaskInitialization      "K = @1;"
+      MaskDisplay	      "disp('K')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      off
+      MaskIconUnits	      autoscale
+      MaskValueString	      "Ke"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Position		      [160, 230, 190, 260]
+      Floating		      off
+      Location		      [7, 221, 338, 541]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "23.600000"
+      YMin		      "-12.600000"
+      YMax		      "12.600000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step Input"
+      Position		      [85, 125, 105, 145]
+      Time		      "2.5"
+      Before		      "0"
+      After		      "1"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Position		      [430, 84, 450, 111]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Position		      [425, 224, 445, 251]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Position		      [600, 189, 620, 216]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum3"
+      Position		      [375, 214, 395, 241]
+      Inputs		      "++"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum4"
+      Position		      [260, 74, 280, 101]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum5"
+      Position		      [155, 64, 175, 91]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      UnitDelay
+      Name		      "Unit Delay"
+      Position		      [470, 221, 500, 259]
+      X0		      "0"
+      SampleTime	      "Ts"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold"
+      Position		      [622, 280, 658, 310]
+      Orientation	      down
+      SampleTime	      "Ts"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold1"
+      Position		      [305, 75, 345, 105]
+      SampleTime	      "Ts"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "kq1/C(1)"
+      Position		      [200, 67, 225, 93]
+      Gain		      "kq1/Cd(1)"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport"
+      Position		      [615, 90, 635, 110]
+      Port		      "1"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport1"
+      Position		      [380, 30, 400, 50]
+      Port		      "2"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      " kq2, kq3, kq4"
+      SrcPort		      1
+      Points		      [-100, 0; 0, -70]
+      Branch {
+	Points			[-95, 0]
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -210]
+	DstBlock		"Sum4"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "C"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, 95; -445, 0; 0, -110]
+	DstBlock		"Sum5"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Outport"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 95]
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Zero-Order\nHold1"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, -50]
+	DstBlock		"Outport1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 55; -55, 0; 0, 75]
+	DstBlock		"Bd"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"B"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum4"
+      SrcPort		      1
+      DstBlock		      "Zero-Order\nHold1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Step Input"
+      SrcPort		      1
+      Points		      [10, 0; 0, -30; -45, 0; 0, -35]
+      DstBlock		      "F"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "F"
+      SrcPort		      1
+      DstBlock		      "Sum5"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum5"
+      SrcPort		      1
+      DstBlock		      "kq1/C(1)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "kq1/C(1)"
+      SrcPort		      1
+      DstBlock		      "Sum4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Unit Delay"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	Points			[0, 135]
+	DstBlock		" kq2, kq3, kq4"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 0]
+	Branch {
+	  DstBlock		  "Cd"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 60]
+	  DstBlock		  "Ad"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Zero-Order\nHold"
+      SrcPort		      1
+      Points		      [0, 20]
+      DstBlock		      "Ke"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      Points		      [15, 0]
+      DstBlock		      "Zero-Order\nHold"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Bd"
+      SrcPort		      1
+      DstBlock		      "Sum3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ke"
+      SrcPort		      1
+      Points		      [-40, 0; 0, -100]
+      DstBlock		      "Sum3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum3"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cd"
+      SrcPort		      1
+      Points		      [10, 0; 0, -30]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Ad"
+      SrcPort		      1
+      Points		      [-40, 0; 0, -55]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Unit Delay"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Integrator"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"C"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"A"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "A"
+      SrcPort		      1
+      Points		      [-30, 0; 0, -45]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Integrator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "B"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [592, 252]
+      VerticalAlignment	      top
+      Text		      "y_"
+    }
+    Annotation {
+      Position		      [472, 47]
+      VerticalAlignment	      top
+      Text		      "Prozess"
+    }
+    Annotation {
+      Position		      [492, 62]
+      VerticalAlignment	      top
+      Text		      "x(0) <> 0"
+    }
+    Annotation {
+      Position		      [592, 132]
+      VerticalAlignment	      top
+      Text		      "y"
+    }
+    Annotation {
+      Position		      [477, 202]
+      VerticalAlignment	      top
+      Text		      "diskreter Beobachter"
+    }
+    Annotation {
+      Position		      [532, 292]
+      VerticalAlignment	      top
+      Text		      "x_"
+    }
+    Annotation {
+      Position		      [527, 152]
+      VerticalAlignment	      top
+      Text		      "x"
+    }
+    Annotation {
+      Position		      [577, 317]
+      VerticalAlignment	      top
+      Text		      "y-y_"
+    }
+  }
+}

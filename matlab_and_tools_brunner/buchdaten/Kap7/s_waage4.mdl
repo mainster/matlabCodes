@@ -1,0 +1,344 @@
+Model {
+  Name			  "S_waage4"
+  Version		  2.00
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  WideVectorLines	  off
+  PaperOrientation	  landscape
+  StartTime		  "0.0"
+  StopTime		  "0.25"
+  Solver		  ode15s
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "1e-4"
+  InitialStep		  "auto"
+  FixedStep		  "1e-4"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "S_waage4"
+    Location		    [40, 132, 738, 514]
+    Open		    on
+    ScreenColor		    white
+    Block {
+      BlockType		      Gain
+      Name		      "1/(mw+mx)"
+      Position		      [470, 127, 495, 153]
+      Gain		      "1/(mx+mw)"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "D"
+      Position		      [575, 230, 605, 260]
+      Orientation	      left
+      Gain		      "D"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      Position		      [430, 270, 460, 300]
+      Orientation	      left
+      Gain		      "-ks"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Int."
+      Position		      [530, 124, 555, 156]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Integrator
+      Name		      "Int. 1"
+      Position		      [585, 124, 610, 156]
+      ExternalReset	      none
+      InitialConditionSource      internal
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit      "inf"
+      LowerSaturationLimit      "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step Input"
+      Position		      [245, 65, 265, 85]
+      Time		      "0"
+      Before		      "0"
+      After		      "mx"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Position		      [360, 120, 380, 140]
+      Inputs		      "-+"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Position		      [415, 122, 435, 158]
+      Inputs		      "+--"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum2"
+      Position		      [235, 114, 255, 156]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Transfer Fcn"
+      Position		      [275, 113, 325, 157]
+      Numerator		      "[kg]"
+      Denominator	      "[L  R]"
+    }
+    Block {
+      BlockType		      ZeroPole
+      Name		      "Zero-Pole\nRegler"
+      Position		      [75, 104, 205, 146]
+      Zeros		      "[zr1; zr2; zr3]"
+      Poles		      "[0; pr2; pr3]"
+      Gain		      "[kr]"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "g"
+      Position		      [295, 62, 320, 88]
+      Gain		      "g"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "kg"
+      Position		      [255, 215, 285, 245]
+      Orientation	      left
+      Gain		      "kg"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "r"
+      Position		      [495, 175, 525, 205]
+      Orientation	      left
+      Gain		      "r"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport"
+      Position		      [580, 80, 600, 100]
+      Orientation	      left
+      Port		      "1"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport2"
+      Position		      [155, 60, 175, 80]
+      Orientation	      left
+      Port		      "2"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Outport1"
+      Position		      [325, 180, 345, 200]
+      Orientation	      left
+      Port		      "3"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      "Zero-Pole\nRegler"
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, -55]
+	DstBlock		"Outport2"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Sum2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, 30; 30, 0; 0, 25]
+	DstBlock		"Outport1"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Sum"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "kg"
+      SrcPort		      1
+      Points		      [-30, 0]
+      DstBlock		      "Sum2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      Points		      [-370, 0; 0, -160]
+      DstBlock		      "Zero-Pole\nRegler"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Int. 1"
+      SrcPort		      1
+      Points		      [10, 0]
+      Branch {
+	Points			[0, 145]
+	DstBlock		"Gain"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -50]
+	DstBlock		"Outport"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 105]
+	DstBlock		"D"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum2"
+      SrcPort		      1
+      DstBlock		      "Transfer Fcn"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "r"
+      SrcPort		      1
+      Points		      [-90, 0]
+      DstBlock		      "Sum1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Int."
+      SrcPort		      1
+      Points		      [5, 0]
+      Branch {
+	Points			[0, 90]
+	DstBlock		"kg"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 50]
+	DstBlock		"r"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Int. 1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "D"
+      SrcPort		      1
+      Points		      [-180, 0; 0, -105]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "1/(mw+mx)"
+      SrcPort		      1
+      DstBlock		      "Int."
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "1/(mw+mx)"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "g"
+      SrcPort		      1
+      Points		      [15, 0; 0, 50]
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Step Input"
+      SrcPort		      1
+      DstBlock		      "g"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [257, 47]
+      VerticalAlignment	      top
+      Text		      "mx"
+    }
+  }
+}

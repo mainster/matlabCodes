@@ -1,0 +1,1089 @@
+Model {
+  Name			  "S_torce3"
+  Version		  2.00
+  SimParamPage		  Solver
+  SampleTimeColors	  off
+  WideVectorLines	  on
+  PaperOrientation	  landscape
+  StartTime		  "0.0"
+  StopTime		  "200"
+  Solver		  ode5
+  RelTol		  "1e-3"
+  AbsTol		  "1e-6"
+  Refine		  "1"
+  MaxStep		  "0.1"
+  InitialStep		  "auto"
+  FixedStep		  "0.1"
+  MaxOrder		  5
+  OutputOption		  RefineOutputTimes
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  warning
+  MinStepSizeMsg	  warning
+  UnconnectedInputMsg	  warning
+  UnconnectedOutputMsg	  warning
+  UnconnectedLineMsg	  warning
+  ConsistencyChecking	  off
+  ZeroCross		  on
+  BlockDefaults {
+    Orientation		    right
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    NamePlacement	    normal
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    center
+    VerticalAlignment	    middle
+    ForegroundColor	    black
+    BackgroundColor	    white
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    normal
+    FontAngle		    normal
+  }
+  System {
+    Name		    "S_torce3"
+    Location		    [223, 81, 786, 413]
+    Open		    on
+    ScreenColor		    white
+    Block {
+      BlockType		      Relay
+      Name		      "Relay"
+      Position		      [280, 123, 310, 147]
+      OnSwitchValue	      "delta"
+      OffSwitchValue	      "-delta"
+      OnOutputValue	      "Qz_rmax"
+      OffOutputValue	      "Qz_rmin"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Position		      [365, 250, 395, 280]
+      Floating		      off
+      Location		      [0, 6, 331, 320]
+      Open		      off
+      Grid		      on
+      TickLabels	      on
+      ZoomMode		      on
+      TimeRange		      "204.800000"
+      YMin		      "-2.970000"
+      YMax		      "2.970000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Step
+      Name		      "Step Input"
+      Position		      [90, 105, 110, 125]
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Position		      [170, 107, 190, 143]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum1"
+      Position		      [220, 117, 240, 153]
+      Inputs		      "+-"
+    }
+    Block {
+      BlockType		      TransferFcn
+      Name		      "Transfer Fcn"
+      Position		      [235, 173, 295, 217]
+      Orientation	      left
+      Numerator		      "[1 ]"
+      Denominator	      "[Tz  1]"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "fuellst\n"
+      Position		      [360, 81, 405, 184]
+      ShowPortLabels	      off
+      System {
+	Name			"fuellst\n"
+	Location		[20, 42, 555, 547]
+	Open			off
+	ScreenColor		white
+	Block {
+	  BlockType		  Inport
+	  Name			  "in_1"
+	  Position		  [95, 85, 115, 105]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1/A2"
+	  Position		  [235, 92, 260, 118]
+	  Gain			  "1/A1"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1/A2_"
+	  Position		  [240, 217, 265, 243]
+	  Gain			  "1/A2"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "1/A3"
+	  Position		  [245, 347, 270, 373]
+	  Gain			  "1/A2"
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs"
+	  Position		  [300, 145, 330, 165]
+	  Orientation		  left
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs1"
+	  Position		  [295, 270, 325, 290]
+	  Orientation		  left
+	}
+	Block {
+	  BlockType		  Abs
+	  Name			  "Abs2"
+	  Position		  [290, 400, 320, 420]
+	  Orientation		  left
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  Position		  [305, 87, 325, 123]
+	  ExternalReset		  none
+	  InitialConditionSource  internal
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator1"
+	  Position		  [310, 212, 330, 248]
+	  ExternalReset		  none
+	  InitialConditionSource  internal
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator2"
+	  Position		  [310, 342, 330, 378]
+	  ExternalReset		  none
+	  InitialConditionSource  internal
+	  InitialCondition	  "0"
+	  LimitOutput		  off
+	  UpperSaturationLimit	  "inf"
+	  LowerSaturationLimit	  "-inf"
+	  ShowSaturationPort	  off
+	  ShowStatePort		  off
+	  AbsoluteTolerance	  "auto"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Position		  [235, 144, 275, 191]
+	  Orientation		  left
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Position		  [240, 268, 280, 317]
+	  Orientation		  left
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Position		  [240, 399, 275, 446]
+	  Orientation		  left
+	  Inputs		  "2"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sign"
+	  Position		  [335, 165, 355, 195]
+	  Orientation		  left
+	  ShowPortLabels	  off
+	  MaskType		  "Sign"
+	  MaskDescription	  "y = sign(x)"
+	  MaskHelp		  "Sign Function:\\n\\t\\t\\ty = 1 if x "
+				  "> 0\\n\\t\\t\\ty = 0 if x = 0\\n\\t\\t\\ty "
+				  "= -1 if x < 0"
+	  MaskDisplay		  "plot(-50,-50,50,50,[-50,50],[0,0],[0,0],[-50"
+				  ",50],[-40,0],[-30,-30],[0,40],[30,30])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  off
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "Sign"
+	    Location		    [159, 417, 467, 586]
+	    Open		    off
+	    ScreenColor		    white
+	    Block {
+	      BlockType		      Inport
+	      Name		      "in_1"
+	      Position		      [35, 30, 55, 50]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [65, 105, 85, 125]
+	      Value		      "0"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator"
+	      Position		      [140, 32, 170, 63]
+	      Operator		      >
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator1"
+	      Position		      [140, 92, 170, 123]
+	      Operator		      <
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Position		      [215, 64, 235, 91]
+	      Inputs		      "+-"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "out_1"
+	      Position		      [265, 70, 285, 90]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "out_1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 20]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator1"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -25]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -60]
+		DstBlock		"Relational\nOperator"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "in_1"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 60]
+		DstBlock		"Relational\nOperator1"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sign1"
+	  Position		  [330, 290, 350, 320]
+	  Orientation		  left
+	  ShowPortLabels	  off
+	  MaskType		  "Sign"
+	  MaskDescription	  "y = sign(x)"
+	  MaskHelp		  "Sign Function:\\n\\t\\t\\ty = 1 if x "
+				  "> 0\\n\\t\\t\\ty = 0 if x = 0\\n\\t\\t\\ty "
+				  "= -1 if x < 0"
+	  MaskDisplay		  "plot(-50,-50,50,50,[-50,50],[0,0],[0,0],[-50"
+				  ",50],[-40,0],[-30,-30],[0,40],[30,30])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  off
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "Sign1"
+	    Location		    [159, 417, 467, 586]
+	    Open		    off
+	    ScreenColor		    white
+	    Block {
+	      BlockType		      Inport
+	      Name		      "in_1"
+	      Position		      [35, 30, 55, 50]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [65, 105, 85, 125]
+	      Value		      "0"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator"
+	      Position		      [140, 32, 170, 63]
+	      Operator		      >
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator1"
+	      Position		      [140, 92, 170, 123]
+	      Operator		      <
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Position		      [215, 64, 235, 91]
+	      Inputs		      "+-"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "out_1"
+	      Position		      [265, 70, 285, 90]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "out_1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 20]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator1"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -25]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -60]
+		DstBlock		"Relational\nOperator"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "in_1"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 60]
+		DstBlock		"Relational\nOperator1"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Sign2"
+	  Position		  [330, 420, 350, 450]
+	  Orientation		  left
+	  ShowPortLabels	  off
+	  MaskType		  "Sign"
+	  MaskDescription	  "y = sign(x)"
+	  MaskHelp		  "Sign Function:\\n\\t\\t\\ty = 1 if x "
+				  "> 0\\n\\t\\t\\ty = 0 if x = 0\\n\\t\\t\\ty "
+				  "= -1 if x < 0"
+	  MaskDisplay		  "plot(-50,-50,50,50,[-50,50],[0,0],[0,0],[-50"
+				  ",50],[-40,0],[-30,-30],[0,40],[30,30])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  off
+	  MaskIconUnits		  autoscale
+	  System {
+	    Name		    "Sign2"
+	    Location		    [159, 417, 467, 586]
+	    Open		    off
+	    ScreenColor		    white
+	    Block {
+	      BlockType		      Inport
+	      Name		      "in_1"
+	      Position		      [35, 30, 55, 50]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [65, 105, 85, 125]
+	      Value		      "0"
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator"
+	      Position		      [140, 32, 170, 63]
+	      Operator		      >
+	    }
+	    Block {
+	      BlockType		      RelationalOperator
+	      Name		      "Relational\nOperator1"
+	      Position		      [140, 92, 170, 123]
+	      Operator		      <
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      Position		      [215, 64, 235, 91]
+	      Inputs		      "+-"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "out_1"
+	      Position		      [265, 70, 285, 90]
+	      Port		      "1"
+	      OutputWhenDisabled      held
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "out_1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, 20]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Relational\nOperator1"
+	      SrcPort		      1
+	      Points		      [10, 0; 0, -25]
+	      DstBlock		      "Sum"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, -60]
+		DstBlock		"Relational\nOperator"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "in_1"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Relational\nOperator"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 60]
+		DstBlock		"Relational\nOperator1"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  Position		  [175, 87, 200, 118]
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Position		  [175, 212, 200, 243]
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Position		  [180, 342, 205, 373]
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Position		  [390, 97, 415, 128]
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum5"
+	  Position		  [390, 222, 415, 253]
+	  Inputs		  "+-"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "toricelli_1"
+	  Position		  [170, 160, 210, 180]
+	  Orientation		  left
+	  Expr			  "A12*u(2)*sqrt(2*g*u(1))"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "toricelli_2"
+	  Position		  [180, 415, 220, 435]
+	  Orientation		  left
+	  Expr			  "A12*u(2)*sqrt(2*g*u(1))"
+	}
+	Block {
+	  BlockType		  Fcn
+	  Name			  "toricelli_4"
+	  Position		  [175, 285, 215, 305]
+	  Orientation		  left
+	  Expr			  "A12*u(2)*sqrt(2*g*u(1))"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_1"
+	  Position		  [440, 50, 460, 70]
+	  Port			  "1"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_3"
+	  Position		  [445, 190, 465, 210]
+	  Port			  "2"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_5"
+	  Position		  [445, 350, 465, 370]
+	  Port			  "3"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_2"
+	  Position		  [95, 160, 115, 180]
+	  Orientation		  left
+	  Port			  "4"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_4"
+	  Position		  [100, 285, 120, 305]
+	  Orientation		  left
+	  Port			  "5"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "out_6"
+	  Position		  [100, 415, 120, 435]
+	  Orientation		  left
+	  Port			  "6"
+	  OutputWhenDisabled	  held
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "1/A2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "1/A2_"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "1/A3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/A2"
+	  SrcPort		  1
+	  DstBlock		  "Integrator"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/A2_"
+	  SrcPort		  1
+	  DstBlock		  "Integrator1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "1/A3"
+	  SrcPort		  1
+	  DstBlock		  "Integrator2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator1"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "Sum5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -30]
+	    Branch {
+	      Points		      [0, -80]
+	      DstBlock		      "Sum3"
+	      DstPort		      2
+	    }
+	    Branch {
+	      DstBlock		      "out_3"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Integrator2"
+	  SrcPort		  1
+	  Points		  [35, 0]
+	  Branch {
+	    DstBlock		    "out_5"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -115]
+	    DstBlock		    "Sum5"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Abs2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 75]
+	    DstBlock		    "Sign2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "toricelli_1"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    DstBlock		    "out_2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 50]
+	    DstBlock		    "Sum1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  Points		  [0, 0]
+	  Branch {
+	    Points		    [10, 0; 0, 40]
+	    DstBlock		    "Abs"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [10, 0; 0, 65]
+	    DstBlock		    "Sign"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Abs"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "toricelli_1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sign"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "toricelli_4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sign1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum5"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, 40]
+	  Branch {
+	    Points		    [0, 25]
+	    DstBlock		    "Sign1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    DstBlock		    "Abs1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Abs1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "toricelli_4"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  Branch {
+	    DstBlock		    "out_4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Sum1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 55]
+	    DstBlock		    "Sum2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Abs2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "toricelli_2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sign2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "toricelli_2"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  Branch {
+	    DstBlock		    "out_6"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -60]
+	    DstBlock		    "Sum2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "in_1"
+	  SrcPort		  1
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [20, 0]
+	  Branch {
+	    DstBlock		    "Sum3"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -45]
+	    DstBlock		    "out_1"
+	    DstPort		    1
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "h1"
+      Position		      [445, 35, 465, 55]
+      Port		      "1"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "h2"
+      Position		      [470, 70, 490, 90]
+      Port		      "2"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "h3_"
+      Position		      [475, 115, 495, 135]
+      Port		      "3"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Q12"
+      Position		      [480, 155, 500, 175]
+      Port		      "4"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Q23"
+      Position		      [480, 200, 500, 220]
+      Port		      "5"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Q30"
+      Position		      [455, 240, 475, 260]
+      Port		      "6"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Block {
+      BlockType		      Outport
+      Name		      "Qz"
+      Position		      [380, 45, 400, 65]
+      Port		      "7"
+      OutputWhenDisabled      held
+      InitialOutput	      "0"
+    }
+    Line {
+      SrcBlock		      "fuellst\n"
+      SrcPort		      1
+      Points		      [10, 0; 0, -50]
+      DstBlock		      "h1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuellst\n"
+      SrcPort		      2
+      Points		      [45, 0]
+      DstBlock		      "h2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuellst\n"
+      SrcPort		      4
+      Points		      [40, 0; 0, 25]
+      DstBlock		      "Q12"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuellst\n"
+      SrcPort		      5
+      Points		      [15, 0; 0, 55]
+      DstBlock		      "Q23"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuellst\n"
+      SrcPort		      6
+      Points		      [5, 0; 0, 80]
+      DstBlock		      "Q30"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "fuellst\n"
+      SrcPort		      3
+      Points		      [25, 0]
+      Branch {
+	Points			[0, 115; -115, 0]
+	Branch {
+	  Points		  [0, 25]
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [-185, 0; 0, -105]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	DstBlock		"h3_"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Step Input"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Relay"
+      SrcPort		      1
+      Points		      [15, 0]
+      Branch {
+	DstBlock		"fuellst\n"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -80]
+	DstBlock		"Qz"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 60]
+	DstBlock		"Transfer Fcn"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Sum1"
+      SrcPort		      1
+      DstBlock		      "Relay"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      DstBlock		      "Sum1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Transfer Fcn"
+      SrcPort		      1
+      Points		      [-30, 0; 0, -50]
+      DstBlock		      "Sum1"
+      DstPort		      2
+    }
+    Annotation {
+      Position		      [272, 97]
+      VerticalAlignment	      top
+      Text		      "Zeipunktregler"
+    }
+    Annotation {
+      Position		      [327, 207]
+      VerticalAlignment	      top
+      Text		      "h3"
+    }
+  }
+}

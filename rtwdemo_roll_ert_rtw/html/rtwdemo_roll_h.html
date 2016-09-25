@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>RTW Report - rtwdemo_roll.h</title>
+<style> .LN { font-style: italic; color: #888888 } </style>
+<style> .CT { font-style: italic; color: #117755 } </style>
+<style> .PP { font-style: bold;   color: #992211 } </style>
+<style> .KW { font-style: bold;   color: #112266 } </style>
+<style> .DT { font-style: bold;   color: #112266 } </style>
+<link rel="stylesheet" type="text/css" href="rtwreport.css"></link><script language="JavaScript" type="text/javascript" src="rtwreport_utils.js"></script>
+<SCRIPT type="text/javascript" src="rtwannotate.js"></SCRIPT>
+</head>
+<body bgcolor="#eeeeee" text="#1122aa" onload="try {if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window.document); else local_onload();}} catch(err) {};if (typeof rtwannotate === 'function') {rtwannotate('rtwdemo_roll_h_cov.xml');}">
+<p>
+<table border="0" cellspacing="0" cellpadding="6" width="100%%" height="100%%"><tr><td width="100%%" valign="top" bgcolor="#ffffff">
+<h4>File: <a href="../rtwdemo_roll.h" target="rtwreport_document_frame" id="linkToText_plain">rtwdemo_roll.h</a></h4>
+<pre id="RTWcode">
+<span><a class="LN" name="1">    1   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="2">    2   </a><span class="CT"> * File: rtwdemo_roll.h</span>
+</span><span><a class="LN" name="3">    3   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="4">    4   </a><span class="CT"> * Code generated for Simulink model 'rtwdemo_roll'.</span>
+</span><span><a class="LN" name="5">    5   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="6">    6   </a><span class="CT"> * Model version                  : 1.31</span>
+</span><span><a class="LN" name="7">    7   </a><span class="CT"> * Simulink Coder version         : 8.4 (R2013a) 13-Feb-2013</span>
+</span><span><a class="LN" name="8">    8   </a><span class="CT"> * TLC version                    : 8.4 (Jan 18 2013)</span>
+</span><span><a class="LN" name="9">    9   </a><span class="CT"> * C/C++ source code generated on : Sun Jul 20 05:59:20 2014</span>
+</span><span><a class="LN" name="10">   10   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="11">   11   </a><span class="CT"> * Target selection: ert.tlc</span>
+</span><span><a class="LN" name="12">   12   </a><span class="CT"> * Embedded hardware selection: Specified</span>
+</span><span><a class="LN" name="13">   13   </a><span class="CT"> * Code generation objectives: Unspecified</span>
+</span><span><a class="LN" name="14">   14   </a><span class="CT"> * Validation result: Not run</span>
+</span><span><a class="LN" name="15">   15   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="16">   16   </a>
+</span><span><a class="LN" name="17">   17   </a><font color="#992211">#</font><span class="PP">ifndef</span> RTW_HEADER_rtwdemo_roll_h_
+</span><span><a class="LN" name="18">   18   </a><font color="#992211">#</font><span class="PP">define</span> RTW_HEADER_rtwdemo_roll_h_
+</span><span><a class="LN" name="19">   19   </a><font color="#992211">#</font><span class="PP">ifndef</span> rtwdemo_roll_COMMON_INCLUDES_
+</span><span><a class="LN" name="20">   20   </a><font color="#992211">#</font> <span class="PP">define</span> rtwdemo_roll_COMMON_INCLUDES_
+</span><span><a class="LN" name="21">   21   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&lt;math.h&gt;</font>
+</span><span><a class="LN" name="22">   22   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwtypes.h&quot;</font>
+</span><span><a class="LN" name="23">   23   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* rtwdemo_roll_COMMON_INCLUDES_ */</span>
+</span><span><a class="LN" name="24">   24   </a>
+</span><span><a class="LN" name="25">   25   </a><span class="CT">/* Child system includes */</span>
+</span><span><a class="LN" name="26">   26   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwdemo_heading.h&quot;</font>
+</span><span><a class="LN" name="27">   27   </a><font color="#992211">#</font><span class="PP">include</span> <font color="#992211">&quot;rtwdemo_attitude.h&quot;</font>
+</span><span><a class="LN" name="28">   28   </a>
+</span><span><a class="LN" name="29">   29   </a><span class="CT">/* Macros for accessing real-time model data structure */</span>
+</span><span><a class="LN" name="30">   30   </a><font color="#992211">#</font><span class="PP">ifndef</span> rtmGetErrorStatus
+</span><span><a class="LN" name="31">   31   </a><font color="#992211">#</font> <span class="PP">define</span> rtmGetErrorStatus(rtm)        ((rtm)-&gt;errorStatus)
+</span><span><a class="LN" name="32">   32   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="33">   33   </a>
+</span><span><a class="LN" name="34">   34   </a><font color="#992211">#</font><span class="PP">ifndef</span> rtmSetErrorStatus
+</span><span><a class="LN" name="35">   35   </a><font color="#992211">#</font> <span class="PP">define</span> rtmSetErrorStatus(rtm, val)   ((rtm)-&gt;errorStatus = (val))
+</span><span><a class="LN" name="36">   36   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="37">   37   </a>
+</span><span><a class="LN" name="38">   38   </a><font color="#992211">#</font><span class="PP">ifndef</span> rtmGetErrorStatusPointer
+</span><span><a class="LN" name="39">   39   </a><font color="#992211">#</font> <span class="PP">define</span> rtmGetErrorStatusPointer(rtm) ((const <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_char_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_char_T');" target="rtwreport_document_frame"><font color="#1122aa">char_T</font></a> **)(&amp;((rtm)-&gt;errorStatus)))
+</span><span><a class="LN" name="40">   40   </a><font color="#992211">#</font><span class="PP">endif</span>
+</span><span><a class="LN" name="41">   41   </a>
+</span><span><a class="LN" name="42">   42   </a><span class="CT">/* Forward declaration for rtModel */</span>
+</span><span><a class="LN" name="43">   43   </a><span class="KW">typedef</span> <span class="KW">struct</span> tag_RTM <a name="type_RT_MODEL">RT_MODEL</a>;
+</span><span><a class="LN" name="44">   44   </a>
+</span><span><a class="LN" name="45">   45   </a><span class="CT">/* Block signals and states (auto storage) for system '<a href="matlab:rtwprivate('code2model','rtwdemo_roll')" name="code2model"><font color="#117755"><i>&lt;Root&gt;</i></font></a>' */</span>
+</span><span><a class="LN" name="46">   46   </a><span class="KW">typedef</span> <span class="KW">struct</span> <b>{</b>
+</span><span><a class="LN" name="47">   47   </a>  rtwdemo_attitude_rtMdlrefDWork BasicRollMode_DWORK1;<span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:9')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/BasicRollMode</i></font></a>' */</span>
+</span><span><a class="LN" name="48">   48   </a>  rtwdemo_heading_rtMdlrefDWork HeadingMode_DWORK1;<span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:11')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/HeadingMode</i></font></a>' */</span>
+</span><span><a class="LN" name="49">   49   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> FixPtUnitDelay1_DSTATE;       <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:19:5')" name="code2model"><font color="#117755"><i>&lt;S2&gt;/FixPt Unit Delay1</i></font></a>' */</span>
+</span><span><a class="LN" name="50">   50   </a><b>}</b> <a name="type_D_Work">D_Work</a>;
+</span><span><a class="LN" name="51">   51   </a>
+</span><span><a class="LN" name="52">   52   </a><span class="CT">/* External inputs (root inport signals with auto storage) */</span>
+</span><span><a class="LN" name="53">   53   </a><span class="KW">typedef</span> <span class="KW">struct</span> <b>{</b>
+</span><span><a class="LN" name="54">   54   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> Phi;                          <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:1')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Phi</i></font></a>' */</span>
+</span><span><a class="LN" name="55">   55   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> Psi;                          <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:2')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Psi</i></font></a>' */</span>
+</span><span><a class="LN" name="56">   56   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> P;                            <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:3')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/P</i></font></a>' */</span>
+</span><span><a class="LN" name="57">   57   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> TAS;                          <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:4')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/TAS</i></font></a>' */</span>
+</span><span><a class="LN" name="58">   58   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> AP_Eng;                    <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:5')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/AP_Eng</i></font></a>' */</span>
+</span><span><a class="LN" name="59">   59   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="rtwreport_document_frame"><font color="#1122aa">boolean_T</font></a> HDG_Mode;                  <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:6')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/HDG_Mode</i></font></a>' */</span>
+</span><span><a class="LN" name="60">   60   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> HDG_Ref;                      <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:7')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/HDG_Ref</i></font></a>' */</span>
+</span><span><a class="LN" name="61">   61   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> Turn_Knob;                    <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:8')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Turn_Knob</i></font></a>' */</span>
+</span><span><a class="LN" name="62">   62   </a><b>}</b> <a name="type_ExternalInputs">ExternalInputs</a>;
+</span><span><a class="LN" name="63">   63   </a>
+</span><span><a class="LN" name="64">   64   </a><span class="CT">/* External outputs (root outports fed by signals with auto storage) */</span>
+</span><span><a class="LN" name="65">   65   </a><span class="KW">typedef</span> <span class="KW">struct</span> <b>{</b>
+</span><span><a class="LN" name="66">   66   </a>  <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_real_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real_T');" target="rtwreport_document_frame"><font color="#1122aa">real_T</font></a> Ail_Cmd;                      <span class="CT">/* '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:33')" name="code2model"><font color="#117755"><i>&lt;Root&gt;/Ail_Cmd</i></font></a>' */</span>
+</span><span><a class="LN" name="67">   67   </a><b>}</b> <a name="type_ExternalOutputs">ExternalOutputs</a>;
+</span><span><a class="LN" name="68">   68   </a>
+</span><span><a class="LN" name="69">   69   </a><span class="CT">/* Real-time Model Data Structure */</span>
+</span><span><a class="LN" name="70">   70   </a><span class="KW">struct</span> tag_RTM <b>{</b>
+</span><span><a class="LN" name="71">   71   </a>  <span class="DT">const</span> <a href="../../slprj/ert/_sharedutils/html/rtwtypes_h.html#type_char_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_char_T');" target="rtwreport_document_frame"><font color="#1122aa">char_T</font></a> * <span class="DT">volatile</span> errorStatus;
+</span><span><a class="LN" name="72">   72   </a><b>}</b>;
+</span><span><a class="LN" name="73">   73   </a>
+</span><span><a class="LN" name="74">   74   </a><span class="CT">/* Block signals and states (auto storage) */</span>
+</span><span><a class="LN" name="75">   75   </a><span class="DT">extern</span> <a href="#type_D_Work" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_D_Work');" target="rtwreport_document_frame"><font color="#1122aa">D_Work</font></a> <a href="rtwdemo_roll_c.html#var_rtDWork" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" target="rtwreport_document_frame"><font color="#1122aa">rtDWork</font></a>;
+</span><span><a class="LN" name="76">   76   </a>
+</span><span><a class="LN" name="77">   77   </a><span class="CT">/* External inputs (root inport signals with auto storage) */</span>
+</span><span><a class="LN" name="78">   78   </a><span class="DT">extern</span> <a href="#type_ExternalInputs" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExternalInputs');" target="rtwreport_document_frame"><font color="#1122aa">ExternalInputs</font></a> <a href="rtwdemo_roll_c.html#var_rtU" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtU');" target="rtwreport_document_frame"><font color="#1122aa">rtU</font></a>;
+</span><span><a class="LN" name="79">   79   </a>
+</span><span><a class="LN" name="80">   80   </a><span class="CT">/* External outputs (root outports fed by signals with auto storage) */</span>
+</span><span><a class="LN" name="81">   81   </a><span class="DT">extern</span> <a href="#type_ExternalOutputs" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_ExternalOutputs');" target="rtwreport_document_frame"><font color="#1122aa">ExternalOutputs</font></a> <a href="rtwdemo_roll_c.html#var_rtY" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtY');" target="rtwreport_document_frame"><font color="#1122aa">rtY</font></a>;
+</span><span><a class="LN" name="82">   82   </a>
+</span><span><a class="LN" name="83">   83   </a><span class="CT">/* Model entry point functions */</span>
+</span><span><a class="LN" name="84">   84   </a><span class="DT">extern</span> <span class="DT">void</span> <a href="rtwdemo_roll_c.html#fcn_rtwdemo_roll_initialize" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_rtwdemo_roll_initialize');" target="rtwreport_document_frame"><font color="#1122aa">rtwdemo_roll_initialize</font></a>(<span class="DT">void</span>);
+</span><span><a class="LN" name="85">   85   </a><span class="DT">extern</span> <span class="DT">void</span> <a href="rtwdemo_roll_c.html#fcn_rtwdemo_roll_step" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_rtwdemo_roll_step');" target="rtwreport_document_frame"><font color="#1122aa">rtwdemo_roll_step</font></a>(<span class="DT">void</span>);
+</span><span><a class="LN" name="86">   86   </a>
+</span><span><a class="LN" name="87">   87   </a><span class="CT">/* Real-time Model object */</span>
+</span><span><a class="LN" name="88">   88   </a><span class="DT">extern</span> <a href="#type_RT_MODEL" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_RT_MODEL');" target="rtwreport_document_frame"><font color="#1122aa">RT_MODEL</font></a> *<span class="DT">const</span> <a href="rtwdemo_roll_c.html#var_rtM" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtM');" target="rtwreport_document_frame"><font color="#1122aa">rtM</font></a>;
+</span><span><a class="LN" name="89">   89   </a>
+</span><span><a class="LN" name="90">   90   </a><span class="CT">/*-</span>
+</span><span><a class="LN" name="91">   91   </a><span class="CT"> * The generated code includes comments that allow you to trace directly</span>
+</span><span><a class="LN" name="92">   92   </a><span class="CT"> * back to the appropriate location in the model.  The basic format</span>
+</span><span><a class="LN" name="93">   93   </a><span class="CT"> * is &lt;system&gt;/block_name, where system is the system number (uniquely</span>
+</span><span><a class="LN" name="94">   94   </a><span class="CT"> * assigned by Simulink) and block_name is the name of the block.</span>
+</span><span><a class="LN" name="95">   95   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="96">   96   </a><span class="CT"> * Use the MATLAB hilite_system command to trace the generated code back</span>
+</span><span><a class="LN" name="97">   97   </a><span class="CT"> * to the model.  For example,</span>
+</span><span><a class="LN" name="98">   98   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="99">   99   </a><span class="CT"> * hilite_system('&lt;S3&gt;')    - opens system 3</span>
+</span><span><a class="LN" name="100">  100   </a><span class="CT"> * hilite_system('&lt;S3&gt;/Kp') - opens and selects block Kp which resides in S3</span>
+</span><span><a class="LN" name="101">  101   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="102">  102   </a><span class="CT"> * Here is the system hierarchy for this model</span>
+</span><span><a class="LN" name="103">  103   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="104">  104   </a><span class="CT"> * '<a href="matlab:rtwprivate('code2model','rtwdemo_roll')" name="code2model"><font color="#117755"><i>&lt;Root&gt;</i></font></a>' : 'rtwdemo_roll'</span>
+</span><span><a class="LN" name="105">  105   </a><span class="CT"> * '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:14')" name="code2model"><font color="#117755"><i>&lt;S1&gt;</i></font></a>'   : 'rtwdemo_roll/RollAngleReference'</span>
+</span><span><a class="LN" name="106">  106   </a><span class="CT"> * '<a href="matlab:rtwprivate('code2model','rtwdemo_roll:19')" name="code2model"><font color="#117755"><i>&lt;S2&gt;</i></font></a>'   : 'rtwdemo_roll/RollAngleReference/LatchPhi'</span>
+</span><span><a class="LN" name="107">  107   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="108">  108   </a>
+</span><span><a class="LN" name="109">  109   </a><span class="CT">/*-</span>
+</span><span><a class="LN" name="110">  110   </a><span class="CT"> * Requirements for '<a href="matlab:rtwprivate('code2model','rtwdemo_roll')" name="code2model"><font color="#117755"><i>&lt;Root&gt;</i></font></a>': rtwdemo_roll</span>
+</span><span><a class="LN" name="111">  111   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="112">  112   </a><font color="#992211">#</font><span class="PP">endif</span>                                 <span class="CT">/* RTW_HEADER_rtwdemo_roll_h_ */</span>
+</span><span><a class="LN" name="113">  113   </a>
+</span><span><a class="LN" name="114">  114   </a><span class="CT">/*</span>
+</span><span><a class="LN" name="115">  115   </a><span class="CT"> * File trailer for generated code.</span>
+</span><span><a class="LN" name="116">  116   </a><span class="CT"> *</span>
+</span><span><a class="LN" name="117">  117   </a><span class="CT"> * [EOF]</span>
+</span><span><a class="LN" name="118">  118   </a><span class="CT"> */</span>
+</span><span><a class="LN" name="119">  119   </a>
+</span></pre>
+</td></tr></table>
+</p>
+</body>
+</html>

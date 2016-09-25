@@ -1,0 +1,36 @@
+function [m, thd, SWR, rloss] = smith_ch_calc(x, varargin) 
+%% usage:
+% [m1, d1, VSWR1, Rloss1] = smith_ch_calc(50, 50)
+% [m2, d2, VSWR2, Rloss2] = smith_ch_calc(50, 100 + 50j)
+% [m3, d3, VSWR3, Rloss3] = smith_ch_calc(50, 30 - j*47)
+
+if nargin >= 2
+    % Normalize given impedance
+    Z0 = x;
+    zl = varargin{1}/Z0; 
+end
+
+if nargin == 1  % bereits normierte Zl
+    zl=x;
+end
+    
+% Draw appropriate chart
+smith_draw_example_chart 
+
+
+
+% Calculate reflection, magnitude and angle
+g = (zl - 1)/(zl + 1);
+m = abs(g);
+th = angle(g); 
+
+% Plot appropriate point
+polar(th, m, 'r*') 
+
+% Change radians to degrees
+thd = th * 180/pi; 
+
+% Calculate VSWR and return loss.
+% We can add epsilon to magnitude, to avoid div by 0 or log(0)
+SWR = (1 + m)/(1 - m + eps);
+rloss = -20 * log10(m + eps);

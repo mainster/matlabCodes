@@ -1,0 +1,76 @@
+.header {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.mainlink {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.mainlinkdesc {
+	COLOR: #074b01; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.actionlink {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.copyright {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 6pt
+}
+.inputdesc {
+	COLOR: #074b01; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.bookdesc {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+.importantlink {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+.subheader {
+	COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.defaulttxt {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+; color: #000000
+}
+.anzeige {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.navigation {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt
+}
+.deftxtgr {
+	COLOR: #4abdf0; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.deftxtred {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.inputbox {
+	BORDER-BOTTOM: #074b01 1px inset; BORDER-LEFT: #074b01 1px inset; BORDER-RIGHT: #074b01 1px inset; BORDER-TOP: #074b01 1px inset
+}
+.autor {
+	COLOR: #074b01; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+.autordesc {
+	COLOR: #074b01; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.notice {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.important {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+A {
+	COLOR: #074b01; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #dd0202; TEXT-DECORATION: none
+}
+.subnav {
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 8pt
+}
+.partner {
+	COLOR: #074b01; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt; FONT-WEIGHT: bold
+}
+.error {
+	COLOR: #dd0202; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.message {
+	COLOR: #074b01; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}

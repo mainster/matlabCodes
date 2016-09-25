@@ -1,0 +1,8 @@
+Dieser Ordner enthält die Informationen, die Sie zum Installieren
+von Internet Explorer 5 benötigen.
+Sobald Internet Explorer 5 auf Ihrem System installiert ist und
+einwandfrei ausgeführt wird, können Sie diesen Ordner entfernen,
+um Speicherplatz zu sparen.
+Wenn Sie diesen Ordner entfernen, das Produkt jedoch später neu
+installieren möchten, müssen Sie es erneut von der Website
+downloaden.

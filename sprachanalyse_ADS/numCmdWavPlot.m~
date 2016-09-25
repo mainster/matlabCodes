@@ -1,0 +1,39 @@
+PATHA = '/home/mainster/CODES_local/matlab_workspace/wavefiles/14_56_53/backup2';
+clear pl* suf*
+
+fprintf('load all *.wav files and plot\n\n')
+
+MAGNITUDE = 'loglin';   % log oder lin oder loglin
+
+l = struct2cell(dir(PATHA));
+idx = find(~cellfun(@isempty, strfind(l(1,:),'.wav')));
+N = length(idx);
+
+f39 = figure(39); clf;
+SUB = 330;
+   
+for k=1:9
+    speech{k}=audioread(fullfile(PATHA, l{1,idx(k)}));
+%     speech{k}  = eval( strrep([CMD '([PATHB, ''wav_numberB_%i.wav''])'], '%i', num2str(k)));
+    figure(f39);
+    suf(k) = subplot(SUB+k); hold all
+    if strcmp(MAGNITUDE,'lin')
+        plf(k) = plot(speech{k},'LineWidth',1); grid on;
+    else
+        if strcmp(MAGNITUDE,'log')
+            plf(k) = plot(20*log10(abs(speech{k})),'LineWidth',1); grid on;
+        else
+            if strcmp(MAGNITUDE,'loglin')
+                xx=[0:length(speech{k})-1];
+                plfa(k,:) = plotyy(xx,20*log10(abs(speech{k})),...
+                    xx,speech{k}); grid on;
+                set(plfa(1),'YTick',linspace(min( get(plfa(1),'YTick')),...
+                    max( get(plfa(1),'YTick')),11));
+            else
+               warning('Magnitude linear or log scaling?') 
+            end
+        end
+    end
+    title(sprintf('Nummer: %i',k))
+        
+end

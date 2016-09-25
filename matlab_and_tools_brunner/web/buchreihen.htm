@@ -1,0 +1,292 @@
+<html>
+<head>
+<title>AW</title>
+
+<style type="text/css">
+<!--
+.babytd {  font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #FF9900}
+.babytd a:link {  color: #FF9900; text-decoration: none}
+.babytd a:visited {  color: #666666}
+.babytd a:hover {  color: #333333; text-decoration: underline}
+.babytd a:active {  color: #333333; text-decoration: underline}
+.babytd a:link {  color: #FF9900; text-decoration: none}
+.babytd a:visited {  color: #666666; text-decoration: none}
+.babytd a:hover {  color: #333333; text-decoration: underline}
+.babytd a:active {  color: #333333; text-decoration: underline}
+.orangehead {  font-family: Arial, Helvetica, sans-serif; font-size: 40px; color: #FFBE63; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-weight: normal}
+.grayhead { font-family: Arial, Helvetica, sans-serif; font-size: 40px; color: #CCCCCC; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px}
+.graytext { font-family: Georgia, "Times New Roman", Times, serif; font-size: 16px; color: #999999; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px }
+-->
+  
+#divUpControl{position:absolute; width:478; left:55; top:40; z-index:1; text-align: right} 
+#divDownControl{position:absolute; width:478; left:55; top:435; z-index:1; text-align: right} 
+#divContainer{position:absolute; width:478; height:220; overflow:hidden; top:112; left:60; clip:rect(0,478,220,0); visibility:hidden} 
+#divContent{position:absolute; top:0; left:0} 
+
+</style>
+
+<script language="JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function P7AniMagic(el, x, y, a, b, c, s) { //v2.5 PVII
+ var g,elo=el,f="",m=false,d="";x=parseInt(x);y=parseInt(y);
+ var t = 'g.p7Magic = setTimeout("P7AniMagic(\''+elo+'\','; 
+ if ((g=MM_findObj(el))!=null) {d=(document.layers)?g:g.style;}else{return;}
+ if (parseInt(s)>0) {eval(t+x+','+y+','+a+','+b+','+c+',0)",' + s+')');return;}
+ var xx=(parseInt(d.left))?parseInt(d.left):0;
+ var yy=(parseInt(d.top))?parseInt(d.top):0;
+ if(parseInt(c)==1) {x+=xx;y+=yy;m=true;c=0;}
+ else if (c==2) {m=false;clearTimeout(g.p7Magic);}
+ else {var i=parseInt(a);
+  if (eval(g.moved)){clearTimeout(g.p7Magic);}
+  if (xx<x){xx+=i;m=true;if(xx>x){xx=x;}}
+  if (xx>x){xx-=i;m=true;if(xx<x){xx=x;}}
+  if (yy<y){yy+=i;m=true;if(yy>y){yy=y;}}
+  if (yy>y){yy-=i;m=true;if(yy<y){yy=y;}}}
+ if (m) {if((navigator.appName=="Netscape") && parseInt(navigator.appVersion)>4){
+    xx+="px";yy+="px";}
+  d.left=xx;d.top=yy;g.moved=true;eval(t+x+','+y+','+a+','+b+','+c+',0)",'+b+')');
+  }else {g.moved=false;}
+}
+//-->
+// begin absolutely positioned scrollable area object scripts 
+// Extension developed by David G. Miles 
+// Original Scrollable Area code developed by Thomas Brattli 
+function verifyCompatibleBrowser(){ 
+    this.ver=navigator.appVersion 
+    this.dom=document.getElementById?1:0 
+    this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0; 
+    this.ie4=(document.all && !this.dom)?1:0; 
+    this.ns5=(this.dom && parseInt(this.ver) >= 5) ?1:0; 
+ 
+    this.ns4=(document.layers && !this.dom)?1:0; 
+    this.bw=(this.ie5 || this.ie4 || this.ns4 || this.ns5) 
+    return this 
+} 
+bw=new verifyCompatibleBrowser() 
+ 
+ 
+var speed=50 
+ 
+var loop, timer 
+ 
+function ConstructObject(obj,nest){ 
+    nest=(!nest) ? '':'document.'+nest+'.' 
+    this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0; 
+    this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight 
+    this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight 
+    this.up=MoveAreaUp;this.down=MoveAreaDown; 
+    this.MoveArea=MoveArea; this.x; this.y; 
+    this.obj = obj + "Object" 
+    eval(this.obj + "=this") 
+    return this 
+} 
+function MoveArea(x,y){ 
+    this.x=x;this.y=y 
+    this.css.left=this.x 
+    this.css.top=this.y 
+} 
+ 
+function MoveAreaDown(move){ 
+	if(this.y>-this.scrollHeight+objContainer.clipHeight){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".down("+move+")",speed) 
+	} 
+} 
+function MoveAreaUp(move){ 
+	if(this.y<0){ 
+    this.MoveArea(0,this.y-move) 
+    if(loop) setTimeout(this.obj+".up("+move+")",speed) 
+	} 
+} 
+ 
+function PerformScroll(speed){ 
+	if(initialised){ 
+		loop=true; 
+		if(speed>0) objScroller.down(speed) 
+		else objScroller.up(speed) 
+	} 
+} 
+ 
+function CeaseScroll(){ 
+    loop=false 
+    if(timer) clearTimeout(timer) 
+} 
+var initialised; 
+function InitialiseScrollableArea(){ 
+    objContainer=new ConstructObject('divContainer') 
+    objScroller=new ConstructObject('divContent','divContainer') 
+    objScroller.MoveArea(0,0) 
+    objContainer.css.visibility='visible' 
+    initialised=true; 
+} 
+// end absolutely positioned scrollable area object scripts 
+
+</script>
+
+<LINK href="images/styles.css" rel=stylesheet>
+<SCRIPT language=JavaScript src="images/Rollover.js"></SCRIPT>
+
+<SCRIPT language=Javascript src="images/projector.js"></SCRIPT>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF" onLoad="InitialiseScrollableArea()">
+<!-- begin absolutely positioned scrollable area object--> <!-- end absolutely positioned scrollable area object --> 
+<br>
+<table border=0 cellpadding=0 cellspacing=0 width=580 vspace="0" hspace="10" height="362">
+  <tbody> 
+  <tr> 
+    <td height=31 width=1><span class=actionlink></span><img height=7 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td height=31 width=15><img height=1 src="images/trans.gif" 
+            width=1></td>
+    <td width=22 height="31"><img height=1 src="images/trans.gif" 
+          width=1></td>
+    <td class=header rowspan=3 valign=top 
+            width=412>&nbsp;&nbsp;&nbsp;<font face="Times New Roman, Times, serif" size="4">&nbsp;<font face="Verdana, Arial, Helvetica, sans-serif" size="3" class="header">Buchreihen-&Uuml;bersicht</font><br>
+      <br>
+      </font></td>
+    <td height=31 width=22><img height=1 src="images/trans.gif" 
+            width=1></td>
+    <td height=31 width=15><img height=1 src="images/trans.gif" 
+            width=1></td>
+    <td height=31 width=1><img height=7 src="buchtext-Dateien/trans.gif" 
+            width=1></td>
+  </tr>
+  <tr> 
+    <td bgcolor=#4abdfo rowspan=5 width=1><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo rowspan=5 width=1><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+  </tr>
+  <tr> 
+    <td height=15 width=15><img height=15 
+            src="buchtext-Dateien/trans.gif" width=8></td>
+    <td height=15 width=22></td>
+    <td height=15 width=22></td>
+    <td height=15 width=15></td>
+  </tr>
+  <tr> 
+    <td width=15>&nbsp;</td>
+    <td colspan=3 valign=top> 
+      <table bgcolor=#e0f0fb border=0 cellpadding=22 cellspacing=0 
+            width="100%">
+        <tbody> 
+        <tr valign=top> 
+          <td> 
+            <p><span class="defaulttxt">Auf dieser Seite finden Sie einen &Uuml;berblick 
+              zu den Buchreihen von Addison-Wesley</span>.<br>
+              <br>
+              <a href="prog_choice.htm" target="main" class="mainlinkdesc"><b>Programmer´s 
+              Choice</b> </a><span class="defaulttxt">- Von Profis f&uuml;r Profis.</span><br class="defaulttxt">
+              <a href="lernen.htm" target="main" class="mainlinkdesc"><b>Lernen</b></a><span class="defaulttxt"> 
+              - Die Einsteigerreihe</span><br class="defaulttxt">
+              <a href="go_to.htm" target="main" class="mainlinkdesc"><b>Go To</b></a> 
+              <span class="defaulttxt">- Auf dem Weg zum Profi.<br class="defaulttxt">
+              </span> <a href="workshop.htm" target="main" class="mainlinkdesc"><b>workshop</b></a> 
+              <span class="defaulttxt">- Die praktischen Arbeitsb&uuml;cher mit 
+              Online-Test<span class="defaulttxt">.</span><br>
+              </span> <a href="nitty.htm" target="main" class="mainlinkdesc"><b>Nitty 
+              Gritty </b><span class="defaulttxt">- Auf den Punkt gebrach<span class="defaulttxt">t</span></span></a><span class="defaulttxt"><br>
+              </span> <a href="agenten.htm" target="main" class="mainlinkdesc"><b>Agententechnologie 
+              </b></a><br class="defaulttxt">
+              <a href="dpi.htm" target="main" class="mainlinkdesc"><b>dpi - </b><span class="defaulttxt">Grafik- 
+              und Webdesign</span></a><br class="defaulttxt">
+              <a href="linux_sp.htm" target="main" class="mainlinkdesc"><b>Linux 
+              Specials</b></a> <span class="defaulttxt">- Open Source<br class="defaulttxt">
+              </span> <a href="netcom.htm" target="main" class="mainlinkdesc"><b>net.com</b></a> 
+              <span class="defaulttxt">- Kommunikation &amp; Netze</span><br class="defaulttxt">
+              <a href="wintec.htm" target="main" class="mainlinkdesc"><b>win.tec</b></a> 
+              <span class="defaulttxt">- Windows-Technologien</span><br class="defaulttxt">
+              <a href="mcse_tr.htm" target="main" class="mainlinkdesc"><b>MCSE 
+              </b></a><br class="defaulttxt">
+              <a href="novel.htm" target="main" class="mainlinkdesc"><b>Novell-Bibliothek</b></a> 
+              <br class="defaulttxt">
+              <a href="integrata.htm" target="main" class="nav_reihen"><span class="mainlinkdesc"><b>Integrata</b></span></a><b><span class="mainlinkdesc">-Qualifizierung</span></b> 
+              <span class="defaulttxt">- neue Berufe in der IT-Industrie.</span><br class="defaulttxt">
+              <a href="datacom.htm" target="main" class="mainlinkdesc"><b>Sigs 
+              Datacom Akademie</b></a> <br class="defaulttxt">
+              <a href="edi_oracle.htm" target="main" class="mainlinkdesc"><b>Edition 
+              Oracle</b></a> <br class="defaulttxt">
+              <a href="buisness.htm" target="main" class="mainlinkdesc"><b>Business&Computing</b></a> 
+              <span class="defaulttxt">- Erstklassige Informationen zum eBusiness.</span><br class="defaulttxt">
+              <a href="sap_anw.htm" target="main" class="mainlinkdesc"><b>SAP-Anwenderedition</b></a> 
+              <span class="defaulttxt">- Die Fachbuchreihe f&uuml;r den SAP-Anwender.<br class="defaulttxt">
+              </span> <a href="edi_sap.htm" target="main" class="mainlinkdesc"><b>Edition 
+              SAP</b></a><span class="defaulttxt"> - F&uuml;r den SAP-Administrator 
+              und -Entwickler.</span><br class="defaulttxt">
+              <a href="edi_lotus.htm" target="main" class="mainlinkdesc"><b>Edition 
+              Lotus</b></a><br class="defaulttxt">
+              <a href="sientific.htm" target="main" class="mainlinkdesc"><b>Scientific 
+              Computing </b><span class="defaulttxt">- F&uuml;r Fachleute aus 
+              Naturwissenschaft, Technik und Statistik.</span></a> </p>
+            </td>
+        </tr>
+        </tbody> 
+      </table>
+    </td>
+    <td width=15>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height=15 width=15></td>
+    <td height=15 width=22></td>
+    <td height=15 width=412>&nbsp;</td>
+    <td height=15 width=22></td>
+    <td height=15 width=15></td>
+  </tr>
+  <tr> 
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td height=1></td>
+    <td bgcolor=#4abdfo height=1 width=22><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+    <td bgcolor=#4abdfo height=1 width=15><img height=1 
+            src="buchtext-Dateien/trans.gif" width=1></td>
+  </tr>
+  </tbody> 
+</table>
+<br>
+<table width="603" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td colspan="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="85" align="left" valign="top"><a href="http://www.pearsoned.de/" 
+      target=_blank><img border=0 height=47 
+      src="images/pearson-edu.gif" width=74></a></td>
+    <td width="518" align="left" valign="top" class="copyright"> Copyright © 2001 
+      Pearson Education Deutschland GmbH | Alle Rechte vorbehalten<br>
+      All rights reserved| <a href="impressum.htm" target="_top">Impresum</a><br>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

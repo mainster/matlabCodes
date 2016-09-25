@@ -1,0 +1,251 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>labview_control_loop_v1</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div lang="en" class="book" title="labview_control_loop_v1"><div class="titlepage"><div><div><h1 class="title"><a name="d0e1"></a>labview_control_loop_v1</h1></div><div><h2 class="subtitle">Details for labview_control_loop_v1</h2></div><div><div class="mediaobject"><map name="d0e15"><area coords="19,359,37,367" shape="rect" href="#093e14136d1d7ac1b21adb94910ab23b"><area coords="308,351,344,376" shape="rect" href="#5bf30707ddc54dde3f65bf7daac50782"><area coords="398,354,422,373" shape="rect" href="#fc0e4fc55289d46f71912aa21475220e"><area coords="73,357,85,369" shape="rect" href="#0674500c0839454e6defa3a36e4f448e"><area coords="476,459,488,471" shape="rect" href="#c89739972c902e9c0552f533ae0c2324"><area coords="383,456,407,475" shape="rect" href="#494f68ff7ac55c24c18ca4cc137ab572"><area coords="256,354,280,373" shape="rect" href="#7b4af8827431f677521e52a4ad6a3c32"><area coords="184,354,205,372" shape="rect" href="#4c21c4ab3b6c46ebc50be8449afc02ed"><area coords="184,456,205,474" shape="rect" href="#60d4bfd1ef7b473ddc48010aa0ed79dc"><area coords="112,352,136,374" shape="rect" href="#24603c2e7a236c8f0b8bd2de15cfb8eb"><area coords="458,354,488,373" shape="rect" href="#bf584ac658e0eb8b574e74a70b99f825"><area coords="473,492,491,510" shape="rect" href="#9907ce0ba84a4de4f77544814f651df3"><area coords="548,359,566,367" shape="rect" href="#d5244665c1805bbc779f0677f4abbaec"></map><img src="./labview_control_loop_v10_html_files/image-001-sl.png" usemap="%0A                #d0e15" ismap="" border="0"></div></div><div><div class="author"><h3 class="author"><span class="firstname">mainster</span></h3></div></div><div><p class="pubdate">18-Jan-2015 11:48:17</p></div></div><hr></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="chapter"><a href="#d0e52">Model - labview_control_loop_v1</a></span></dt><dt><span class="chapter"><a href="#d0e146">System - labview_control_loop_v1</a></span></dt><dt><span class="chapter"><a href="#d0e727">Appendix</a></span></dt></dl></div><div class="list-of-tables"><p><b>List of Tables</b></p><dl><dt>1. <a href="#d0e188">Constant Block Properties</a></dt><dt>2. <a href="#d0e248">Gain Block Properties</a></dt><dt>3. <a href="#d0e427">Inport Block Properties</a></dt><dt>4. <a href="#d0e462">Outport Block Properties</a></dt><dt>5. <a href="#d0e549">PID 1dof Block Properties</a></dt><dt>6. <a href="#d0e567">Sum Block Properties</a></dt><dt>7. <a href="#d0e692">ZeroOrderHold Block Properties</a></dt><dt>8. <a href="#d0e732">Block Type Count</a></dt></dl></div><div class="chapter" title="Model - labview_control_loop_v1"><div class="titlepage"><div><div><h2 class="title"><a name="d0e52"></a>Model - labview_control_loop_v1</h2></div></div></div><a name="676ec971bcf89ae163c7d5248c43fb1f"></a><div class="orderedlist" title="Full Model Hierarchy"><p class="title"><b>Full Model Hierarchy</b></p><ol class="orderedlist" type="1" compact><li class="listitem"><p class="simpara">
+            <a class="link" href="#676ec971bcf89ae163c7d5248c43fb1f">labview_control_loop_v1</a>
+        </p><div class="orderedlist"><ol class="orderedlist" type="1" compact><li class="listitem">
+                    LabView
+                </li><li class="listitem">
+                    actuator
+                </li><li class="listitem">
+                    plant
+                </li></ol></div></li></ol></div><a name="d0e85"></a><div class="table"><div class="table-contents"><table summary="" border="1" cellspacing="0" fastRender="1" width="100%"><col width="9000*"><col width="30000*"><thead><tr>
+            <th align="left">Simulation Parameter</th>
+            <th align="left">Value</th>
+        </tr></thead><tbody><tr>
+            <td align="left">Solver</td>
+            <td align="left">ode45</td>
+        </tr><tr>
+            <td align="left">RelTol</td>
+            <td align="left">1e-3</td>
+        </tr><tr>
+            <td align="left">Refine</td>
+            <td align="left">1</td>
+        </tr><tr>
+            <td align="left">MaxOrder</td>
+            <td align="left">5</td>
+        </tr><tr>
+            <td align="left">ZeroCross</td>
+            <td align="left">on</td>
+        </tr></tbody></table></div></div><p>
+    <a class="link" href="#appendix-sl">
+        <span class="emphasis"><em>[more info]</em></span>
+    </a>
+</p></div><div class="chapter" title="System - labview_control_loop_v1"><div class="titlepage"><div><div><h2 class="title"><a name="d0e146"></a>System - labview_control_loop_v1</h2></div></div></div><a name="5cf6d61509465ddb8305ea0d13d32975"></a><div class="mediaobject"><map name="d0e153"><area coords="19,359,37,367" shape="rect" href="#093e14136d1d7ac1b21adb94910ab23b"><area coords="308,351,344,376" shape="rect" href="#5bf30707ddc54dde3f65bf7daac50782"><area coords="398,354,422,373" shape="rect" href="#fc0e4fc55289d46f71912aa21475220e"><area coords="73,357,85,369" shape="rect" href="#0674500c0839454e6defa3a36e4f448e"><area coords="476,459,488,471" shape="rect" href="#c89739972c902e9c0552f533ae0c2324"><area coords="383,456,407,475" shape="rect" href="#494f68ff7ac55c24c18ca4cc137ab572"><area coords="256,354,280,373" shape="rect" href="#7b4af8827431f677521e52a4ad6a3c32"><area coords="184,354,205,372" shape="rect" href="#4c21c4ab3b6c46ebc50be8449afc02ed"><area coords="184,456,205,474" shape="rect" href="#60d4bfd1ef7b473ddc48010aa0ed79dc"><area coords="112,352,136,374" shape="rect" href="#24603c2e7a236c8f0b8bd2de15cfb8eb"><area coords="458,354,488,373" shape="rect" href="#bf584ac658e0eb8b574e74a70b99f825"><area coords="473,492,491,510" shape="rect" href="#9907ce0ba84a4de4f77544814f651df3"><area coords="548,359,566,367" shape="rect" href="#d5244665c1805bbc779f0677f4abbaec"></map><img src="./labview_control_loop_v10_html_files/image-005-sl.png" usemap="%0A                #d0e153" ismap="" border="0"></div><a name="d0e188"></a><div class="table"><p class="title"><b>Table&nbsp;1.&nbsp;Constant Block Properties</b></p><div class="table-contents"><table summary="Constant Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Value</th>
+            <th align="left">Sampling Mode</th>
+            <th align="left">Out Data Type Str</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Sample Time</th>
+            <th align="left">Frame Period</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="9907ce0ba84a4de4f77544814f651df3"></a>noise</td>
+            <td align="left">0</td>
+            <td align="left">Sample based</td>
+            <td align="left">Inherit: Inherit from 'Constant value'</td>
+            <td align="left">off</td>
+            <td align="left">inf</td>
+            <td align="left">inf</td>
+        </tr></tbody></table></div></div><a name="d0e248"></a><div class="table"><p class="title"><b>Table&nbsp;2.&nbsp;Gain Block Properties</b></p><div class="table-contents"><table summary="Gain Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Gain</th>
+            <th align="left">Multiplication</th>
+            <th align="left">Param Data Type Str</th>
+            <th align="left">Out Data Type Str</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Rnd Meth</th>
+            <th align="left">Saturate On Integer Overflow</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="5bf30707ddc54dde3f65bf7daac50782"></a>KSQ</td>
+            <td align="left">0.0035</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="fc0e4fc55289d46f71912aa21475220e"></a>LED Red</td>
+            <td align="left">188</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="bf584ac658e0eb8b574e74a70b99f825"></a>mechanical damping</td>
+            <td align="left">0.95</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="494f68ff7ac55c24c18ca4cc137ab572"></a>TCS3200</td>
+            <td align="left">1</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="7b4af8827431f677521e52a4ad6a3c32"></a>V/pwm converter</td>
+            <td align="left">20</td>
+            <td align="left">Element-wise(K.*u)</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr></tbody></table></div></div><a name="d0e427"></a><div class="table"><p class="title"><b>Table&nbsp;3.&nbsp;Inport Block Properties</b></p><div class="table-contents"><table summary="Inport Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Port</th>
+            <th align="left">Defined In Blk</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="093e14136d1d7ac1b21adb94910ab23b"></a>set</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#676ec971bcf89ae163c7d5248c43fb1f">labview_control_loop_v1 (model)</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d0e462"></a><div class="table"><p class="title"><b>Table&nbsp;4.&nbsp;Outport Block Properties</b></p><div class="table-contents"><table summary="Outport Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Port</th>
+            <th align="left">Icon Display</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Var Size Sig</th>
+            <th align="left">Signal Type</th>
+            <th align="left">Sampling Mode</th>
+            <th align="left">Source Of Initial Output Value</th>
+            <th align="left">Output When Disabled</th>
+            <th align="left">Used By Blk</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="d5244665c1805bbc779f0677f4abbaec"></a>y</td>
+            <td align="left">1</td>
+            <td align="left">Port number</td>
+            <td align="left">off</td>
+            <td align="left">Inherit</td>
+            <td align="left">auto</td>
+            <td align="left">auto</td>
+            <td align="left">Dialog</td>
+            <td align="left">held</td>
+            <td align="left">
+                <a class="link" href="#676ec971bcf89ae163c7d5248c43fb1f">labview_control_loop_v1 (model)</a>, <a class="link" href="#c89739972c902e9c0552f533ae0c2324">Sum1</a>
+            </td>
+        </tr></tbody></table></div></div><a name="d0e549"></a><div class="table"><p class="title"><b>Table&nbsp;5.&nbsp;PID 1dof Block Properties</b></p><div class="table-contents"><table summary="PID 1dof Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="24603c2e7a236c8f0b8bd2de15cfb8eb"></a>compensator</td>
+        </tr></tbody></table></div></div><a name="d0e567"></a><div class="table"><p class="title"><b>Table&nbsp;6.&nbsp;Sum Block Properties</b></p><div class="table-contents"><table summary="Sum Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Icon Shape</th>
+            <th align="left">Inputs</th>
+            <th align="left">Collapse Mode</th>
+            <th align="left">Collapse Dim</th>
+            <th align="left">Input Same DT</th>
+            <th align="left">Accum Data Type Str</th>
+            <th align="left">Out Data Type Str</th>
+            <th align="left">Lock Scale</th>
+            <th align="left">Rnd Meth</th>
+            <th align="left">Saturate On Integer Overflow</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="0674500c0839454e6defa3a36e4f448e"></a>Sum</td>
+            <td align="left">round</td>
+            <td align="left">|+-</td>
+            <td align="left">All dimensions</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr><tr>
+            <td align="left">
+                <a name="c89739972c902e9c0552f533ae0c2324"></a>Sum1</td>
+            <td align="left">round</td>
+            <td align="left">|++</td>
+            <td align="left">All dimensions</td>
+            <td align="left">1</td>
+            <td align="left">off</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">Inherit: Inherit via internal rule</td>
+            <td align="left">off</td>
+            <td align="left">Floor</td>
+            <td align="left">off</td>
+        </tr></tbody></table></div></div><a name="d0e692"></a><div class="table"><p class="title"><b>Table&nbsp;7.&nbsp;ZeroOrderHold Block Properties</b></p><div class="table-contents"><table summary="ZeroOrderHold Block Properties" border="1" cellspacing="0" fastRender="1" width="100%"><col width="60*"><col width="60*"><thead><tr>
+            <th align="left">Name</th>
+            <th align="left">Sample Time</th>
+        </tr></thead><tbody><tr>
+            <td align="left">
+                <a name="4c21c4ab3b6c46ebc50be8449afc02ed"></a>Zero-Order Hold</td>
+            <td align="left">1</td>
+        </tr><tr>
+            <td align="left">
+                <a name="60d4bfd1ef7b473ddc48010aa0ed79dc"></a>Zero-Order Hold1</td>
+            <td align="left">1</td>
+        </tr></tbody></table></div></div></div><div class="chapter" title="Appendix"><div class="titlepage"><div><div><h2 class="title"><a name="d0e727"></a>Appendix</h2></div></div></div><a name="appendix-sl"></a><a name="d0e732"></a><div class="table"><p class="title"><b>Table&nbsp;8.&nbsp;Block Type Count</b></p><div class="table-contents"><table summary="Block Type Count" border="1" cellspacing="0" fastRender="1" width="100%"><col width="120*"><col width="60*"><col width="240*"><thead><tr>
+            <th align="left">BlockType</th>
+            <th align="left">Count</th>
+            <th align="left">Block Names</th>
+        </tr></thead><tbody><tr>
+            <td align="left">Gain</td>
+            <td align="left">5</td>
+            <td align="left">
+                <a class="link" href="#5bf30707ddc54dde3f65bf7daac50782">KSQ</a>, <a class="link" href="#fc0e4fc55289d46f71912aa21475220e">LED Red</a>, <a class="link" href="#494f68ff7ac55c24c18ca4cc137ab572">TCS3200</a>, <a class="link" href="#7b4af8827431f677521e52a4ad6a3c32">V/pwm converter</a>, <a class="link" href="#bf584ac658e0eb8b574e74a70b99f825">mechanical damping</a>
+            </td>
+        </tr><tr>
+            <td align="left">SubSystem</td>
+            <td align="left">3</td>
+            <td align="left">
+                LabView, actuator, plant
+            </td>
+        </tr><tr>
+            <td align="left">ZeroOrderHold</td>
+            <td align="left">2</td>
+            <td align="left">
+                <a class="link" href="#4c21c4ab3b6c46ebc50be8449afc02ed">Zero-Order Hold</a>, <a class="link" href="#60d4bfd1ef7b473ddc48010aa0ed79dc">Zero-Order Hold1</a>
+            </td>
+        </tr><tr>
+            <td align="left">Sum</td>
+            <td align="left">2</td>
+            <td align="left">
+                <a class="link" href="#0674500c0839454e6defa3a36e4f448e">Sum</a>, <a class="link" href="#c89739972c902e9c0552f533ae0c2324">Sum1</a>
+            </td>
+        </tr><tr>
+            <td align="left">PID 1dof (m)</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#24603c2e7a236c8f0b8bd2de15cfb8eb">compensator</a>
+            </td>
+        </tr><tr>
+            <td align="left">Outport</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#d5244665c1805bbc779f0677f4abbaec">y</a>
+            </td>
+        </tr><tr>
+            <td align="left">Inport</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#093e14136d1d7ac1b21adb94910ab23b">set</a>
+            </td>
+        </tr><tr>
+            <td align="left">Constant</td>
+            <td align="left">1</td>
+            <td align="left">
+                <a class="link" href="#9907ce0ba84a4de4f77544814f651df3">noise</a>
+            </td>
+        </tr></tbody></table></div></div><a name="appendix-sf"></a></div></div></body></html>

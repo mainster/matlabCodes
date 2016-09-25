@@ -1,0 +1,3 @@
+function [iae] = iae(y1, y2)
+
+iae = sum(GgGabs(y1-y2));G

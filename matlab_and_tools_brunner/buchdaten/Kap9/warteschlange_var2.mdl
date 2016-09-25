@@ -1,0 +1,775 @@
+Model {
+  Name			  "warteschlange_var2"
+  Version		  4.00
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Apr 04 14:50:28 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Sep 01 09:53:34 2001"
+  ModelVersionFormat	  "1.%<AutoIncrement:52>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  StartTime		  "0.0"
+  StopTime		  "500.0"
+  SolverMode		  "Auto"
+  Solver		  "FixedStepDiscrete"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  LimitDataPoints	  on
+  MaxDataPoints		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  ZeroCross		  on
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  ParameterPooling	  on
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "warteschlange_var2"
+    Location		    [291, 415, 740, 665]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Display
+      Name		      "Anzahl Kunden\nim System"
+      Ports		      [1]
+      Position		      [270, 165, 360, 195]
+      Format		      "short"
+      Decimation	      "1"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Scope"
+      Ports		      [1]
+      Position		      [300, 89, 330, 121]
+      Floating		      off
+      Location		      [38, 93, 951, 360]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "500"
+      YMin		      "-1"
+      YMax		      "1"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Warteschlan-\ngensystem"
+      Ports		      [0, 1]
+      Position		      [85, 58, 170, 152]
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Stateflow"
+      MaskDescription	      "Stateflow diagram"
+      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private'"
+",'sfblk','yIcon'));text(0.5,0,sf('Private', 'sfblk', 'tIcon'),'HorizontalAl',"
+"'Center','VerticalAl','Bottom');"
+      MaskSelfModifiable      on
+      MaskIconFrame	      off
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Warteschlan-\ngensystem"
+	Location		[257, 457, 812, 717]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Demux
+	  Name			  " Demux "
+	  Ports			  [1, 1]
+	  Position		  [270, 160, 320, 200]
+	  Outputs		  "1"
+	  BusSelectionMode	  off
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  " Ground "
+	  Position		  [20, 121, 40, 139]
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " SFunction "
+	  Tag			  "Stateflow S-Function warteschlange_var2 1"
+	  Ports			  [1, 2]
+	  Position		  [180, 100, 230, 160]
+	  FunctionName		  "sf_sfun"
+	  PortCounts		  "[1 2]"
+	  SFunctionModules	  "''"
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  " Terminator "
+	  Position		  [460, 171, 480, 189]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Kunden"
+	  Position		  [460, 101, 480, 119]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  " Demux "
+	  SrcPort		  1
+	  DstBlock		  " Terminator "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " Ground "
+	  SrcPort		  1
+	  DstBlock		  " SFunction "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  1
+	  Points		  [0, 65]
+	  DstBlock		  " Demux "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " SFunction "
+	  SrcPort		  2
+	  DstBlock		  "Kunden"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Warteschlan-\ngensystem"
+      SrcPort		      1
+      Points		      [30, 0]
+      Branch {
+	DstBlock		"Scope"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 75]
+	DstBlock		"Anzahl Kunden\nim System"
+	DstPort			1
+      }
+    }
+  }
+}
+
+# Finite State Machines
+# -- File save dated 01-Sep-2001 09:53:34
+#
+#    Stateflow Version 4.0 (R12) dated Oct  4 2000, 19:47:56
+#
+#
+
+Stateflow {
+
+	machine {
+		id                   		1
+		name                 		"warteschlange_var2"
+		created              		"04-Apr-2001 14:50:39"
+		firstTarget          		29
+		debug {
+			breakOn              		[0 0 1]
+		}
+		sfVersion            		40012071
+	}
+
+	chart {
+		id                       		2
+		name                     		"Warteschlan-\n"
+					"gensystem"
+		windowPosition           		[18.621 6.207 604.552 430.138]
+		viewLimits               		[155.033 865.723 0 500.172]
+		zoomFactor               		1.25
+		screen                   		[1 1 1024 768 1.611111111111111]
+		treeNode                 		[0 8 0 0]
+		firstTransition          		17
+		viewObj                  		2
+		machine                  		1
+		subviewS {
+		}
+		decomposition            		CLUSTER_CHART
+		firstEvent               		18
+		firstData                		19
+		updateMethod             		DISCRETE
+		sampleTime               		"1"
+		chartFileNumber          		1
+		executeAtInitialization  		1
+	}
+
+	state {
+		id             		3
+		labelString    		"Kunden_prozess/"
+		position       		[208.118 211.972 129.936 256.526]
+		fontSize       		12
+		chart          		2
+		treeNode       		[8 7 4 0]
+		firstTransition		11
+		subviewer      		2
+		type           		AND_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		4
+		labelString    		"Server_prozess/"
+		position       		[348.471 209.653 362.705 267.752]
+		fontSize       		12
+		chart          		2
+		treeNode       		[8 5 0 3]
+		firstTransition		10
+		firstJunction  		9
+		subviewer      		2
+		type           		AND_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		5
+		labelString    		"idle/"
+		position       		[357.901 281.663 87.893 51.295]
+		fontSize       		12
+		chart          		2
+		treeNode       		[4 0 0 6]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		6
+		labelString    		"busy/\n"
+						"entry: sz=smin+(smax-smin)*ml('rand');\n"
+						"bz=bz+sz;\n"
+						"on Ankunft: Kunden=Kunden+1;"
+		position       		[460.245 317.421 222.946 82.302]
+		fontSize       		12
+		chart          		2
+		treeNode       		[4 0 5 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		7
+		labelString    		"Hilfszustand/\n"
+						"entry:iz=imin+...\n"
+						"(imax-imin)*...\n"
+						"ml('rand');\n"
+						"az=az+iz;"
+		position       		[219.821 291.981 104.442 124.298]
+		fontSize       		12
+		chart          		2
+		treeNode       		[3 0 0 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		CLUSTER_STATE
+	}
+
+	state {
+		id             		8
+		labelString    		"Warteschlangensystem"
+		position       		[173.06 169.354 564.211 325.496]
+		fontSize       		12
+		chart          		2
+		treeNode       		[2 4 0 0]
+		subviewer      		2
+		type           		OR_STATE
+		decomposition  		SET_STATE
+	}
+
+	junction {
+		id         		9
+		position   		[506.4957430156855 443.2987841089977 7]
+		chart      		2
+		linkNode   		[4 0 0]
+		subviewer  		2
+		type       		CONNECTIVE_JUNCTION
+	}
+
+	transition {
+		id             		10
+		labelPosition  		[399.61 259.474 8.525 15.509]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 403.1904203352393 251.6635196318321 0]
+		}
+		dst {
+			id          		5
+			intersection		[1 0 -1 0.5152777777777777 403.1903848879647 281.6633946318322 
+								  0]
+		}
+		midPoint       		[399.6102444496472 259.4748124731242]
+		chart          		2
+		linkNode       		[4 0 12]
+		dataLimits     		[399.605 405.59 251.664 281.663]
+		subviewer      		2
+	}
+
+	transition {
+		id             		11
+		labelPosition  		[244.591 267.479 8.525 15.509]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 248.5427498211866 258.8542807031902 0]
+		}
+		dst {
+			id          		7
+			intersection		[1 0 -1 0.2749999999999999 248.5426810711866 291.9810272549313 
+								  0]
+		}
+		midPoint       		[244.589430515431 267.4797046430205]
+		chart          		2
+		linkNode       		[3 0 16]
+		dataLimits     		[244.586 250.943 258.854 291.981]
+		subviewer      		2
+	}
+
+	transition {
+		id             		12
+		labelString    		"Ankunft/Kunden=Kunden+1;bz=t;"
+		labelPosition  		[508.627 251.45 175.929 15.509]
+		fontSize       		12
+		src {
+			id          		5
+			intersection		[2 1 0 0.501300800142655 445.7940234527937 307.3778684668064 
+								  0]
+		}
+		dst {
+			id          		6
+			intersection		[1 0 -1 0.8557222222222221 651.0247754794364 317.4208956858902 
+								  0]
+		}
+		midPoint       		[566.5270671156221 275.4435351710241]
+		chart          		2
+		linkNode       		[4 10 14]
+		dataLimits     		[445.794 653.425 274.811 317.421]
+		subviewer      		2
+	}
+
+	transition {
+		id             		13
+		labelString    		"[t>=bz]{Kunden=Kunden-1}"
+		labelPosition  		[530.575 451.403 144.928 15.509]
+		fontSize       		12
+		src {
+			id          		6
+			intersection		[3 0 1 0.2527403069076207 626.8434952501908 399.7233568739644 
+								  0]
+		}
+		dst {
+			id          		9
+			intersection		[0 0.9899494936611661 0.1414213562373122 -1 513.4253894713137 
+								  444.2887336026589 0]
+		}
+		midPoint       		[587.6866257033693 443.2643734321483]
+		chart          		2
+		linkNode       		[4 15 0]
+		dataLimits     		[513.425 626.843 399.723 449.246]
+		subviewer      		2
+	}
+
+	transition {
+		id             		14
+		labelString    		"[Kunden==0]"
+		labelPosition  		[413.894 403.316 69.751 15.509]
+		fontSize       		12
+		src {
+			id          		9
+			intersection		[0 -0.9701425001453305 0.2425356250363388 -1 499.7047455146682 
+								  444.996533484252 0]
+		}
+		dst {
+			id          		5
+			intersection		[3 0 1 0.8261880501419999 373.1779653041461 332.9588919213971 
+								  0]
+		}
+		midPoint       		[414.8021471098826 415.8192623491995]
+		chart          		2
+		linkNode       		[4 12 15]
+		dataLimits     		[370.778 499.705 332.959 446.671]
+		subviewer      		2
+	}
+
+	transition {
+		id             		15
+		labelPosition  		[504.041 418.507 8.525 15.509]
+		fontSize       		12
+		src {
+			id          		9
+			intersection		[0 -0.5547001962252248 -0.8320502943378466 -1 502.6128416421089 
+								  437.4744320486328 0]
+		}
+		dst {
+			id          		6
+			intersection		[3 0 1 0.7726978501628667 510.9210733627805 399.7233568739644 
+								  0]
+		}
+		midPoint       		[503.4968570620619 418.6288303942627]
+		chart          		2
+		linkNode       		[4 14 13]
+		dataLimits     		[499.89 513.321 399.723 437.474]
+		subviewer      		2
+	}
+
+	transition {
+		id             		16
+		labelString    		"[t>=az]/Ankunft"
+		labelPosition  		[246.881 444.941 79.827 15.509]
+		fontSize       		12
+		src {
+			id          		7
+			intersection		[3 0 1 0.09166666666666679 314.6895829321012 416.278634806505 
+								  0]
+		}
+		dst {
+			id          		7
+			intersection		[3 0 1 0.8916666666666667 231.1356016341038 416.278634806505 
+								  0]
+		}
+		midPoint       		[270.1898368209288 441.6052014586268]
+		chart          		2
+		linkNode       		[3 11 0]
+		dataLimits     		[228.736 314.69 416.279 441.658]
+		subviewer      		2
+	}
+
+	transition {
+		id             		17
+		labelPosition  		[228.554 141.618 8.525 15.509]
+		fontSize       		12
+		src {
+			intersection		[0 -1 0 0 233.0300748900664 131.8543398584543 0]
+		}
+		dst {
+			id          		8
+			intersection		[1 0 -1 0.1062901155327343 233.0300748900664 169.3543398584543 
+								  0]
+		}
+		midPoint       		[228.5548550330763 141.6184559100693]
+		chart          		2
+		linkNode       		[2 0 0]
+		dataLimits     		[228.555 235.43 131.854 169.354]
+		subviewer      		2
+	}
+
+	event {
+		id         		18
+		name       		"Ankunft"
+		linkNode   		[2 0 0]
+		scope      		LOCAL_EVENT
+		trigger    		EITHER_EDGE_EVENT
+		machine    		1
+	}
+
+	data {
+		id               		19
+		name             		"iz"
+		linkNode         		[2 0 20]
+		scope            		LOCAL_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		20
+		name             		"az"
+		linkNode         		[2 19 21]
+		scope            		LOCAL_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		21
+		name             		"sz"
+		linkNode         		[2 20 22]
+		scope            		LOCAL_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		22
+		name             		"Kunden"
+		linkNode         		[2 21 23]
+		scope            		OUTPUT_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		23
+		name             		"bz"
+		linkNode         		[2 22 24]
+		scope            		LOCAL_DATA
+		machine          		1
+		dataType         		"int16"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		24
+		name             		"smin"
+		linkNode         		[2 23 25]
+		scope            		CONSTANT_DATA
+		initFromWorkspace		1
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		25
+		name             		"smax"
+		linkNode         		[2 24 26]
+		scope            		CONSTANT_DATA
+		initFromWorkspace		1
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		26
+		name             		"imin"
+		linkNode         		[2 25 27]
+		scope            		LOCAL_DATA
+		initFromWorkspace		1
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	data {
+		id               		27
+		name             		"imax"
+		linkNode         		[2 26 0]
+		scope            		LOCAL_DATA
+		initFromWorkspace		1
+		machine          		1
+		dataType         		"double"
+		props {
+			range {
+				minimum		""
+				maximum		""
+			}
+		}
+	}
+
+	instance {
+		id     		28
+		name   		"Warteschlan-\n"
+					"gensystem"
+		machine		1
+		chart  		2
+	}
+
+	target {
+		id               		29
+		name             		"sfun"
+		description      		"Default Simulink S-Function Target."
+		machine          		1
+		linkNode         		[1 0 0]
+	}
+}
