@@ -7,13 +7,18 @@ function sqlTestdata (NNN)
 NN=NNN;
 halbe = round(rand(1,NN))*0.5;
 dat={zeros(NN,1)};
-lead = 'INSERT INTO "worktime" VALUES (';
+lead = 'INSERT INTO "worktime" (dat, workerID, prjID, hours) VALUES (';
 
 %% src and target 
 % TEMPLATE='/home/mainster/mysql/delBassoInitialDb_sheme_template.sql';
-TEMPLATE='/var/lib/mysql/delBassoInitialDb_sheme_template.sql';
+%TEMPLATE='/var/lib/mysql/delBassoInitialDb_sheme_template.sql';
+% TEMPLATE='~/CODES_local/qt_creator/WorktimeManager/sqlite/delBassoInitialDb_sheme_template.sql';
+TEMPLATE='~/CODES_local/qt_creator/worktimeManagerSubdirPrj/WorktimeManager/sqlite/delBassoInitialDb_sheme_template.sql';
+% SQL_PATH = '~/CODES_local/qt_creator/WorktimeManager/sqlite';
+SQL_PATH = '~/CODES_local/qt_creator/worktimeManagerSubdirPrj/WorktimeManager/sqlite';
+
 [PAT, NAME, EXT]= fileparts (TEMPLATE);
-NAMER = [NAME strrep(strrep(char(datetime), ' ','_'),':','')];
+NAMER = [NAME strrep(strrep(char(timeDate), ' ','_'),':','')];
 
 TARG=[fullfile(PAT, NAMER), EXT];
 copyfile(TEMPLATE, TARG);
@@ -42,8 +47,10 @@ fclose(fd);
 type(TARG)
 %%
 
-cmd = ['[ -e $SQL/delbassoSQL.db ] && mv $SQL/delbassoSQL.db $SQL/olddb/delbassoSQL_$(dateForFile).db;',...
+cmd1 = ['[ -e $SQL/delbassoSQL.db ] && mv $SQL/delbassoSQL.db $SQL/olddb/delbassoSQL_$(dateForFile).db;',...
    'sqlite3 $SQL/delbassoSQL.db < ', TARG];
+cmd = ['[ -e ' SQL_PATH '/delbassoSQL.db ] && mv ' SQL_PATH '/delbassoSQL.db ' SQL_PATH '/olddb/delbassoSQL_$(dateForFile).db;',...
+   'sqlite3 ' SQL_PATH '/delbassoSQL.db < ', TARG];
 [stat, cmdout]=system(cmd)
 %%
 disp (stat)
