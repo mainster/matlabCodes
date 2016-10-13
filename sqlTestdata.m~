@@ -24,43 +24,40 @@ TARG=[fullfile(PAT, NAMER), EXT];
 copyfile(TEMPLATE, TARG);
 %%
 
-if 0
-    fd = fopen(TEMPLATE);
-    line = fgetl(fd);
+fd = fopen(TEMPLATE);
+line = fgetl(fd);
 
-    A=[1];
-    Al=[1];
+A=[1];
 
-    while ischar(line)
-        if regexp(line, '^INSERT INTO.*')
-            A = [A ftell(fd)];
-        end
-        Al = [Al length(line)]
-        line = fgetl(fd);
+while ischar(line)
+    if regexp(line, '^INSERT INTO.*')
+        A = [A ftell(fd)/length(line)];
     end
-
-    plot(diff(A), 'o'); grid on;
-
-
-    ftell(fd)
-
-    return;
-    %%
-    cc = 0;
-
     line = fgetl(fd);
-    while ischar(line)
-        if regexp(line, '^CREATE TABLE.*')
-            while strfind(fget(fd), ',')
-                cc = cc + 1;
-            end
-        end
-        tline = fgetl(fid);
-    end
-
-    fclose(fid);
-
 end
+
+plot(diff(A)); grid on;
+
+
+ftell(fd)
+
+return;
+
+%%
+cc = 0;
+
+line = fgetl(fd);
+while ischar(line)
+    if regexp(line, '^CREATE TABLE.*')
+        while strfind(fget(fd), ',')
+            cc = cc + 1;
+        end
+    end
+    tline = fgetl(fid);
+end
+
+fclose(fid);
+
 %%
 fd = fopen(TARG,'at+');
 day  = [1 30];
