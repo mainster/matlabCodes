@@ -1,7 +1,7 @@
 function [F] = fourierMDB(fhand, varargin)	
 %% function [F] = fourierMDB(FHAND, C, S)				@@@MDB
 %
-% FHAND		handle zur funktion die transformiert werden soll
+% FHAND		handle zur Funktion die transformiert werden soll
 % c und s sind zum angeben einer anderen Fourier- Definition
 %
 
