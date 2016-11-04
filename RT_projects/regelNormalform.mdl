@@ -41,7 +41,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [2483.0, -4.0, 820.0, 542.0]
+      Location		      [1100.0, 0.0, 820.0, 542.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -50,7 +50,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -65,9 +65,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[764.0, 353.0]
+	Extents			[778.0, 375.0]
 	ZoomFactor		[1.0]
-	Offset			[-134.29153846153861, 23.929267399267417]
+	Offset			[-134.29153846153861, 22.0]
       }
     }
   }
@@ -77,7 +77,7 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mainster"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue May 06 21:00:24 2014"
+  LastModifiedDate	  "Wed Nov 02 10:37:45 2016"
   RTWModifiedTimeStamp	  321310821
   ModelVersionFormat	  "1.%<AutoIncrement:8>"
   ConfigurationManager	  "none"
@@ -117,7 +117,7 @@ Model {
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "regelNormalform"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -853,7 +853,7 @@ Model {
   }
   System {
     Name		    "regelNormalform"
-    Location		    [2483, -4, 3303, 538]
+    Location		    [1100, 0, 1920, 542]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1025,7 +1025,7 @@ Model {
       Name		      "Sum"
       SID		      "2"
       Ports		      [4, 1]
-      Position		      [110, 114, 130, 176]
+      Position		      [110, 118, 130, 182]
       ZOrder		      2
       ShowName		      off
       Inputs		      "|+|---"
@@ -1168,7 +1168,7 @@ Model {
       Labels		      [1, 1]
       SrcBlock		      "Gain3"
       SrcPort		      1
-      Points		      [-72, 0; 0, -35]
+      Points		      [-72, 0; 0, -30]
       DstBlock		      "Sum"
       DstPort		      4
     }
@@ -1201,6 +1201,7 @@ Model {
       Name		      "Regelungsnormalform bildet Brücke zwischen Systembeschreibungen \nim Zustandsraum und als Übertra"
       "gungsfunktion."
       Position		      [246, 309]
+      ZOrder		      -1
       FontName		      "Sans Serif"
       FontSize		      12
     }
@@ -1208,6 +1209,7 @@ Model {
       SID		      "17"
       Name		      "G(s)=(z3*s²+z2*s+z1)/(s³+n3*s²+n2*s+n1)"
       Position		      [242, 354]
+      ZOrder		      -2
       FontName		      "Sans Serif"
       FontSize		      12
     }
@@ -1215,6 +1217,7 @@ Model {
       SID		      "3"
       Name		      "System 3. Ordnung"
       Position		      [100, 72]
+      ZOrder		      -3
       FontName		      "Sans Serif"
       FontSize		      12
     }

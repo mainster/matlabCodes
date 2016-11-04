@@ -39,7 +39,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [1245.0, 45.0, 680.0, 629.0]
+      Location		      [1240.0, 45.0, 680.0, 629.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -48,7 +48,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -63,7 +63,7 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[624.0, 440.0]
+	Extents			[638.0, 462.0]
 	ZoomFactor		[1.26]
 	Offset			[0.0, 0.0]
       }
@@ -75,7 +75,7 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mainster"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue May 06 21:38:29 2014"
+  LastModifiedDate	  "Wed Nov 02 10:37:45 2016"
   RTWModifiedTimeStamp	  321277181
   ModelVersionFormat	  "1.%<AutoIncrement:2>"
   ConfigurationManager	  "none"
@@ -807,7 +807,7 @@ Model {
   }
   System {
     Name		    "RT_labor_Faustformel"
-    Location		    [1245, 45, 1925, 674]
+    Location		    [1240, 45, 1920, 674]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200

@@ -26,10 +26,10 @@ ylim([-.1 1.1])
 %% Fourier transform x0(t) o--o X0(w) of the non-periodic function
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 X0=str2func(['@(w,T0)' char(fourierS(x0,t,w))]);
-X0=dotExpansion(X0);
+%v X0=dotExpansion(X0);
 
 f2=figure(2);
-ezplot(X0(w,T0_),[-1 1]*10*2*pi/T0_)
+ezplot(X0(w,T0_),w,[-1 1]*10*2*pi/T0_)
 
 w0_=2*pi/T0_;
 fprintf('T0=%g --> f0=%g --> w0=%g\n\n', T0_, 1/T0_, w0_)
@@ -43,7 +43,10 @@ fprintf('%s:  %g\n',areaW, double(eval(areaW)));
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 N_=10;
 cnx=w0_*(-N_:N_);
+dotExpansion('X0');
+
 cny = X0(cnx,T0_); %/pi2;
+
 cny(find(isnan(cny))) = limit( X0(w,T0_), w, 0);
 
 figure(f2); hold all

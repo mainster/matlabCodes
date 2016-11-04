@@ -43,7 +43,7 @@ RUNNING = 1;          % A flag to continue data capture
 % addchannel(ai, 1);
 % 
 % % Configure the analog input object.
-% set(ai, 'SampleRate', Fs);
+ set(ai, 'SampleRate', Fs);
 % set(ai, 'SamplesPerTrigger', framesize);
 % set(ai, 'TriggerRepeat',inf);
 % set(ai, 'TriggerType', 'immediate');

@@ -141,7 +141,7 @@ clear mi wavObj lh;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     [W opt] = readCutWav(fname);     
     wobj = {W opt};
-    fs = wobj{2}(1).fmt.nSamplesPerSecvvbfg
+    fs = wobj{2}(1).fmt.nSamplesPerSec
 
 
 
