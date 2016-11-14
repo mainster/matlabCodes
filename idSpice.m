@@ -15,6 +15,10 @@ function varargout = idSpice (varargin)
 %
 %                     NOTE: at this time, only the first plot pane will be
 %                           parsed!!
+%
+%   TF = idSpice( ... , '1')  places a LTspice formated laplacian function
+%                             of the estimated system into paste buffer.
+%   
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %
