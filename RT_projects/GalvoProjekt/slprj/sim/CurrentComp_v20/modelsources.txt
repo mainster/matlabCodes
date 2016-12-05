@@ -1,1 +1,0 @@
-   CurrentComp_v20.c 

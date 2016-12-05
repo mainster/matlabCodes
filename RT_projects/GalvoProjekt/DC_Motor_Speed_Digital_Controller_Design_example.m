@@ -231,5 +231,4 @@ title('Stairstep Response: with Modified PID controller')
 % The plot above shows that the settling time is less than 2 seconds and the
 % percent overshoot is around 2%. Additionally, the steady-state error is
 % zero. Therefore, this response satisfies all of the given design requirements.
-##### SOURCE END #####
--->
+
