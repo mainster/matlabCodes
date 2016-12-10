@@ -3,10 +3,10 @@ function blkStruct = slblocks
 		% in the Library Browser
 		% and be cached in the browser repository
 
-		Browser.Library = 'mylib';
+		Browser.Library = 'simulink_lib_MDB.slx';
 		% 'mylib' is the name of the library
 
-		Browser.Name = 'My Library';
+		Browser.Name = 'MDB custom lib';
 		% 'My Library' is the library name that appears in the Library Browser
 
 		blkStruct.Browser = Browser; 
