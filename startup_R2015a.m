@@ -55,9 +55,9 @@ par3    = @(x,y,z)  (x.^(-1)+y.^(-1)+z.^(-1)).^(-1);
 % Run this fprintf only if built-in fprintf is not shadowed by a function
 % inside user workspace
 if ~strcmp(which('fprintf'), 'matlab_workspace')
-   disp('fprintf() built-in is not shadowed')
-   fprintf('\nsetWrap = %s\ngetWrap = %s\nreim = %s\nvname = %s\npar2 = %s\npar3 = %s\n',...
-      char(setWrap),char(getWrap),char(reim),char(vname),char(par2),char(par3))
+    disp('fprintf() built-in is not shadowed')
+    fprintf('\nsetWrap = %s\ngetWrap = %s\nreim = %s\nvname = %s\npar2 = %s\npar3 = %s\n',...
+        char(setWrap),char(getWrap),char(reim),char(vname),char(par2),char(par3))
 end
 
 cl=clock;
@@ -82,7 +82,7 @@ vars=cellfun(@eval, fields,'UniformOutput', false);
 global ol;
 ol=struct();
 for k=1:length(fields)
-   ol.(fields{k}) = vars{k,1};
+    ol.(fields{k}) = vars{k,1};
 end
 
 fields = fields';
@@ -113,8 +113,8 @@ setappdata(0,'basefunctions',bf);
 % Run this fprintf only if built-in fprintf is not shadowed by a function
 % inside user workspace
 if ~strcmp(which('fprintf'), 'matlab_workspace')
-   fprintf('csigma = %s\nrect = %s\ntri = %s\n%s\n',...
-      char(bf.csigma),char(bf.rect),char(bf.tri),ds)
+    fprintf('csigma = %s\nrect = %s\ntri = %s\n%s\n',...
+        char(bf.csigma),char(bf.rect),char(bf.tri),ds)
 end
 
 clear bf;
@@ -128,9 +128,10 @@ ver=version;
 %% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  Dark color theme for all figures/axis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-colordef('black')
+%colordef('black')
 %reset(groot);
 
+<<<<<<< HEAD
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % change some default options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,20 +150,47 @@ set(groot,...
 %         'DefaultFigureColor',         [1 1 1]*0.82 );
 %         'DefaultAxesColor',           [1 1 1]*0.96,...
 
+=======
+>>>>>>> origin/masterLoc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % default options only for R2015a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if ~isempty(strfind(ver,'R2015a'))
+<<<<<<< HEAD
    set(groot, ...
       'DefaultAxesGridAlpha',       0.5,...
       'DefaultLegendInterpreter',   'tex')
+=======
+   colordef('black')
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % change some default options
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%'DefaultAxesFontName','Swiss 721',...
+    
+    set(groot,...
+        'DefaultAxesXGrid',           'on',...
+        'DefaultAxesYGrid',           'on',...
+        'DefaultAxesFontSize',        11,...
+        'ShowHiddenHandles',          'on',...
+        'DefaultTextFontSize',        11,...
+        'DefaultFigurePosition',      [1930 400 845 600],...
+        'DefaultFigureColor',         [1 1 1]*.175,...
+        'DefaultLineLineWidth',       1,...
+        'DefaultLegendInterpreter',         'tex');
+    %         'DefaultFigureColor',         [1 1 1]*0.82 );
+    %         'DefaultAxesColor',           [1 1 1]*0.96,...
+    set(groot, ...
+        'DefaultAxesGridAlpha',       0.5);
+>>>>>>> origin/masterLoc
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % default options only for R2013a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if ~isempty(strfind(ver,'R2013a'))
-   %    set(0,  'DefaultAxesGridAlpha',       0.2);
+   colordef('white')
+    %    set(0,  'DefaultAxesGridAlpha',       0.2);
 end
 
 %%
@@ -197,9 +225,9 @@ INITIALVARS = struct2cell(INITIALVARS);
 INITIALVARS = INITIALVARS(1,:);
 
 fprintf(['To reset variable workspace to initial state, type:\n\n',...
-   '\tclearvars(' '''-except''' ',INITIALVARS{:})\n\n'])
+    '\tclearvars(' '''-except''' ',INITIALVARS{:})\n\n'])
 fprintf(['Run following command from command prompt:\n\n',...
-   'com.mathworks.mlwidgets.html.HtmlComponentFactory.setDefaultType(''HTMLPANEL'')\n\n'])
+    'com.mathworks.mlwidgets.html.HtmlComponentFactory.setDefaultType(''HTMLPANEL'')\n\n'])
 
 
 

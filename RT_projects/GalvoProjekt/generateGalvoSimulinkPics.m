@@ -1,3 +1,50 @@
+<<<<<<< HEAD
+=======
+%% Export subsystems of single mdl
+mdls = {'galvoMdl'};
+
+[~, HOST]=system('echo $HOSTNAME');
+
+if strfind(HOST,'x58a')
+   outbase = '/media/storage/data_notebook/whz/projectGalvoDocu/pics/simulExport/';
+else
+   if strfind(HOST,'XPS')
+      outbase='/media/data/whz/projectGalvoDocu/pics/simulExport/';
+   else
+      error(['Unknown hostname: ' HOST])
+   end
+end
+
+open_system(mdls{1}); 
+
+ONOFF = 'off';
+
+outbase
+
+%% Find subsystem block paths
+sspaths = find_system(mdls{1},'BlockType','SubSystem');
+for i=1:length(sspaths) 
+    try 
+        submdl=strsplit(sspaths{i},'/');
+        open_system(sspaths{i});
+        
+        % Find all system of type 'block' and enable Shadow
+        blks = find_system(gcs, 'FindAll', 'on', 'type', 'block')
+        
+        set(blks,'DropShadow','off')
+        print(['-s' sspaths{i}], '-r55', '-dsvg', [outbase, submdl{end}, '.svg']);        
+        system(['sed -i ''s/fill\=\"\#ffffff\"/fill="none"/g'' ' [outbase, submdl{end}, '.svg']])
+        %print(['-s' sspaths{i}], '-r150', '-dpng', [outbase, submdl{end}, '.png']);        
+        close_system(sspaths{i}, 0); 
+    catch err
+        disp msg
+    end
+end
+
+open_system(mdls{1});
+return
+%%
+>>>>>>> origin/masterLoc
 clearvars('-except',INITIALVARS{:})
 PRJ='/media/data/CODES/matlab_workspace/RT_projects/GalvoProjekt/';
 cd(PRJ);
@@ -24,6 +71,11 @@ end
 mdlPar{:}
 %%
 return
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/masterLoc
 index = 'picme2';
 outbase='/tmp/GalvoModelPngs/';
 

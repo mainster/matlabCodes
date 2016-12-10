@@ -1,4 +1,3 @@
-ignore
-libreMatlab/
-*.m~
+RT_projects/GalvoProjekt/slprj*
 libreMatlab
+slprj*

@@ -6,7 +6,8 @@
 %%
 %set(0,'DefaultFigureRenderer','OpenGL')
 %set(0,'DefaultFigureRendererMode', 'manual')
-startup
+
+clearvars('-except',INITIALVARS{:})
 optb=ol.optb;
 optn=ol.optn;
 
@@ -26,8 +27,8 @@ SIMFILES={  'Galvo_sys_cc_feed_v40',...
 % *********************************************************************
 %               Init block models
 % *********************************************************************
-param = loadGalvoParam(5,'eval');
-paramCtrl = loadCtrlParam(5);
+% param = loadGalvoParam(5,'eval');
+% paramCtrl = loadCtrlParam(5);
 %evalGalvoParam(4);
 	
 
@@ -86,15 +87,21 @@ legend('Ts','Ss','G0')
 %
 % Generated on: 09-Oct-2014 01:04:46
 
-model = 'Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66';
-model = 'Galvo_sys_Ccont_Pcont_cc_nosub_bandwidth_v68'
-model = 'Galvo_sys_Ccont_Pcont_cc_nosub_bandwidth_AbsTolProb_v68'
+models = {
+   'Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66',...
+   'Galvo_sys_Ccont_Pcont_cc_nosub_bandwidth_v68',...
+   'Galvo_sys_Ccont_Pcont_cc_nosub_bandwidth_AbsTolProb_v68'
+   };
 
-factor='Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66/factor';
-factor='Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66/deg2rad3';
-factor = [model '/PosDemod'];
+factors = {
+   'Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66/factor',...
+   'Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66/deg2rad3'
+   };
+   
+model = models{2};
+open_system(model)
 
-model = gcs;
+% factor = [model '/PosDemod'];
 factor=[];
 
 types={'compsensitivity', 'sensitivity', 'looptransfer'};
@@ -106,7 +113,7 @@ set_param(factor,'Gain','1');
 %sysG=repmat( {''},1,3);
 for m=1:1
     for j=1:length(types)
-        io = getlinio(model);
+        io = getlinio(model)
         if isempty(io)
             warning('output argument of getlinio command is empty, please select a block/portnumber')
             blocks = find_system(model,'Type','Block')
@@ -137,7 +144,7 @@ nyquist(sysG{1,2},optn);
 nyquist(sysG{1,3},optn);
 hold off;
 
-%%
+%
 f7=figure(7);
 cla;
 SUB=120;
@@ -149,13 +156,13 @@ end
 hold off;
 legend(types);
 
-subplot(SUB+2);
-hold all;
-for k=1:3
-    bodeplot(sysG{2,k});
-end
-hold off;
-legend(types);
+% subplot(SUB+2);
+% hold all;
+% for k=1:3
+%     bodeplot(sysG{2,k});
+% end
+% hold off;
+% legend(types);
 
 %%
 FILES={'Galvo_sys_Cdisc_Pcont_ccvc_FET_SUB_REF_v66'};

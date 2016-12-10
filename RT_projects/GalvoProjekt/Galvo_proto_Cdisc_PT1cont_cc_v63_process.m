@@ -16,7 +16,8 @@ sweepBlk={
 	{'/Gcc(s)/shuntMonGain','Gain'}};
 
 %% backup initial value
-for k=1:length(sweepBlk) 
+for k=1:length(sweepBlk)
+   open_system(FILES{k});
     sweepBlk{1,k}{3} = get_param([FILES{1} sweepBlk{1,k}{1}], sweepBlk{1,k}{2});
 end
 

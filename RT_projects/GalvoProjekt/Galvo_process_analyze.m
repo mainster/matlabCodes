@@ -16,9 +16,9 @@ SIMFILES={  'Galvo_sys_Cdisc_Pcont_cc_nosub_GUT_v63',...
 % *********************************************************************
 %               Init block models
 % *********************************************************************
-param = loadGalvoParam(4);
-paramCtrl = loadCtrlParam(4);
-evalGalvoParam(4);
+% param = loadGalvoParam(4);
+% paramCtrl = loadCtrlParam(4);
+% evalGalvoParam(4);
 init = 0;
 
 load_system(SIMFILES{1});
