@@ -4,10 +4,10 @@ mdls = {'galvoMdl'};
 [~, HOST]=system('echo $HOSTNAME');
 
 if strfind(HOST,'x58a')
-   outbase = '/media/storage/data_notebook/whz/projectGalvoDocu/mdlPngs/';
+   outbase = '/media/storage/data_notebook/whz/projectGalvoDocu/pics/simulExport/';
 else
-   if strfind(HOST,'XPS-L521X')
-      outbase='/media/data/whz/projectGalvoDocu/mdlPngs/';
+   if strfind(HOST,'XPS')
+      outbase='/media/data/whz/projectGalvoDocu/pics/simulExport/';
    else
       error(['Unknown hostname: ' HOST])
    end
