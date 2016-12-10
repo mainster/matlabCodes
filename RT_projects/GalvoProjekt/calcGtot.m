@@ -16,13 +16,17 @@ pretty(Gt)
 
 %% Load Galvo parameters
 P=loadGalvoParam(98);
+P{3,2} = '1.5';
+P
 p=struct;
+
 
 for k=1:length(P)
     p.(P{k,1}).v=P{k,2};
     p.(P{k,1}).unit=P{k,3};
     p.(P{k,1}).desc=P{k,4};
 end
+
 
 %% Create transfer function
 s=tf('s');
@@ -36,5 +40,5 @@ Gts=tf(double(coeffs(num,'s')), double(coeffs(den,'s')))
 
 %% Plots
 bodeplot(Gts, ol.optb)
-
+nyquist(Gts, ol.optn)
 

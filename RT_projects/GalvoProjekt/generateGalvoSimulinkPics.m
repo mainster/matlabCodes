@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 %% Export subsystems of single mdl
-mdls = {'galvoMdl'};
+mdls = {'galvoMdl3'};
 
 [~, HOST]=system('echo $HOSTNAME');
 
@@ -44,7 +42,6 @@ end
 open_system(mdls{1});
 return
 %%
->>>>>>> origin/masterLoc
 clearvars('-except',INITIALVARS{:})
 PRJ='/media/data/CODES/matlab_workspace/RT_projects/GalvoProjekt/';
 cd(PRJ);
@@ -71,11 +68,6 @@ end
 mdlPar{:}
 %%
 return
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/masterLoc
 index = 'picme2';
 outbase='/tmp/GalvoModelPngs/';
 
