@@ -148,7 +148,7 @@ end
     Mod_6860_No1={
         '6e-8'       % Rotor inertia
         '9.3e-3'     % Torque constant
-        '3.5'        % Coil resistance
+        '1.5'        % Coil resistance
         '170e-6'     % Coil inductance
         '4e-12'      % Rotor dynamic friction
         '1e-9'          % Torsion bar constant
