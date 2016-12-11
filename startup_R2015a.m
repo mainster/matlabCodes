@@ -131,7 +131,6 @@ ver=version;
 %colordef('black')
 %reset(groot);
 
-<<<<<<< HEAD
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % change some default options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -150,17 +149,13 @@ set(groot,...
 %         'DefaultFigureColor',         [1 1 1]*0.82 );
 %         'DefaultAxesColor',           [1 1 1]*0.96,...
 
-=======
->>>>>>> origin/masterLoc
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % default options only for R2015a
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if ~isempty(strfind(ver,'R2015a'))
-<<<<<<< HEAD
    set(groot, ...
       'DefaultAxesGridAlpha',       0.5,...
       'DefaultLegendInterpreter',   'tex')
-=======
    colordef('black')
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -182,7 +177,6 @@ if ~isempty(strfind(ver,'R2015a'))
     %         'DefaultAxesColor',           [1 1 1]*0.96,...
     set(groot, ...
         'DefaultAxesGridAlpha',       0.5);
->>>>>>> origin/masterLoc
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

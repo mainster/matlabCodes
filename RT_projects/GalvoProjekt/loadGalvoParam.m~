@@ -213,11 +213,8 @@ end
 
     if EVALUATE
         fprintf('Evaluating struct members as single variables in base workspace...\n')
-        if isstruct(paramSet)
-            fn=fields(paramSet);
-        elseif iscell(paramSet)
-            fn=paramSet(:,1);
-        end
+        if iss
+        fn=fields(paramSet);
 
         for k=1:length(fn)
             assignin('base', fn{k}, ['param.' fn{k}])
