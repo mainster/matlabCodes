@@ -35,7 +35,7 @@ if k==length(anh)
     note = Simulink.Annotation(sys, 'Data dictionary source:');
     sprintf(strjoin(callbackFcn))
     set(note, 'ClickFcn', sprintf(strjoin(callbackFcn)));
-    set(note, 'backgroundColor', color([1,1,0]));
+    set(note, 'backgroundColor', c[1,1,0]);
     set(note, 'foregroundColor', 'black');
     note.position = [0,0];
 end

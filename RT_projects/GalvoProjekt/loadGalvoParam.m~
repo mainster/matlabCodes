@@ -159,34 +159,34 @@ end
  %       '100e-3'     % Current shunt resistor 
  
 
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     % another CamTech 
-%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Mod2={
-%         '1.25e-8'    % Rotor inertia
-%         '6.17e-3'      % Torque constant
-%         '2.79'        % Coil resistance
-%         '180e-6'      % Coil inductance
-%         '1e-12'        % Rotor dynamic friction
-%         '47e-3'      % Torsion bar constant
-%         '108e-6'       % Back electromotive force
-%         '10e-3'     % Current shunt resistor 
-%     };
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    % another CamTech 
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Mod2={
+        '1.25e-8'    % Rotor inertia
+        '6.17e-3'      % Torque constant
+        '2.79'        % Coil resistance
+        '180e-6'      % Coil inductance
+        '1e-12'        % Rotor dynamic friction
+        '47e-3'      % Torsion bar constant
+        '108e-6'       % Back electromotive force
+        '10e-3'     % Current shunt resistor 
+    };
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % LSK 040EF from PHD
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     ModPhd={
         '7.3e-9'        % Rotor inertia
-        '15.e-3'        % Torque constant
-        '2.3'           % Coil resistance
-        '1.8e-3'        % Coil inductance
-        '4.0e-6'        % Rotor dynamic friction
-        '47.e-3'        % Torsion bar constant
-        '7.0e-3'        % Back electromotive force
-        '50e-3'         % Current shunt resistor
-        '0.172'         % position Demod gain (Galvo #1)
+        '15.0e-3'      % Torque constant
+        '2.79'        % Coil resistance
+        '180e-6'      % Coil inductance
+        '1e-12'        % Rotor dynamic friction
+        '47e-3'      % Torsion bar constant
+        '108e-6'       % Back electromotive force
+        '10e-3'     % Current shunt resistor 
     };
+%        '100e-3'     % Current shunt resistor 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Parameter für Blockvereinfachung
