@@ -7,6 +7,27 @@
 % for dictionary file                         11-12-2016
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 sys=gcs;
+
+blks=find_system(sys);
+x=1e9;
+y=-1e9;
+
+for k=1:length(blks)
+    try
+        pos=get_param(blks(k),'position');
+        pos=pos{1}(1:4);
+        if pos(1)<x
+            x=pos(1);
+        end
+        if pos(4)>y
+            y=pos(4);
+        end
+    catch err
+        
+    end
+end
+[x y]
+%%
 callbackFcn={'an = getCallbackAnnotation;\n'
 '[a b]=regexpi(an.text, '':.*'')\n'
 '\n'
@@ -30,14 +51,14 @@ for k=1:length(anh)
     end
 end
 
+%%
 if k==length(anh)
-%     [sys 'Data dictionary source:']
     note = Simulink.Annotation(sys, 'Data dictionary source:');
-    sprintf(strjoin(callbackFcn))
+    
     set(note, 'ClickFcn', sprintf(strjoin(callbackFcn)));
-    set(note, 'backgroundColor', color([1,1,0]));
+    set(note, 'backgroundColor', '[1,1,0]');
     set(note, 'foregroundColor', 'black');
-    note.position = [0,0];
+    note.position = [x y+40];
 end
 
 return
