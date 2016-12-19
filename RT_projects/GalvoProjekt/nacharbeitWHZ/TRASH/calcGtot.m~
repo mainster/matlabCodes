@@ -6,7 +6,17 @@ function [tfCalc, tfLin]=calcGtot(model, varargin)
 %   means, the model parameter KTB will be calculated by
 %   KTB=KEL*iL_40Deg/dPosMax
 
+%% Parse Input args (1)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if ~ischar(model)
+    error 'Please pass a simulink model file name in first argument'
+end
 
+model = strsplit(model,'.');
+
+if ~exist([model{1} '.slx'], 'file') && ~exist([model{1} '.mdl'], 'file')
+    error ('model %s not found!', model)
+end
 %% Load Galvo parameters (2)
 % Load parameters from data dictionary file
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -19,15 +29,14 @@ dds=ddo.getSection('Design Data');
 % Check if model has a KTBsub block
 hasKTBsub=~isempty(find_system(MDL,'Name','KTBsub'));
 
-%% Parse Input args (1)
+%% Parse Input args (2)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-if nargin==0
+if nargin==1
     if hasKTBsub
         set_param([MDL '/KTBsub'], 'iL_40', '0');
     else
         ddModifyEntry(get_param(MDL,'DataDictionary'),'KTBmess',0);
         set_param([MDL '/Torsion Bar'], 'Gain','KTB');
-%         ddModifyEntry(get_param(MDL,'DataDictionary'),'iL_40', 0);
     end
 else
     if isnumeric(varargin{1})
@@ -51,7 +60,7 @@ syms KEL KTB KFR KEMF JR RL L real; syms s
 ds=evalin('base','ds');
 ol=evalin('base','ol');
 
-fprintf('\n%s\n%s\n',ds,ds);
+% fprintf('\n%s\n%s\n',ds,ds);
 G1=1/(s*L+RL);
 G2=1/(s*JR+KFR);
 G3=G1*KEL;
@@ -64,7 +73,7 @@ Gsym=[G1;G2;G3;G4;G5;G6];
 
 for k=1:length(Gsym)
     Gsym(k)=collect(simplify(Gsym(k), 'steps', k*10), s);
-    pretty(Gsym(k));
+%     pretty(Gsym(k));
 end
 
 %% Create transfer function (3)
@@ -93,7 +102,7 @@ else
     if dds.getEntry('KTBmess').getValue.Value ~= 0
         % Replace the numeric value of KTB by KTBmess
         numvec(~cellfun(@isempty, strfind(svstr,'KTB')))=...
-            dds.getEntry('KTBmess').getValue.Value
+            dds.getEntry('KTBmess').getValue.Value;
     end
 end
 % Substitution of syms, except s
@@ -135,8 +144,8 @@ legend show; hold on;
 
 %%
 GtLin=S.zpk(end);
-GtLin.Name=['G_' S.zpk.OutputName{end}]
-bodeplot(GtLin, '--');
+GtLin.Name=['G_' S.zpk.OutputName{end}];
+bodeplot(GtLin, '-.');
 
 tfCalc=GtCalc;
 tfLin=S.zpk;

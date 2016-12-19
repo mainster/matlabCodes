@@ -13,9 +13,15 @@ Gcalc=cell(1); Glin=cell(1);
 % set_param(MDL,'DataDictionary',DDS{2});
 tic
 for iL40=0:8
-%     [Gcalc{end+1}, Glin{end+1}]=
-    calcGtot(MDL, iL40*.25);
+    [Gcalc{end+1}, Glin{end+1}]=...
+        calcGtot(MDL, iL40*.25);
     drawnow;
 end
 toc
 
+%%
+f2=figure(2);
+for k=1:length(Gcalc)
+    pzmap(Gcalc{k});
+    hold all;
+end

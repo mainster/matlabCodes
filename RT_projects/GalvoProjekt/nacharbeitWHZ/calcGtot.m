@@ -6,11 +6,22 @@ function [tfCalc, tfLin]=calcGtot(model, varargin)
 %   means, the model parameter KTB will be calculated by
 %   KTB=KEL*iL_40Deg/dPosMax
 
+%% Parse Input args (1)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+if ~ischar(model)
+    error 'Please pass a simulink model file name in first argument'
+end
+
+model = strsplit(model,'.');
+
+if ~exist([model{1} '.slx'], 'file') && ~exist([model{1} '.mdl'], 'file')
+    error ('model %s not found!', model)
+end
 
 %% Load Galvo parameters (2)
 % Load parameters from data dictionary file
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-MDL=model;
+MDL=model{1};
 open_system(MDL,'loadonly');
 DATA_DICT=get_param(MDL,'DataDictionary');
 ddo=Simulink.data.dictionary.open(DATA_DICT);
@@ -19,7 +30,7 @@ dds=ddo.getSection('Design Data');
 % Check if model has a KTBsub block
 hasKTBsub=~isempty(find_system(MDL,'Name','KTBsub'));
 
-%% Parse Input args (1)
+%% Parse Input args (2)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 if nargin==1
     if hasKTBsub

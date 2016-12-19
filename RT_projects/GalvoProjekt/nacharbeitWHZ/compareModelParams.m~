@@ -1,6 +1,0 @@
-%% Compare freq response for different KTB/KFR values
-clear Gcalc Glin
-clf;
-
-n=1;
-[Gcalc(n)]
