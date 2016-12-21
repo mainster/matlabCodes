@@ -3,7 +3,7 @@ function [varargout] = linmodHighLvl (ModelPath, varargin)
 % 
 % SYS:              LTI system object (tf)
 % REPRESENTATION:   'NumDen' for standard numerator denominator repres.
-%                   'ZeroPole' for zero pole gain repres.
+%                   'PoleZero' for zero pole gain repres.
 % ROUNDTO:          Numeric value (0 ... 9) 
 
     ARG2CMP = 'PoleZero;NumDen';

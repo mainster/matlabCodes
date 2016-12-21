@@ -1,5 +1,5 @@
 Model {
-  Name			  "regelNormalform"
+  Name			  "regelNormalform2"
   Version		  8.5
   MdlSubVersion		  0
   SavedCharacterEncoding  "UTF-8"
@@ -18,13 +18,13 @@ Model {
       SignalName	      "Y"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
+    ComputedModelVersion    "1.1"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
   ScopeRefreshTime	  0.035000
-  OverrideScopeRefreshTime off
-  DisableAllScopes	  off
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  on
   DataTypeOverride	  "UseLocalSettings"
   DataTypeOverrideAppliesTo "AllNumericTypes"
   MinMaxOverflowLogging	  "UseLocalSettings"
@@ -40,7 +40,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [2171.0, 0.0, 1251.0, 834.0]
+      Location		      [97.0, 74.0, 1520.0, 847.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -64,21 +64,21 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1209.0, 657.0]
-	ZoomFactor		[1.5]
-	Offset			[-24.655818002876686, 68.209906124612075]
+	Extents			[1478.0, 670.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
-  Created		  "Tue May 06 19:58:52 2014"
+  Created		  "Tue Dec 06 01:04:15 2016"
   Creator		  "mainster"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mainster"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Dec 06 00:07:09 2016"
-  RTWModifiedTimeStamp	  402883627
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Tue Dec 06 01:04:53 2016"
+  RTWModifiedTimeStamp	  402887070
+  ModelVersionFormat	  "1.%<AutoIncrement:1>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -121,12 +121,12 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "regelNormalform"
-    overrideMode_	    [0.0]
+    model_		    "regelNormalform2"
+    overrideMode_	    [0U]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "regelNormalform"
+      Cell		      "regelNormalform2"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -330,8 +330,8 @@ Model {
 	  SaveWithDisabledLinksMsg "warning"
 	  SaveWithParameterizedLinksMsg	"warning"
 	  CheckSSInitialOutputMsg on
-	  UnderspecifiedInitializationDetection	"Classic"
-	  MergeDetectMultiDrivingBlocksExec "none"
+	  UnderspecifiedInitializationDetection	"Simplified"
+	  MergeDetectMultiDrivingBlocksExec "error"
 	  CheckExecutionContextPreStartOutputMsg off
 	  CheckExecutionContextRuntimeOutputMsg	off
 	  SignalResolutionControl "UseLocalSettings"
@@ -341,7 +341,7 @@ Model {
 	  MaxConsecutiveZCsMsg	  "error"
 	  MaskedZcDiagnostic	  "warning"
 	  IgnoredZcDiagnostic	  "warning"
-	  SolverPrmCheckMsg	  "warning"
+	  SolverPrmCheckMsg	  "none"
 	  InheritedTsInSrcMsg	  "warning"
 	  DiscreteInheritContinuousMsg "warning"
 	  MultiTaskDSMMsg	  "error"
@@ -384,7 +384,7 @@ Model {
 	  ModelReferenceDataLoggingMessage "warning"
 	  ModelReferenceSymbolNameMessage "warning"
 	  ModelReferenceExtraNoncontSigs "error"
-	  StateNameClashWarn	  "warning"
+	  StateNameClashWarn	  "none"
 	  SimStateInterfaceChecksumMismatchMsg "warning"
 	  SimStateOlderReleaseMsg "error"
 	  InitInArrayFormatMsg	  "warning"
@@ -476,7 +476,7 @@ Model {
 	  Version		  "1.15.0"
 	  Array {
 	    Type		    "Cell"
-	    Dimension		    15
+	    Dimension		    16
 	    Cell		    "IncludeHyperlinkInReport"
 	    Cell		    "GenerateTraceInfo"
 	    Cell		    "GenerateTraceReport"
@@ -487,6 +487,7 @@ Model {
 	    Cell		    "GenerateWebview"
 	    Cell		    "GenerateCodeMetricsReport"
 	    Cell		    "GenerateCodeReplacementReport"
+	    Cell		    "GenerateMissedCodeReplacementReport"
 	    Cell		    "GenerateErtSFunction"
 	    Cell		    "CreateSILPILBlock"
 	    Cell		    "CodeExecutionProfiling"
@@ -555,8 +556,9 @@ Model {
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
-		Dimension		22
+		Dimension		24
 		Cell			"IgnoreCustomStorageClasses"
+		Cell			"ParameterTuningSideEffectCode"
 		Cell			"IgnoreTestpoints"
 		Cell			"InsertBlockDesc"
 		Cell			"InsertPolySpaceComments"
@@ -577,6 +579,7 @@ Model {
 		Cell			"CustomSymbolStrBlkIO"
 		Cell			"CustomSymbolStrTmpVar"
 		Cell			"CustomSymbolStrMacro"
+		Cell			"CustomSymbolStrUtil"
 		Cell			"ReqsInCode"
 		PropName		"DisabledProps"
 	      }
@@ -625,21 +628,20 @@ Model {
 	      Version		      "1.15.0"
 	      Array {
 		Type			"Cell"
-		Dimension		14
+		Dimension		13
 		Cell			"GeneratePreprocessorConditionals"
 		Cell			"IncludeMdlTerminateFcn"
-		Cell			"SupportNonInlinedSFcns"
 		Cell			"SuppressErrorStatus"
 		Cell			"ERTCustomFileBanners"
 		Cell			"GenerateSampleERTMain"
 		Cell			"GenerateTestInterfaces"
 		Cell			"ModelStepFunctionPrototypeControlCompliant"
-		Cell			"CPPClassGenCompliant"
 		Cell			"GenerateAllocFcn"
 		Cell			"PurelyIntegerCode"
 		Cell			"SupportComplex"
 		Cell			"SupportAbsoluteTime"
 		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
 		PropName		"DisabledProps"
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
@@ -723,7 +725,7 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 1150, 225, 2210, 855 ] 
+      ConfigPrmDlgPosition     [ 420, 220, 1500, 860 ] 
     }
     PropName		    "ConfigurationSets"
   }
@@ -879,8 +881,8 @@ Model {
     }
   }
   System {
-    Name		    "regelNormalform"
-    Location		    [2171, 0, 3422, 834]
+    Name		    "regelNormalform2"
+    Location		    [97, 74, 1617, 921]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -892,15 +894,15 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "22"
+    SIDHighWatermark	    "14"
     Block {
       BlockType		      Inport
       Name		      "U"
       SID		      "1"
-      Position		      [150, 283, 180, 297]
-      ZOrder		      1
+      Position		      [440, 398, 470, 412]
+      ZOrder		      16
       ShowName		      off
       IconDisplay	      "Port number and signal name"
       Port {
@@ -913,9 +915,9 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain"
-      SID		      "7"
-      Position		      [520, 196, 550, 234]
-      ZOrder		      6
+      SID		      "2"
+      Position		      [810, 311, 840, 349]
+      ZOrder		      21
       ShowName		      off
       Gain		      "z(3)"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -925,9 +927,9 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain1"
-      SID		      "10"
-      Position		      [520, 241, 550, 279]
-      ZOrder		      9
+      SID		      "3"
+      Position		      [810, 356, 840, 394]
+      ZOrder		      22
       ShowName		      off
       Gain		      "z(2)"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -937,9 +939,9 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain2"
-      SID		      "11"
-      Position		      [520, 286, 550, 324]
-      ZOrder		      10
+      SID		      "4"
+      Position		      [810, 401, 840, 439]
+      ZOrder		      23
       ShowName		      off
       Gain		      "z(1)"
       ParamDataTypeStr	      "Inherit: Inherit via internal rule"
@@ -949,9 +951,9 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain3"
-      SID		      "12"
-      Position		      [300, 346, 330, 384]
-      ZOrder		      11
+      SID		      "5"
+      Position		      [590, 461, 620, 499]
+      ZOrder		      24
       BlockMirror	      on
       NamePlacement	      "alternate"
       ShowName		      off
@@ -969,9 +971,9 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain4"
-      SID		      "13"
-      Position		      [375, 376, 405, 414]
-      ZOrder		      12
+      SID		      "6"
+      Position		      [665, 491, 695, 529]
+      ZOrder		      25
       BlockMirror	      on
       NamePlacement	      "alternate"
       ShowName		      off
@@ -989,9 +991,9 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain5"
-      SID		      "14"
-      Position		      [450, 406, 480, 444]
-      ZOrder		      13
+      SID		      "7"
+      Position		      [740, 521, 770, 559]
+      ZOrder		      26
       BlockMirror	      on
       NamePlacement	      "alternate"
       ShowName		      off
@@ -1009,10 +1011,10 @@ Model {
     Block {
       BlockType		      Integrator
       Name		      "Integrator"
-      SID		      "4"
+      SID		      "8"
       Ports		      [1, 1]
-      Position		      [300, 290, 330, 320]
-      ZOrder		      3
+      Position		      [590, 405, 620, 435]
+      ZOrder		      18
       Port {
 	PortNumber		1
 	Name			"X3"
@@ -1023,10 +1025,10 @@ Model {
     Block {
       BlockType		      Integrator
       Name		      "Integrator1"
-      SID		      "5"
+      SID		      "9"
       Ports		      [1, 1]
-      Position		      [375, 290, 405, 320]
-      ZOrder		      4
+      Position		      [665, 405, 695, 435]
+      ZOrder		      19
       Port {
 	PortNumber		1
 	Name			"X2"
@@ -1037,10 +1039,10 @@ Model {
     Block {
       BlockType		      Integrator
       Name		      "Integrator2"
-      SID		      "6"
+      SID		      "10"
       Ports		      [1, 1]
-      Position		      [450, 290, 480, 320]
-      ZOrder		      5
+      Position		      [740, 405, 770, 435]
+      ZOrder		      20
       Port {
 	PortNumber		1
 	Name			"X1"
@@ -1051,10 +1053,10 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum"
-      SID		      "2"
+      SID		      "11"
       Ports		      [4, 1]
-      Position		      [245, 273, 265, 337]
-      ZOrder		      2
+      Position		      [535, 388, 555, 452]
+      ZOrder		      17
       ShowName		      off
       Inputs		      "|+|---"
       InputSameDT	      off
@@ -1070,10 +1072,10 @@ Model {
     Block {
       BlockType		      Sum
       Name		      "Sum1"
-      SID		      "15"
+      SID		      "12"
       Ports		      [3, 1]
-      Position		      [570, 245, 600, 275]
-      ZOrder		      14
+      Position		      [860, 360, 890, 390]
+      ZOrder		      27
       ShowName		      off
       IconShape		      "round"
       Inputs		      "+++"
@@ -1090,9 +1092,9 @@ Model {
     Block {
       BlockType		      Outport
       Name		      "Y"
-      SID		      "16"
-      Position		      [630, 253, 660, 267]
-      ZOrder		      15
+      SID		      "13"
+      Position		      [920, 368, 950, 382]
+      ZOrder		      28
       ShowName		      off
       IconDisplay	      "Port number and signal name"
     }
@@ -1130,50 +1132,50 @@ Model {
     }
     Line {
       Name		      "X3"
-      ZOrder		      5
+      ZOrder		      8
       Labels		      [1, 0]
       SrcBlock		      "Integrator"
       SrcPort		      1
       Points		      [20, 0]
       Branch {
-	ZOrder			6
+	ZOrder			7
 	Points			[0, 60]
 	DstBlock		"Gain3"
 	DstPort			1
       }
       Branch {
-	ZOrder			7
+	ZOrder			6
 	Points			[0, -90]
 	DstBlock		"Gain"
 	DstPort			1
       }
       Branch {
-	ZOrder			8
+	ZOrder			5
 	DstBlock		"Integrator1"
 	DstPort			1
       }
     }
     Line {
       Name		      "X2"
-      ZOrder		      9
+      ZOrder		      12
       Labels		      [1, 0]
       SrcBlock		      "Integrator1"
       SrcPort		      1
       Points		      [19, 0]
       Branch {
-	ZOrder			10
+	ZOrder			11
 	Points			[0, 90]
 	DstBlock		"Gain4"
 	DstPort			1
       }
       Branch {
-	ZOrder			11
+	ZOrder			10
 	Points			[0, -45]
 	DstBlock		"Gain1"
 	DstPort			1
       }
       Branch {
-	ZOrder			12
+	ZOrder			9
 	DstBlock		"Integrator2"
 	DstPort			1
       }
@@ -1219,7 +1221,7 @@ Model {
     }
     Line {
       Name		      "X1"
-      ZOrder		      17
+      ZOrder		      19
       Labels		      [1, 0]
       SrcBlock		      "Integrator2"
       SrcPort		      1
@@ -1230,7 +1232,7 @@ Model {
 	DstPort			1
       }
       Branch {
-	ZOrder			19
+	ZOrder			17
 	Points			[0, 120]
 	DstBlock		"Gain5"
 	DstPort			1
@@ -1246,58 +1248,20 @@ Model {
       DstPort		      1
     }
     Annotation {
-      SID		      "20"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n"
-      "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
-      "lock-indent:0; text-indent:0px;\"><br /></p></body></html>"
-      Position		      [16, 18, 18, 35]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-      Interpreter	      "rich"
-    }
-    Annotation {
-      SID		      "18"
-      Name		      "Regelungsnormalform bildet Brücke zwischen Systembeschreibungen \nim Zustandsraum und als Übertra"
-      "gungsfunktion."
-      Position		      [372, 549, 797, 579]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -1
-      FontName		      "Sans Serif"
-      FontSize		      12
-    }
-    Annotation {
-      SID		      "17"
-      Name		      "G(s)=(z3*s²+z2*s+z1)/(s³+n3*s²+n2*s+n1)"
-      Position		      [372, 514, 638, 530]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -2
-      FontName		      "Sans Serif"
-      FontSize		      12
-    }
-    Annotation {
-      SID		      "3"
+      SID		      "14"
       Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
       "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
       "\n</style></head><body style=\" font-family:'Sans Serif'; font-size:12px; font-weight:400; font-style:normal;\">"
       "\n<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-i"
       "ndent:0; text-indent:0px;\"><span style=\" font-family:'Nimbus Sans L'; font-size:8pt; color:#000000;\">Struktur"
       "bild der Regelungsnormalform für alle linearen, zeitin-varianten Systeme 3. Ordnung</span></p></body></html>"
-      Position		      [250, 230, 383, 295]
+      Position		      [540, 345, 673, 410]
       InternalMargins	      [3, 3, 3, 3]
       FixedHeight	      on
       FixedWidth	      on
       BackgroundColor	      "[0.941176, 0.941176, 0.941176]"
       Interpreter	      "rich"
-      ZOrder		      -3
+      ZOrder		      -23
       FontName		      "Sans Serif"
       FontSize		      12
     }

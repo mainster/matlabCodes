@@ -1,29 +1,30 @@
 Model {
   Name			  "regelNormalform"
-  Version		  8.5
+  Version		  8.1
   MdlSubVersion		  0
-  SavedCharacterEncoding  "UTF-8"
   GraphicalInterface {
     NumRootInports	    1
     Inport {
-      Name		      "U"
       BusObject		      ""
       SignalName	      "U"
+      Name		      "U"
     }
     NumRootOutports	    1
     Outport {
-      Name		      "Y"
       BusObject		      ""
       BusOutputAsStruct	      "off"
       SignalName	      "Y"
+      Name		      "Y"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
+    ComputedModelVersion    "1.8"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
+  SavedCharacterEncoding  "UTF-8"
+  SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
-  OverrideScopeRefreshTime off
+  OverrideScopeRefreshTime on
   DisableAllScopes	  off
   DataTypeOverride	  "UseLocalSettings"
   DataTypeOverrideAppliesTo "AllNumericTypes"
@@ -40,7 +41,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [2171.0, 0.0, 1251.0, 834.0]
+      Location		      [2483.0, -4.0, 820.0, 542.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -49,7 +50,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[9]
+	Filter			[8]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -64,9 +65,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1209.0, 657.0]
-	ZoomFactor		[1.5]
-	Offset			[-24.655818002876686, 68.209906124612075]
+	Extents			[764.0, 353.0]
+	ZoomFactor		[1.0]
+	Offset			[-134.29153846153861, 23.929267399267417]
       }
     }
   }
@@ -76,9 +77,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mainster"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Dec 06 00:07:09 2016"
-  RTWModifiedTimeStamp	  402883627
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Tue May 06 21:00:24 2014"
+  RTWModifiedTimeStamp	  321310821
+  ModelVersionFormat	  "1.%<AutoIncrement:8>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -96,7 +97,6 @@ Model {
   SortedOrder		  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
-  ShowMarkup		  on
   BlockNameDataTip	  off
   BlockParametersDataTip  off
   BlockDescriptionStringDataTip	off
@@ -105,11 +105,6 @@ Model {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
-  PauseTimes		  "5"
-  NumberOfSteps		  1
-  SnapshotBufferSize	  10
-  SnapshotInterval	  10
-  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -122,7 +117,7 @@ Model {
     $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "regelNormalform"
-    overrideMode_	    [0.0]
+    overrideMode_	    [0U]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -143,7 +138,6 @@ Model {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
-  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeVarName	  "covCumulativeData"
@@ -151,12 +145,6 @@ Model {
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
   CovExternalEMLEnable	  off
-  CovSFcnEnable		  on
-  CovBoundaryAbsTol	  0.000010
-  CovBoundaryRelTol	  0.010000
-  CovUseTimeInterval	  off
-  CovStartTime		  0
-  CovStopTime		  0
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -178,6 +166,7 @@ Model {
   ExtModeSkipDownloadWhenConnect off
   ExtModeLogAll		  on
   ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
   Array {
@@ -185,13 +174,13 @@ Model {
     Dimension		    1
     Simulink.ConfigSet {
       $ObjectID		      7
-      Version		      "1.15.0"
+      Version		      "1.13.0"
       Array {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
 	  $ObjectID		  8
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -226,7 +215,7 @@ Model {
 	}
 	Simulink.DataIOCC {
 	  $ObjectID		  9
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -244,7 +233,6 @@ Model {
 	  SignalLogging		  on
 	  DSMLogging		  on
 	  InspectSignalLogs	  off
-	  VisualizeSimOutput	  on
 	  SaveTime		  on
 	  ReturnWorkspaceOutputs  off
 	  StateSaveName		  "xout"
@@ -259,7 +247,7 @@ Model {
 	}
 	Simulink.OptimizationCC {
 	  $ObjectID		  10
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -277,16 +265,13 @@ Model {
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
 	  InlineParams		  off
-	  UseDivisionForNetSlopeComputation "off"
+	  UseIntDivNetSlope	  off
 	  UseFloatMulNetSlope	  off
-	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
 	  BufferReuse		  on
 	  EnhancedBackFolding	  off
-	  CachingGlobalReferences off
-	  GlobalBufferReuse	  on
 	  StrengthReduction	  off
 	  ExpressionFolding	  on
 	  BooleansAsBitfields	  off
@@ -294,13 +279,14 @@ Model {
 	  EnableMemcpy		  on
 	  MemcpyThreshold	  64
 	  PassReuseOutputArgsAs	  "Structure reference"
-	  PassReuseOutputArgsThreshold 12
 	  ExpressionDepthLimit	  128
+	  FoldNonRolledExpr	  on
 	  LocalBlockOutputs	  on
 	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
-	  ActiveStateOutputEnumStorageType "Native Integer"
+	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
 	  InitFltsAndDblsToZero	  off
@@ -311,12 +297,13 @@ Model {
 	  LifeSpan		  "inf"
 	  MaxStackSize		  "Inherit from target"
 	  BufferReusableBoundary  on
-	  SimCompilerOptimization "off"
+	  SimCompilerOptimization "Off"
 	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
 	  $ObjectID		  11
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -371,15 +358,17 @@ Model {
 	  UnconnectedOutputMsg	  "warning"
 	  UnconnectedLineMsg	  "warning"
 	  SFcnCompatibilityMsg	  "none"
-	  FrameProcessingCompatibilityMsg "error"
+	  FrameProcessingCompatibilityMsg "warning"
 	  UniqueDataStoreMsg	  "none"
 	  BusObjectLabelMismatch  "warning"
 	  RootOutportRequireBusObject "warning"
 	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
 	  ModelReferenceIOMsg	  "none"
 	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
 	  ModelReferenceVersionMismatchMessage "none"
 	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
 	  UnknownTsInhSupMsg	  "warning"
 	  ModelReferenceDataLoggingMessage "warning"
 	  ModelReferenceSymbolNameMessage "warning"
@@ -391,6 +380,7 @@ Model {
 	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
 	  BlockIODiagnostic	  "none"
 	  SFUnusedDataAndEventsDiag "warning"
 	  SFUnexpectedBacktrackingDiag "warning"
@@ -400,12 +390,10 @@ Model {
 	  SFUnconditionalTransitionShadowingDiag "warning"
 	  SFUndirectedBroadcastEventsDiag "warning"
 	  SFTransitionActionBeforeConditionDiag	"warning"
-	  SFOutputUsedAsStateInMooreChartDiag "error"
-	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
 	  $ObjectID		  12
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -437,6 +425,7 @@ Model {
 	  TargetIntDivRoundTo	  "Undefined"
 	  TargetEndianess	  "Unspecified"
 	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
 	  TargetPreprocMaxBitsSint 32
 	  TargetPreprocMaxBitsUint 32
 	  TargetHWDeviceType	  "Specified"
@@ -445,7 +434,7 @@ Model {
 	}
 	Simulink.ModelReferenceCC {
 	  $ObjectID		  13
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -460,20 +449,22 @@ Model {
 	}
 	Simulink.SFSimCC {
 	  $ObjectID		  14
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
+	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
+	  SimBlas		  on
 	  SimCtrlC		  on
+	  SimExtrinsic		  on
 	  SimIntegrity		  on
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
-	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
 	  $ObjectID		  15
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    15
@@ -495,15 +486,11 @@ Model {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
-	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
-	  PostCodeGenCommand	  ""
-	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -512,20 +499,15 @@ Model {
 	  TLCDebug		  off
 	  TLCCoverage		  off
 	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
-	  Toolchain		  "Automatically locate an installed toolchain"
-	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -534,25 +516,25 @@ Model {
 	  SILDebugging		  off
 	  TargetLang		  "C"
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
 	  GenerateTraceInfo	  off
 	  GenerateTraceReport	  off
 	  GenerateTraceReportSl	  off
 	  GenerateTraceReportSf	  off
 	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
 	  GenerateWebview	  off
 	  GenerateCodeMetricsReport off
 	  GenerateCodeReplacementReport	off
-	  GenerateMissedCodeReplacementReport off
-	  RTWCompilerOptimization "off"
-	  RTWCustomCompilerOptimizations ""
+	  RTWCompilerOptimization "Off"
 	  CheckMdlBeforeBuild	  "Off"
-	  SharedConstantsCachingThreshold 1024
+	  CustomRebuildMode	  "OnUpdate"
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
 	      $ObjectID		      16
-	      Version		      "1.15.0"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
 		Dimension		22
@@ -582,7 +564,6 @@ Model {
 	      }
 	      ForceParamTrailComments off
 	      GenerateComments	      on
-	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
 	      IncHierarchyInIds	      off
@@ -605,7 +586,6 @@ Model {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
-	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -622,13 +602,13 @@ Model {
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
 	      $ObjectID		      17
-	      Version		      "1.15.0"
+	      Version		      "1.13.0"
 	      Array {
 		Type			"Cell"
-		Dimension		14
+		Dimension		15
 		Cell			"GeneratePreprocessorConditionals"
 		Cell			"IncludeMdlTerminateFcn"
-		Cell			"SupportNonInlinedSFcns"
+		Cell			"CombineOutputUpdateFcns"
 		Cell			"SuppressErrorStatus"
 		Cell			"ERTCustomFileBanners"
 		Cell			"GenerateSampleERTMain"
@@ -640,22 +620,21 @@ Model {
 		Cell			"SupportComplex"
 		Cell			"SupportAbsoluteTime"
 		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
 		PropName		"DisabledProps"
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      GenFloatMathFcnCalls    "NOT IN USE"
-	      TargetLangStandard      "C89/C90 (ANSI)"
-	      CodeReplacementLibrary  "None"
+	      CodeReplacementLibrary  "ANSI_C"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
 	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
 	      GenerateFullHeader      on
-	      InferredTypesCompatibility off
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -672,22 +651,20 @@ Model {
 	      LogVarNameModifier      "rt_"
 	      MatFileLogging	      on
 	      MultiInstanceERTCode    off
-	      CodeInterfacePackaging  "Nonreusable function"
 	      SupportNonFinite	      on
 	      SupportComplex	      on
 	      PurelyIntegerCode	      off
 	      SupportContinuousTime   on
 	      SupportNonInlinedSFcns  on
 	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
 	      ParenthesesLevel	      "Nominal"
-	      CastingMode	      "Nominal"
 	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
-	      CPPClassGenCompliant    on
+	      CPPClassGenCompliant    off
 	      AutosarCompliant	      off
 	      GRTInterface	      off
 	      GenerateAllocFcn	      off
-	      GenerateSharedConstants on
 	      UseMalloc		      off
 	      ExtMode		      off
 	      ExtModeStaticAlloc      off
@@ -701,14 +678,13 @@ Model {
 	      RTWCAPIStates	      off
 	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
-	      MultiInstanceErrorCode  "Error"
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	hdlcoderui.hdlcc {
 	  $ObjectID		  18
-	  Version		  "1.15.0"
+	  Version		  "1.13.0"
 	  Description		  "HDL Coder custom configuration component"
 	  Name			  "HDL Coder"
 	  Array {
@@ -834,9 +810,6 @@ Model {
       LimitOutput	      off
       UpperSaturationLimit    "inf"
       LowerSaturationLimit    "-inf"
-      WrapState		      off
-      WrappedStateUpperValue  "pi"
-      WrappedStateLowerValue  "-pi"
       ShowSaturationPort      off
       ShowStatePort	      off
       AbsoluteTolerance	      "auto"
@@ -880,7 +853,7 @@ Model {
   }
   System {
     Name		    "regelNormalform"
-    Location		    [2171, 0, 3422, 834]
+    Location		    [2483, -4, 3303, 538]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -892,17 +865,16 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "22"
+    SIDHighWatermark	    "19"
     Block {
       BlockType		      Inport
       Name		      "U"
       SID		      "1"
-      Position		      [150, 283, 180, 297]
+      Position		      [20, 123, 50, 137]
       ZOrder		      1
-      ShowName		      off
-      IconDisplay	      "Port number and signal name"
+      IconDisplay	      "Port number"
       Port {
 	PortNumber		1
 	Name			"U"
@@ -914,7 +886,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain"
       SID		      "7"
-      Position		      [520, 196, 550, 234]
+      Position		      [390, 36, 420, 74]
       ZOrder		      6
       ShowName		      off
       Gain		      "z(3)"
@@ -926,7 +898,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain1"
       SID		      "10"
-      Position		      [520, 241, 550, 279]
+      Position		      [390, 81, 420, 119]
       ZOrder		      9
       ShowName		      off
       Gain		      "z(2)"
@@ -938,7 +910,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain2"
       SID		      "11"
-      Position		      [520, 286, 550, 324]
+      Position		      [390, 126, 420, 164]
       ZOrder		      10
       ShowName		      off
       Gain		      "z(1)"
@@ -950,7 +922,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain3"
       SID		      "12"
-      Position		      [300, 346, 330, 384]
+      Position		      [170, 186, 200, 224]
       ZOrder		      11
       BlockMirror	      on
       NamePlacement	      "alternate"
@@ -970,7 +942,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain4"
       SID		      "13"
-      Position		      [375, 376, 405, 414]
+      Position		      [245, 216, 275, 254]
       ZOrder		      12
       BlockMirror	      on
       NamePlacement	      "alternate"
@@ -990,7 +962,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain5"
       SID		      "14"
-      Position		      [450, 406, 480, 444]
+      Position		      [320, 246, 350, 284]
       ZOrder		      13
       BlockMirror	      on
       NamePlacement	      "alternate"
@@ -1011,7 +983,7 @@ Model {
       Name		      "Integrator"
       SID		      "4"
       Ports		      [1, 1]
-      Position		      [300, 290, 330, 320]
+      Position		      [170, 130, 200, 160]
       ZOrder		      3
       Port {
 	PortNumber		1
@@ -1025,7 +997,7 @@ Model {
       Name		      "Integrator1"
       SID		      "5"
       Ports		      [1, 1]
-      Position		      [375, 290, 405, 320]
+      Position		      [245, 130, 275, 160]
       ZOrder		      4
       Port {
 	PortNumber		1
@@ -1039,7 +1011,7 @@ Model {
       Name		      "Integrator2"
       SID		      "6"
       Ports		      [1, 1]
-      Position		      [450, 290, 480, 320]
+      Position		      [320, 130, 350, 160]
       ZOrder		      5
       Port {
 	PortNumber		1
@@ -1053,7 +1025,7 @@ Model {
       Name		      "Sum"
       SID		      "2"
       Ports		      [4, 1]
-      Position		      [245, 273, 265, 337]
+      Position		      [110, 114, 130, 176]
       ZOrder		      2
       ShowName		      off
       Inputs		      "|+|---"
@@ -1072,7 +1044,7 @@ Model {
       Name		      "Sum1"
       SID		      "15"
       Ports		      [3, 1]
-      Position		      [570, 245, 600, 275]
+      Position		      [460, 85, 490, 115]
       ZOrder		      14
       ShowName		      off
       IconShape		      "round"
@@ -1091,97 +1063,83 @@ Model {
       BlockType		      Outport
       Name		      "Y"
       SID		      "16"
-      Position		      [630, 253, 660, 267]
+      Position		      [525, 93, 555, 107]
       ZOrder		      15
-      ShowName		      off
-      IconDisplay	      "Port number and signal name"
+      IconDisplay	      "Port number"
     }
     Line {
       Name		      "U"
-      ZOrder		      1
-      Labels		      [1, 0]
+      Labels		      [1, 1]
       SrcBlock		      "U"
       SrcPort		      1
       DstBlock		      "Sum"
       DstPort		      1
     }
     Line {
-      ZOrder		      2
       SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [30, 0]
+      Points		      [50, 0]
       DstBlock		      "Sum1"
       DstPort		      1
     }
     Line {
-      ZOrder		      3
       SrcBlock		      "Gain1"
       SrcPort		      1
       DstBlock		      "Sum1"
       DstPort		      2
     }
     Line {
-      ZOrder		      4
       SrcBlock		      "Gain2"
       SrcPort		      1
-      Points		      [30, 0]
+      Points		      [50, 0]
       DstBlock		      "Sum1"
       DstPort		      3
     }
     Line {
       Name		      "X3"
-      ZOrder		      5
-      Labels		      [1, 0]
+      Labels		      [1, 1]
       SrcBlock		      "Integrator"
       SrcPort		      1
       Points		      [20, 0]
       Branch {
-	ZOrder			6
 	Points			[0, 60]
 	DstBlock		"Gain3"
 	DstPort			1
       }
       Branch {
-	ZOrder			7
 	Points			[0, -90]
 	DstBlock		"Gain"
 	DstPort			1
       }
       Branch {
-	ZOrder			8
 	DstBlock		"Integrator1"
 	DstPort			1
       }
     }
     Line {
       Name		      "X2"
-      ZOrder		      9
-      Labels		      [1, 0]
+      Labels		      [1, 1]
       SrcBlock		      "Integrator1"
       SrcPort		      1
       Points		      [19, 0]
       Branch {
-	ZOrder			10
 	Points			[0, 90]
 	DstBlock		"Gain4"
 	DstPort			1
       }
       Branch {
-	ZOrder			11
 	Points			[0, -45]
 	DstBlock		"Gain1"
 	DstPort			1
       }
       Branch {
-	ZOrder			12
 	DstBlock		"Integrator2"
 	DstPort			1
       }
     }
     Line {
       Name		      "X3'"
-      ZOrder		      13
-      Labels		      [1, 0]
+      Labels		      [1, 1]
       SrcBlock		      "Sum"
       SrcPort		      1
       DstBlock		      "Integrator"
@@ -1189,7 +1147,6 @@ Model {
     }
     Line {
       Name		      "z4"
-      ZOrder		      14
       Labels		      [1, 1]
       SrcBlock		      "Gain5"
       SrcPort		      1
@@ -1199,7 +1156,6 @@ Model {
     }
     Line {
       Name		      "z3"
-      ZOrder		      15
       Labels		      [1, 1]
       SrcBlock		      "Gain4"
       SrcPort		      1
@@ -1209,7 +1165,6 @@ Model {
     }
     Line {
       Name		      "z2"
-      ZOrder		      16
       Labels		      [1, 1]
       SrcBlock		      "Gain3"
       SrcPort		      1
@@ -1219,18 +1174,15 @@ Model {
     }
     Line {
       Name		      "X1"
-      ZOrder		      17
-      Labels		      [1, 0]
+      Labels		      [1, 1]
       SrcBlock		      "Integrator2"
       SrcPort		      1
       Points		      [15, 0]
       Branch {
-	ZOrder			18
 	DstBlock		"Gain2"
 	DstPort			1
       }
       Branch {
-	ZOrder			19
 	Points			[0, 120]
 	DstBlock		"Gain5"
 	DstPort			1
@@ -1238,66 +1190,31 @@ Model {
     }
     Line {
       Name		      "Y"
-      ZOrder		      20
-      Labels		      [1, 0]
+      Labels		      [1, 1]
       SrcBlock		      "Sum1"
       SrcPort		      1
       DstBlock		      "Y"
       DstPort		      1
     }
     Annotation {
-      SID		      "20"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body style=\" font-family:'Helvetica'; font-size:10px; font-weight:400; font-style:normal;\">\n"
-      "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-b"
-      "lock-indent:0; text-indent:0px;\"><br /></p></body></html>"
-      Position		      [16, 18, 18, 35]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-      Interpreter	      "rich"
-    }
-    Annotation {
       SID		      "18"
       Name		      "Regelungsnormalform bildet Brücke zwischen Systembeschreibungen \nim Zustandsraum und als Übertra"
       "gungsfunktion."
-      Position		      [372, 549, 797, 579]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -1
+      Position		      [246, 309]
       FontName		      "Sans Serif"
       FontSize		      12
     }
     Annotation {
       SID		      "17"
       Name		      "G(s)=(z3*s²+z2*s+z1)/(s³+n3*s²+n2*s+n1)"
-      Position		      [372, 514, 638, 530]
-      InternalMargins	      [0, 0, 0, 0]
-      FixedHeight	      off
-      FixedWidth	      off
-      ZOrder		      -2
+      Position		      [242, 354]
       FontName		      "Sans Serif"
       FontSize		      12
     }
     Annotation {
       SID		      "3"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body style=\" font-family:'Sans Serif'; font-size:12px; font-weight:400; font-style:normal;\">"
-      "\n<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-i"
-      "ndent:0; text-indent:0px;\"><span style=\" font-family:'Nimbus Sans L'; font-size:8pt; color:#000000;\">Struktur"
-      "bild der Regelungsnormalform für alle linearen, zeitin-varianten Systeme 3. Ordnung</span></p></body></html>"
-      Position		      [250, 230, 383, 295]
-      InternalMargins	      [3, 3, 3, 3]
-      FixedHeight	      on
-      FixedWidth	      on
-      BackgroundColor	      "[0.941176, 0.941176, 0.941176]"
-      Interpreter	      "rich"
-      ZOrder		      -3
+      Name		      "System 3. Ordnung"
+      Position		      [100, 72]
       FontName		      "Sans Serif"
       FontSize		      12
     }

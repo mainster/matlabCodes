@@ -364,8 +364,7 @@ f = figure('Visible','on','Position',DimFigure*ppm);
 
         for L=h.md.sweepVal
 %            h = guidata(f);
-
-            eventdata.swParam=sweepParam;
+%            eventdata.swParam=sweepParam;
             h.md.swVal=L;
             
             guidata(f, h);
@@ -411,12 +410,12 @@ f = figure('Visible','on','Position',DimFigure*ppm);
         % -----------------------------------------------------
         % sweep parameter durch aktuellen Wert ersetzen
         % -----------------------------------------------------
-        if ~isempty(strfind(num,eventdata.swParam))
-            num=subs(num, eventdata.swParam, h.md.swVal);
-        end
-        if ~isempty(strfind(den,eventdata.swParam))
-            den=subs(den, eventdata.swParam, h.md.swVal);
-        end
+%         if ~isempty(strfind(num,eventdata.swParam))
+%             num=subs(num, eventdata.swParam, h.md.swVal);
+%         end
+%         if ~isempty(strfind(den,eventdata.swParam))
+%             den=subs(den, eventdata.swParam, h.md.swVal);
+%         end
         % -----------------------------------------------------
         % andere symbols wie 's' oder 'p'?
         % -----------------------------------------------------
@@ -441,10 +440,6 @@ f = figure('Visible','on','Position',DimFigure*ppm);
         s=sym('s');
 
         di={num,den};
-        if isempty(symvar(di{1}))
-            disp('no ')
-        end
-        
         solc=cellfun(@solve,di(:),'UniformOutput',false);
         if ~isempty(solc{1})
             solZ=eval(solc{1,1});

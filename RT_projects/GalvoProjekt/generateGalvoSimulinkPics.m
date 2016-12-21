@@ -1,25 +1,14 @@
 %% Export subsystems of single mdl
 mdls = {'galvoMdl'};
-
-[~, HOST]=system('echo $HOSTNAME');
-
-if strfind(HOST,'x58a')
-   outbase = '/media/storage/data_notebook/whz/projectGalvoDocu/mdlPngs/';
-else
-   if strfind(HOST,'XPS-L521X')
-      outbase='/media/data/whz/projectGalvoDocu/mdlPngs/';
-   else
-      error(['Unknown hostname: ' HOST])
-   end
-end
-
+outbase='/media/data/whz/projectGalvoDocu/mdlPngs/';
+outbase='/media/whz/projectGalvoDocu/mdlPngs/';
 open_system(mdls{1}); 
 
 ONOFF = 'off';
 
-outbase
 
-%% Find subsystem block paths
+
+% Find subsystem block paths
 sspaths = find_system(mdls{1},'BlockType','SubSystem');
 for i=1:length(sspaths) 
     try 
@@ -43,7 +32,7 @@ open_system(mdls{1});
 return
 %%
 clearvars('-except',INITIALVARS{:})
-PRJ='/media/data/CODES/matlab_workspace/RT_projects/GalvoProjekt/';
+PRJ='/media/data/CODES/matlab_workspace/RT_projecdts/GalvoProjekt/';
 cd(PRJ);
 
 [status,mdlPaths] = system('find . -iname "*\.slx" -print -o -iname "*\.mdl" -print');
