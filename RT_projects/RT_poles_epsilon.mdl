@@ -50,7 +50,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [2026.0, -8.0, 1020.0, 778.0]
+      Location		      [900.0, 0.0, 1020.0, 778.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -74,7 +74,7 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[769.0, 589.0]
+	Extents			[783.0, 611.0]
 	ZoomFactor		[1.25]
 	Offset			[-37.66173401631562, 101.27563844325081]
       }
@@ -86,7 +86,7 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "mainster"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue May 06 19:48:43 2014"
+  LastModifiedDate	  "Wed Nov 02 10:37:45 2016"
   RTWModifiedTimeStamp	  320991232
   ModelVersionFormat	  "1.%<AutoIncrement:17>"
   ConfigurationManager	  "none"
@@ -126,7 +126,7 @@ Model {
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "RT_poles_epsilon"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -862,7 +862,7 @@ Model {
   }
   System {
     Name		    "RT_poles_epsilon"
-    Location		    [2026, -8, 3046, 770]
+    Location		    [900, 0, 1920, 778]
     Open		    on
     ModelBrowserVisibility  on
     ModelBrowserWidth	    200

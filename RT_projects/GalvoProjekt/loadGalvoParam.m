@@ -65,6 +65,34 @@ switch paramVers
         'KBM',0,...   % Back electromotive force
         'Rsh',0,...   % Current shunt resistor
         'KPOS1',0);   % position Demod gain (Galvo #1)
+    
+   case 98
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Liste der Modellparameter  
+% 10.12.2016 (WHZ docu)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    parTmp={...
+        'JR',   'Rotor inertia';...
+        'KEL',  'Torque constant';...
+        'RL',   'Coil resistance';...
+        'L',	'Coil inductance';...
+        'KFR',	'Rotor dynamic friction';...
+        'KTB',	'Torsion bar constant';...
+        'KEMF',	'Back electromot. force';...
+        'Rsh',	'Current shunt resistor';...
+        'KPOS1','PosDemod gain Galvo#1'};
+
+	units={...
+        'JR',   'kg*m^2';...
+        'KEL',  'Nm/A';...
+        'RL',   'Ohm';...
+        'L',	'H';...
+        'KFR',	'Nm*s/rad';...
+        'KTB',	'Nm/rad';...
+        'KEMF',	'Vs/rad';...
+        'Rsh',	'Ohm';...
+        'KPOS1','V/deg'};
+
     case 99
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Liste der Modellparameter neu mit 
@@ -77,9 +105,9 @@ switch paramVers
         'Lc',	'Coil inductance';...
         'KFR',	'Rotor dynamic friction';...
         'KTB',	'Torsion bar constant';...
-        'KBM',	'Back electromotive force';...
+        'KBM',	'Back electromot. force';...
         'Rsh',	'Current shunt resistor';...
-        'KPOS1','position Demod gain (Galvo #1)'};
+        'KPOS1','PosDemod gain Galvo#1'};
 
 	units={...
         'JR',   'kg*m^2';...
@@ -120,7 +148,7 @@ end
     Mod_6860_No1={
         '6e-8'       % Rotor inertia
         '9.3e-3'     % Torque constant
-        '3.5'        % Coil resistance
+        '1.5'        % Coil resistance
         '170e-6'     % Coil inductance
         '4e-12'      % Rotor dynamic friction
         '1e-9'          % Torsion bar constant
@@ -131,20 +159,34 @@ end
  %       '100e-3'     % Current shunt resistor 
  
 
+%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     % another CamTech 
+%     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Mod2={
+%         '1.25e-8'    % Rotor inertia
+%         '6.17e-3'      % Torque constant
+%         '2.79'        % Coil resistance
+%         '180e-6'      % Coil inductance
+%         '1e-12'        % Rotor dynamic friction
+%         '47e-3'      % Torsion bar constant
+%         '108e-6'       % Back electromotive force
+%         '10e-3'     % Current shunt resistor 
+%     };
+
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % another CamTech 
+    % LSK 040EF from PHD
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    Mod2={
-        '1.25e-8'    % Rotor inertia
-        '6.17e-3'      % Torque constant
-        '2.79'        % Coil resistance
-        '180e-6'      % Coil inductance
-        '1e-12'        % Rotor dynamic friction
-        '47e-3'      % Torsion bar constant
-        '108e-6'       % Back electromotive force
-        '10e-3'     % Current shunt resistor 
+    ModPhd={
+        '7.3e-9'        % Rotor inertia
+        '15.e-3'        % Torque constant
+        '2.3'           % Coil resistance
+        '1.8e-3'        % Coil inductance
+        '4.0e-6'        % Rotor dynamic friction
+        '47.e-3'        % Torsion bar constant
+        '7.0e-3'        % Back electromotive force
+        '50e-3'         % Current shunt resistor
+        '0.172'         % position Demod gain (Galvo #1)
     };
-%        '100e-3'     % Current shunt resistor 
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     % Parameter für Blockvereinfachung
@@ -161,7 +203,7 @@ end
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
 %   paramSet=cell2struct(Mod2,fieldnames(parTmp));
-    if paramVers ~= 99
+    if (paramVers ~= 99) && (paramVers ~= 98)
         if paramVers==5         % Kpos1 param added
             paramSet=cell2struct(Mod_6860_No1,fieldnames(parTmp));
         else
@@ -170,7 +212,7 @@ end
             
     else
         paramSet(:,1)=parTmp(:,1);
-        paramSet(:,2)=Mod_6860;
+        paramSet(:,2)=Mod_6860_No1;
         paramSet(:,3)=units(:,2);
         paramSet(:,4)=parTmp(:,2);
     end
@@ -184,8 +226,12 @@ end
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     if EVALUATE
-        fprintf('Evaluating struct members as single variables in base workspace...')
-        fn=fields(paramSet);
+        fprintf('Evaluating struct members as single variables in base workspace...\n')
+        if isstruct(paramSet)
+            fn=fields(paramSet);
+        elseif iscell(paramSet)
+            fn=paramSet(:,1);
+        end
 
         for k=1:length(fn)
             assignin('base', fn{k}, ['param.' fn{k}])
